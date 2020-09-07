@@ -1,0 +1,41 @@
+import React, { useState } from "react";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
+// components
+import Nav from "./components/navigation";
+// styles
+import { lightTheme, darkTheme, respond } from "./styles";
+
+function App() {
+    const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+    return (
+        <div>
+            <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+                <GlobalStyle />
+                <Nav />
+            </ThemeProvider>
+        </div>
+    );
+}
+
+export default App;
+
+const GlobalStyle = createGlobalStyle`
+    *,
+    *::after,
+    *::before{
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+    }
+
+    html{
+        font-size: 62.5%;
+        box-sizing: border-box;
+
+        ${(props) => respond("s", `font-size:55%;`)}
+        ${(props) => respond("m", `font-size:60%;`)}
+        ${(props) => respond("l", `font-size:62.5%;`)}
+        ${(props) => respond("xxl", `font-size:100%;`)}
+    }
+`;
