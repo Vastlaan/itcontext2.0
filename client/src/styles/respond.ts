@@ -8,7 +8,11 @@ export const respond = (type: string, content: string): string | undefined => {
     ${content}
   }`;
     } else if (type === "l") {
-        return `@media only screen and (min-width: 1050px){
+        return `@media only screen and (min-width: 928px){
+    ${content}
+  }`;
+    } else if (type === "xl") {
+        return `@media only screen and (min-width: 1111px){
     ${content}
   }`;
     } else if (type === "xxl") {
