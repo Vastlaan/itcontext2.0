@@ -27,15 +27,20 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: inherit;
+        line-height: 1.6;
     }
 
     html{
-        font-size: 62.5%;
+        font-size: 50%;
         box-sizing: border-box;
-
-        ${(props) => respond("s", `font-size:55%;`)}
-        ${(props) => respond("m", `font-size:60%;`)}
-        ${(props) => respond("l", `font-size:62.5%;`)}
+        ${(props) => respond("s", `font-size:50%;`)}
+        ${(props) => respond("m", `font-size:55%;`)}
+        ${(props) => respond("l", `font-size:60%;`)}
+        ${(props) => respond("xl", `font-size:62.5%;`)}
         ${(props) => respond("xxl", `font-size:100%;`)}
+    }
+
+    body{
+        overflow-x: hidden;
     }
 `;
