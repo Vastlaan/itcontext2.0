@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 // components
 import Nav from "./components/navigation";
+import Landing from "./components/landing";
 // styles
 import { lightTheme, darkTheme, respond } from "./styles";
 
@@ -13,6 +14,7 @@ function App() {
             <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
                 <GlobalStyle />
                 <Nav />
+                <Landing />
             </ThemeProvider>
         </div>
     );
