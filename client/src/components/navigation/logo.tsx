@@ -16,6 +16,7 @@ const Container = styled.h1`
     color: ${(props) => props.theme.primaryLight};
     background-color: ${(props) => props.theme.bg};
     cursor: pointer;
+    line-height: 1;
 
     ${respond("s", "padding: 1rem 2rem;")}
 `;

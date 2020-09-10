@@ -21,4 +21,5 @@ const Container = styled.nav`
     padding: 0rem;
     display: flex;
     background-color: ${(props) => props.theme.greyDark};
+    line-height: 1;
 `;
