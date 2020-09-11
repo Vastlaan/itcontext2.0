@@ -93,33 +93,36 @@ const Actions = styled.div`
     }
 `;
 const Anchor = styled.a`
+    width: 30rem;
     text-decoration: none;
     padding: 1rem 3rem;
     margin: 2rem auto;
     display: flex;
     justify-content: center;
-    border: 1px solid ${(props) => props.color};
+    border: 1px solid transparent;
+    background-color: ${(props) => props.color};
     border-radius: 3px;
     transition: all 0.3s;
 
     &:hover {
-        background-color: ${(props) => props.color};
+        background-color: transparent;
+        border: 1px solid ${(props) => props.color};
 
         svg {
-            color: snow;
+            color: ${(props) => props.color};
         }
         span {
-            color: snow;
+            color: ${(props) => props.color};
         }
     }
     svg {
         margin-right: 2rem;
         align-self: center;
         font-size: 4rem;
-        color: ${(props) => props.color};
+        color: snow;
     }
     span {
-        color: ${(props) => props.color};
+        color: snow;
         font-size: 3rem;
         font-family: ${fonts.advent};
     }
