@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { fonts, respond } from "../../../styles";
 import { BsInfoCircle } from "react-icons/bs";
-import Image1 from "../../../img/resdessmall.jpg";
+import { RiPhoneLine, RiMailLine } from "react-icons/ri";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
 
 export default function Bait() {
     return (
@@ -13,37 +14,36 @@ export default function Bait() {
                 </Icon>
                 <h3>at your service</h3>
             </Head>
-            <Block>
-                <BlockContent>
-                    <BlockHeader>Responsive Websites</BlockHeader>
-                    <BlockText>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Qui corrupti vero maiores perferendis reiciendis
-                        nihil?
-                    </BlockText>
-                    <BlockImage>
-                        <img src={Image1} alt="responsive design website" />
-                    </BlockImage>
-                    <BlockButton>Contact us</BlockButton>
-                </BlockContent>
-                <BlockContent>
-                    <BlockHeader>Responsive Websites</BlockHeader>
-                    <BlockText>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Qui corrupti vero maiores perferendis reiciendis
-                        nihil?
-                    </BlockText>
-                    <BlockImage>
-                        <img src={Image1} alt="responsive design website" />
-                    </BlockImage>
-                    <BlockButton>Contact us</BlockButton>
-                </BlockContent>
-            </Block>
+            <Actions>
+                <p>
+                    We work during the working days from 9:00 till 17:00
+                    o'clock. But you can mail us also during the weekend. Our
+                    customer service is for your disposal.
+                </p>
+                <Anchor color="#117864" href="tel:0031682307051">
+                    <RiPhoneLine />
+                    <span>06 82 30 70 51</span>
+                </Anchor>
+                <Anchor color="#006A93" href="mailto:info@itcontext.nl">
+                    <RiMailLine />
+                    <span>info@itcontext.nl</span>
+                </Anchor>
+                <p>Follow Us:</p>
+                <Social>
+                    <a href="https://facebook.com">
+                        <FaFacebook color="darkblue" />
+                    </a>
+                    <a href="https://facebook.com">
+                        <FaLinkedin color="skyblue" />
+                    </a>
+                </Social>
+            </Actions>
         </Container>
     );
 }
 
 const Container = styled.div`
+    grid-area: bait;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -65,8 +65,8 @@ const Head = styled.div`
     }
 `;
 const Icon = styled.div`
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
     border-right: 1px solid ${(props) => props.theme.greyLight};
     border-bottom: 1px solid ${(props) => props.theme.greyLight};
     box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
@@ -80,58 +80,68 @@ const Icon = styled.div`
     }
 `;
 
-const Block = styled.div`
-    margin: 2rem 0;
-`;
-const BlockContent = styled.div`
-    padding: 1rem 0rem 1rem 2rem;
-    display: grid;
-    grid-template-areas:
-        "head head head head head head"
-        "text text text img img img"
-        "btn btn btn btn btn btn";
-`;
-const BlockHeader = styled.h3`
-    grid-area: head;
+const Actions = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
 
-    text-align: center;
-    font-size: 2.5rem;
-    font-family: ${fonts.gayathri};
-`;
-const BlockText = styled.p`
-    grid-area: text;
-    font-size: 2rem;
-    font-family: ${fonts.cormoran};
-`;
-const BlockImage = styled.div`
-    grid-area: img;
-    img {
+    p {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        text-align: center;
+        font-size: 2rem;
+        font-family: ${fonts.cormoran};
     }
 `;
-
-const BlockButton = styled.button`
-    grid-area: btn;
-    margin: 1rem auto;
+const Anchor = styled.a`
+    text-decoration: none;
     padding: 1rem 3rem;
-    border: 1px solid ${(props) => props.theme.primary};
-    background-color: ${(props) => props.theme.primary};
-    color: ${(props) => props.theme.bg};
-
-    font-size: 2rem;
-    font-family: ${fonts.advent};
-    text-transform: uppercase;
-    cursor: pointer;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    border: 1px solid ${(props) => props.color};
+    border-radius: 3px;
     transition: all 0.3s;
 
     &:hover {
-        background-color: transparent;
-        color: ${(props) => props.theme.primary};
+        background-color: ${(props) => props.color};
+
+        svg {
+            color: snow;
+        }
+        span {
+            color: snow;
+        }
     }
-    &::active,
-    ::focus {
-        outline: none;
+    svg {
+        margin-right: 2rem;
+        align-self: center;
+        font-size: 4rem;
+        color: ${(props) => props.color};
+    }
+    span {
+        color: ${(props) => props.color};
+        font-size: 3rem;
+        font-family: ${fonts.advent};
+    }
+`;
+
+const Social = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    a {
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+
+        text-decoration: none;
+        color: ${(props) => props.theme.greyDark};
+        font-size: 4rem;
+        transition: all 0.3s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
     }
 `;

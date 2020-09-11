@@ -58,6 +58,7 @@ export default function Info() {
     );
 }
 const Container = styled.div`
+    grid-area: info;
     position: relative;
     padding: 5rem 2rem;
 `;

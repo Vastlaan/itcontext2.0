@@ -17,8 +17,15 @@ export default function Header() {
 const Container = styled.section`
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-areas:
+        "info"
+        "bait";
     overflow-x: hidden;
 
-    ${() => respond("m", "grid-template-columns: 2fr 1fr;")};
+    ${() =>
+        respond(
+            "l",
+            `grid-template-areas: 
+        "info info info info info bait";`
+        )};
 `;
