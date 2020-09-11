@@ -14,7 +14,7 @@ export default function Header() {
         </Container>
     );
 }
-const Container = styled.section`
+const Container = styled.header`
     width: 100%;
     display: grid;
     grid-template-areas:
