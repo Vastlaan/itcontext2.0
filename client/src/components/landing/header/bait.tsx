@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { fonts, respond } from "../../../styles";
+import { fonts } from "../../../styles";
 import { BsInfoCircle } from "react-icons/bs";
 import { RiPhoneLine, RiMailLine } from "react-icons/ri";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
