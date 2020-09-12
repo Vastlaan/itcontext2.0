@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { fonts } from "../../../styles";
+import { fonts, Social } from "../../../styles";
 import { BsInfoCircle } from "react-icons/bs";
 import { RiPhoneLine, RiMailLine } from "react-icons/ri";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
@@ -125,26 +125,5 @@ const Anchor = styled.a`
         color: snow;
         font-size: 3rem;
         font-family: ${fonts.advent};
-    }
-`;
-
-const Social = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-    a {
-        &:not(:last-child) {
-            margin-right: 2rem;
-        }
-
-        text-decoration: none;
-        color: ${(props) => props.theme.greyDark};
-        font-size: 4rem;
-        transition: all 0.3s;
-
-        &:hover {
-            transform: scale(1.2);
-        }
     }
 `;
