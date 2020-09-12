@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { fonts, respond } from "../../../styles";
+import { fonts, respond, Button } from "../../../styles";
 import Image1 from "../../../img/image-story-1.jpg";
 import Image2 from "../../../img/image-story-2.jpg";
 
@@ -117,27 +117,7 @@ const BlockImage = styled.div`
     }
 `;
 
-const BlockButton = styled.button`
+const BlockButton = styled(Button)`
     align-self: center;
     grid-area: btn;
-    margin: 1rem auto;
-    padding: 1rem 3rem;
-    border: 1px solid ${(props) => props.theme.primary};
-    background-color: ${(props) => props.theme.primary};
-    color: ${(props) => props.theme.bg};
-
-    font-size: 2rem;
-    font-family: ${fonts.advent};
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s;
-
-    &:hover {
-        background-color: transparent;
-        color: ${(props) => props.theme.primary};
-    }
-    &::active,
-    ::focus {
-        outline: none;
-    }
 `;
