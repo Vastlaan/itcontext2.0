@@ -3,6 +3,7 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 // components
 import Nav from "./components/navigation";
 import Landing from "./components/landing";
+import Footer from "./components/footer";
 // styles
 import { lightTheme, darkTheme, respond } from "./styles";
 
@@ -15,6 +16,7 @@ function App() {
                 <GlobalStyle />
                 <Nav />
                 <Landing />
+                <Footer />
             </ThemeProvider>
         </div>
     );
