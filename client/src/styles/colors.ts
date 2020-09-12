@@ -5,6 +5,9 @@ export const lightTheme = {
     secondary: "#00B2BE",
     secondaryLight: "#70FACB",
 
+    warm: "#c0392b",
+    fresh: "#117864",
+
     grey: "#424656",
     greyDark: "#18191F",
     greyLight: "#A6ABBD",
@@ -18,6 +21,9 @@ export const darkTheme = {
 
     secondary: "#00B2BE",
     secondaryLight: "#70FACB",
+
+    warm: "#c0392b",
+    fresh: "#117864",
 
     grey: "#424656",
     greyDark: "#18191F",
