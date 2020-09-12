@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Info from "./info";
 import Bait from "./bait";
 // styles
-import { fonts, respond } from "../../../styles";
+import { respond } from "../../../styles";
 
 export default function Header() {
     return (
