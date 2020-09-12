@@ -18,5 +18,5 @@ const Container = styled.h1`
     cursor: pointer;
     line-height: 1;
 
-    ${respond("s", "padding: 1rem 2rem;")}
+    ${() => respond("s", "padding: 1rem 2rem;")}
 `;

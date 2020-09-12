@@ -23,3 +23,24 @@ export const Button = styled.button`
         outline: none;
     }
 `;
+
+export const Social = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    a {
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+
+        text-decoration: none;
+        color: ${(props) => props.theme.greyLight};
+        font-size: 4rem;
+        transition: all 0.3s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+`;
