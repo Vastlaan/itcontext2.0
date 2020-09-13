@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { fonts, respond } from "../../styles";
 
 export default function Menu() {
     return (
         <Container>
-            <li>Web Design</li>
-            <li>Online marketing</li>
+            <Link to="/website-otwerpen">Web Design</Link>
+            <Link to="/online-marketing">E-commerce</Link>
         </Container>
     );
 }
@@ -19,7 +20,8 @@ const Container = styled.ul`
 
     ${() => respond("l", "display: none;")}
 
-    li {
+    a {
+        text-decoration: none;
         flex: 1;
         padding: 0.5rem;
         display: none;
