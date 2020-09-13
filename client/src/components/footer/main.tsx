@@ -17,7 +17,7 @@ export default function Main() {
                 </List>
                 <List>
                     <h3>Informations</h3>
-                    <Link to="/over-ons">Contact Us</Link>
+                    <Link to="/over-ons">Over ons</Link>
                     <Link to="/contact">Contact Us</Link>
                     <Link to="/cookies">Cookies</Link>
                     <Link to="/algemene-voorwaarden">Algemene Voorwaarden</Link>
