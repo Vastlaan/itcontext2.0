@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
+import { IntlProvider } from "react-intl";
 // components
 import Nav from "./components/navigation";
 import Landing from "./components/landing";
@@ -12,12 +13,14 @@ function App() {
 
     return (
         <div>
-            <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-                <GlobalStyle />
-                <Nav />
-                <Landing />
-                <Footer />
-            </ThemeProvider>
+            <IntlProvider locale="en">
+                <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+                    <GlobalStyle />
+                    <Nav />
+                    <Landing />
+                    <Footer />
+                </ThemeProvider>
+            </IntlProvider>
         </div>
     );
 }

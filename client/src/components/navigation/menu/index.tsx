@@ -1,13 +1,33 @@
 import React from "react";
+import { IntlShape } from "react-intl";
 import styled from "styled-components";
 import { fonts, respond } from "../../../styles";
 
-export default function Menu() {
+interface MenuProps {
+    intl: IntlShape;
+}
+export default function Menu(props: MenuProps) {
+    const { intl } = props;
     return (
         <Container>
-            <li>Web Design</li>
-            <li>SEO Optimalisation</li>
-            <li>Online marketing</li>
+            <li>
+                {intl.formatMessage({
+                    id: "navigation.menu-1",
+                    defaultMessage: "Web Design",
+                })}
+            </li>
+            <li>
+                {intl.formatMessage({
+                    id: "navigation.menu-2",
+                    defaultMessage: "SEO Optimalisation",
+                })}
+            </li>
+            <li>
+                {intl.formatMessage({
+                    id: "navigation.menu-1",
+                    defaultMessage: "Online marketing",
+                })}
+            </li>
         </Container>
     );
 }
