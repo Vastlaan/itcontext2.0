@@ -1,9 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { fonts, respond } from "../../styles";
 
 export default function Logo() {
-    return <Container>IT Context</Container>;
+    return (
+        <Link to="/" style={{ textDecoration: "none" }}>
+            <Container>IT Context</Container>
+        </Link>
+    );
 }
 const Container = styled.h1`
     display: flex;

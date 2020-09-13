@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { IntlShape } from "react-intl";
 import styled from "styled-components";
 import { fonts, respond } from "../../../styles";
@@ -10,24 +11,24 @@ export default function Menu(props: MenuProps) {
     const { intl } = props;
     return (
         <Container>
-            <li>
+            <Link to="/website-ontwerpen">
                 {intl.formatMessage({
                     id: "navigation.menu-1",
                     defaultMessage: "Web Design",
                 })}
-            </li>
-            <li>
+            </Link>
+            <Link to="/online-marketing">
                 {intl.formatMessage({
                     id: "navigation.menu-2",
                     defaultMessage: "SEO Optimalisation",
                 })}
-            </li>
-            <li>
+            </Link>
+            <Link to="/online-marketing">
                 {intl.formatMessage({
                     id: "navigation.menu-1",
                     defaultMessage: "Online marketing",
                 })}
-            </li>
+            </Link>
         </Container>
     );
 }
@@ -38,7 +39,8 @@ const Container = styled.ul`
     flex: 1;
     ${() => respond("l", "display: flex;")}
 
-    li {
+    a {
+        text-decoration: none;
         flex: 1;
         padding: 0.5rem;
         display: flex;

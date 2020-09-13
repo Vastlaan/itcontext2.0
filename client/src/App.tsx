@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { IntlProvider } from "react-intl";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // components
 import Nav from "./components/navigation";
 import Landing from "./components/landing";
@@ -16,9 +17,13 @@ function App() {
             <IntlProvider locale="en">
                 <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
                     <GlobalStyle />
-                    <Nav />
-                    <Landing />
-                    <Footer />
+                    <Router>
+                        <Nav />
+                        <Switch>
+                            <Route path="/" exact component={Landing} />
+                        </Switch>
+                        <Footer />
+                    </Router>
                 </ThemeProvider>
             </IntlProvider>
         </div>
