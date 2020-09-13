@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { fonts, Social, respond } from "../../styles";
@@ -9,16 +10,17 @@ export default function Main() {
             <ListGroup>
                 <List>
                     <h3>Services</h3>
-                    <a href="/website-ontwerpen">Web Design</a>
-                    <a href="/website-ontwerpen">Web Development</a>
-                    <a href="/online-marketing">Online Marketing</a>
-                    <a href="/online-marketing">SEO optimalisation</a>
+                    <Link to="/website-ontwerpen">Web Design</Link>
+                    <Link to="/website-ontwerpen">Web Development</Link>
+                    <Link to="/online-marketing">Online Marketing</Link>
+                    <Link to="/online-marketing">SEO optimalisation</Link>
                 </List>
                 <List>
                     <h3>Informations</h3>
-                    <a href="/contact">Contact Us</a>
-                    <a href="/cookies">Cookies</a>
-                    <a href="/algemene-voorwaarden">Algemene Voorwaarden</a>
+                    <Link to="/over-ons">Contact Us</Link>
+                    <Link to="/contact">Contact Us</Link>
+                    <Link to="/cookies">Cookies</Link>
+                    <Link to="/algemene-voorwaarden">Algemene Voorwaarden</Link>
                 </List>
             </ListGroup>
 

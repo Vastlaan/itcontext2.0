@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { RiHeart2Fill } from "react-icons/ri";
 import { fonts } from "../../styles";
@@ -11,7 +12,7 @@ export default function Copyright() {
                 <p>Designed with</p>
                 <RiHeart2Fill />
                 <p>
-                    by <a href="/">IT Context</a>
+                    by <Link to="/">IT Context</Link>
                 </p>
             </Credits>
         </Container>
