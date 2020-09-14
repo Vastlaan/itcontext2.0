@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { IntlProvider } from "react-intl";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -11,10 +11,25 @@ import { lightTheme, darkTheme, respond } from "./styles";
 
 function App() {
     const [isDarkTheme, setIsDarkTheme] = useState(false);
+    const [ten, setTen] = useState({});
+
+    const language = navigator.language.split(/[-_]/)[0]; // language without region code
+
+    useEffect(() => {
+        const fetchTranslation = async () => {
+            const res = await fetch(
+                "https://michalantczakblogresources.s3.eu-central-1.amazonaws.com/itcontext/translation-en.json"
+            );
+            const data = await res.json();
+
+            setTen(data);
+        };
+        fetchTranslation();
+    }, []);
 
     return (
         <div>
-            <IntlProvider locale="en">
+            <IntlProvider locale={language} messages={ten}>
                 <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
                     <GlobalStyle />
                     <Router>
