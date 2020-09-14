@@ -42,6 +42,6 @@ const Text = styled.div`
 `;
 const Image = styled.div`
     align-self: flex-end;
-
-    height: 10rem;
+    height: 30rem;
+    ${() => respond("s", "height: 10rem;")}
 `;

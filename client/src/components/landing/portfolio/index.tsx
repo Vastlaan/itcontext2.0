@@ -17,8 +17,8 @@ export default function Protfolio() {
 
 const Container = styled.section`
     position: relative;
-
-    background-color: ${(props) => props.theme.grey};
+    margin: 10rem 0;
+    background-color: ${(props) => props.theme.primary};
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
