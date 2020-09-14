@@ -18,8 +18,8 @@ export const Button = styled.button`
         background-color: transparent;
         color: ${(props) => props.theme.primary};
     }
-    &::active,
-    ::focus {
+    &:active,
+    :focus {
         outline: none;
     }
 `;
