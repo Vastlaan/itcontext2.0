@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import BackgroundCenterImage from "../../../img/image-portfolio-center.jpg";
 import { fonts, respond } from "../../../styles";
 
 export default function Back() {
@@ -25,12 +24,18 @@ const Container = styled.div`
     grid-area: back;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     background-color: white;
+    overflow: hidden;
+
+    ${() => respond("m", "align-items: flex-end;")}
 `;
 const Text = styled.div`
-    max-width: 50%;
-    margin-bottom: 10rem;
+    max-width: 80%;
+    margin-bottom: 2rem;
+    margin-top: 10rem;
+    ${() => respond("s", "max-width: 50%;")}
+    ${() => respond("m", "margin-bottom: 10rem;margin-top: 2rem;")}
 
     p {
         font-family: ${fonts.cormoran};
@@ -52,8 +57,8 @@ const Circles = styled.div`
     &::after {
         content: "";
         position: absolute;
-        top: -10%;
-        left: -10%;
+        top: -20%;
+        left: -20%;
 
         width: 15rem;
         height: 15rem;

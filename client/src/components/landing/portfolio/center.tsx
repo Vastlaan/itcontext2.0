@@ -29,9 +29,9 @@ const Container = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -70%);
+    transform: translate(-50%, -100%);
     z-index: 1;
-    ${() => respond("s", "transform: translate(-50%, -50%);")};
+    ${() => respond("m", "transform: translate(-50%, -50%);")};
 `;
 const SmallText = styled.div`
     font-size: 1.5rem;
