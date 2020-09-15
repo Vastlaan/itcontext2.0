@@ -6,12 +6,14 @@ import {
     BlockText,
     BlockImage,
     BlockButton,
+    BlockInfo,
 } from "../../../styles";
 import Image1 from "../../../img/image-story-1.jpg";
 
 export default function Ux() {
     return (
         <BlockContentReverse>
+            <BlockInfo>Intuitive navigation</BlockInfo>
             <BlockHeader>User friendly experience</BlockHeader>
             <BlockText>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -31,6 +33,7 @@ const BlockContentReverse = styled.div`
     display: grid;
     grid-row-gap: 2rem;
     grid-template-areas:
+        "info info info info info info"
         "head head head head head head"
         "img img img img img img"
         "text text text text text text"
@@ -40,6 +43,7 @@ const BlockContentReverse = styled.div`
         respond(
             "s",
             `grid-template-areas:
+            ". . . info info info"
         " img img img head head head"
         "img img img text text text "
         "img img img btn btn btn ";`

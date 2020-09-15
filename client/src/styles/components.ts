@@ -45,6 +45,15 @@ export const Social = styled.div`
     }
 `;
 
+export const BlockInfo = styled.p`
+    grid-area: info;
+    font-family: ${fonts.advent};
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: ${(props) => props.theme.grey};
+    border-left: 5px solid ${(props) => props.theme.fresh};
+    padding-left: 1rem;
+`;
 export const BlockHeader = styled.h2`
     grid-area: head;
 
@@ -59,7 +68,7 @@ export const BlockText = styled.p`
     font-size: 2rem;
     font-family: ${fonts.cormoran};
     text-align: center;
-    padding: 0rem 2rem;
+    padding: 1rem;
     letter-spacing: 0.2rem;
 `;
 export const BlockImage = styled.div`

@@ -4,6 +4,7 @@ import { fonts } from "./fonts";
 import {
     Button,
     Social,
+    BlockInfo,
     BlockButton,
     BlockHeader,
     BlockImage,
@@ -17,6 +18,7 @@ export {
     fonts,
     Button,
     Social,
+    BlockInfo,
     BlockText,
     BlockImage,
     BlockHeader,
