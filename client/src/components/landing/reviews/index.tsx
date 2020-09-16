@@ -1,20 +1,39 @@
 import React from "react";
 import styled from "styled-components";
-import { fonts } from "../../../styles";
-import { ImStarFull, ImStarHalf } from "react-icons/im";
+import Header from "./header";
+import Review from "./review";
+import Face1 from "../../../img/image-review-1.jpg";
 
 export default function Reviews() {
     return (
         <Container>
-            <Header>
-                <h3>Customers Rating</h3>
-                <Line></Line>
-                <p>
-                    We listen to our customers and always try to improve based
-                    on their feedback.
-                </p>
-                <p>Listen to what they say about us.</p>
-            </Header>
+            <Header />
+            <Review
+                image={Face1}
+                title="Mijn bedrijf eigen website"
+                date="09-10-2020"
+                stars={[1, 2, 3, 4]}
+                text={`Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nesciunt modi officia, voluptate molestias sapiente commodi
+                voluptatum delectus amet odio consectetur veniam accusamus
+                distinctio voluptatibus. Ex, deserunt! Animi dolores autem
+                excepturi atque voluptatum deserunt officia, eos accusamus.
+                Maxime magni, corrupti vero ipsum nostrum exercitationem.
+                Voluptatem, vero assumenda aut quasi blanditiis eos.`}
+            />
+            <Review
+                image={Face1}
+                title="Professionele website"
+                date="29-09-2020"
+                stars={[1, 2, 3, 4, 5]}
+                text={`Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nesciunt modi officia, voluptate molestias sapiente commodi
+                voluptatum delectus amet odio consectetur veniam accusamus
+                distinctio voluptatibus. Ex, deserunt! Animi dolores autem
+                excepturi atque voluptatum deserunt officia, eos accusamus.
+                Maxime magni, corrupti vero ipsum nostrum exercitationem.
+                Voluptatem, vero assumenda aut quasi blanditiis eos.`}
+            />
         </Container>
     );
 }
@@ -22,26 +41,4 @@ export default function Reviews() {
 const Container = styled.section`
     margin-bottom: 10rem;
     padding: 2rem;
-`;
-const Header = styled.div`
-    h3 {
-        font-family: ${fonts.advent};
-        font-weight: 500;
-        font-size: 4rem;
-        color: ${(props) => props.theme.grey};
-        text-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
-    }
-    p {
-        max-width: 50%;
-        font-family: ${fonts.cormoran};
-        font-size: 2rem;
-        color: ${(props) => props.theme.grey};
-    }
-`;
-const Line = styled.div`
-    margin: 1rem 0;
-    width: 50%;
-    height: 0.1px;
-    background-color: ${(props) => props.theme.greyLight};
-    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
 `;
