@@ -45,7 +45,7 @@ const SmallTextTurned = styled.div`
     font-size: 1.5rem;
     font-family: ${fonts.advent};
     letter-spacing: 0.3rem;
-    color: snow;
+    color: ${(props) => props.theme.grey};
     position: absolute;
     bottom: 2rem;
     left: 2rem;
@@ -73,6 +73,12 @@ const Eye = styled.div`
     background-position: center;
     z-index: 10;
 
+    &:hover {
+        a {
+            color: ${(props) => props.theme.greyLight};
+        }
+    }
+
     a {
         font-family: ${fonts.advent};
         font-size: 6rem;
@@ -80,9 +86,5 @@ const Eye = styled.div`
         color: snow;
         cursor: pointer;
         transition: all 0.3s;
-
-        &:hover {
-            color: ${(props) => props.theme.greyLight};
-        }
     }
 `;

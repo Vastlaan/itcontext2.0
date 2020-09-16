@@ -31,13 +31,13 @@ const Header = styled.h1`
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.4rem;
-    color: ${(props) => props.theme.fresh};
+    color: ${(props) => props.theme.primaryLight};
 `;
 const Text = styled.div`
     margin: 4rem 0;
     font-family: ${fonts.gayathri};
     font-size: 3rem;
-    color: ${(props) => props.theme.greyLight};
+    color: ${(props) => props.theme.grey};
 `;
 const Image = styled.div`
     align-self: flex-end;
