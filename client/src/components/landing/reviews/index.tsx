@@ -10,12 +10,10 @@ export default function Reviews() {
                 <h3>Customers Rating</h3>
                 <Line></Line>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Suscipit atque laudantium consequuntur adipisci, commodi
-                    veritatis quas exercitationem quisquam quidem hic eligendi
-                    qui, accusantium vitae ipsam? Natus ad quasi voluptatem
-                    fugiat!
+                    We listen to our customers and always try to improve based
+                    on their feedback.
                 </p>
+                <p>Listen to what they say about us.</p>
             </Header>
         </Container>
     );
