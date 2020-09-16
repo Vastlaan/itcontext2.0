@@ -31,7 +31,6 @@ const Header = styled.h1`
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.4rem;
-    text-shadow: 0.2rem 0.2rem 0.1rem rgba(255, 255, 255, 1);
     color: ${(props) => props.theme.fresh};
 `;
 const Text = styled.div`
