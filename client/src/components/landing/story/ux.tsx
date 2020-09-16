@@ -9,11 +9,14 @@ import {
     BlockInfo,
 } from "../../../styles";
 import Image1 from "../../../img/image-story-1.jpg";
+import { RiHeart2Fill } from "react-icons/ri";
 
 export default function Ux() {
     return (
         <BlockContentReverse>
-            <BlockInfo>Intuitive navigation</BlockInfo>
+            <BlockInfoReversed style={{ textAlign: "right" }}>
+                Intuitive navigation
+            </BlockInfoReversed>
             <BlockHeader>User friendly experience</BlockHeader>
             <BlockText>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -21,6 +24,10 @@ export default function Ux() {
                 tenetur officia quae fuga.
             </BlockText>
             <BlockImage>
+                <Icon>
+                    <RiHeart2Fill />
+                </Icon>
+
                 <img src={Image1} alt="great user experience" />
             </BlockImage>
             <BlockButton>Contact us</BlockButton>
@@ -43,9 +50,25 @@ const BlockContentReverse = styled.div`
         respond(
             "s",
             `grid-template-areas:
-            ". . . info info info"
+            "img img img info info info"
         " img img img head head head"
         "img img img text text text "
         "img img img btn btn btn ";`
         )}
+`;
+const BlockInfoReversed = styled(BlockInfo)`
+    border-left: none;
+    border-right: 5px solid ${(props) => props.theme.fresh};
+    text-align: right;
+`;
+const Icon = styled.div`
+    padding: 2rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 5;
+    svg {
+        font-size: 4rem;
+        color: ${(props) => props.theme.warm};
+    }
 `;

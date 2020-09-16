@@ -9,6 +9,7 @@ import {
     BlockButton,
 } from "../../../styles";
 import Image2 from "../../../img/image-story-2.jpg";
+import { FaHubspot } from "react-icons/fa";
 
 export default function Responsive() {
     return (
@@ -22,6 +23,10 @@ export default function Responsive() {
                 everyone and everywhere can enjoy your content.
             </BlockText>
             <BlockImage>
+                <Icon>
+                    <FaHubspot />
+                </Icon>
+
                 <img src={Image2} alt="responsive design website" />
             </BlockImage>
             <BlockButton>Our Work</BlockButton>
@@ -44,10 +49,21 @@ const BlockContent = styled.div`
         respond(
             "s",
             `grid-template-areas:
-            "info info info info info info"
+            "info info info img img img"
         "head head head img img img"
         "text text text img img img"
         "btn btn btn img img img";
         padding: 2rem 0rem;`
         )}
+`;
+const Icon = styled.div`
+    padding: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 5;
+    svg {
+        font-size: 4rem;
+        color: ${(props) => props.theme.primary};
+    }
 `;

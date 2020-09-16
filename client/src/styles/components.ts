@@ -52,7 +52,8 @@ export const BlockInfo = styled.p`
     text-transform: uppercase;
     color: ${(props) => props.theme.grey};
     border-left: 5px solid ${(props) => props.theme.fresh};
-    padding-left: 1rem;
+    padding: 0rem 1rem;
+    margin: 0 1rem;
 `;
 export const BlockHeader = styled.h2`
     grid-area: head;
@@ -72,6 +73,7 @@ export const BlockText = styled.p`
     letter-spacing: 0.2rem;
 `;
 export const BlockImage = styled.div`
+    position: relative;
     grid-area: img;
     overflow: hidden;
     img {
