@@ -13,6 +13,7 @@ import Voorwaarden from "./components/voorwaarden";
 import Webdev from "./components/webdev";
 import Footer from "./components/footer";
 import NotFound from "./components/not-found";
+import ScrollToTop from "./components/scroll-to-top";
 // styles
 import { lightTheme, darkTheme, respond } from "./styles";
 
@@ -39,7 +40,9 @@ function App() {
             <IntlProvider locale={language} messages={ten}>
                 <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
                     <GlobalStyle />
+
                     <Router>
+                        <ScrollToTop />
                         <Nav />
                         <Switch>
                             <Route path="/" exact component={Landing} />
