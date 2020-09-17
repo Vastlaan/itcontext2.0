@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
-import { fonts, respond } from "../../styles";
+import { fonts, respond, Anchor, Button } from "../../styles";
 import { FiPhoneCall, FiMail, FiMapPin } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 
@@ -139,14 +139,12 @@ function Contact() {
                             ) => setMessage(e.target?.value)}
                         ></textarea>
                     </Field>
-                    <Button>
-                        <button type="submit">
-                            {intl.formatMessage({
-                                id: "contactFormButton",
-                                defaultMessage: "Versturen",
-                            })}
-                        </button>
-                    </Button>
+                    <CustomButton type="submit">
+                        {intl.formatMessage({
+                            id: "contactFormButton",
+                            defaultMessage: "Versturen",
+                        })}
+                    </CustomButton>
                 </Form>
 
                 <Details id="klantenservice">
@@ -169,14 +167,14 @@ function Contact() {
                                 "Heb je een vraag voor mij? Neem gerust contact met mij op via de onderstaande contactgegevens.",
                         })}
                     </p>
-                    <Box href="tel:0682307051">
+                    <Anchor color="#117864" href="tel:0682307051">
                         <FiPhoneCall />
-                        <p>06 82 30 70 51</p>
-                    </Box>
-                    <Box href="mailTo:info@itcontext.nl">
+                        <span>06 82 30 70 51</span>
+                    </Anchor>
+                    <Anchor color="#006A93" href="mailTo:info@itcontext.nl">
                         <FiMail />
-                        <p>info@itcontext.nl</p>
-                    </Box>
+                        <span>info@itcontext.nl</span>
+                    </Anchor>
                 </Details>
                 {displayConfirmation ? (
                     <Confirmation>
@@ -270,33 +268,10 @@ const Field = styled.div`
     }
 `;
 
-const Button = styled.div`
-     display: flex;
+const CustomButton = styled(Button)`
+    display: flex;
     justify-content: center;
     margin: 2rem auto 5rem auto;
-
-    button {
-      border: none;
-      border-radius: 5px;
-      padding: 1rem 4rem;
-      background-color: ${(props) => props.theme.secondary};
-      color: white;
-      font-familly: "Courier New", sans-serif;
-      font-size: 2rem;
-      letter-spacing:.2rem;
-      transition: all 0.3s;
-      cursor: pointer;
-
-      &:focus {
-        outline: none;
-        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
-      }
-
-      &:hover {
-        background-color:  ${(props) => props.theme.secondaryLight};
-      }
-    }
-  }
 `;
 
 const Details = styled.div`
@@ -325,43 +300,6 @@ const Details = styled.div`
         font-size: 2rem;
         color: ${(props) => props.theme.grey};
     }
-`;
-const Box = styled.a`
-
-    font-family: ${fonts.advent};
-    text-decoration: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: 2rem auto;
-    padding: 2rem;
-    border: 1px solid ${(props) => props.theme.secondary};
-    transition: all 0.3s;
-
-    
-    &:hover {
-      background-color: ${(props) => props.theme.bg};
-      cursor: pointer;
-    }
-    
-
-    svg {
-      font-size: 3rem;
-      color: ${(props) => props.theme.secondary};
-    }
-    p {
-      font-size: 2.5rem;
-      font-weight: 900;
-      color: ${(props) => props.theme.grey};
-    }
-    div{
-        flex: 0 0 70%;
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-    }
-  }
 `;
 
 const Confirmation = styled.div`
