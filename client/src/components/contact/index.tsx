@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
-import { fonts, respond, Anchor, Button } from "../../styles";
-import { FiPhoneCall, FiMail, FiMapPin } from "react-icons/fi";
-import { MdClose } from "react-icons/md";
+//components
+import Form from "./form";
+import Details from "./details";
+import Confirmation from "./confirmation";
+import { fonts, respond, Anchor, Button, PageNav } from "../../styles";
 
 function Contact() {
     interface DataToSend {
@@ -69,138 +71,37 @@ function Contact() {
     };
     return (
         <Container>
-            {/* <Nav>
+            <PageNav>
                 <p>
                     <Link to="/">
-                        {intl.formatMessage({ id: "navigationHome" })}
+                        {intl.formatMessage({
+                            id: "navigationHome",
+                            defaultMessage: "Voorpagina",
+                        })}
                     </Link>
                     {" > "}
                     <Link to="/contact">
-                        {intl.formatMessage({ id: "contactNavCurrent" })}
+                        {intl.formatMessage({
+                            id: "contactNavCurrent",
+                            defaultMessage: "Contact",
+                        })}
                     </Link>
                 </p>
-            </Nav> */}
+            </PageNav>
             <Main>
-                <Form onSubmit={submitContactForm}>
-                    <h1>
-                        {intl.formatMessage({
-                            id: "contactFormHeaderMain",
-                            defaultMessage: "Contact Formulier",
-                        })}
-                    </h1>
-                    <p>
-                        {intl.formatMessage({
-                            id: "contactFormHeaderSub",
-                            defaultMessage:
-                                "Heb je een vraag of opmerking? Vul dan onderstaand contactformulier in, ik streef ernaar om je vraag binnen 3 werkdagen te beantwoorden. Heb je een vraag over een van ons dienst? Vermeld dan het in onderstaand formulier:",
-                        })}
-                    </p>
-                    {warning ? <div>{warning}</div> : null}
-                    <Field>
-                        <label>
-                            {intl.formatMessage({
-                                id: "contactFormField1",
-                                defaultMessage: "Naam",
-                            })}
-                        </label>
-                        <input
-                            name="contact_name"
-                            type="text"
-                            onChange={(e) => setName(e.target.value)}
-                        />
-                    </Field>
-                    <Field>
-                        <label>
-                            {intl.formatMessage({
-                                id: "contactFormField2",
-                                defaultMessage: "Email",
-                            })}
-                        </label>
-                        <input
-                            name="contact_email"
-                            type="email"
-                            required
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                    </Field>
-                    <Field>
-                        <label>
-                            {intl.formatMessage({
-                                id: "contactFormField3",
-                                defaultMessage: "Bericht",
-                            })}
-                        </label>
-                        <textarea
-                            name="contact_msg"
-                            maxLength={500}
-                            required
-                            onChange={(
-                                e: React.ChangeEvent<HTMLTextAreaElement>
-                            ) => setMessage(e.target?.value)}
-                        ></textarea>
-                    </Field>
-                    <CustomButton type="submit">
-                        {intl.formatMessage({
-                            id: "contactFormButton",
-                            defaultMessage: "Versturen",
-                        })}
-                    </CustomButton>
-                </Form>
+                <Form
+                    setEmail={setEmail}
+                    setName={setName}
+                    setMessage={setMessage}
+                    warning={warning}
+                    submitContactForm={submitContactForm}
+                />
 
-                <Details id="klantenservice">
-                    <h1>
-                        {intl.formatMessage({
-                            id: "contactDetailsHeaderMain",
-                            defaultMessage: "Klantenservice",
-                        })}
-                    </h1>
-                    <h3>
-                        {intl.formatMessage({
-                            id: "contactDetailsHeaderSub1",
-                            defaultMessage: "IK BEN JE GRAAG VAN DIENST",
-                        })}
-                    </h3>
-                    <p>
-                        {intl.formatMessage({
-                            id: "contactDetailsHeaderSub2",
-                            defaultMessage:
-                                "Heb je een vraag voor mij? Neem gerust contact met mij op via de onderstaande contactgegevens.",
-                        })}
-                    </p>
-                    <Anchor color="#117864" href="tel:0682307051">
-                        <FiPhoneCall />
-                        <span>06 82 30 70 51</span>
-                    </Anchor>
-                    <Anchor color="#006A93" href="mailTo:info@itcontext.nl">
-                        <FiMail />
-                        <span>info@itcontext.nl</span>
-                    </Anchor>
-                </Details>
+                <Details />
                 {displayConfirmation ? (
-                    <Confirmation>
-                        <div onClick={() => setDisplayConfirmation(false)}>
-                            <MdClose />
-                        </div>
-                        <h1>
-                            {intl.formatMessage({
-                                id: "contactConfirmation1",
-                                defaultMessage: "Bedankt voor uw bericht! .",
-                            })}
-                        </h1>
-                        <h1>
-                            {intl.formatMessage({
-                                id: "ontactConfirmation1",
-                                defaultMessage:
-                                    "Ik zal met u zo spoedig mogelijk contact opnemen",
-                            })}
-                        </h1>
-                        <a
-                            href="#"
-                            onClick={() => setDisplayConfirmation(false)}
-                        >
-                            <span>Ok</span>
-                        </a>
-                    </Confirmation>
+                    <Confirmation
+                        setDisplayConfirmation={setDisplayConfirmation}
+                    />
                 ) : null}
             </Main>
         </Container>
@@ -216,135 +117,5 @@ const Main = styled.div`
 
     ${() => respond("l", "flex-direction: row;")}
 `;
-const Form = styled.form`
-    flex: 0 0 60%;
-    padding: 2rem;
-    font-family: ${fonts.advent};
 
-    h1 {
-        font-size: 3.2rem;
-        font-weight: 300;
-        letter-spacing: 0.3rem;
-        text-align: center;
-        text-transform: uppercase;
-        color: ${(props) => props.theme.grey};
-    }
-    p {
-        margin: 2rem auto;
-        font-family: ${fonts.cormoran};
-        font-size: 2rem;
-        color: ${(props) => props.theme.grey};
-    }
-`;
-
-const Field = styled.div`
-    display: flex;
-    justify-content: flex-end;
-    margin: 2rem auto;
-
-    label {
-        margin-right: 2rem;
-        font-size: 2rem;
-        color: ${(props) => props.theme.grey};
-    }
-
-    input,
-    textarea {
-        width: 70%;
-        padding: 1rem;
-        font-family: ${fonts.cormoran};
-        font-size: 1.8rem;
-        border: 1px solid ${(props) => props.theme.primary};
-
-        ${() => respond("l", "width: 50%;")}
-
-        &:focus {
-            outline: none;
-            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
-        }
-    }
-    textarea {
-        height: 20rem;
-    }
-`;
-
-const CustomButton = styled(Button)`
-    display: flex;
-    justify-content: center;
-    margin: 2rem auto 5rem auto;
-`;
-
-const Details = styled.div`
-    flex: 0 0 40%;
-    padding: 2rem;
-    font-family: ${fonts.advent};
-
-    h1 {
-        font-size: 2.8rem;
-        font-weight: 900;
-        text-align: center;
-        text-transform: uppercase;
-        color: ${(props) => props.theme.grey};
-    }
-
-    h3 {
-        font-size: 2rem;
-        font-weight: 700;
-        text-align: center;
-        text-transform: lowercase;
-        color: ${(props) => props.theme.grey};
-    }
-    p {
-        margin: 1rem auto;
-        font-family: ${fonts.cormoran};
-        font-size: 2rem;
-        color: ${(props) => props.theme.grey};
-    }
-`;
-
-const Confirmation = styled.div`
-    font-family: ${fonts.advent};
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 99;
-
-    div {
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        svg {
-            color: ${(props) => props.theme.bg};
-            font-size: 5rem;
-            cursor: pointer;
-        }
-    }
-
-    h1 {
-        font-family: ${fonts.advent};
-        font-size: 3rem;
-        color: ${(props) => props.theme.bg};
-    }
-
-    a {
-        margin-top: 2rem;
-        color: ${(props) => props.theme.bg};
-        border: 1px solid ${(props) => props.theme.bg};
-        font-size: 2.2rem;
-        text-decoration: none;
-        padding: 1rem 2rem;
-        cursor: pointer;
-    }
-`;
 export default Contact;

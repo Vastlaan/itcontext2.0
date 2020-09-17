@@ -11,6 +11,7 @@ import {
     BlockText,
     Anchor,
     PageNav,
+    Confirmation,
 } from "./components";
 
 export {
@@ -27,4 +28,5 @@ export {
     BlockButton,
     Anchor,
     PageNav,
+    Confirmation,
 };

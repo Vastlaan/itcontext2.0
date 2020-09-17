@@ -142,3 +142,49 @@ export const PageNav = styled.div`
         font-size: 2rem;
     }
 `;
+
+export const Confirmation = styled.div`
+    font-family: ${fonts.advent};
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+
+    div {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            color: ${(props) => props.theme.bg};
+            font-size: 5rem;
+            cursor: pointer;
+        }
+    }
+
+    h1 {
+        font-family: ${fonts.advent};
+        font-size: 3rem;
+        color: ${(props) => props.theme.bg};
+    }
+
+    a {
+        margin-top: 2rem;
+        color: ${(props) => props.theme.bg};
+        border: 1px solid ${(props) => props.theme.bg};
+        font-size: 2.2rem;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        cursor: pointer;
+    }
+`;
