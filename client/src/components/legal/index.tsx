@@ -280,9 +280,12 @@ const Main = styled.section`
     }
     ul {
         padding: 2rem;
-        font-family: ${fonts.cormoran};
-        color: ${(props) => props.theme.primary};
         font-size: 1.8rem;
+
+        &li {
+            font-family: ${fonts.cormoran};
+            color: ${(props) => props.theme.greyDark};
+        }
     }
     p,
     ul {
