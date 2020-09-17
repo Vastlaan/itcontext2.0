@@ -6,7 +6,7 @@ export default function Error() {
     return (
         <Container>
             <h1>Error: 404</h1>
-            <h1>Page not Fond</h1>
+            <h1>Page not Found</h1>
             <h1>:-/</h1>
         </Container>
     );
