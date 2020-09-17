@@ -5,7 +5,14 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // components
 import Nav from "./components/navigation";
 import Landing from "./components/landing";
+import About from "./components/about";
+import Contact from "./components/contact";
+import Legal from "./components/legal";
+import Marketing from "./components/marketing";
+import Voorwaarden from "./components/voorwaarden";
+import Webdev from "./components/webdev";
 import Footer from "./components/footer";
+import NotFound from "./components/not-found";
 // styles
 import { lightTheme, darkTheme, respond } from "./styles";
 
@@ -36,6 +43,25 @@ function App() {
                         <Nav />
                         <Switch>
                             <Route path="/" exact component={Landing} />
+                            <Route path="/over-ons" exact component={About} />
+                            <Route path="/contact" exact component={Contact} />
+                            <Route path="/cookies" exact component={Legal} />
+                            <Route
+                                path="/online-marketing"
+                                exact
+                                component={Marketing}
+                            />
+                            <Route
+                                path="/website-ontwerpen"
+                                exact
+                                component={Webdev}
+                            />
+                            <Route
+                                path="/algemene-voorwaarden"
+                                exact
+                                component={Voorwaarden}
+                            />
+                            <Route component={NotFound} />
                         </Switch>
                         <Footer />
                     </Router>
