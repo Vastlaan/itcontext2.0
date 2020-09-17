@@ -10,6 +10,7 @@ import {
     BlockImage,
     BlockText,
     Anchor,
+    PageNav,
 } from "./components";
 
 export {
@@ -25,4 +26,5 @@ export {
     BlockHeader,
     BlockButton,
     Anchor,
+    PageNav,
 };

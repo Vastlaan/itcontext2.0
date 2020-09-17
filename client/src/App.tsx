@@ -40,7 +40,6 @@ function App() {
             <IntlProvider locale={language} messages={ten}>
                 <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
                     <GlobalStyle />
-
                     <Router>
                         <ScrollToTop />
                         <Nav />

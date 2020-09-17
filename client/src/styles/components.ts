@@ -130,3 +130,15 @@ export const Anchor = styled.a`
         font-family: ${fonts.advent};
     }
 `;
+
+export const PageNav = styled.div`
+    padding: 2rem;
+    p,
+    a {
+        font-family: ${fonts.advent};
+        text-decoration: none;
+        font-weight: 400;
+        color: ${(props) => props.theme.primary};
+        font-size: 2rem;
+    }
+`;
