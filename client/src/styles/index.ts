@@ -9,6 +9,7 @@ import {
     BlockHeader,
     BlockImage,
     BlockText,
+    Anchor,
 } from "./components";
 
 export {
@@ -23,4 +24,5 @@ export {
     BlockImage,
     BlockHeader,
     BlockButton,
+    Anchor,
 };

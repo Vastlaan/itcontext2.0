@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { fonts, Social } from "../../../styles";
+import { fonts, Social, Anchor } from "../../../styles";
 import { BsInfoCircle } from "react-icons/bs";
 import { RiPhoneLine, RiMailLine } from "react-icons/ri";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
@@ -90,40 +90,5 @@ const Actions = styled.div`
         text-align: center;
         font-size: 2rem;
         font-family: ${fonts.cormoran};
-    }
-`;
-const Anchor = styled.a`
-    width: 30rem;
-    text-decoration: none;
-    padding: 1rem 3rem;
-    margin: 2rem auto;
-    display: flex;
-    justify-content: center;
-    border: 1px solid transparent;
-    background-color: ${(props) => props.color};
-    border-radius: 3px;
-    transition: all 0.3s;
-
-    &:hover {
-        background-color: transparent;
-        border: 1px solid ${(props) => props.color};
-
-        svg {
-            color: ${(props) => props.color};
-        }
-        span {
-            color: ${(props) => props.color};
-        }
-    }
-    svg {
-        margin-right: 2rem;
-        align-self: center;
-        font-size: 4rem;
-        color: snow;
-    }
-    span {
-        color: snow;
-        font-size: 3rem;
-        font-family: ${fonts.advent};
     }
 `;
