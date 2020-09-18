@@ -13,26 +13,33 @@ import { FaHubspot } from "react-icons/fa";
 
 export default function Responsive() {
     return (
-        <BlockContent>
-            <BlockInfo>Responsive Websites</BlockInfo>
-            <BlockHeader>Websites for every device</BlockHeader>
-            <BlockText>
-                In the era of mobile world your users might want to reach you in
-                different places, using various devices. That's why we design
-                our websites where every diameter has its right place. So that
-                everyone and everywhere can enjoy your content.
-            </BlockText>
-            <BlockImage>
-                <Icon>
-                    <FaHubspot />
-                </Icon>
+        <Container>
+            <BlockContent>
+                <BlockInfo>Responsive Websites</BlockInfo>
+                <BlockHeader>Websites for every device</BlockHeader>
+                <BlockText>
+                    In the era of mobile world your users might want to reach
+                    you in different places, using various devices. That's why
+                    we design our websites where every diameter has its right
+                    place. So that everyone and everywhere can enjoy your
+                    content.
+                </BlockText>
+                <BlockImage>
+                    <Icon>
+                        <FaHubspot />
+                    </Icon>
 
-                <img src={Image2} alt="responsive design website" />
-            </BlockImage>
-            <BlockButton>Our Work</BlockButton>
-        </BlockContent>
+                    <img src={Image2} alt="responsive design website" />
+                </BlockImage>
+                <BlockButton>Our Work</BlockButton>
+            </BlockContent>
+        </Container>
     );
 }
+const Container = styled.section`
+    margin: 5rem 0rem;
+    ${() => respond("m", "margin:2rem;")}
+`;
 const BlockContent = styled.div`
     margin-bottom: 10rem;
 

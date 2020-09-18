@@ -13,27 +13,33 @@ import { RiHeart2Fill } from "react-icons/ri";
 
 export default function Ux() {
     return (
-        <BlockContentReverse>
-            <BlockInfoReversed style={{ textAlign: "right" }}>
-                Intuitive navigation
-            </BlockInfoReversed>
-            <BlockHeader>User friendly experience</BlockHeader>
-            <BlockText>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti consequatur provident dolor ea saepe voluptatibus at,
-                tenetur officia quae fuga.
-            </BlockText>
-            <BlockImage>
-                <Icon>
-                    <RiHeart2Fill />
-                </Icon>
+        <Container>
+            <BlockContentReverse>
+                <BlockInfoReversed style={{ textAlign: "right" }}>
+                    Intuitive navigation
+                </BlockInfoReversed>
+                <BlockHeader>User friendly experience</BlockHeader>
+                <BlockText>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Corrupti consequatur provident dolor ea saepe voluptatibus
+                    at, tenetur officia quae fuga.
+                </BlockText>
+                <BlockImage>
+                    <Icon>
+                        <RiHeart2Fill />
+                    </Icon>
 
-                <img src={Image1} alt="great user experience" />
-            </BlockImage>
-            <BlockButton>Contact us</BlockButton>
-        </BlockContentReverse>
+                    <img src={Image1} alt="great user experience" />
+                </BlockImage>
+                <BlockButton>Contact us</BlockButton>
+            </BlockContentReverse>
+        </Container>
     );
 }
+const Container = styled.section`
+    margin: 5rem 0rem;
+    ${() => respond("m", "margin:2rem;")}
+`;
 const BlockContentReverse = styled.div`
     margin-bottom: 10rem;
     padding: 2rem 0rem;
