@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
-import { fonts, Social, Anchor } from "../../../styles";
+import { fonts, Social, Anchor, Text } from "../../../styles";
 import { BsInfoCircle } from "react-icons/bs";
 import { RiPhoneLine, RiMailLine } from "react-icons/ri";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
@@ -23,12 +23,12 @@ export default function Bait() {
                 </h3>
             </Head>
             <Actions>
-                <p>
+                <Text>
                     {intl.formatMessage({
                         id: "landing.header-info-2",
                         defaultMessage: "tot uw dienst",
                     })}
-                </p>
+                </Text>
                 <Anchor color="#117864" href="tel:0031682307051">
                     <RiPhoneLine />
                     <span>06 82 30 70 51</span>
@@ -37,12 +37,12 @@ export default function Bait() {
                     <RiMailLine />
                     <span>info@itcontext.nl</span>
                 </Anchor>
-                <p>
+                <Text>
                     {intl.formatMessage({
                         id: "landing.header-info-3",
                         defaultMessage: "Volg ons",
                     })}
-                </p>
+                </Text>
                 <Social>
                     <a href="https://facebook.com">
                         <FaFacebook color="darkblue" />
@@ -102,7 +102,5 @@ const Actions = styled.div`
     p {
         width: 100%;
         text-align: center;
-        font-size: 2rem;
-        font-family: ${fonts.cormoran};
     }
 `;

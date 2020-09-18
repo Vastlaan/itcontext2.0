@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
-import { fonts, respond } from "../../../styles";
+import { fonts, respond, Text } from "../../../styles";
 import { RiShieldStarLine } from "react-icons/ri";
 import { FaBlackTie, FaRegHandshake } from "react-icons/fa";
 
@@ -31,13 +31,13 @@ export default function Info() {
                                     "Elegante en gestructureerde website",
                             })}
                         </h3>
-                        <p>
+                        <Text>
                             {intl.formatMessage({
                                 id: "landing.header-1-text",
                                 defaultMessage:
                                     "Wij maken websites die uw bedrijf vertegenwoordigen in de moderne en chique stijl. Maak het intuïtief om te navigeren en gemakkelijk te gebruiken.",
                             })}
-                        </p>
+                        </Text>
                     </div>
                 </Block>
                 <Block>
@@ -53,13 +53,13 @@ export default function Info() {
                                     "Elegante en gestructureerde website",
                             })}
                         </h3>
-                        <p>
+                        <Text>
                             {intl.formatMessage({
                                 id: "landing.header-2-text",
                                 defaultMessage:
                                     "Elegante en gestructureerde website",
                             })}
-                        </p>
+                        </Text>
                     </div>
                 </Block>
                 <Block>
@@ -75,13 +75,13 @@ export default function Info() {
                                     "Onderscheid je van de concurrentie",
                             })}
                         </h3>
-                        <p>
+                        <Text>
                             {intl.formatMessage({
                                 id: "landing.header-3-text",
                                 defaultMessage:
                                     "Elegante en gestructureerde website",
                             })}
-                        </p>
+                        </Text>
                     </div>
                 </Block>
             </Details>
@@ -145,11 +145,6 @@ const Block = styled.div`
             font-family: ${fonts.advent};
             font-size: 2.5rem;
             color: ${(props) => props.theme.primary};
-        }
-        p {
-            font-family: ${fonts.cormoran};
-            font-size: 2rem;
-            color: ${(props) => props.theme.greyDark};
         }
     }
 `;

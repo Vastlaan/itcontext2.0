@@ -188,3 +188,10 @@ export const Confirmation = styled.div`
         cursor: pointer;
     }
 `;
+
+export const Text = styled.p`
+    font-family: ${fonts.cormoran};
+    font-size: 2rem;
+    color: ${(props) => props.theme.greyDark};
+    letter-spacing: 0.2rem;
+`;

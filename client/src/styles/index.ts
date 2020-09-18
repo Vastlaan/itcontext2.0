@@ -12,6 +12,7 @@ import {
     Anchor,
     PageNav,
     Confirmation,
+    Text,
 } from "./components";
 
 export {
@@ -29,4 +30,5 @@ export {
     Anchor,
     PageNav,
     Confirmation,
+    Text,
 };
