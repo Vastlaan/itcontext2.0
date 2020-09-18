@@ -23,8 +23,8 @@ export default function Review(props: ReviewProps) {
             <Title>{title}</Title>
             <Date>{date}</Date>
             <Stars>
-                {stars.map((s) => (
-                    <RiStarSFill />
+                {stars.map((s, i) => (
+                    <RiStarSFill key={`${s}-${i}`} />
                 ))}
             </Stars>
             <Text>{text}</Text>
