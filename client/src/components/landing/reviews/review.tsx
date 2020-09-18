@@ -65,6 +65,7 @@ const Title = styled.h6`
     color: ${(props) => props.theme.primary};
 `;
 const Date = styled.p`
+    text-align: right;
     grid-area: date;
     font-family: ${fonts.advent};
     font-size: 2rem;
