@@ -1,12 +1,21 @@
 import React from "react";
 import styled from "styled-components";
+import { useIntl } from "react-intl";
 import { fonts, respond } from "../../../styles";
 import { RiShieldStarLine } from "react-icons/ri";
 import { FaBlackTie, FaRegHandshake } from "react-icons/fa";
+
 export default function Info() {
+    const intl = useIntl();
+
     return (
         <Container>
-            <Header>Design inspired by beauty</Header>
+            <Header>
+                {intl.formatMessage({
+                    id: "landing.header-main",
+                    defaultMessage: "Moderne website & creatief ontwerp",
+                })}
+            </Header>
             <Circles />
             <Details>
                 <Block>
@@ -15,11 +24,19 @@ export default function Info() {
                     </Icon>
 
                     <div>
-                        <h3>Elegant and structured website</h3>
+                        <h3>
+                            {intl.formatMessage({
+                                id: "landing.header-1-header",
+                                defaultMessage:
+                                    "Elegante en gestructureerde website",
+                            })}
+                        </h3>
                         <p>
-                            We create websites, which represent your company in
-                            the modern and chick style. Make it intuitive to
-                            navigate and easy to use.
+                            {intl.formatMessage({
+                                id: "landing.header-1-text",
+                                defaultMessage:
+                                    "Wij maken websites die uw bedrijf vertegenwoordigen in de moderne en chique stijl. Maak het intuïtief om te navigeren en gemakkelijk te gebruiken.",
+                            })}
                         </p>
                     </div>
                 </Block>
@@ -30,13 +47,18 @@ export default function Info() {
 
                     <div>
                         <h3>
-                            Reach the right audience and convince them to
-                            contact you
+                            {intl.formatMessage({
+                                id: "landing.header-2-header",
+                                defaultMessage:
+                                    "Elegante en gestructureerde website",
+                            })}
                         </h3>
                         <p>
-                            We will let your potential customers find you easy
-                            and build solid fundamentals to concern them to
-                            choose your products and services.
+                            {intl.formatMessage({
+                                id: "landing.header-2-text",
+                                defaultMessage:
+                                    "Elegante en gestructureerde website",
+                            })}
                         </p>
                     </div>
                 </Block>
@@ -46,10 +68,19 @@ export default function Info() {
                     </Icon>
 
                     <div>
-                        <h3>Stand out from the competition</h3>
+                        <h3>
+                            {intl.formatMessage({
+                                id: "landing.header-3-header",
+                                defaultMessage:
+                                    "Onderscheid je van de concurrentie",
+                            })}
+                        </h3>
                         <p>
-                            We design delightful and unique websites and help
-                            you create valueable content.
+                            {intl.formatMessage({
+                                id: "landing.header-3-text",
+                                defaultMessage:
+                                    "Elegante en gestructureerde website",
+                            })}
                         </p>
                     </div>
                 </Block>

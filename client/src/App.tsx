@@ -14,14 +14,18 @@ import Webdev from "./components/webdev";
 import Footer from "./components/footer";
 import NotFound from "./components/not-found";
 import ScrollToTop from "./components/scroll-to-top";
+// translations
+import En from "./translations/en.json";
+import Nl from "./translations/nl.json";
 // styles
 import { lightTheme, darkTheme, respond } from "./styles";
 
 function App() {
     const [isDarkTheme, setIsDarkTheme] = useState(false);
+    const [language, setLanguage] = useState("nl");
     const [ten, setTen] = useState({});
 
-    const language = navigator.language.split(/[-_]/)[0]; // language without region code
+    // const language = navigator.language.split(/[-_]/)[0]; // language without region code
 
     useEffect(() => {
         const fetchTranslation = async () => {
@@ -37,12 +41,15 @@ function App() {
 
     return (
         <div>
-            <IntlProvider locale={language} messages={ten}>
+            <IntlProvider
+                locale={language}
+                messages={language === "en" ? En : Nl}
+            >
                 <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
                     <GlobalStyle />
                     <Router>
                         <ScrollToTop />
-                        <Nav />
+                        <Nav setLanguage={setLanguage} />
                         <Switch>
                             <Route path="/" exact component={Landing} />
                             <Route path="/over-ons" exact component={About} />

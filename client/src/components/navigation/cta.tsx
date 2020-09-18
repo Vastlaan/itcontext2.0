@@ -5,13 +5,18 @@ import { RiMenu3Line } from "react-icons/ri";
 import NLFlag from "../../img/flag.svg";
 import ENFlag from "../../img/uk.svg";
 
-export default function Cta() {
+interface CtaProps {
+    setLanguage: React.Dispatch<React.SetStateAction<string>>;
+}
+export default function Cta(props: CtaProps) {
+    const { setLanguage } = props;
+
     return (
         <Container>
-            <Flag>
+            <Flag onClick={() => setLanguage("nl")}>
                 <img src={NLFlag} alt="nederlandse flag" />
             </Flag>
-            <Flag>
+            <Flag onClick={() => setLanguage("en")}>
                 <img src={ENFlag} alt="nederlandse flag" />
             </Flag>
             <Button>
@@ -53,9 +58,22 @@ const Button = styled.button`
     }
 `;
 
-const Flag = styled.div`
+const Flag = styled.button`
     width: 3.5rem;
     margin: 0rem 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:focus,
+    active {
+        outline: none;
+    }
 
     img {
         width: 100%;

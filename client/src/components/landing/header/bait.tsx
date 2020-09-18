@@ -1,24 +1,33 @@
 import React from "react";
 import styled from "styled-components";
+import { useIntl } from "react-intl";
 import { fonts, Social, Anchor } from "../../../styles";
 import { BsInfoCircle } from "react-icons/bs";
 import { RiPhoneLine, RiMailLine } from "react-icons/ri";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 
 export default function Bait() {
+    const intl = useIntl();
+
     return (
         <Container>
             <Head>
                 <Icon>
                     <BsInfoCircle />
                 </Icon>
-                <h3>at your service</h3>
+                <h3>
+                    {intl.formatMessage({
+                        id: "landing.header-info-1",
+                        defaultMessage: "tot uw dienst",
+                    })}
+                </h3>
             </Head>
             <Actions>
                 <p>
-                    We work during the working days from 9:00 till 17:00
-                    o'clock. But you can mail us also during the weekend. Our
-                    customer service is for your disposal.
+                    {intl.formatMessage({
+                        id: "landing.header-info-2",
+                        defaultMessage: "tot uw dienst",
+                    })}
                 </p>
                 <Anchor color="#117864" href="tel:0031682307051">
                     <RiPhoneLine />
@@ -28,7 +37,12 @@ export default function Bait() {
                     <RiMailLine />
                     <span>info@itcontext.nl</span>
                 </Anchor>
-                <p>Follow Us:</p>
+                <p>
+                    {intl.formatMessage({
+                        id: "landing.header-info-3",
+                        defaultMessage: "Volg ons",
+                    })}
+                </p>
                 <Social>
                     <a href="https://facebook.com">
                         <FaFacebook color="darkblue" />

@@ -6,14 +6,19 @@ import Menu from "./menu";
 import PhoneMenu from "./phoneMenu";
 import Cta from "./cta";
 
-export default function Nav() {
+interface NavProps {
+    setLanguage: React.Dispatch<React.SetStateAction<string>>;
+}
+export default function Nav(props: NavProps) {
+    const { setLanguage } = props;
     const intl = useIntl();
+
     return (
         <Container>
             <Logo />
             <Menu intl={intl} />
-            <PhoneMenu />
-            <Cta />
+            <PhoneMenu intl={intl} />
+            <Cta setLanguage={setLanguage} />
         </Container>
     );
 }

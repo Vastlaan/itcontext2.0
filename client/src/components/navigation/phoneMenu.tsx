@@ -1,13 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { IntlShape } from "react-intl";
 import { fonts, respond } from "../../styles";
 
-export default function Menu() {
+interface MenuProps {
+    intl: IntlShape;
+}
+
+export default function Menu(props: MenuProps) {
+    const { intl } = props;
+
     return (
         <Container>
-            <Link to="/website-otwerpen">Web Design</Link>
-            <Link to="/online-marketing">E-commerce</Link>
+            <Link to="/website-otwerpen">
+                {intl.formatMessage({
+                    id: "navigation.menu-1",
+                    defaultMessage: "Web Design",
+                })}
+            </Link>
+            <Link to="/online-marketing">
+                {intl.formatMessage({
+                    id: "navigation.menu-2",
+                    defaultMessage: "Online marketing",
+                })}
+            </Link>
         </Container>
     );
 }
