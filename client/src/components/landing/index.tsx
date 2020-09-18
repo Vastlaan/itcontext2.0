@@ -6,11 +6,11 @@ import Reviews from "./reviews";
 
 export default function Landing() {
     return (
-        <div>
+        <main>
             <Header />
             <Portfolio />
             <Story />
             <Reviews />
-        </div>
+        </main>
     );
 }
