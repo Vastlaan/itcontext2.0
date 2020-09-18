@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {
     respond,
+    fonts,
     BlockInfo,
     BlockHeader,
     BlockText,
@@ -9,6 +10,7 @@ import {
     BlockButton,
 } from "../../../styles";
 import Image2 from "../../../img/image-story-2.jpg";
+import Signature from "../../../img/signature.png";
 import { FaHubspot } from "react-icons/fa";
 
 export default function Responsive() {
@@ -24,11 +26,11 @@ export default function Responsive() {
                     place. So that everyone and everywhere can enjoy your
                     content.
                 </BlockText>
+                <Sign>
+                    <img src={Signature} alt="signature" />
+                    <p>Michal Antczak - fullstack developer</p>
+                </Sign>
                 <BlockImage>
-                    <Icon>
-                        <FaHubspot />
-                    </Icon>
-
                     <img src={Image2} alt="responsive design website" />
                 </BlockImage>
                 <BlockButton>Our Work</BlockButton>
@@ -38,29 +40,42 @@ export default function Responsive() {
 }
 const Container = styled.section`
     margin: 5rem 0rem;
-    ${() => respond("m", "margin:2rem;")}
+    ${() => respond("m", "margin:10rem auto;")}
 `;
 const BlockContent = styled.div`
     margin-bottom: 10rem;
-
+    padding: 2rem 0rem;
     display: grid;
     grid-row-gap: 2rem;
+    grid-template-columns: repeat(6, 1fr);
     grid-template-areas:
         "info info info info info info"
         "head head head head head head"
         "img img img img img img"
         "text text text text text text"
+        "sign sign sign sign sign sign"
         "btn btn btn btn btn btn";
-
     ${() =>
         respond(
-            "s",
+            "m",
             `grid-template-areas:
-            "info info info img img img"
-        "head head head img img img"
-        "text text text img img img"
-        "btn btn btn img img img";
-        padding: 2rem 0rem;`
+            "info info info info info info"
+        "head head head text text text"
+        "img img img text text text"
+        "img img img sign sign sign"
+        ". . . btn btn btn";
+        padding: 2rem 5rem;`
+        )}
+    ${() =>
+        respond(
+            "xl",
+            `grid-template-areas:
+            "info info info info info info"
+        "head head head text text text"
+        "img img . text text text"
+        "img img . sign sign sign"
+        "btn btn btn btn btn btn";
+        padding: 2rem 10rem;`
         )}
 `;
 const Icon = styled.div`
@@ -72,5 +87,22 @@ const Icon = styled.div`
     svg {
         font-size: 4rem;
         color: ${(props) => props.theme.primary};
+    }
+`;
+
+const Sign = styled.div`
+    grid-area: sign;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 70%;
+    }
+    p {
+        font-family: ${fonts.advent};
+        font-size: 1.4rem;
+        color: ${(props) => props.theme.grey};
     }
 `;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { fonts } from "./fonts";
+import { respond } from "./respond";
 
 export const Button = styled.button`
     margin: 1rem auto;
@@ -58,12 +59,13 @@ export const BlockInfo = styled.p`
 `;
 export const BlockHeader = styled.h2`
     grid-area: head;
-
-    text-align: center;
+    padding: 0 1rem;
     font-size: 3.5rem;
     font-family: ${fonts.gayathri};
     color: ${(props) => props.theme.grey};
     text-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+
+    ${() => respond("l", "padding: 0")}
 `;
 export const BlockText = styled.p`
     grid-area: text;

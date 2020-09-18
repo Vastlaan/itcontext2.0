@@ -25,14 +25,15 @@ const Container = styled.div`
 `;
 const Headline = styled.p`
     font-family: ${fonts.cormoran};
-    color: ${(props) => props.theme.primary};
+    color: ${(props) => props.theme.grey};
     font-size: 2rem;
     text-align: center;
 `;
 const Main = styled.p`
     font-family: ${fonts.advent};
-    color: ${(props) => props.theme.secondary};
-    font-size: 3rem;
+    color: ${(props) => props.theme.primaryLight};
+    font-size: 3.5rem;
+    font-weight: 600;
     width: 90%;
     text-align: center;
 
