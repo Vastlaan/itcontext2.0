@@ -21,9 +21,9 @@ export default function Header() {
                 <CustomButton>Read more</CustomButton>
             </Main>
             <Right>
-                <div>
+                <SideButton>
                     <BsChevronDoubleDown />
-                </div>
+                </SideButton>
             </Right>
         </Container>
     );
@@ -70,17 +70,21 @@ const Right = styled.div`
     align-items: center;
     justify-content: center;
     width: 50%;
+`;
 
-    div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 5rem;
-        border: 2px solid ${(props) => props.theme.secondary};
-        border-radius: 50%;
-    }
+const SideButton = styled(Button)`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: transparent;
+    border: 2px solid ${(props) => props.theme.secondary};
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3;
+
     svg {
         color: ${(props) => props.theme.secondary};
-        font-size: 10rem;
+        font-size: 8rem;
     }
 `;
