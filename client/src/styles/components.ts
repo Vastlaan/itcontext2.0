@@ -25,6 +25,7 @@ export const Button = styled.button`
 `;
 
 export const Social = styled.div`
+    margin: 2rem 0;
     width: 100%;
     display: flex;
     justify-content: center;
