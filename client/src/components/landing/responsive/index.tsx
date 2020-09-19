@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { useIntl } from "react-intl";
 import {
     respond,
     fonts,
@@ -11,29 +13,55 @@ import {
 } from "../../../styles";
 import Image2 from "../../../img/image-story-2.jpg";
 import Signature from "../../../img/signature.png";
-import { FaHubspot } from "react-icons/fa";
 
 export default function Responsive() {
+    const intl = useIntl();
+
     return (
         <Container>
             <BlockContent>
-                <BlockInfo>Responsive Websites</BlockInfo>
-                <BlockHeader>Websites for every device</BlockHeader>
+                <BlockInfo>
+                    {intl.formatMessage({
+                        id: "landing.responsive-info",
+                        defaultMessage: "Responsive Websites",
+                    })}
+                </BlockInfo>
+                <BlockHeader>
+                    {intl.formatMessage({
+                        id: "landing.responsive-header",
+                        defaultMessage:
+                            "Oogstrelende websites voor elk apparaat",
+                    })}
+                </BlockHeader>
                 <BlockText>
-                    In the era of mobile world your users might want to reach
-                    you in different places, using various devices. That's why
-                    we design our websites where every diameter has its right
-                    place. So that everyone and everywhere can enjoy your
-                    content.
+                    {intl.formatMessage({
+                        id: "landing.responsive-text",
+                        defaultMessage:
+                            "Onze technologie zorgt ervoor dat uw website vanaf verschillende apparaten toegankelijk is, snel laadt en uw bedrijf hoger scoort in de resultaten van zoekmachines",
+                    })}
                 </BlockText>
                 <Sign>
                     <img src={Signature} alt="signature" />
-                    <p>Michal Antczak - fullstack developer</p>
+                    <p>
+                        {intl.formatMessage({
+                            id: "landing.responsive-sign",
+                            defaultMessage:
+                                "Michal Antczak - fullstack developer",
+                        })}
+                    </p>
                 </Sign>
                 <BlockImage>
                     <img src={Image2} alt="responsive design website" />
                 </BlockImage>
-                <BlockButton>Our Work</BlockButton>
+
+                <BlockButton>
+                    <Link to="/contact">
+                        {intl.formatMessage({
+                            id: "landing.responsive-btn",
+                            defaultMessage: "Bestel uw professionele website",
+                        })}
+                    </Link>
+                </BlockButton>
             </BlockContent>
         </Container>
     );
@@ -77,17 +105,6 @@ const BlockContent = styled.div`
         "btn btn btn btn btn btn";
         padding: 2rem 10rem;`
         )}
-`;
-const Icon = styled.div`
-    padding: 2rem;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    z-index: 5;
-    svg {
-        font-size: 4rem;
-        color: ${(props) => props.theme.primary};
-    }
 `;
 
 const Sign = styled.div`

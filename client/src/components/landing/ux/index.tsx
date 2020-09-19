@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { useIntl } from "react-intl";
 import {
     respond,
     BlockHeader,
@@ -14,27 +16,53 @@ import Image1 from "../../../img/image-story-1.jpg";
 import { RiHeart2Fill } from "react-icons/ri";
 
 export default function Ux() {
+    const intl = useIntl();
+
     return (
         <Container>
             <BlockContent>
-                <BlockInfo>Intuitive navigation</BlockInfo>
-                <BlockHeader>User friendly experience</BlockHeader>
+                <BlockInfo>
+                    {intl.formatMessage({
+                        id: "landing.ux-info",
+                        defaultMessage: "Intuïtieve navigatie",
+                    })}
+                </BlockInfo>
+                <BlockHeader>
+                    {intl.formatMessage({
+                        id: "landing.ux-header",
+                        defaultMessage: "Gebruiksvriendelijke ervaring",
+                    })}
+                </BlockHeader>
                 <BlockText>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Corrupti consequatur provident dolor ea saepe voluptatibus
-                    at, tenetur officia quae fuga.
+                    {intl.formatMessage({
+                        id: "landing.ux-text",
+                        defaultMessage:
+                            "We analyseren wat er in het hoofd van uw klant gebeurt. Daarom is ons ontwerp erop gericht om uw publiek te laten groeien met mogelijk veel nieuwe klanten.",
+                    })}
                 </BlockText>
                 <List>
                     <p>
-                        <BsCheckCircle /> Lorem ipsum dolor sit.
+                        <BsCheckCircle />{" "}
+                        {intl.formatMessage({
+                            id: "landing.ux-check1",
+                            defaultMessage: "Uw gebruikers erbij betrokken",
+                        })}
                     </p>
                     <p>
-                        <BsCheckCircle /> Sa sit amet consectetur adipisicing
-                        elit.
+                        <BsCheckCircle />{" "}
+                        {intl.formatMessage({
+                            id: "landing.ux-check2",
+                            defaultMessage:
+                                "Intentional design met de nadruk op actie ondernemen",
+                        })}
                     </p>
                     <p>
-                        <BsCheckCircle /> Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit.
+                        <BsCheckCircle />{" "}
+                        {intl.formatMessage({
+                            id: "landing.ux-check3",
+                            defaultMessage:
+                                "Consistent en begrijpelijk ontwerp",
+                        })}
                     </p>
                 </List>
                 <BlockImage>
@@ -43,7 +71,14 @@ export default function Ux() {
                     </Icon>
                     <img src={Image1} alt="great user experience" />
                 </BlockImage>
-                <BlockButton>Contact us</BlockButton>
+                <BlockButton>
+                    <Link to="">
+                        {intl.formatMessage({
+                            id: "landing.ux-btn",
+                            defaultMessage: "Hoe u nieuwe klanten kunt werven",
+                        })}
+                    </Link>
+                </BlockButton>
             </BlockContent>
         </Container>
     );

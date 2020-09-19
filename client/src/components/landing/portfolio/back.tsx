@@ -1,15 +1,20 @@
 import React from "react";
+import { useIntl } from "react-intl";
 import styled from "styled-components";
 import { fonts, respond } from "../../../styles";
 
 export default function Back() {
+    const intl = useIntl();
+
     return (
         <Container>
             <Text>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-                    iusto incidunt accusantium laudantium unde est iure dicta
-                    tempora blanditiis tempore?
+                    {intl.formatMessage({
+                        id: "landing.portfolio-text",
+                        defaultMessage:
+                            "Onze werk is gekenmerkt door de continue ontwikkeling proces. Projecten zijn altijd met gebruik van de nieuweste technologieën, met passie en betrokkenheid uitgevoert",
+                    })}
                 </p>
             </Text>
             <Circles />

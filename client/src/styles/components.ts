@@ -18,6 +18,10 @@ export const Button = styled.button`
     &:hover {
         background-color: transparent;
         color: ${(props) => props.theme.primary};
+
+        a {
+            color: ${(props) => props.theme.primary};
+        }
     }
     &:active,
     :focus {
@@ -96,6 +100,15 @@ export const BlockImage = styled.div`
 export const BlockButton = styled(Button)`
     align-self: center;
     grid-area: btn;
+
+    a {
+        text-decoration: none;
+        color: ${(props) => props.theme.bg};
+
+        &:hover {
+            color: ${(props) => props.theme.primary};
+        }
+    }
 `;
 
 export const Anchor = styled.a`

@@ -117,7 +117,7 @@ const Circles = styled.div`
 `;
 const Header = styled.h1`
     font-family: ${fonts.gayathri};
-    font-size: 5rem;
+    font-size: 3.5rem;
     text-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
     color: ${(props) => props.theme.grey};
 `;
