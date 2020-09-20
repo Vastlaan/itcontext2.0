@@ -1,4 +1,5 @@
 import React from "react";
+import { useIntl } from "react-intl";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { fonts, respond } from "../../../styles";
@@ -6,14 +7,16 @@ import { fonts, respond } from "../../../styles";
 import BackgroundEye from "../../../img/image-portfolio-eye.jpg";
 
 export default function Center() {
+    const intl = useIntl();
+
     return (
         <Container>
             <SmallText>
                 <p>Creative solution</p>
             </SmallText>
             <Eye>
-                <Link to="/over-ons">PORT</Link>
-                <Link to="/over-ons">FOLIO</Link>
+                <Link to="/over-ons">OUR</Link>
+                <Link to="/over-ons">STORY</Link>
             </Eye>
             <SmallTextTurned>
                 <p>Custom design</p>

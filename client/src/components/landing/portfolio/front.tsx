@@ -1,11 +1,19 @@
 import React from "react";
+import { useIntl } from "react-intl";
 import styled from "styled-components";
 import { fonts, respond } from "../../../styles";
 
 export default function Front() {
+    const intl = useIntl();
+
     return (
         <Container>
-            <Header>Portfolio</Header>
+            <Header>
+                {intl.formatMessage({
+                    id: "landing.portfolio-header",
+                    defaultMessage: "Voorstelling",
+                })}
+            </Header>
             <Image></Image>
             <Text>
                 <p>We</p>
@@ -27,11 +35,13 @@ const Container = styled.div`
 `;
 const Header = styled.h1`
     font-family: ${fonts.gayathri};
-    font-size: 6rem;
+    font-size: 4.5rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.3rem;
     color: ${(props) => props.theme.primaryLight};
+
+    ${() => respond("s", "font-size: 6rem;")}
 `;
 const Text = styled.div`
     margin: 4rem 0;
