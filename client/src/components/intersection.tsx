@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { fonts, respond } from "../styles";
+import Curve from "../img/curve.svg";
 
 interface IntersectionProps {
     headline: string;
@@ -13,6 +14,9 @@ export default function Intersection(props: IntersectionProps) {
         <Container>
             <Headline>{headline}</Headline>
             <Main>{text}</Main>
+            <Image>
+                <img src={Curve} alt="curve decoration line" />
+            </Image>
         </Container>
     );
 }
@@ -22,6 +26,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 `;
 const Headline = styled.p`
     font-family: ${fonts.cormoran};
@@ -38,4 +43,18 @@ const Main = styled.p`
     text-align: center;
 
     ${() => respond("m", "width: 50%;")}
+`;
+
+const Image = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    heigth: 100%;
+    overflow-x: hidden;
+    z-index: -1;
+
+    img {
+        width: 100%;
+    }
 `;
