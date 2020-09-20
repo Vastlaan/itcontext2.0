@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { fonts, respond } from "../../styles";
+import { respond } from "../../styles";
 import { RiMenu3Line } from "react-icons/ri";
 import NLFlag from "../../img/flag.svg";
 import ENFlag from "../../img/uk.svg";

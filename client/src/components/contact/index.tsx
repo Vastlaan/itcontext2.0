@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import gsap from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -8,7 +8,7 @@ import { useIntl } from "react-intl";
 import Form from "./form";
 import Details from "./details";
 import Confirmation from "./confirmation";
-import { fonts, respond, Anchor, Button, PageNav } from "../../styles";
+import { respond, PageNav } from "../../styles";
 
 function Contact() {
     interface DataToSend {
@@ -16,7 +16,7 @@ function Contact() {
         email: string;
         message: string;
     }
-    const contact = useRef();
+    // const contact = useRef();
     const intl = useIntl();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");

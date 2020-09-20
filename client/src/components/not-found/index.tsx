@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { fonts, respond } from "../../styles";
+import { fonts } from "../../styles";
 
 export default function Error() {
     return (

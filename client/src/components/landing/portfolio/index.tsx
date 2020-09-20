@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Front from "./front";
 import Back from "./back";
 import Center from "./center";
-import { fonts, respond } from "../../../styles";
+import { respond } from "../../../styles";
 
 export default function Protfolio() {
     return (
