@@ -33,7 +33,8 @@ export default function Review(props: ReviewProps) {
 }
 
 const Container = styled.div`
-    padding: 0rem;
+    width: 100%;
+    padding: 0.5rem;
     margin: 2rem auto;
     background-color: ${(props) => props.theme.bg};
     border-radius: 3px;
@@ -55,7 +56,8 @@ const Container = styled.div`
         "img stars stars ."
         "img text text text"
         ". text text text";
-        padding: 1rem;`
+        padding: 1rem;
+        width: 90%;`
         )}
 `;
 const Image = styled.div`
