@@ -19,10 +19,10 @@ export default function Menu(props: MenuProps) {
                     defaultMessage: "Web Design",
                 })}
             </Link>
-            <Link to="/online-marketing">
+            <Link to="/contact">
                 {intl.formatMessage({
-                    id: "navigation.menu-2",
-                    defaultMessage: "Online marketing",
+                    id: "navigation.menu-3",
+                    defaultMessage: "Contact",
                 })}
             </Link>
         </Container>
