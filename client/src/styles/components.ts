@@ -195,14 +195,20 @@ export const Confirmation = styled.div`
         color: ${(props) => props.theme.bg};
     }
 
-    a {
+    a,
+    button {
         margin-top: 2rem;
         color: ${(props) => props.theme.bg};
         border: 1px solid ${(props) => props.theme.bg};
+        background-color: transparent;
         font-size: 2.2rem;
         text-decoration: none;
         padding: 1rem 2rem;
         cursor: pointer;
+        &:active,
+        :focus {
+            outline: none;
+        }
     }
 `;
 

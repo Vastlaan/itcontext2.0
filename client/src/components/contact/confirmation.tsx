@@ -28,9 +28,9 @@ export default function Conf(props: ConfirmationProps) {
                         "Ik zal met u zo spoedig mogelijk contact opnemen",
                 })}
             </h1>
-            <a href="#" onClick={() => setDisplayConfirmation(false)}>
+            <button onClick={() => setDisplayConfirmation(false)}>
                 <span>Ok</span>
-            </a>
+            </button>
         </Confirmation>
     );
 }
