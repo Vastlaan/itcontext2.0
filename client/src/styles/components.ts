@@ -98,6 +98,7 @@ export const BlockImage = styled.div`
 `;
 
 export const BlockButton = styled(Button)`
+    margin-top: 5rem;
     align-self: center;
     grid-area: btn;
 

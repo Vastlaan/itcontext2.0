@@ -144,8 +144,7 @@ const List = styled.div`
         width: 90%;
         display: flex;
         align-items: center;
-        text-align: center;
-        font-size: 1.8rem;
+        font-size: 2rem;
         font-family: ${fonts.cormoran};
         letter-spacing: 0.2rem;
 
