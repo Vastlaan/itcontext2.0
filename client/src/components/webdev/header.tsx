@@ -1,27 +1,52 @@
 import React from "react";
 import styled from "styled-components";
+import { useIntl } from "react-intl";
 import { fonts, Button } from "../../styles";
 import { BsChevronDoubleDown } from "react-icons/bs";
 import Image from "../../img/image-webdev-header.png";
 
 export default function Header() {
+    function scrollDown() {
+        return window.scrollTo({
+            top: 550,
+            left: 0,
+            behavior: "smooth",
+        });
+    }
+
+    const intl = useIntl();
+
     return (
         <Container>
             <Main>
-                <Head>Professionele Websites</Head>
-                <Head>aan uw behoeften</Head>
+                <Head>
+                    {intl.formatMessage({
+                        id: "webdev.header-header-1",
+                        defaultMessage: "Professionele Websites",
+                    })}
+                </Head>
+                <Head>
+                    {intl.formatMessage({
+                        id: "webdev.header-header-2",
+                        defaultMessage: "op maat van uw behoeften",
+                    })}
+                </Head>
                 <Text>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
-                    vel aliquam nulla illo quos esse quaerat sed velit nisi,
-                    dolore soluta, nemo quidem praesentium magni veniam quo,
-                    repellendus repellat cupiditate quibusdam possimus quisquam?
-                    Dolor eligendi quas doloremque earum quaerat illo excepturi
-                    debitis eum. Sequi, vel illum? Quae, amet tempora?
+                    {intl.formatMessage({
+                        id: "webdev.header-text",
+                        defaultMessage:
+                            "Onze brede aanbod onderscheidt zich door allerlei oplossingen. Wij realiseren zowel kleine als grote opdrachten, van eenvoudig maar krachtig websites tot complexe webapplicaties, e-mailadressen, Content Manager Systems en veel meer.",
+                    })}
                 </Text>
-                <CustomButton>Read more</CustomButton>
+                <CustomButton onClick={scrollDown}>
+                    {intl.formatMessage({
+                        id: "webdev.header-btn",
+                        defaultMessage: "Lees meer",
+                    })}
+                </CustomButton>
             </Main>
             <Right>
-                <SideButton>
+                <SideButton onClick={scrollDown}>
                     <BsChevronDoubleDown />
                 </SideButton>
             </Right>
@@ -31,7 +56,7 @@ export default function Header() {
 const Container = styled.header`
     padding: 2rem;
     background-image: url(${Image});
-    backgroung-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     height: 70vh;
@@ -85,6 +110,6 @@ const SideButton = styled(Button)`
 
     svg {
         color: ${(props) => props.theme.secondary};
-        font-size: 8rem;
+        font-size: 5rem;
     }
 `;
