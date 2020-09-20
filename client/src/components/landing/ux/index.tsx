@@ -141,6 +141,7 @@ const List = styled.div`
     align-items: center;
 
     p {
+        width: 90%;
         display: flex;
         align-items: center;
         text-align: center;
@@ -149,6 +150,8 @@ const List = styled.div`
         letter-spacing: 0.2rem;
 
         svg {
+            min-width: 20px;
+            min-height: 20px;
             margin-right: 1rem;
             color: ${(props) => props.theme.fresh};
         }
