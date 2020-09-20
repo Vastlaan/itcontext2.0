@@ -1,35 +1,95 @@
 import React from "react";
+import { useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { fonts, Social, respond } from "../../styles";
 
 export default function Main() {
+    const intl = useIntl();
+
     return (
         <Container>
             <ListGroup>
                 <List>
-                    <h3>Services</h3>
-                    <Link to="/website-ontwerpen">Web Design</Link>
-                    <Link to="/website-ontwerpen">Web Development</Link>
-                    <Link to="/online-marketing">Online Marketing</Link>
-                    <Link to="/online-marketing">SEO optimalisation</Link>
+                    <h3>
+                        {intl.formatMessage({
+                            id: "footer.services-header",
+                            defaultMessage: "Diensten",
+                        })}
+                    </h3>
+                    <Link to="/website-ontwerpen">
+                        {intl.formatMessage({
+                            id: "footer.services-1",
+                            defaultMessage: "Websites Ontwerpen",
+                        })}
+                    </Link>
+                    <Link to="/website-ontwerpen">
+                        {intl.formatMessage({
+                            id: "footer.services-2",
+                            defaultMessage: "Websites laten maken",
+                        })}
+                    </Link>
+                    <Link to="/online-marketing">
+                        {intl.formatMessage({
+                            id: "footer.services-3",
+                            defaultMessage: "Online Marketing",
+                        })}
+                    </Link>
+                    <Link to="/online-marketing">
+                        {intl.formatMessage({
+                            id: "footer.services-4",
+                            defaultMessage: "SEO Optimalizatie",
+                        })}
+                    </Link>
                 </List>
                 <List>
-                    <h3>Informations</h3>
-                    <Link to="/over-ons">Over ons</Link>
-                    <Link to="/contact">Contact Us</Link>
-                    <Link to="/cookies">Cookies</Link>
-                    <Link to="/algemene-voorwaarden">Algemene Voorwaarden</Link>
+                    <h3>
+                        {intl.formatMessage({
+                            id: "footer.information-header",
+                            defaultMessage: "Informatie",
+                        })}
+                    </h3>
+                    <Link to="/over-ons">
+                        {intl.formatMessage({
+                            id: "footer.information-1",
+                            defaultMessage: "Over Ons",
+                        })}
+                    </Link>
+                    <Link to="/contact">
+                        {intl.formatMessage({
+                            id: "footer.information-2",
+                            defaultMessage: "Contact",
+                        })}
+                    </Link>
+                    <Link to="/cookies">
+                        {intl.formatMessage({
+                            id: "footer.information-3",
+                            defaultMessage: "Cookies",
+                        })}
+                    </Link>
+                    <Link to="/algemene-voorwaarden">
+                        {intl.formatMessage({
+                            id: "footer.information-4",
+                            defaultMessage: "Algemene Voorwaarden",
+                        })}
+                    </Link>
                 </List>
             </ListGroup>
 
             <SocialMedia>
-                <h3>Follow us on Social Media</h3>
+                <h3>
+                    {intl.formatMessage({
+                        id: "footer.social-header",
+                        defaultMessage: "Volg Ons op Social Media",
+                    })}
+                </h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Praesentium aliquam nulla doloremque omnis iste nam soluta
-                    odit quidem eius nemo.
+                    {intl.formatMessage({
+                        id: "footer.social-text",
+                        defaultMessage:
+                            "Duik in ons bedrijf, leer ons beter kennen. Wees op te hoogte van onze aanbiediengen en maak een kennis met onze nieuweste prestaties. Wij zijn jong bedrijf, maar we hebben grote ambities.",
+                    })}
                 </p>
                 <Social style={{ justifyContent: "flex-start" }}>
                     <a href="https://facebook.com">

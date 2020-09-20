@@ -16,7 +16,7 @@
     "landing.intersection1-headline": "For any company that wants to grow online",
     "landing.intersection1-text": "Our goal is to provide affordable, good quality websites to all kinds of businesses. With your own e-mail address, SEO plan and Content Manager System.",
     "landing.intersection2-headline": "Friendly and professional approach to customers' needs",
-    "landing.intersection2-text": "We think along constructively with you and apply the best solutions. The collaboration is based on understanding your needs and responding to your comments",
+    "landing.intersection2-text": "We think along with you constructively and apply the best solutions. The collaboration is based on understanding your needs and responding to your expectations",
     "landing.responsive-info": "Responsive design",
     "landing.responsive-header": "Eye-candy websites for every device",
     "landing.responsive-text": "Our technology allows your website to be accessible from various devices, load fast and rank your business higher in the search engines results",
@@ -30,5 +30,20 @@
     "landing.ux-check1": "Get your users involved",
     "landing.ux-check2": "Intentional design with an emphasis on taking the action",
     "landing.ux-check3": "Consistent and understandable design",
-    "landing.ux-btn": "How to acquire new customers"
+    "landing.ux-btn": "How to acquire new customers",
+
+    "footer.copyright-rights": "All rights reserved.",
+    "footer.copyright-credits": "Designed with",
+    "footer.services-header": "Services",
+    "footer.services-1": "Web Design",
+    "footer.services-2": "Web Development",
+    "footer.services-3": "Online Marketing",
+    "footer.services-4": "SEO Optimisation",
+    "footer.information-header": "Information",
+    "footer.information-1": "About us",
+    "footer.information-2": "Contact",
+    "footer.information-3": "Cookies",
+    "footer.information-4": "Terms and Conditions",
+    "footer.social-header": "Follow Us on Social Media",
+    "footer.social-text": "Dive into our company, get to know us better. Be aware of our offers and discover our latest achievements. We are a young company, but we have great ambitions"
 }

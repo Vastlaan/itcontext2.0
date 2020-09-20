@@ -1,15 +1,29 @@
 import React from "react";
+import { useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { RiHeart2Fill } from "react-icons/ri";
 import { fonts } from "../../styles";
 
 export default function Copyright() {
+    const intl = useIntl();
+
     return (
         <Container>
-            <Year>&copy; {new Date().getFullYear()} All rights reserved.</Year>
+            <Year>
+                &copy; {new Date().getFullYear()}{" "}
+                {intl.formatMessage({
+                    id: "footer.copyright-rights",
+                    defaultMessage: "Alle rechten voorbehouden",
+                })}{" "}
+            </Year>
             <Credits>
-                <p>Designed with</p>
+                <p>
+                    {intl.formatMessage({
+                        id: "footer.copyright-credits",
+                        defaultMessage: "Ontworpen met",
+                    })}
+                </p>
                 <RiHeart2Fill />
                 <p>
                     by <Link to="/">IT Context</Link>
