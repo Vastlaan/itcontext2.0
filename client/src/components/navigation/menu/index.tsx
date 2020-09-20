@@ -49,7 +49,7 @@ const Container = styled.ul`
         justify-content: center;
         color: ${(props) => props.theme.bg};
         font-family: ${fonts.advent};
-        font-size: 2rem;
+        font-size: 2.5rem;
         cursor: pointer;
         transition: all 0.3s;
         text-align: center;

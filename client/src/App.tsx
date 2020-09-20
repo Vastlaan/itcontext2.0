@@ -104,5 +104,6 @@ const GlobalStyle = createGlobalStyle`
 
     body{
         overflow-x: hidden;
+        padding-top: 5.5rem;
     }
 `;

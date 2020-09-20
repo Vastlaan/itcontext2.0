@@ -24,9 +24,13 @@ export default function Nav(props: NavProps) {
 }
 
 const Container = styled.nav`
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     padding: 0rem;
     display: flex;
     background-color: ${(props) => props.theme.greyDark};
     line-height: 1;
+    z-index: 9;
 `;
