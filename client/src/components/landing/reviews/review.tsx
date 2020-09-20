@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { fonts } from "../../../styles";
+import { fonts, respond } from "../../../styles";
 
 import { RiStarSFill } from "react-icons/ri";
 
@@ -33,17 +33,30 @@ export default function Review(props: ReviewProps) {
 }
 
 const Container = styled.div`
-    padding: 1rem;
+    padding: 0rem;
     margin: 2rem auto;
     background-color: ${(props) => props.theme.bg};
     border-radius: 3px;
     display: grid;
+    grid-gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
+        "img title title title"
+        "img stars stars stars"
+        "text text text text"
+        "text text text text"
+        "date date date date";
+
+    ${() =>
+        respond(
+            "m",
+            `grid-template-areas:
         "img title title date"
         "img stars stars ."
         "img text text text"
         ". text text text";
+        padding: 1rem;`
+        )}
 `;
 const Image = styled.div`
     grid-area: img;
