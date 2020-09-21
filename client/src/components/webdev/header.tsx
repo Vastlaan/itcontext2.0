@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
-import { fonts, Button } from "../../styles";
+import { fonts, Button, respond } from "../../styles";
 import { BsChevronDoubleDown } from "react-icons/bs";
 import Image from "../../img/image-webdev-header.png";
 
@@ -59,15 +59,18 @@ const Container = styled.header`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 70vh;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    min-height: 70vh;
 `;
 
 const Main = styled.div`
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
+
+    ${() => respond("m", "width: 50%;")}
 `;
 const Head = styled.h1`
     color: snow;
@@ -76,6 +79,7 @@ const Head = styled.h1`
     letter-spacing: 0.3rem;
 `;
 const Text = styled.p`
+    margin: 3rem 0;
     color: snow;
     font-size: 2rem;
     font-family: ${fonts.cormoran};
@@ -91,17 +95,19 @@ const CustomButton = styled(Button)`
 `;
 
 const Right = styled.div`
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     width: 50%;
+
+    ${() => respond("m", "display: flex;")}
 `;
 
 const SideButton = styled(Button)`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 1rem;
     background-color: transparent;
     border: 2px solid ${(props) => props.theme.secondary};
     border-radius: 50%;
