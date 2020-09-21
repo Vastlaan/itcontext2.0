@@ -6,17 +6,20 @@ import Curve from "../img/curve.svg";
 interface IntersectionProps {
     headline: string;
     text: string;
+    background?: boolean;
 }
 export default function Intersection(props: IntersectionProps) {
-    const { headline, text } = props;
+    const { background, headline, text } = props;
 
     return (
         <Container>
             <Headline>{headline}</Headline>
             <Main>{text}</Main>
-            <Image>
-                <img src={Curve} alt="curve decoration line" />
-            </Image>
+            {background ? (
+                <Image>
+                    <img src={Curve} alt="curve decoration line" />
+                </Image>
+            ) : null}
         </Container>
     );
 }

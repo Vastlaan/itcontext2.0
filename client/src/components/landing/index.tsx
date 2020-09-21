@@ -24,6 +24,7 @@ export default function Landing() {
                     defaultMessage:
                         "Onze doel is om betaalbaar, goede kwaliteit websites aan allerlei ondernemingen te leveren. Met eigen e-mailadres, SEO plan en Content Manager System.",
                 })}
+                background={false}
             />
             <Portfolio />
             <Ux />
@@ -38,6 +39,7 @@ export default function Landing() {
                     defaultMessage:
                         "Wij denken met u constructief mee en passen de beste oplossingen. De samenwerking is gebaseerd op het begrijpen van uw behoeften en het reageren op uw opmerkingen",
                 })}
+                background={true}
             />
 
             <Reviews />
