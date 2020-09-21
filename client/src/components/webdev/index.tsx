@@ -5,7 +5,9 @@ import { fonts, PageNav } from "../../styles";
 import { useIntl } from "react-intl";
 import Cards from "./cards";
 import Intersection from "../intersection";
+import InfoStrip from "../infoStrip";
 import Header from "./header";
+import { FaHandshake } from "react-icons/fa";
 
 export default function Webdev() {
     const intl = useIntl();
@@ -13,6 +15,15 @@ export default function Webdev() {
     return (
         <Container>
             <Header />
+            <InfoStrip
+                text="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus autem veritatis numquam, quidem obcaecati doloremque
+                soluta eveniet. Harum sapiente impedit illo distinctio non
+                error. Iure provident eos illo totam?"
+                btn="Find your solution"
+                note="with IT Context"
+                icon={<FaHandshake />}
+            />
             <Cards />
             <Intersection
                 headline={intl.formatMessage({
