@@ -11,21 +11,21 @@ export default function Details() {
         <Container id="klantenservice">
             <h1>
                 {intl.formatMessage({
-                    id: "contactDetailsHeaderMain",
+                    id: "contact.details-header-main",
                     defaultMessage: "Klantenservice",
                 })}
             </h1>
             <h3>
                 {intl.formatMessage({
-                    id: "contactDetailsHeaderSub1",
-                    defaultMessage: "IK BEN JE GRAAG VAN DIENST",
+                    id: "contact.details-header-sub-1",
+                    defaultMessage: "WIJ ZIJN JE GRAAG VAN DIENST",
                 })}
             </h3>
             <p>
                 {intl.formatMessage({
-                    id: "contactDetailsHeaderSub2",
+                    id: "contact.details-header-sub-2",
                     defaultMessage:
-                        "Heb je een vraag voor mij? Neem gerust contact met mij op via de onderstaande contactgegevens.",
+                        "Heb je een vraag voor ons? Neem gerust contact met ons op via de onderstaande contactgegevens.",
                 })}
             </p>
             <Anchor color="#117864" href="tel:0682307051">

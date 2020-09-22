@@ -19,22 +19,22 @@ export default function Form(props: FormProps) {
         <Container onSubmit={submitContactForm}>
             <h1>
                 {intl.formatMessage({
-                    id: "contactFormHeaderMain",
+                    id: "contact.form-header-main",
                     defaultMessage: "Contact Formulier",
                 })}
             </h1>
             <p>
                 {intl.formatMessage({
-                    id: "contactFormHeaderSub",
+                    id: "contact.form-header-sub",
                     defaultMessage:
-                        "Heb je een vraag of opmerking? Vul dan onderstaand contactformulier in, ik streef ernaar om je vraag binnen 3 werkdagen te beantwoorden. Heb je een vraag over een van ons dienst? Vermeld dan het in onderstaand formulier:",
+                        "Heb je een vraag of opmerking? Vul dan onderstaand contactformulier in, wij streven ernaar om je vraag binnen 3 werkdagen te beantwoorden. Heb je een vraag over een van ons dienst? Vermeld dan het in onderstaand formulier:",
                 })}
             </p>
             {warning ? <div>{warning}</div> : null}
             <Field>
                 <label>
                     {intl.formatMessage({
-                        id: "contactFormField1",
+                        id: "contact.form-field-1",
                         defaultMessage: "Naam",
                     })}
                 </label>
@@ -47,8 +47,8 @@ export default function Form(props: FormProps) {
             <Field>
                 <label>
                     {intl.formatMessage({
-                        id: "contactFormField2",
-                        defaultMessage: "Email",
+                        id: "contact.form-field-2",
+                        defaultMessage: "E-mail",
                     })}
                 </label>
                 <input
@@ -61,7 +61,7 @@ export default function Form(props: FormProps) {
             <Field>
                 <label>
                     {intl.formatMessage({
-                        id: "contactFormField3",
+                        id: "contact.form-field-3",
                         defaultMessage: "Bericht",
                     })}
                 </label>
@@ -76,7 +76,7 @@ export default function Form(props: FormProps) {
             </Field>
             <CustomButton type="submit">
                 {intl.formatMessage({
-                    id: "contactFormButton",
+                    id: "contact.form-submit",
                     defaultMessage: "Versturen",
                 })}
             </CustomButton>

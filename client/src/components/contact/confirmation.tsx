@@ -17,15 +17,15 @@ export default function Conf(props: ConfirmationProps) {
             </div>
             <h1>
                 {intl.formatMessage({
-                    id: "contactConfirmation1",
-                    defaultMessage: "Bedankt voor uw bericht! .",
+                    id: "contact.confirmation-1",
+                    defaultMessage: "Bedankt voor uw bericht!",
                 })}
             </h1>
             <h1>
                 {intl.formatMessage({
-                    id: "contactConfirmation1",
+                    id: "contact.confirmation-2",
                     defaultMessage:
-                        "Ik zal met u zo spoedig mogelijk contact opnemen",
+                        "Wij zullen met u zo spoedig mogelijk contact opnemen.",
                 })}
             </h1>
             <button onClick={() => setDisplayConfirmation(false)}>

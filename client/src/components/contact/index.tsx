@@ -75,14 +75,14 @@ function Contact() {
                 <p>
                     <Link to="/">
                         {intl.formatMessage({
-                            id: "navigationHome",
+                            id: "contact.pagenav-home",
                             defaultMessage: "Voorpagina",
                         })}
                     </Link>
                     {" > "}
                     <Link to="/contact">
                         {intl.formatMessage({
-                            id: "contactNavCurrent",
+                            id: "contact.pagenav-current",
                             defaultMessage: "Contact",
                         })}
                     </Link>
