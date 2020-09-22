@@ -13,7 +13,7 @@ export default function Menu(props: MenuProps) {
 
     return (
         <Container>
-            <Link to="/website-otwerpen">
+            <Link to="/website-ontwerpen">
                 {intl.formatMessage({
                     id: "navigation.menu-1",
                     defaultMessage: "Web Design",
