@@ -36,7 +36,11 @@ const Container = styled.article`
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: 1fr;
-
+    grid-template-areas:
+        "head "
+        "para1 "
+        "para2 "
+        "para3";
     ${() =>
         respond(
             "m",
@@ -46,7 +50,6 @@ const Container = styled.article`
             "para1 para3" 
             "para2 para3" `
         )}
-
     &:after {
         content: "";
         position: absolute;
