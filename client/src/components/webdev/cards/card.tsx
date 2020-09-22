@@ -28,7 +28,12 @@ export default function Card(props: CardProps) {
             <Icon hovered={hovered}>{icon}</Icon>
             <Header hovered={hovered}>{header}</Header>
             <CardText hovered={hovered}>{text}</CardText>
-            <CardButton>{btn}</CardButton>
+            <Link
+                to={link}
+                style={{ textDecoration: "none", margin: "0 auto" }}
+            >
+                <CardButton>{btn}</CardButton>
+            </Link>
         </Container>
     );
 }

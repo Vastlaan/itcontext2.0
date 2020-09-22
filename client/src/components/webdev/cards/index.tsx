@@ -17,8 +17,8 @@ export default function Cards() {
         <div>
             <Container>
                 <Card
-                    btn="read more"
-                    link="/online-marketing"
+                    btn="secure websites"
+                    link="/website-ontwerpen"
                     hovered={true}
                     image={Image1}
                     icon={<GiCheckedShield />}
@@ -26,8 +26,8 @@ export default function Cards() {
                     text="Our websites are force to use encrypted protocols so that connection is safe and all the users data are protected. "
                 />
                 <Card
-                    btn="read more"
-                    link="/online-marketing"
+                    btn="more about us"
+                    link="/over-ons"
                     hovered={false}
                     translate={"10%"}
                     icon={<GiTechnoHeart />}
@@ -36,38 +36,7 @@ export default function Cards() {
                     text="We follow global trends and use newest, best working solutions"
                 />
                 <Card
-                    btn="read more"
-                    link="/online-marketing"
-                    hovered={false}
-                    translate={"20%"}
-                    icon={<GiChart />}
-                    image={Image2}
-                    header="Grow customers base"
-                    text="Our goal is to increase your audience, drag more visitors and convert them in your customers."
-                />
-            </Container>
-            <Container>
-                <Card
-                    btn="read more"
-                    link="/online-marketing"
-                    hovered={false}
-                    image={Image1}
-                    icon={<GiCheckedShield />}
-                    header="secure environment"
-                    text="Our websites are force to use encrypted protocols so that connection is safe and all the users data are protected. "
-                />
-                <Card
-                    btn="read more"
-                    link="/online-marketing"
-                    hovered={true}
-                    translate={"10%"}
-                    icon={<GiTechnoHeart />}
-                    image={Image3}
-                    header="newest technologies"
-                    text="We follow global trends and use newest, best working solutions"
-                />
-                <Card
-                    btn="read more"
+                    btn="marketing strategies"
                     link="/online-marketing"
                     hovered={false}
                     translate={"20%"}
