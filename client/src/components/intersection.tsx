@@ -24,7 +24,7 @@ export default function Intersection(props: IntersectionProps) {
     );
 }
 
-const Container = styled.div`
+const Container = styled.article`
     margin: 20rem auto;
     display: flex;
     flex-direction: column;

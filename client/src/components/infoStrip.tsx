@@ -25,7 +25,7 @@ export default function InfoStrip(props: InfoStripProps) {
     );
 }
 
-const Container = styled.div`
+const Container = styled.article`
     margin: 2rem auto;
     padding: 2rem;
     display: flex;
