@@ -5,7 +5,9 @@ import { fonts, Button, respond } from "../../styles";
 import Header from "./header";
 import Paragraph from "../paragraph";
 import Intersection from "../intersection";
+import InfoStrip from "../infoStrip";
 import Reviews from "./reviews";
+import { GiTakeMyMoney } from "react-icons/gi";
 
 export default function About() {
     const intl = useIntl();
@@ -46,7 +48,18 @@ export default function About() {
                 })}
                 background={true}
             />
+
             <Reviews />
+
+            <InfoStrip
+                text="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus autem veritatis numquam, quidem obcaecati doloremque
+                soluta eveniet. Harum sapiente impedit illo distinctio non
+                error. Iure provident eos illo totam?"
+                btn="Make profits"
+                note="with IT Context"
+                icon={<GiTakeMyMoney />}
+            />
         </Container>
     );
 }
