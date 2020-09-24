@@ -8,6 +8,7 @@ import Paragraph from "../paragraph";
 import Intersection from "../intersection";
 import InfoStrip from "../infoStrip";
 import Header from "./header";
+import Security from "./security";
 import { FaHandshake } from "react-icons/fa";
 
 export default function Webdev() {
@@ -70,23 +71,9 @@ export default function Webdev() {
                 })}
                 background={false}
             />
-            <Paragraph
-                heading="ipsum dolor sit"
-                para1="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus autem veritatis numquam, quidem obcaecati doloremque
-                soluta eveniet. Harum sapiente impedit illo distinctio non
-                error. Iure provident eos illo totam?"
-                para2="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus autem veritatis numquam, quidem obcaecati doloremque
-                soluta eveniet. Harum sapien?"
-                para3="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus autem veritatis numquam, quidem obcaecati doloremque
-                soluta eveniet. Harum sapiente impedit illo distinctio non
-                error. Iure provident eos illo totam?Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus autem veritatis numquam, quidem obcaecati doloremque
-                soluta eveniet. Harum sapiente impedit illo distinctio non
-                error. Iure provident eos illo totam?"
-            />
+
+            <Security />
+
             <InfoStrip
                 text="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Temporibus autem veritatis numquam, quidem obcaecati doloremque
