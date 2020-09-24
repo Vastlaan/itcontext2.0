@@ -1,5 +1,9 @@
 export const respond = (type: string, content: string): string | undefined => {
-    if (type === "s") {
+    if (type === "xs") {
+        return `@media only screen and (max-width: 320px){
+    ${content}
+  }`;
+    } else if (type === "s") {
         return `@media only screen and (min-width: 576px){
     ${content}
   }`;
