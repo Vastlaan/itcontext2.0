@@ -1,25 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
-import { fonts, Button, Text, respond } from "../../styles";
+import { fonts, Button, Text, respond, PageNav } from "../../styles";
 import ImageLong from "../../img/image-about-side.png";
 import ImageShort from "../../img/image-about-short.png";
 
 export default function Header() {
+    const intl = useIntl();
+
     return (
         <Container>
             <Head>
-                <h1 style={{ textAlign: "left" }}>
-                    Everything begins from one person{" "}
-                </h1>
+                <h1>Everything begins from one person </h1>
                 <br />
-                <h1 style={{ textAlign: "center" }}>
-                    single idea or important desicion,
-                </h1>
+                <h1>single idea or important desicion,</h1>
                 <br />
-                <h1 style={{ textAlign: "right" }}>
-                    which makes the significant change
-                </h1>
+                <h1>which makes the significant change</h1>
             </Head>
             <Info>
                 <h3>We belive in your idea</h3>
@@ -35,6 +32,23 @@ export default function Header() {
             <Long>
                 <img src={ImageLong} alt="business online laten groeien" />
             </Long>
+            <PageNavGrid>
+                <p>
+                    <Link to="/">
+                        {intl.formatMessage({
+                            id: "webdev.pagenav-home",
+                            defaultMessage: "Voorpagina",
+                        })}
+                    </Link>
+                    {" > "}
+                    <Link to="/over-ons">
+                        {intl.formatMessage({
+                            id: "webdev.pagenav-current",
+                            defaultMessage: "Over Ons",
+                        })}
+                    </Link>
+                </p>
+            </PageNavGrid>
         </Container>
     );
 }
@@ -44,10 +58,11 @@ const Container = styled.header`
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas:
-        "head head head head head head"
-        "head head head head head head"
+        "nav nav nav nav nav nav"
         "info info info info info info"
         "info info info info info info"
+        "head head head head head head"
+        "head head head head head head"
         "short short short short short short"
         "short short short short short short";
     grid-gap: 2rem;
@@ -59,8 +74,13 @@ const Container = styled.header`
         "head head head head long long"
         "head head head head long long"
         "info info short short long long"
-        "info info short short long long";`
+        "info info short short long long"
+        "nav nav nav nav nav nav";`
         )}
+`;
+
+const PageNavGrid = styled(PageNav)`
+    grid-area: nav;
 `;
 const Head = styled.div`
     grid-area: head;
@@ -72,6 +92,7 @@ const Head = styled.div`
         font-size: 2.5rem;
         color: ${(p) => p.theme.primaryLight};
         font-weight: 700;
+        text-align: center;
 
         ${() => respond("s", `font-size: 4rem;`)}
     }
