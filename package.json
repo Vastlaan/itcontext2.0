@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "description": "IT Context website",
     "main": "index.js",
+    "engines": {
+        "node": "12.x"
+    },
     "scripts": {
         "dev": " concurrently \"npm run server\" \"npm run client\" ",
         "client": "npm start --prefix client",
