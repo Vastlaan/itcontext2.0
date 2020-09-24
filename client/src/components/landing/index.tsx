@@ -3,7 +3,6 @@ import { useIntl } from "react-intl";
 import Header from "./header";
 import Portfolio from "./portfolio";
 import Responsive from "./responsive";
-import Reviews from "./reviews";
 import Ux from "./ux";
 import Intersection from "../intersection";
 
@@ -39,10 +38,8 @@ export default function Landing() {
                     defaultMessage:
                         "Wij denken met u constructief mee en passen de beste oplossingen. De samenwerking is gebaseerd op het begrijpen van uw behoeften en het reageren op uw opmerkingen",
                 })}
-                background={true}
+                background={false}
             />
-
-            <Reviews />
         </main>
     );
 }

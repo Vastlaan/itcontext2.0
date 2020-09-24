@@ -4,6 +4,8 @@ import { useIntl } from "react-intl";
 import { fonts, Button, respond } from "../../styles";
 import Header from "./header";
 import Paragraph from "../paragraph";
+import Intersection from "../intersection";
+import Reviews from "./reviews";
 
 export default function About() {
     const intl = useIntl();
@@ -32,6 +34,19 @@ export default function About() {
                         "Waarschijnlijk zou u toch meer van de website verwachten. U wilt dat uw klanten makkelijk online afspraak met u kunnen maken of een offerte aanvragen. Misschien wenst u dat elke klant een persoonlijke account kunt aanmaken en daardoor een toegang krijgen tot voor hem bedoelde inhoud. Heeft u een professionele e-mailadres nodig? IT Context biedt goedkoop e-mail, de prijzen beginnen vanaf 19 &euro; exclusief per jaar. Wilt u inhoud van uw website online beheren? Met ons krijg u toegang tot Content Manager System al vanaf 49 &euro; exclusief per jaar. IT Context helpt u ook met uw eigen webshop oprichten.  Kosten hangen er af van aantal paginas, producten en gewenste functionaliteit.  Er komen nog kleine maandelijke bedragen bij voor o.a. online betalen en server capaciteit.",
                 })}
             />
+            <Intersection
+                headline={intl.formatMessage({
+                    id: "landing.intersection1-headline",
+                    defaultMessage: "Voor elk bedrijf dat online wil groeien",
+                })}
+                text={intl.formatMessage({
+                    id: "landing.intersection1-text",
+                    defaultMessage:
+                        "Onze doel is om betaalbaar, goede kwaliteit websites aan allerlei ondernemingen te leveren. Met eigen e-mailadres, SEO plan en Content Manager System.",
+                })}
+                background={true}
+            />
+            <Reviews />
         </Container>
     );
 }
