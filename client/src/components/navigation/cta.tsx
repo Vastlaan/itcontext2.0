@@ -7,9 +7,10 @@ import ENFlag from "../../img/uk.svg";
 
 interface CtaProps {
     setLanguage: React.Dispatch<React.SetStateAction<string>>;
+    setDisplayMobileMenu: React.Dispatch<React.SetStateAction<boolean>>;
 }
 export default function Cta(props: CtaProps) {
-    const { setLanguage } = props;
+    const { setLanguage, setDisplayMobileMenu } = props;
 
     return (
         <Container>
@@ -19,7 +20,9 @@ export default function Cta(props: CtaProps) {
             <Flag onClick={() => setLanguage("en")}>
                 <img src={ENFlag} alt="nederlandse flag" />
             </Flag>
-            <Button>
+            <Button
+                onClick={() => setDisplayMobileMenu((prevState) => !prevState)}
+            >
                 <RiMenu3Line />
             </Button>
         </Container>
@@ -42,7 +45,7 @@ const Button = styled.button`
     transition: all 0.3s;
     cursor: pointer;
     display: block;
-    ${() => respond("l", "display: none;")}
+    ${() => respond("l", "display: block;")}
 
     &:hover {
         background-color: ${(props) => props.theme.primaryLight};
