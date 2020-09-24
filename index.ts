@@ -11,7 +11,8 @@ if (process.env.NODE_ENV === "production") {
         res.sendFile(path.resolve(__dirname, "client", "public", "index.html"));
     });
 }
+const PORT = process.env.PORT || 4670;
 
-app.listen(4670, () => {
-    console.log(`App is listening on port 4670`);
+app.listen(PORT, () => {
+    console.log(`App is listening on port ${PORT}`);
 });
