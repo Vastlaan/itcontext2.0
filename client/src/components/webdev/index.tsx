@@ -33,6 +33,9 @@ export default function Webdev() {
                     </Link>
                 </p>
             </PageNav>
+
+            <Cards />
+
             <Paragraph
                 heading={intl.formatMessage({
                     id: "webdev.paragraph-1-header",
@@ -54,7 +57,6 @@ export default function Webdev() {
                         "Waarschijnlijk zou u toch meer van de website verwachten. U wilt dat uw klanten makkelijk online afspraak met u kunnen maken of een offerte aanvragen. Misschien wenst u dat elke klant een persoonlijke account kunt aanmaken en daardoor een toegang krijgen tot voor hem bedoelde inhoud. Heeft u een professionele e-mailadres nodig? IT Context biedt goedkoop e-mail, de prijzen beginnen vanaf 19 &euro; exclusief per jaar. Wilt u inhoud van uw website online beheren? Met ons krijg u toegang tot Content Manager System al vanaf 49 &euro; exclusief per jaar. IT Context helpt u ook met uw eigen webshop oprichten.  Kosten hangen er af van aantal paginas, producten en gewenste functionaliteit.  Er komen nog kleine maandelijke bedragen bij voor o.a. online betalen en server capaciteit.",
                 })}
             />
-            <Cards />
 
             <Intersection
                 headline={intl.formatMessage({
