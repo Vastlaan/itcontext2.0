@@ -10,8 +10,7 @@
         "dev": " concurrently \"npm run server\" \"npm run client\" ",
         "client": "npm start --prefix client",
         "server": "ts-node-dev index.ts",
-        "start": "node index.js",
-        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+        "start": "node index.js"
     },
     "author": "",
     "license": "ISC",
