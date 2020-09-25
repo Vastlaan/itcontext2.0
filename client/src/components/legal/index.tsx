@@ -12,7 +12,7 @@ export default function Legal() {
                 <p>
                     <Link to="/">
                         {intl.formatMessage({
-                            id: "navigationHome",
+                            id: "navigation.menu-0",
                             defaultMessage: "Voorpagina",
                         })}
                     </Link>

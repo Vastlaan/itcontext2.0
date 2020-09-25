@@ -14,6 +14,7 @@ import Webdev from "./components/webdev";
 import Footer from "./components/footer";
 import NotFound from "./components/not-found";
 import ScrollToTop from "./components/scroll-to-top";
+import Cookies from "./components/cookies";
 // translations
 import En from "./translations/en.json";
 import Nl from "./translations/nl.json";
@@ -23,21 +24,57 @@ import { lightTheme, darkTheme, respond } from "./styles";
 function App() {
     const [isDarkTheme, setIsDarkTheme] = useState(false);
     const [language, setLanguage] = useState("nl");
-    const [ten, setTen] = useState({});
-
-    // const language = navigator.language.split(/[-_]/)[0]; // language without region code
+    const [cookies, setCookies] = useState({
+        display: true,
+        types: [
+            {
+                type: "necessary",
+                allow: true, // always true
+                components: [],
+            },
+            {
+                type: "analitycs",
+                allow: true, // always true
+                components: [],
+            },
+            {
+                type: "preferences",
+                allow: true, // always true
+                components: [],
+            },
+            {
+                type: "marketing",
+                allow: true, // always true
+                components: [],
+            },
+        ],
+    });
 
     useEffect(() => {
-        const fetchTranslation = async () => {
-            const res = await fetch(
-                "https://michalantczakblogresources.s3.eu-central-1.amazonaws.com/itcontext/translation-en.json"
-            );
-            const data = await res.json();
+        const cookiesPresets = window.localStorage.getItem("cookiesPresets");
 
-            setTen(data);
-        };
-        fetchTranslation();
+        if (cookiesPresets) {
+            const cookiesPresetsObject = JSON.parse(cookiesPresets);
+            return setCookies(cookiesPresetsObject);
+        }
     }, []);
+
+    // // Below code will be implement for fetching translations from json file on Amazon S#
+    // const [ten, setTen] = useState({});
+
+    // // const language = navigator.language.split(/[-_]/)[0]; // language without region code
+
+    // useEffect(() => {
+    //     const fetchTranslation = async () => {
+    //         const res = await fetch(
+    //             "https://michalantczakblogresources.s3.eu-central-1.amazonaws.com/itcontext/translation-en.json"
+    //         );
+    //         const data = await res.json();
+
+    //         setTen(data);
+    //     };
+    //     fetchTranslation();
+    // }, []);
 
     return (
         <div>
@@ -72,6 +109,13 @@ function App() {
                             />
                             <Route component={NotFound} />
                         </Switch>
+                        {cookies.display ? (
+                            <Cookies
+                                cookiesState={cookies}
+                                setCookies={setCookies}
+                            />
+                        ) : null}
+
                         <Footer />
                     </Router>
                 </ThemeProvider>

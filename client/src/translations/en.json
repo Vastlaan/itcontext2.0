@@ -103,5 +103,8 @@
     "footer.information-3": "Cookies",
     "footer.information-4": "Terms and Conditions",
     "footer.social-header": "Follow Us on Social Media",
-    "footer.social-text": "Dive into our company, get to know us better. Be aware of our offers and discover our latest achievements. We are a young company, but we have great ambitions"
+    "footer.social-text": "Dive into our company, get to know us better. Be aware of our offers and discover our latest achievements. We are a young company, but we have great ambitions",
+
+    "cookies.statement-header": "This website uses Cookies",
+    "cookies.statement-text": "We use cookies to personalise content and adds, to provide social media features and to analyse our traffic. We share some of this cookies with our social media, analytic and advertising partners."
 }
