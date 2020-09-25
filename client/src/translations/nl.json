@@ -1,7 +1,9 @@
 {
-    "navigation.menu-1": "Web Design",
+    "navigation.menu-0": "Home",
+    "navigation.menu-1": "Website Ontwerpen",
     "navigation.menu-2": "Online marketing",
-    "navigation.menu-3": "Contact",
+    "navigation.menu-3": "Over Ons",
+    "navigation.menu-4": "Contact",
 
     "landing.header-main": "Om uw bedrijf online te laten groeien",
     "landing.header-1-header": "Elegante en gestructureerde website",

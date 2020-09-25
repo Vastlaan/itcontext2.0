@@ -9,12 +9,13 @@ interface MenuProps {
 }
 export default function Menu(props: MenuProps) {
     const { intl } = props;
+
     return (
         <Container>
             <Link to="/website-ontwerpen">
                 {intl.formatMessage({
                     id: "navigation.menu-1",
-                    defaultMessage: "Web Design",
+                    defaultMessage: "Website Ontwerpen",
                 })}
             </Link>
 
@@ -24,10 +25,10 @@ export default function Menu(props: MenuProps) {
                     defaultMessage: "Online marketing",
                 })}
             </Link>
-            <Link to="/contact">
+            <Link to="/over-ons">
                 {intl.formatMessage({
                     id: "navigation.menu-3",
-                    defaultMessage: "Contact",
+                    defaultMessage: "Over Ons",
                 })}
             </Link>
         </Container>
@@ -49,7 +50,7 @@ const Container = styled.ul`
         justify-content: center;
         color: ${(props) => props.theme.bg};
         font-family: ${fonts.advent};
-        font-size: 2.5rem;
+        font-size: 2.4rem;
         cursor: pointer;
         transition: all 0.3s;
         text-align: center;

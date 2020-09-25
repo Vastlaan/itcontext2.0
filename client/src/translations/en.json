@@ -1,7 +1,9 @@
 {
+    "navigation.menu-0": "Home",
     "navigation.menu-1": "Web Design",
     "navigation.menu-2": "Online marketing",
-    "navigation.menu-3": "Contact",
+    "navigation.menu-3": "About Us",
+    "navigation.menu-4": "Contact",
 
     "landing.header-main": "Grow your business online",
     "landing.header-1-header": "Elegant and structured website",

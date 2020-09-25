@@ -24,7 +24,10 @@ export default function Nav(props: NavProps) {
                 setLanguage={setLanguage}
                 setDisplayMobileMenu={setDisplayMobileMenu}
             />
-            <MobileMenu displayMobileMenu={displayMobileMenu} />
+            <MobileMenu
+                displayMobileMenu={displayMobileMenu}
+                setDisplayMobileMenu={setDisplayMobileMenu}
+            />
         </Container>
     );
 }

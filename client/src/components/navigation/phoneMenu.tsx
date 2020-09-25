@@ -19,10 +19,10 @@ export default function Menu(props: MenuProps) {
                     defaultMessage: "Web Design",
                 })}
             </Link>
-            <Link to="/contact">
+            <Link to="/online-marketing">
                 {intl.formatMessage({
-                    id: "navigation.menu-3",
-                    defaultMessage: "Contact",
+                    id: "navigation.menu-2",
+                    defaultMessage: "online-marketing",
                 })}
             </Link>
         </Container>
@@ -46,15 +46,17 @@ const Container = styled.ul`
         justify-content: center;
         color: ${(props) => props.theme.grey};
         font-family: ${fonts.advent};
-        font-size: 2.5rem;
+        font-size: 1.7rem;
         cursor: pointer;
         transition: all 0.3s;
         text-align: center;
         text-transform: uppercase;
+        ${() => respond("s", "display: flex;")};
+        ${() => respond("m", "display: flex; font-size: 2.5rem;")};
+        ${() => respond("l", "display: none;")};
 
         &:hover {
             background-color: ${(props) => props.theme.greyLight};
         }
-        ${() => respond("s", "display: flex;")}
     }
 `;
