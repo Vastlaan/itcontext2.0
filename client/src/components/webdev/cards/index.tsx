@@ -17,33 +17,63 @@ export default function Cards() {
         <div>
             <Container>
                 <Card
-                    btn="secure websites"
+                    btn={intl.formatMessage({
+                        id: "webdev.cards-1-btn",
+                        defaultMessage: "beveiligde websites",
+                    })}
                     link="/website-ontwerpen"
                     hovered={true}
                     image={Image1}
                     icon={<GiCheckedShield />}
-                    header="secure environment"
-                    text="Our websites are force to use encrypted protocols so that connection is safe and all the users data are protected. "
+                    header={intl.formatMessage({
+                        id: "webdev.cards-1-btn",
+                        defaultMessage: "beveiligde websites",
+                    })}
+                    text={intl.formatMessage({
+                        id: "webdev.cards-1-text",
+                        defaultMessage:
+                            "Onze websites zijn gedwongen om gebruik te maken van beveiligd SSL-protocol, zodat de verbinding beschermd tegen diefstal van gebruikersgegevens.",
+                    })}
                 />
                 <Card
-                    btn="more about us"
+                    btn={intl.formatMessage({
+                        id: "webdev.cards-2-btn",
+                        defaultMessage: "meer over ons",
+                    })}
                     link="/over-ons"
                     hovered={false}
                     translate={"10%"}
                     icon={<GiTechnoHeart />}
                     image={Image3}
-                    header="newest technologies"
-                    text="We follow global trends and use newest, best working solutions"
+                    header={intl.formatMessage({
+                        id: "webdev.cards-2-header",
+                        defaultMessage: "nieuwste technologieën",
+                    })}
+                    text={intl.formatMessage({
+                        id: "webdev.cards-2-text",
+                        defaultMessage:
+                            "We volgen wereldwijde trends en gebruiken de nieuwste, best werkende oplossingen",
+                    })}
                 />
                 <Card
-                    btn="marketing strategies"
+                    btn={intl.formatMessage({
+                        id: "webdev.cards-3-btn",
+                        defaultMessage: "marketing strategieën",
+                    })}
                     link="/online-marketing"
                     hovered={false}
                     translate={"20%"}
                     icon={<GiChart />}
                     image={Image2}
-                    header="Grow customers base"
-                    text="Our goal is to increase your audience, drag more visitors and convert them in your customers."
+                    header={intl.formatMessage({
+                        id: "webdev.cards-3-header",
+                        defaultMessage: "Klantenbestand uitbreiden",
+                    })}
+                    text={intl.formatMessage({
+                        id: "webdev.cards-3-text",
+                        defaultMessage:
+                            "Ons doel is om uw publiek te vergroten, meer bezoekers te trekken en ze om te zetten in uw klanten.",
+                    })}
                 />
             </Container>
         </div>

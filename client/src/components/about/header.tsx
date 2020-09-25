@@ -12,19 +12,48 @@ export default function Header() {
     return (
         <Container>
             <Head>
-                <h1>Everything begins from one person </h1>
+                <h1>
+                    {intl.formatMessage({
+                        id: "about.header-slogan-1",
+                        defaultMessage: "Alles begint bij één persoon",
+                    })}{" "}
+                </h1>
                 <br />
-                <h1>single idea or important desicion,</h1>
+                <h1>
+                    {intl.formatMessage({
+                        id: "about.header-slogan-2",
+                        defaultMessage: "enkel idee of belangrijke beslissing,",
+                    })}
+                </h1>
                 <br />
-                <h1>which makes the significant change</h1>
+                <h1>
+                    {intl.formatMessage({
+                        id: "about.header-slogan-3",
+                        defaultMessage:
+                            "die substantiële verandering aanbrengt",
+                    })}
+                </h1>
             </Head>
             <Info>
-                <h3>We belive in your idea</h3>
+                <h3>
+                    {intl.formatMessage({
+                        id: "about.header-info-header",
+                        defaultMessage: "Wij geloven in uw idee",
+                    })}
+                </h3>
                 <Text>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptas, est officia deserunt amet quibusdam quod.
+                    {intl.formatMessage({
+                        id: "about.header-info-text",
+                        defaultMessage:
+                            "Het ontwerpen van een goede website is een expeditie waarin u uw klanten wilt laten duiken. Het moet een missie hebben en door bereiken van de doelen gestructureerd worden. Wij helpen u dit expeditie plannen en uitvoeren.",
+                    })}
                 </Text>
-                <Button>Read more</Button>
+                <Button>
+                    {intl.formatMessage({
+                        id: "about.header-info-btn",
+                        defaultMessage: "Lees meer",
+                    })}
+                </Button>
             </Info>
             <Short>
                 <img src={ImageShort} alt="business online laten groeien" />

@@ -21,34 +21,33 @@ export default function Responsive() {
             <BlockContent>
                 <BlockInfo>
                     {intl.formatMessage({
-                        id: "webdev.responsive-info",
-                        defaultMessage: "Responsive Websites",
+                        id: "webdev.security-info",
+                        defaultMessage: "Servers beveiliging",
                     })}
                 </BlockInfo>
                 <BlockHeader>
                     {intl.formatMessage({
-                        id: "webdev.responsive-header",
-                        defaultMessage:
-                            "Oogstrelende websites voor elk apparaat",
+                        id: "webdev.security-header",
+                        defaultMessage: "Hoe beschermen wij onze websites",
                     })}
                 </BlockHeader>
                 <BlockText>
                     {intl.formatMessage({
-                        id: "webdev.responsive-text",
+                        id: "webdev.security-text",
                         defaultMessage:
-                            "Onze technologie zorgt ervoor dat uw website vanaf verschillende apparaten toegankelijk is, snel laadt en uw bedrijf hoger scoort in de resultaten van zoekmachines",
+                            "Onze servers draaien op een van de meste beveiligd omgeving en volgens de strenge veiligheid regels. Wij zorgen ook voor encrypted communicatie tussen onze servers en bezoekers van uw website. Daarvoor dwingen we gebruik van SSL protocols, zodat belangrijke wachtworden of personlijke gegevens kunnen niet lekken.",
                     })}
                 </BlockText>
 
                 <BlockImage>
-                    <img src={Image2} alt="responsive design website" />
+                    <img src={Image2} alt="securely design website" />
                 </BlockImage>
 
                 <BlockButton>
                     <Link to="/contact">
                         {intl.formatMessage({
-                            id: "webdev.responsive-btn",
-                            defaultMessage: "Bestel uw professionele website",
+                            id: "webdev.security-btn",
+                            defaultMessage: "Bestel uw veilige website",
                         })}
                     </Link>
                 </BlockButton>

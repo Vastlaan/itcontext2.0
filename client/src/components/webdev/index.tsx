@@ -61,13 +61,13 @@ export default function Webdev() {
 
             <Intersection
                 headline={intl.formatMessage({
-                    id: "webdev.intersection1-headline",
-                    defaultMessage: "Voor elk bedrijf dat online wil groeien",
+                    id: "webdev.intersection-1-headline",
+                    defaultMessage: "Beste prijs-kwaliteitverhouding",
                 })}
                 text={intl.formatMessage({
-                    id: "webdev.intersection1-text",
+                    id: "webdev.intersection-1-text",
                     defaultMessage:
-                        "Onze doel is om betaalbaar, goede kwaliteit websites aan allerlei ondernemingen te leveren. Met eigen e-mailadres, SEO plan en Content Manager System.",
+                        "wij ontwerpen onze websites gedreven door innovatie, analyse van de doelgroep- en concurrentiegedrag, waarbij we proberen hen altijd een stap voor te zijn",
                 })}
                 background={false}
             />
@@ -75,12 +75,19 @@ export default function Webdev() {
             <Security />
 
             <InfoStrip
-                text="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus autem veritatis numquam, quidem obcaecati doloremque
-                soluta eveniet. Harum sapiente impedit illo distinctio non
-                error. Iure provident eos illo totam?"
-                btn="Find your solution"
-                note="with IT Context"
+                text={intl.formatMessage({
+                    id: "webdev.stip-text",
+                    defaultMessage:
+                        "Onze klanten krijgen altijd veel persoonlijke aandacht. Omdat beste resultaten zijn mogelijk te bereiken alleen door volledig betrokkenheid en samenwerking.",
+                })}
+                btn={intl.formatMessage({
+                    id: "webdev.stip-btn",
+                    defaultMessage: "Vind uw oplossingen",
+                })}
+                note={intl.formatMessage({
+                    id: "webdev.stip-note",
+                    defaultMessage: "met IT Context",
+                })}
                 icon={<FaHandshake />}
             />
         </Container>
