@@ -130,7 +130,7 @@ const Long = styled.div`
     display: none;
     grid-area: long;
     overflow: hidden;
-    max-height: 90vh;
+    max-height: 95vh;
 
     ${() => respond("m", `display: block;`)}
 
