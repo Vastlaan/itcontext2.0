@@ -60,7 +60,6 @@ export default function About() {
 }
 const Container = styled.section`
     width: 100%;
-    overflow-x: hidden;
 `;
 const Panorama = styled.div`
     width: 100%;

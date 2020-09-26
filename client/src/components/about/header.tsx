@@ -110,6 +110,7 @@ const Container = styled.header`
         "long long long long long long";
     grid-gap: 2rem;
     position: relative;
+    overflow-x: hidden;
 
     ${() =>
         respond(
