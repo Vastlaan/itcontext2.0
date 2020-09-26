@@ -91,6 +91,7 @@ export default function Header() {
                     </Link>
                 </p>
             </PageNavGrid>
+            <Circles />
         </Container>
     );
 }
@@ -108,6 +109,7 @@ const Container = styled.header`
         "short short short short short short"
         "long long long long long long";
     grid-gap: 2rem;
+    position: relative;
 
     ${() =>
         respond(
@@ -119,6 +121,29 @@ const Container = styled.header`
         "long long long long long long"
         ;`
         )}
+`;
+
+const Circles = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50rem;
+    height: 50rem;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    z-index: -1;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(50%, 0%);
+        width: 30rem;
+        height: 30rem;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }
 `;
 
 const PageNavGrid = styled(PageNav)`

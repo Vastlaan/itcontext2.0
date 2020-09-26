@@ -58,7 +58,10 @@ export default function About() {
         </Container>
     );
 }
-const Container = styled.section``;
+const Container = styled.section`
+    width: 100%;
+    overflow-x: hidden;
+`;
 const Panorama = styled.div`
     width: 100%;
     margin: 5rem 0;
