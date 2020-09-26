@@ -6,6 +6,7 @@ import Header from "./header";
 import Paragraph from "../paragraph";
 import Intersection from "../intersection";
 import Reviews from "./reviews";
+import PanoramaImage from "../../img/panorama.jpg";
 
 export default function About() {
     const intl = useIntl();
@@ -13,6 +14,12 @@ export default function About() {
     return (
         <Container>
             <Header />
+            <Panorama>
+                <img
+                    src={PanoramaImage}
+                    alt="moderne websites voor ondernemingen"
+                />
+            </Panorama>
             <Paragraph
                 heading={intl.formatMessage({
                     id: "about.paragraph-1-header",
@@ -52,3 +59,12 @@ export default function About() {
     );
 }
 const Container = styled.section``;
+const Panorama = styled.div`
+    width: 100%;
+    margin: 5rem 0;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
+`;
