@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useIntl } from "react-intl";
 import { fonts, Button, respond } from "../../styles";
 import { BsChevronDoubleDown } from "react-icons/bs";
-import Image from "../../img/image-webdev-header.png";
+import Image from "../../img/image-webdev-header.jpg";
 
 export default function Header() {
     function scrollDown() {

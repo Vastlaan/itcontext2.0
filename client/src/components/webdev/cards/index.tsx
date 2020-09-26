@@ -6,9 +6,9 @@ import Card from "./card";
 import { respond, fonts } from "../../../styles";
 
 import { GiCheckedShield, GiTechnoHeart, GiChart } from "react-icons/gi";
-import Image1 from "../../../img/image-card-1.png";
-import Image2 from "../../../img/image-card-2.png";
-import Image3 from "../../../img/image-card-3.png";
+import Image1 from "../../../img/image-card-1.jpg";
+import Image2 from "../../../img/image-card-2.jpg";
+import Image3 from "../../../img/image-card-3.jpg";
 
 export default function Cards() {
     const intl = useIntl();

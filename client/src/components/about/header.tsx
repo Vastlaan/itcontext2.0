@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
 import { fonts, Button, Text, respond, PageNav } from "../../styles";
-import ImageLong from "../../img/image-about-side.png";
+import ImageLong from "../../img/image-about-side.jpg";
 import ImageShort from "../../img/image-about-short.png";
 
 export default function Header() {
