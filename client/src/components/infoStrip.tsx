@@ -42,7 +42,7 @@ const ShortButton = styled(Button)`
     }
 `;
 const ShortText = styled(Text)`
-    font-size: 1.8rem;
+    font-size: 2rem;
     padding: 2rem;
 `;
 const Note = styled.div`

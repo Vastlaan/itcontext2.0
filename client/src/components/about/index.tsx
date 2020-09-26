@@ -26,7 +26,7 @@ export default function About() {
                 para2={intl.formatMessage({
                     id: "about.paragraph-1-text-2",
                     defaultMessage:
-                        "Het meest voorkomende geval is website die representatieve functies vervult. Bezoekers kunnen erachter komen welke diensten biedt uw bedrijf aan, wat zijn de prijzen, waar bent u gevestigd en hoe is het best om contact met u op te nemen. Op deze website kunt u ook uw prestaties of belangrijke evenementen aankondigen. IT Context ontwerp dergelijke websites al vanaf 247 &euro; exclusief.",
+                        "Onze teamleden bestaan uit gekwalificeerde freelancers die eerder voor grote bedrijven hebben gewerkt en hun kennis hebben opgedaan door deel te nemen aan het ontwerpen van geavanceerde projecten. We komen allemaal uit Polen, maar sommigen van ons wonen en werken in Nederland. We hebben het merk IT Context gecreëerd om onze connecties op de Nederlandse markt uit te breiden.",
                 })}
                 para3={intl.formatMessage({
                     id: "about.paragraph-1-text-3",

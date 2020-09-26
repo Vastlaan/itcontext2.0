@@ -57,15 +57,19 @@ export default function Header() {
             </Short>
             <Long>
                 <InfoStrip
-                    text="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus autem veritatis numquam, quidem obcaecati doloremque
-                soluta eveniet. Harum sapiente impedit illo distinctio non
-                error. Iure provident eos illo totam?"
-                    btn={intl.formatMessage({
-                        id: "about.header-info-btn",
-                        defaultMessage: "Lees meer",
+                    text={intl.formatMessage({
+                        id: "about.header-long-text",
+                        defaultMessage:
+                            "Het is onze taak om zo'n website te ontwerpen die uw bezoekers zal verbazen en in uw loyaal klanten zal veranderen",
                     })}
-                    note="with IT Context"
+                    btn={intl.formatMessage({
+                        id: "about.header-long-btn",
+                        defaultMessage: "Maak winst",
+                    })}
+                    note={intl.formatMessage({
+                        id: "about.header-long-note",
+                        defaultMessage: "met IT Context",
+                    })}
                     icon={<GiTakeMyMoney />}
                 />
             </Long>
