@@ -60,6 +60,7 @@ export default function Responsive() {
                         gridArea: "btn",
                         alignSelf: "center",
                         display: "flex",
+                        textDecoration: "none",
                     }}
                 >
                     <BlockButton>

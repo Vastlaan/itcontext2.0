@@ -77,6 +77,7 @@ export default function Ux() {
                         gridArea: "btn",
                         alignSelf: "center",
                         display: "flex",
+                        textDecoration: "none",
                     }}
                 >
                     <BlockButton>
