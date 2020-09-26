@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
 import { Link } from "react-router-dom";
