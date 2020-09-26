@@ -43,13 +43,13 @@ export default function About() {
             />
             <Intersection
                 headline={intl.formatMessage({
-                    id: "landing.intersection1-headline",
-                    defaultMessage: "Voor elk bedrijf dat online wil groeien",
+                    id: "about.intersection1-headline",
+                    defaultMessage: "Professioneel, loyaal en betrokken",
                 })}
                 text={intl.formatMessage({
-                    id: "landing.intersection1-text",
+                    id: "about.intersection1-text",
                     defaultMessage:
-                        "Onze doel is om betaalbaar, goede kwaliteit websites aan allerlei ondernemingen te leveren. Met eigen e-mailadres, SEO plan en Content Manager System.",
+                        "we bouwen de reputatie op de succesverhalen van onze klanten, zodat het in ons grote belang is om u te helpen een lokale tycoon te worden in uw branche",
                 })}
                 background={true}
             />
