@@ -11,7 +11,7 @@ import {
     BlockImage,
     BlockButton,
 } from "../../styles";
-import Image2 from "../../img/image-story-2.jpg";
+import Image from "../../img/image-security.jpg";
 
 export default function Responsive() {
     const intl = useIntl();
@@ -40,7 +40,7 @@ export default function Responsive() {
                 </BlockText>
 
                 <BlockImage>
-                    <img src={Image2} alt="securely design website" />
+                    <img src={Image} alt="securely design website" />
                 </BlockImage>
 
                 <BlockButton>

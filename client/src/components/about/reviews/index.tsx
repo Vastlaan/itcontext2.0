@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Header from "./header";
 import Review from "./review";
 import Face1 from "../../../img/image-review-1.jpg";
+import Face2 from "../../../img/image-review-2.jpg";
 
 export default function Reviews() {
     return (
@@ -22,7 +23,7 @@ export default function Reviews() {
                 Voluptatem, vero assumenda aut quasi blanditiis eos.`}
             />
             <Review
-                image={Face1}
+                image={Face2}
                 title="Professionele website"
                 date="29-09-2020"
                 stars={[1, 2, 3, 4, 5]}
