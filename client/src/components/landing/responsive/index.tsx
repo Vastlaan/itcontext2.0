@@ -54,14 +54,21 @@ export default function Responsive() {
                     <img src={Image2} alt="responsive design website" />
                 </BlockImage>
 
-                <BlockButton>
-                    <Link to="/contact">
+                <Link
+                    to="/contact"
+                    style={{
+                        gridArea: "btn",
+                        alignSelf: "center",
+                        display: "flex",
+                    }}
+                >
+                    <BlockButton>
                         {intl.formatMessage({
                             id: "landing.responsive-btn",
                             defaultMessage: "Bestel uw professionele website",
                         })}
-                    </Link>
-                </BlockButton>
+                    </BlockButton>
+                </Link>
             </BlockContent>
         </Container>
     );
@@ -115,7 +122,7 @@ const Sign = styled.div`
     align-items: center;
 
     img {
-        width: 70%;
+        width: 50%;
     }
     p {
         font-family: ${fonts.advent};

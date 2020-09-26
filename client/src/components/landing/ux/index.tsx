@@ -71,14 +71,21 @@ export default function Ux() {
                     </Icon>
                     <img src={Image1} alt="great user experience" />
                 </BlockImage>
-                <BlockButton>
-                    <Link to="">
+                <Link
+                    to="/online-marketing"
+                    style={{
+                        gridArea: "btn",
+                        alignSelf: "center",
+                        display: "flex",
+                    }}
+                >
+                    <BlockButton>
                         {intl.formatMessage({
                             id: "landing.ux-btn",
                             defaultMessage: "Hoe u nieuwe klanten kunt werven",
                         })}
-                    </Link>
-                </BlockButton>
+                    </BlockButton>
+                </Link>
             </BlockContent>
         </Container>
     );
