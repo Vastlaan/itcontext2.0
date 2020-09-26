@@ -1,4 +1,5 @@
 import React from "react";
+import { useIntl } from "react-intl";
 import styled from "styled-components";
 import Header from "./header";
 import Review from "./review";
@@ -6,34 +7,38 @@ import Face1 from "../../../img/image-review-1.jpg";
 import Face2 from "../../../img/image-review-2.jpg";
 
 export default function Reviews() {
+    const intl = useIntl();
+
     return (
         <Container>
             <Header />
             <Review
                 image={Face1}
-                title="Mijn bedrijf eigen website"
+                title={intl.formatMessage({
+                    id: "about.reviews-opinion-1-head",
+                    defaultMessage: "Zeer betaalbaar en professioneel",
+                })}
                 date="09-10-2020"
                 stars={[1, 2, 3, 4]}
-                text={`Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nesciunt modi officia, voluptate molestias sapiente commodi
-                voluptatum delectus amet odio consectetur veniam accusamus
-                distinctio voluptatibus. Ex, deserunt! Animi dolores autem
-                excepturi atque voluptatum deserunt officia, eos accusamus.
-                Maxime magni, corrupti vero ipsum nostrum exercitationem.
-                Voluptatem, vero assumenda aut quasi blanditiis eos.`}
+                text={intl.formatMessage({
+                    id: "about.reviews-opinion-1-text",
+                    defaultMessage:
+                        "Ik leer dit bedrijf kennen als toegewijde specialisten. Michal bezit van goede commucative vaardigheden (als voor anderstaligen) en hij geeft waardevolle adviezen over het functioneren van de websites in het algemeen en marketingstrategieën waar ik nog nooit van gehoord heb.",
+                })}
             />
             <Review
                 image={Face2}
-                title="Professionele website"
+                title={intl.formatMessage({
+                    id: "about.reviews-opinion-2-head",
+                    defaultMessage: "Vriendelijke mensen en mooi resultaat",
+                })}
                 date="29-09-2020"
                 stars={[1, 2, 3, 4, 5]}
-                text={`Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nesciunt modi officia, voluptate molestias sapiente commodi
-                voluptatum delectus amet odio consectetur veniam accusamus
-                distinctio voluptatibus. Ex, deserunt! Animi dolores autem
-                excepturi atque voluptatum deserunt officia, eos accusamus.
-                Maxime magni, corrupti vero ipsum nostrum exercitationem.
-                Voluptatem, vero assumenda aut quasi blanditiis eos.`}
+                text={intl.formatMessage({
+                    id: "about.reviews-opinion-2-text",
+                    defaultMessage:
+                        "Ik raad dit bedrijf zeker aan, ze zijn betrokken, zorgen voor dat elke detail van de website een juiste plek en bedoeling heeft. Voor deze prijs ben ik heel tevreden met de resultaat. Top!",
+                })}
             />
         </Container>
     );

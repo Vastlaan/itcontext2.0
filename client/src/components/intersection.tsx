@@ -34,7 +34,7 @@ const Container = styled.article`
 const Headline = styled.p`
     font-family: ${fonts.cormoran};
     color: ${(props) => props.theme.grey};
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
 `;
 const Main = styled.p`
