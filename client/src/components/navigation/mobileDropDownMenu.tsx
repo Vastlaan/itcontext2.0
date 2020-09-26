@@ -73,7 +73,7 @@ const Container = styled.div<ContainerProps>`
     bottom: -30rem;
     right: 0;
     z-index: 9;
-    transition: all 0.6s;
+    transition: all 0.3s;
     transition-timing-function: ease-out;
     transform: translateX(${(p) => (p.show ? `0%` : `100%`)});
     overflow: hidden;
