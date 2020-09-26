@@ -68,6 +68,9 @@ const Flag = styled.button`
     background-color: transparent;
     cursor: pointer;
     transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
         transform: scale(1.1);
