@@ -2,9 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
+import InfoStrip from "../infoStrip";
 import { fonts, Button, Text, respond, PageNav } from "../../styles";
-import ImageLong from "../../img/image-about-side.jpg";
 import ImageShort from "../../img/image-about-short.png";
+import { GiTakeMyMoney } from "react-icons/gi";
+import { HiOutlineLightBulb } from "react-icons/hi";
 
 export default function Header() {
     const intl = useIntl();
@@ -41,38 +43,45 @@ export default function Header() {
                         defaultMessage: "Wij geloven in uw idee",
                     })}
                 </h3>
+                <HiOutlineLightBulb />
                 <Text>
                     {intl.formatMessage({
                         id: "about.header-info-text",
                         defaultMessage:
-                            "Het ontwerpen van een goede website is een expeditie waarin u uw klanten wilt laten duiken. Het moet een missie hebben en door bereiken van de doelen gestructureerd worden. Wij helpen u dit expeditie plannen en uitvoeren.",
+                            "Het ontwerpen van een goede website is een expeditie waarin u uw klanten wilt laten duiken. Het moet een missie hebben en het moet worden aangedreven door bereiken van het doel. Wij helpen u dit expeditie plannen en uitvoeren.",
                     })}
                 </Text>
-                <Button>
-                    {intl.formatMessage({
-                        id: "about.header-info-btn",
-                        defaultMessage: "Lees meer",
-                    })}
-                </Button>
             </Info>
             <Short>
                 <img src={ImageShort} alt="business online laten groeien" />
             </Short>
             <Long>
-                <img src={ImageLong} alt="business online laten groeien" />
+                <InfoStrip
+                    text="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus autem veritatis numquam, quidem obcaecati doloremque
+                soluta eveniet. Harum sapiente impedit illo distinctio non
+                error. Iure provident eos illo totam?"
+                    btn={intl.formatMessage({
+                        id: "about.header-info-btn",
+                        defaultMessage: "Lees meer",
+                    })}
+                    note="with IT Context"
+                    icon={<GiTakeMyMoney />}
+                />
             </Long>
+
             <PageNavGrid>
                 <p>
                     <Link to="/">
                         {intl.formatMessage({
-                            id: "webdev.pagenav-home",
+                            id: "about.pagenav-home",
                             defaultMessage: "Voorpagina",
                         })}
                     </Link>
                     {" > "}
                     <Link to="/over-ons">
                         {intl.formatMessage({
-                            id: "webdev.pagenav-current",
+                            id: "about.pagenav-current",
                             defaultMessage: "Over Ons",
                         })}
                     </Link>
@@ -93,18 +102,18 @@ const Container = styled.header`
         "head head head head head head"
         "head head head head head head"
         "short short short short short short"
-        "short short short short short short";
+        "long long long long long long";
     grid-gap: 2rem;
 
     ${() =>
         respond(
             "m",
             `grid-template-areas:
-        "head head head head long long"
-        "head head head head long long"
-        "info info short short long long"
-        "info info short short long long"
-        "nav nav nav nav nav nav";`
+            "nav nav nav nav info info"
+        "head head head head info info"
+        "head head head head info info"
+        "long long long long long long"
+        ;`
         )}
 `;
 
@@ -127,19 +136,11 @@ const Head = styled.div`
     }
 `;
 const Long = styled.div`
-    display: none;
+    display: block;
     grid-area: long;
     overflow: hidden;
-    max-height: 95vh;
 
     ${() => respond("m", `display: block;`)}
-
-    img {
-        width: 100%;
-        min-height: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
 `;
 
 const Short = styled.div`
@@ -148,7 +149,9 @@ const Short = styled.div`
     width: 100%;
     grid-area: short;
     overflow: hidden;
+    display: block;
 
+    ${() => respond("m", `display: none;`)}
     img {
         width: 100%;
         min-height: 100%;
@@ -167,8 +170,10 @@ const Info = styled.div`
         color: ${(p) => p.theme.primary};
     }
 
-    button {
+    svg {
+        font-size: 5rem;
+        color: ${(p) => p.theme.fresh};
         margin: 2rem 0;
-        align-self: flex-start;
+        align-self: center;
     }
 `;
