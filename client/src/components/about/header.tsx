@@ -169,7 +169,7 @@ const Info = styled.div`
     padding: 2rem;
 
     h3 {
-        font-size: 2.5rem;
+        font-size: 3rem;
         font-family: ${fonts.gayathri};
         color: ${(p) => p.theme.primary};
     }
