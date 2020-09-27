@@ -23,243 +23,121 @@ export default function Legal() {
             <Main>
                 <h1>Cookies & Privacy Policy for IT Context</h1>
 
+                <h2>1. Waarborgen Privacy</h2>
+
                 <p>
-                    At IT Context, accessible from https://www.itcontext.nl,
-                    https://itcontext.nl, one of our main priorities is the
-                    privacy of our visitors. This Privacy Policy document
-                    contains types of information that is collected and recorded
-                    by IT Context and how we use it.
+                    Het waarborgen van de privacy van bezoekers van itcontext.nl
+                    is een belangrijke taak voor ons. Daarom beschrijven we in
+                    onze privacy policy welke informatie we verzamelen en hoe we
+                    deze informatie gebruiken.
                 </p>
 
+                <h2>2. Toestemming</h2>
+
                 <p>
-                    If you have additional questions or require more information
-                    about our Privacy Policy, do not hesitate to contact us.
+                    Door de informatie en de diensten op itcontext.nl te
+                    gebruiken, gaat u akkoord met onze privacy policy en de
+                    voorwaarden die wij hierin hebben opgenomen.
                 </p>
 
+                <h2>3. Vragen</h2>
                 <p>
-                    This Privacy Policy applies only to our online activities
-                    and is valid for visitors to our website with regards to the
-                    information that they shared and/or collect in IT Context.
-                    This policy is not applicable to any information collected
-                    offline or via channels other than this website.
+                    Als u meer informatie wilt ontvangen, of vragen hebt over de
+                    privacy policy van IT Context en specifiek itcontext.nl, kun
+                    u ons benaderen via e-mail. Ons e-mailadres is
+                    info@itcontext.nl.
                 </p>
-
-                <h2>Consent</h2>
-
+                <h2>4. Monitoren gedrag bezoeker</h2>
                 <p>
-                    By using our website, you hereby consent to our Privacy
-                    Policy and agree to its terms.
+                    itcontext.nl maakt gebruik van verschillende technieken om
+                    bij te houden wie de website bezoekt, hoe deze bezoeker zich
+                    op de website gedraagt en welke pagina’s worden bezocht. Dat
+                    is een gebruikelijke manier van werken voor websites omdat
+                    het informatie oplevert op die bijdraagt aan de kwaliteit
+                    van de gebruikerservaring. De informatie die we, via
+                    cookies, registreren, bestaat uit onder meer IP-adressen,
+                    het type browser en de bezochte pagina’s. Tevens monitoren
+                    we waar bezoekers de website voor het eerst bezoeken en
+                    vanaf welke pagina ze vertrekken. Deze informatie houden we
+                    anoniem bij en is niet gekoppeld aan andere persoonlijke
+                    informatie.
                 </p>
-
-                <h2>Information we collect</h2>
-
+                <h2>5. Gebruik van cookies</h2>
                 <p>
-                    The personal information that you are asked to provide, and
-                    the reasons why you are asked to provide it, will be made
-                    clear to you at the point we ask you to provide your
-                    personal information.
+                    itcontext.nl plaatst cookies bij bezoekers. Dat doen we om
+                    informatie te verzamelen over de pagina’s die gebruikers op
+                    onze website bezoeken, om bij te houden hoe vaak bezoekers
+                    terug komen en om te zien welke pagina’s het goed doen op de
+                    website. Ook houden we bij welke informatie de browser
+                    deelt.
                 </p>
+                <h2>6. Cookies uitschakelen</h2>
                 <p>
-                    If you contact us directly, we may receive additional
-                    information about you such as your name, email address,
-                    phone number, the contents of the message and/or attachments
-                    you may send us, and any other information you may choose to
-                    provide.
+                    U kunt er voor kiezen om cookies uit te schakelen. Dat doet
+                    u door gebruik te maken de mogelijkheden van uw browser. U
+                    vindt meer informatie over deze mogelijkheden op de website
+                    van de aanbieder van uw browser.
                 </p>
+                <h2>7. Cookies van derde partijen</h2>
                 <p>
-                    When you register for an Account, we may ask for your
-                    contact information, including items such as name, company
-                    name, address, email address, and telephone number.
+                    Het is mogelijk dat derde partijen, zoals Google, op onze
+                    website adverteren of dat wij gebruik maken van een andere
+                    dienst. Daarvoor plaatsen deze derde partijen in sommige
+                    gevallen cookies. Deze cookies zijn niet door itcontext.nl
+                    te beïnvloeden.
                 </p>
-
-                <h2>How we use your information</h2>
-
+                <h2>8. Onze adverteerders</h2>
                 <p>
-                    We use the information we collect in various ways, including
-                    to:
+                    Op itcontext.nl adverteren meerdere partijen, die allemaal
+                    hun eigen cookies plaatsen. Deze adverteerders gebruiken
+                    technologie voor hun advertenties en de links in hun
+                    advertenties die direct door uw browser worden herkend. Ze
+                    gebruiken onder meer automatische herkenning van IP-adressen
+                    die rechtstreeks naar de adverteerder wordt gestuurd.
+                    Daarnaast worden cookies, javascript en eventueel webbeacons
+                    ingezet om te monitoren hoe effectief de campagnes van deze
+                    partijen zijn. itcontext.nl heeft noch invloed noch controle
+                    over de cookies, het javascript en de webbeacons die onze
+                    adverteerders gebruiken. Al deze partijen hebben een eigen
+                    privacy policy en hanteren deze privacy policy voor het
+                    gebruik van hun website en de daaraan gekoppelde diensten.
+                    Meer informatie over hoe deze partijen omgaan met privacy
+                    vindt u op de websites van deze partijen.
                 </p>
-
-                <ul>
-                    <li>Provide, operate, and maintain our website</li>
-                    <li>Improve, personalize, and expand our website</li>
-                    <li>Understand and analyze how you use our website</li>
-                    <li>
-                        Develop new products, services, features, and
-                        functionality
-                    </li>
-                    <li>
-                        Communicate with you, either directly or through one of
-                        our partners, including for customer service, to provide
-                        you with updates and other information relating to the
-                        webste, and for marketing and promotional purposes
-                    </li>
-                    <li>Send you emails</li>
-                    <li>Find and prevent fraud</li>
-                </ul>
-
-                <h2>Log Files</h2>
-
+                <h2>9. Privacy policy van adverteerders/derde partijen</h2>
                 <p>
-                    IT Context follows a standard procedure of using log files.
-                    These files log visitors when they visit websites. All
-                    hosting companies do this and a part of hosting services'
-                    analytics. The information collected by log files include
-                    internet protocol (IP) addresses, browser type, Internet
-                    Service Provider (ISP), date and time stamp, referring/exit
-                    pages, and possibly the number of clicks. These are not
-                    linked to any information that is personally identifiable.
-                    The purpose of the information is for analyzing trends,
-                    administering the site, tracking users' movement on the
-                    website, and gathering demographic information.
+                    Voor meer informatie over de privacy policy van onze
+                    adverteerders en derde partijen die verbonden zijn aan deze
+                    website, kun u terecht op de websites van deze
+                    respectievelijke partijen. itcontext.nl kan geen invloed
+                    uitoefenen op deze cookies en de privacy policy van door
+                    derden geplaatste cookies. Deze cookies vallen buiten het
+                    bereik van de privacy policy van itcontext.nl.
                 </p>
-
-                <h2>Cookies and Web Beacons</h2>
-
+                <h2>10. DART-cookie van Google</h2>
                 <p>
-                    Like any other website, IT Context uses 'cookies'. These
-                    cookies are used to store information including visitors'
-                    preferences, and the pages on the website that the visitor
-                    accessed or visited. The information is used to optimize the
-                    users' experience by customizing our web page content based
-                    on visitors' browser type and/or other information.
-                </p>
-
-                <p>
-                    For more general information on cookies, please read{" "}
-                    <a href="https://www.cookieconsent.com/what-are-cookies/">
-                        "What Are Cookies"
+                    Het gebruik van een DART-cookie door Google, maakt het
+                    mogelijk dat er advertenties op onze website worden getoond.
+                    Daarnaast wordt deze cookie gebruikt voor het tonen van
+                    advertenties op andere websites. U kunt er voor kiezen om
+                    geen gebruik meer te maken van de DART Cookie. Dat doet u
+                    door de volgende website te bezoeken:{" "}
+                    <a href="https://support.google.com/adsense/answer/2839090?hl=nl">
+                        DART
                     </a>
-                    .
                 </p>
-
-                <h2>Advertising Partners Privacy Policies</h2>
-
+                <h2>11. Informatie van kinderen</h2>
                 <p>
-                    You may consult this list to find the Privacy Policy for
-                    each of the advertising partners of IT Context.
-                </p>
-
-                <p>
-                    Third-party ad servers or ad networks uses technologies like
-                    cookies, JavaScript, or Web Beacons that are used in their
-                    respective advertisements and links that appear on IT
-                    Context, which are sent directly to users' browser. They
-                    automatically receive your IP address when this occurs.
-                    These technologies are used to measure the effectiveness of
-                    their advertising campaigns and/or to personalize the
-                    advertising content that you see on websites that you visit.
-                </p>
-
-                <p>
-                    Note that IT Context has no access to or control over these
-                    cookies that are used by third-party advertisers.
-                </p>
-
-                <h2>Third Party Privacy Policies</h2>
-
-                <p>
-                    IT Context's Privacy Policy does not apply to other
-                    advertisers or websites. Thus, we are advising you to
-                    consult the respective Privacy Policies of these third-party
-                    ad servers for more detailed information. It may include
-                    their practices and instructions about how to opt-out of
-                    certain options.{" "}
-                </p>
-
-                <p>
-                    You can choose to disable cookies through your individual
-                    browser options. To know more detailed information about
-                    cookie management with specific web browsers, it can be
-                    found at the browsers' respective websites.
-                </p>
-
-                <h2>
-                    CCPA Privacy Rights (Do Not Sell My Personal Information)
-                </h2>
-
-                <p>
-                    Under the CCPA, among other rights, California consumers
-                    have the right to:
-                </p>
-                <p>
-                    Request that a business that collects a consumer's personal
-                    data disclose the categories and specific pieces of personal
-                    data that a business has collected about consumers.
-                </p>
-                <p>
-                    Request that a business delete any personal data about the
-                    consumer that a business has collected.
-                </p>
-                <p>
-                    Request that a business that sells a consumer's personal
-                    data, not sell the consumer's personal data.
-                </p>
-                <p>
-                    If you make a request, we have one month to respond to you.
-                    If you would like to exercise any of these rights, please
-                    contact us.
-                </p>
-
-                <h2>GDPR Data Protection Rights</h2>
-
-                <p>
-                    We would like to make sure you are fully aware of all of
-                    your data protection rights. Every user is entitled to the
-                    following:
-                </p>
-                <p>
-                    The right to access – You have the right to request copies
-                    of your personal data. We may charge you a small fee for
-                    this service.
-                </p>
-                <p>
-                    The right to rectification – You have the right to request
-                    that we correct any information you believe is inaccurate.
-                    You also have the right to request that we complete the
-                    information you believe is incomplete.
-                </p>
-                <p>
-                    The right to erasure – You have the right to request that we
-                    erase your personal data, under certain conditions.
-                </p>
-                <p>
-                    The right to restrict processing – You have the right to
-                    request that we restrict the processing of your personal
-                    data, under certain conditions.
-                </p>
-                <p>
-                    The right to object to processing – You have the right to
-                    object to our processing of your personal data, under
-                    certain conditions.
-                </p>
-                <p>
-                    The right to data portability – You have the right to
-                    request that we transfer the data that we have collected to
-                    another organization, or directly to you, under certain
-                    conditions.
-                </p>
-                <p>
-                    If you make a request, we have one month to respond to you.
-                    If you would like to exercise any of these rights, please
-                    contact us.
-                </p>
-
-                <h2>Children's Information</h2>
-
-                <p>
-                    Another part of our priority is adding protection for
-                    children while using the internet. We encourage parents and
-                    guardians to observe, participate in, and/or monitor and
-                    guide their online activity.
-                </p>
-
-                <p>
-                    IT Context does not knowingly collect any Personal
-                    Identifiable Information from children under the age of 13.
-                    If you think that your child provided this kind of
-                    information on our website, we strongly encourage you to
-                    contact us immediately and we will do our best efforts to
-                    promptly remove such information from our records.
+                    Wij vinden het belangrijk om te zorgen voor extra
+                    bescherming voor kinderen die online actief zijn. We
+                    moedigen ouders en opvoeders aan om samen tijd online te
+                    besteden. Op die manier kunt u zien hoe uw kinderen zich
+                    online gedragen, wat ze precies online doen en kunt u helpen
+                    in het sturen van hun gedrag. itcontext.nl verzamelt geen
+                    informatie van kinderen jonger dan 13 jaar oud. Mocht u
+                    constateren dat deze regel wordt overtreden door ons of ons
+                    team, neemt u dan contact met ons op via bovenstaande
+                    contactmogelijkheid.
                 </p>
             </Main>
         </Container>
