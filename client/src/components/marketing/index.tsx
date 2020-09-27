@@ -1,5 +1,10 @@
 import React from "react";
+import Header from "./header";
 
 export default function Marketing() {
-    return <div>Marketing</div>;
+    return (
+        <div>
+            <Header />
+        </div>
+    );
 }
