@@ -193,6 +193,7 @@ const Info = styled.div`
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    background-color: ${(p) => p.theme.bg};
 
     h3 {
         font-size: 3rem;
