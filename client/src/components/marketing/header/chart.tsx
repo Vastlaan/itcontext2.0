@@ -45,6 +45,7 @@ const AxisX = styled.div`
     div {
         font-family: ${fonts.advent};
         font-size: 2rem;
+        line-height: 1;
         color: ${(p) => p.theme.greyDark};
         width: 200%;
         text-align: center;
@@ -59,6 +60,7 @@ const AxisY = styled.div`
     text-align: center;
     font-family: ${fonts.advent};
     font-size: 2rem;
+    line-height: 1;
     color: ${(p) => p.theme.greyDark};
 `;
 const ContentMarketing = styled.div`
