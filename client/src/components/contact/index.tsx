@@ -36,7 +36,7 @@ function Contact() {
     //     tl.fromTo(contact.current, 1, { opacity: 0 }, { opacity: 1 });
     // }, []);
 
-    const submitContactForm = (e: React.FormEvent<HTMLFormElement>) => {
+    const submitContactForm = (e: any) => {
         e.preventDefault();
         if (!email || !message) {
             return setWarning("Fields EMAIL and MESSAGE are required");
@@ -63,7 +63,8 @@ function Contact() {
                 }
             });
         setWarning("");
-        // return e.target.reset();
+
+        return e.target.reset();
     };
     const isValidEmail = (email: string) => {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
