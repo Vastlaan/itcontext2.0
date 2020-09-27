@@ -24,7 +24,7 @@ const Container = styled.div`
     flex: 0 0 50%;
     background-color: ${(p) => p.theme.bg};
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: 5rem repeat(11, 1fr);
     grid-template-areas:
         "title title title title title title title title title title title ."
         "axisX email email email email email email . . . . ."
@@ -36,6 +36,8 @@ const Container = styled.div`
         ". axisY axisY axisY axisY axisY axisY axisY axisY axisY axisY .";
     border-radius: 3px;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    transform: translateY(-5rem);
 `;
 const AxisX = styled.div`
     grid-area: axisX;
@@ -47,9 +49,9 @@ const AxisX = styled.div`
         font-size: 2rem;
         line-height: 1;
         color: ${(p) => p.theme.greyDark};
-        width: 200%;
+        width: 20rem;
         text-align: center;
-        transform: rotate(-90deg) translate(-100%, -1rem);
+        transform: rotate(-90deg) translate(-70%, -8rem);
         transform-origin: center center;
     }
 `;

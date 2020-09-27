@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { respond } from "../../../styles";
+import { respond, PageNav } from "../../../styles";
 import Info from "./info";
 import Chart from "./chart";
 
