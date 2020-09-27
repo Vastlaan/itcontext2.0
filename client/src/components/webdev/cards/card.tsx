@@ -23,6 +23,13 @@ interface CardStyledProps {
 export default function Card(props: CardProps) {
     const { btn, link, hovered, translate, image, icon, header, text } = props;
 
+    const scrollToSecurity = () => {
+        const security = document.querySelector("#security");
+        if (security) {
+            security.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <Container hovered={hovered} trans={translate} image={image}>
             <Icon hovered={hovered}>{icon}</Icon>
@@ -30,6 +37,7 @@ export default function Card(props: CardProps) {
             <CardText hovered={hovered}>{text}</CardText>
             <Link
                 to={link}
+                onClick={scrollToSecurity}
                 style={{ textDecoration: "none", margin: "0 auto" }}
             >
                 <CardButton>{btn}</CardButton>

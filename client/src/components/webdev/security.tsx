@@ -17,7 +17,7 @@ export default function Responsive() {
     const intl = useIntl();
 
     return (
-        <Container>
+        <Container id="security">
             <BlockContent>
                 <BlockInfo>
                     {intl.formatMessage({
