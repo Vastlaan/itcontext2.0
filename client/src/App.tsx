@@ -137,7 +137,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     html{
-        font-size: 50%;
+        font-size: 42%;
         box-sizing: border-box;
         ${(props) => respond("xs", `font-size:30%;`)}
         ${(props) => respond("s", `font-size:50%;`)}
