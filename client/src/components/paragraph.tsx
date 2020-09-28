@@ -60,7 +60,7 @@ const Container = styled.article`
         background-color: ${(p) => p.theme.secondary};
     }
 `;
-const Heading = styled.div`
+const Heading = styled.h3`
     font-family: ${fonts.gayathri};
     font-size: 3rem;
     color: ${(p) => p.theme.secondary};
