@@ -10,7 +10,7 @@ export default function Marketing() {
 
     return (
         <Container>
-            <PageNav>
+            <CustomPageNav>
                 <p>
                     <Link to="/">
                         {intl.formatMessage({
@@ -26,10 +26,14 @@ export default function Marketing() {
                         })}
                     </Link>
                 </p>
-            </PageNav>
+            </CustomPageNav>
+
             <Header />
         </Container>
     );
 }
 
 const Container = styled.section``;
+const CustomPageNav = styled(PageNav)`
+    padding: 2rem 2rem 0rem 2rem;
+`;

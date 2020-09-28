@@ -19,5 +19,5 @@ const Container = styled.header`
     display: flex;
     flex-direction: column;
 
-    ${() => respond("m", "flex-direction: row; padding: 2rem;")}
+    ${() => respond("l", "flex-direction: row; padding: 0rem 2rem 2rem 2rem;")}
 `;

@@ -37,7 +37,7 @@ const Container = styled.div`
     border-radius: 3px;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
     padding: 1rem;
-    transform: translateY(-5rem);
+    transform: translateY(-4rem);
 `;
 const AxisX = styled.div`
     grid-area: axisX;
@@ -65,99 +65,56 @@ const AxisY = styled.div`
     line-height: 1;
     color: ${(p) => p.theme.greyDark};
 `;
-const ContentMarketing = styled.div`
+const SingleChart = styled.button`
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 1rem 0;
+    text-align: center;
+    font-family: ${fonts.advent};
+    font-size: 2rem;
+    text-transform: capitalize;
+    letter-spacing: 0.15rem;
+    color: snow;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+    &:focus,
+    :active {
+        outline: none;
+    }
+`;
+const ContentMarketing = styled(SingleChart)`
     grid-area: content;
     background-color: ${(p) => p.theme.fresh};
-    padding: 0.5rem;
-    text-align: center;
-    font-family: ${fonts.advent};
-    font-size: 2rem;
-    text-transform: capitalize;
-    letter-spacing: 0.15rem;
-    color: snow;
 `;
-const SearchEngineOptimisatie = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0;
+const SearchEngineOptimisatie = styled(SingleChart)`
     grid-area: seo;
     background-color: ${(p) => p.theme.warm};
-    padding: 0.5rem;
-    text-align: center;
-    font-family: ${fonts.advent};
-    font-size: 2rem;
-    text-transform: capitalize;
-    letter-spacing: 0.15rem;
-    color: snow;
 `;
 
-const EmailMarketing = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0;
+const EmailMarketing = styled(SingleChart)`
     grid-area: email;
     background-color: ${(p) => p.theme.secondary};
-    padding: 0.5rem;
-    text-align: center;
-    font-family: ${fonts.advent};
-    font-size: 2rem;
-    text-transform: capitalize;
-    letter-spacing: 0.15rem;
-    color: snow;
 `;
 
-const SearchEnginesMarketing = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0;
+const SearchEnginesMarketing = styled(SingleChart)`
     grid-area: sem;
     background-color: ${(p) => p.theme.primaryLight};
-    padding: 0.5rem;
-    text-align: center;
-    font-family: ${fonts.advent};
-    font-size: 2rem;
-    text-transform: capitalize;
-    letter-spacing: 0.15rem;
-    color: snow;
 `;
 
-const DisplayAdvertaising = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0;
+const DisplayAdvertaising = styled(SingleChart)`
     grid-area: display;
     background-color: ${(p) => p.theme.grey};
-    padding: 0.5rem;
-    text-align: center;
-    font-family: ${fonts.advent};
-    font-size: 2rem;
-    text-transform: capitalize;
-    letter-spacing: 0.15rem;
-    color: snow;
 `;
 
-const SocialMediaMarketing = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0;
+const SocialMediaMarketing = styled(SingleChart)`
     grid-area: social;
     background-color: ${(p) => p.theme.primary};
-    padding: 0.2rem;
-    text-align: center;
-    font-family: ${fonts.advent};
-    font-size: 2rem;
-    text-transform: capitalize;
-    letter-spacing: 0.15rem;
-    color: snow;
 `;
 
 const Title = styled.h3`
