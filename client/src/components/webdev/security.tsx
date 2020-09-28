@@ -56,6 +56,7 @@ export default function Responsive() {
     );
 }
 const Container = styled.section`
+    scroll-margin-top: 6rem;
     margin: 5rem 0rem;
     ${() => respond("m", "margin:10rem auto;")}
 `;

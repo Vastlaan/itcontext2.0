@@ -21,8 +21,14 @@ export default function Chart() {
             >
                 Content Marketing
             </ContentMarketing>
-            <EmailMarketing>Email Marketing</EmailMarketing>
-            <SearchEngineOptimisatie>SEO (Organic)</SearchEngineOptimisatie>
+            <EmailMarketing onClick={() => scrollToArticle("email-marketing")}>
+                Email Marketing
+            </EmailMarketing>
+            <SearchEngineOptimisatie
+                onClick={() => scrollToArticle("seo-marketing")}
+            >
+                SEO (Organic)
+            </SearchEngineOptimisatie>
             <SearchEnginesMarketing>SEM</SearchEnginesMarketing>
             <DisplayAdvertaising>Display Advertaising</DisplayAdvertaising>
             <SocialMediaMarketing>Social Media Marketing</SocialMediaMarketing>

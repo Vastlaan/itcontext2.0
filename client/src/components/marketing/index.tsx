@@ -3,7 +3,7 @@ import { useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Header from "./header";
-import { PageNav } from "../../styles";
+import { PageNav, Button } from "../../styles";
 import Paragraph from "../paragraph";
 
 export default function Marketing() {
@@ -53,50 +53,80 @@ export default function Marketing() {
                         "De goede contentcampagne is gebaseerd op het kennen van uw publiek. Het moet de vragen van uw publiek beantwoorden. Om dat te bereiken, moet u ze beter kennen. Probeer hun sociale media-accounts op te zoeken en erachter te komen welke sites, groepen, profielen ze volgen en pas daaraan aan. Verstrek waardevolle informatie - gebruik verschillende formaten, kies de juiste plaatsen voor uw inhoud en zorg ervoor dat u rechtstreeks met uw publiek praat. Stop zakelijke spraak en geef prioriteit aan de natuurlijke taal. Maak uw inhoud uniek, interessant en opwindend. Gebruik boeiende titels. Zodat ze meer willen.",
                 })}
             />
+            <Link style={{ textDecoration: "none" }} to="/contact">
+                <CustomButton>
+                    {intl.formatMessage({
+                        id: "marketing.button-1",
+                        defaultMessage: "Vraag ons voor meer informatie",
+                    })}
+                </CustomButton>
+            </Link>
 
             <Paragraph
+                id="seo-marketing"
                 heading={intl.formatMessage({
-                    id: "webdev.paragraph-1-header",
-                    defaultMessage: "kosten website maken",
+                    id: "marketing.paragraph-2-header",
+                    defaultMessage: "Zoekmachineoptimalisatie (SEO)",
                 })}
                 para1={intl.formatMessage({
-                    id: "webdev.paragraph-1-text-1",
+                    id: "marketing.paragraph-2-text-1",
                     defaultMessage:
-                        "Veel ondernemers vragen zich af wat zijn de kosten van professionele website? Om dit vraag antwoord te geven moet er juist nog een vraag gesteld worden. Wat voor heb u een website nodig?",
+                        "Zoekmachineoptimalisatie is een techniek om de positie van een website in Organic Search te verbeteren. Organic Search is een onbetaalde ranking van de website-inhoud. Om de plaats in de zoekresultaten te verbeteren, moet u trefwoorden gebruiken waarnaar even vaak wordt gezocht en die tegelijkertijd relevant zijn voor uw specifieke bedrijfssituatie.",
                 })}
                 para2={intl.formatMessage({
-                    id: "webdev.paragraph-1-text-2",
+                    id: "marketing.paragraph-2-text-2",
                     defaultMessage:
-                        "Het meest voorkomende geval is website die representatieve functies vervult. Bezoekers kunnen erachter komen welke diensten biedt uw bedrijf aan, wat zijn de prijzen, waar bent u gevestigd en hoe is het best om contact met u op te nemen. Op deze website kunt u ook uw prestaties of belangrijke evenementen aankondigen. IT Context ontwerp dergelijke websites al vanaf 247 &euro; exclusief.",
+                        "Zoekmachineoptimalisatie is een continu proces, omdat mensen hun voorkeuren veranderen, de technologie die we gebruiken verandert en zoekmachines worden bereikt door nieuwe algoritmen.",
                 })}
                 para3={intl.formatMessage({
-                    id: "webdev.paragraph-1-text-3",
+                    id: "marketing.paragraph-2-text-3",
                     defaultMessage:
-                        "Waarschijnlijk zou u toch meer van de website verwachten. U wilt dat uw klanten makkelijk online afspraak met u kunnen maken of een offerte aanvragen. Misschien wenst u dat elke klant een persoonlijke account kunt aanmaken en daardoor een toegang krijgen tot voor hem bedoelde inhoud. Heeft u een professionele e-mailadres nodig? IT Context biedt goedkoop e-mail, de prijzen beginnen vanaf 19 &euro; exclusief per jaar. Wilt u inhoud van uw website online beheren? Met ons krijg u toegang tot Content Manager System al vanaf 49 &euro; exclusief per jaar. IT Context helpt u ook met uw eigen webshop oprichten.  Kosten hangen er af van aantal paginas, producten en gewenste functionaliteit.  Er komen nog kleine maandelijke bedragen bij voor o.a. online betalen en server capaciteit.",
+                        "De meest populaire zoekwoorden hebben veel concurrentie. Als u een klein bedrijf bent, kan het moeilijk zijn om bovenaan de rangschikkingsresultaten voor die zoekwoorden te verschijnen. Daar kunnen Long Tail Keywords helpen. Long Tail Keywords zijn zoekwoorden met een kleine concurrentie en meestal specifieker. Trefwoorden moeten relevant zijn en de website moet vermijden 'keywords stuffing'.",
+                })}
+            />
+            <a style={{ textDecoration: "none" }} href="tel:0031682307051">
+                <CustomButton>
+                    {intl.formatMessage({
+                        id: "marketing.button-2",
+                        defaultMessage: "bel ons voor gratis advies",
+                    })}
+                </CustomButton>
+            </a>
+
+            <Paragraph
+                id="email-marketing"
+                heading={intl.formatMessage({
+                    id: "webdev.paragraph-3-header",
+                    defaultMessage: "e-mail marketing",
+                })}
+                para1={intl.formatMessage({
+                    id: "webdev.paragraph-3-text-1",
+                    defaultMessage:
+                        "Om een e-mailmarketingcampagne te starten, moet u de e-maillijst samenstellen met adressen van klanten die zich op uw campagne hebben geabonneerd. U kunt uw lijst samenstellen door uw klanten te vragen zich te abonneren voor korting of een ander soort beloning. Het kan ook gebeuren door het formulier op uw website in te vullen.",
+                })}
+                para2={intl.formatMessage({
+                    id: "webdev.paragraph-3-text-2",
+                    defaultMessage:
+                        "Houd er rekening mee dat veel landen de toestemming van klanten nodig hebben om hen een e-mail te sturen, dus vergeet het juiste beleid niet, en die checkbox waarmee wordt bevestigd dat uw klanten Algemeene Voorwaarden over uw campagne hebben gelezen en ermee akkoord zijn gegaan.",
+                })}
+                para3={intl.formatMessage({
+                    id: "webdev.paragraph-3-text-3",
+                    defaultMessage:
+                        "Het verzenden van alleen de e-mails levert geen winst op, noch voor u of uw klanten. Houd er rekening mee dat u de juiste inhoud naar mensen met bepaalde interesses stuurt. Overstelp ze niet met te veel inhoud of te veel e-mails is opeenvolgend. Vraag hen of ze geïnteresseerd zijn in het ontvangen van e-mails over andere producten of diensten. Misschien zijn degenen die een inhoud leuk vinden, geïnteresseerd in een aantal gerelateerde onderwerpen. Kijk hoe vaak ze graag van je willen horen? Is het wekelijks of maandelijks? Probeer ze vervolgens te vragen je feedback te geven over jou winkel- of klantervaring. Vergeet hen niet gewoon te bedanken dat ze uw klanten zijn.",
                 })}
             />
 
-            <Paragraph
-                heading={intl.formatMessage({
-                    id: "webdev.paragraph-1-header",
-                    defaultMessage: "kosten website maken",
-                })}
-                para1={intl.formatMessage({
-                    id: "webdev.paragraph-1-text-1",
-                    defaultMessage:
-                        "Veel ondernemers vragen zich af wat zijn de kosten van professionele website? Om dit vraag antwoord te geven moet er juist nog een vraag gesteld worden. Wat voor heb u een website nodig?",
-                })}
-                para2={intl.formatMessage({
-                    id: "webdev.paragraph-1-text-2",
-                    defaultMessage:
-                        "Het meest voorkomende geval is website die representatieve functies vervult. Bezoekers kunnen erachter komen welke diensten biedt uw bedrijf aan, wat zijn de prijzen, waar bent u gevestigd en hoe is het best om contact met u op te nemen. Op deze website kunt u ook uw prestaties of belangrijke evenementen aankondigen. IT Context ontwerp dergelijke websites al vanaf 247 &euro; exclusief.",
-                })}
-                para3={intl.formatMessage({
-                    id: "webdev.paragraph-1-text-3",
-                    defaultMessage:
-                        "Waarschijnlijk zou u toch meer van de website verwachten. U wilt dat uw klanten makkelijk online afspraak met u kunnen maken of een offerte aanvragen. Misschien wenst u dat elke klant een persoonlijke account kunt aanmaken en daardoor een toegang krijgen tot voor hem bedoelde inhoud. Heeft u een professionele e-mailadres nodig? IT Context biedt goedkoop e-mail, de prijzen beginnen vanaf 19 &euro; exclusief per jaar. Wilt u inhoud van uw website online beheren? Met ons krijg u toegang tot Content Manager System al vanaf 49 &euro; exclusief per jaar. IT Context helpt u ook met uw eigen webshop oprichten.  Kosten hangen er af van aantal paginas, producten en gewenste functionaliteit.  Er komen nog kleine maandelijke bedragen bij voor o.a. online betalen en server capaciteit.",
-                })}
-            />
+            <a
+                style={{ textDecoration: "none" }}
+                href="mailto:info@itcontext.nl?subject=Ik zou graag meer weten over E-mail Marketing!&body=Stuur mij aub een bijsluiter met meer informatie over e-mail marketing! Groeten!"
+            >
+                <CustomButton>
+                    {intl.formatMessage({
+                        id: "marketing.button-3",
+                        defaultMessage: "Vraag meer over e-mail marketing",
+                    })}
+                </CustomButton>
+            </a>
         </Container>
     );
 }
@@ -104,4 +134,8 @@ export default function Marketing() {
 const Container = styled.section``;
 const CustomPageNav = styled(PageNav)`
     padding: 2rem 2rem 0rem 2rem;
+`;
+const CustomButton = styled(Button)`
+    margin: 0 auto;
+    display: block;
 `;

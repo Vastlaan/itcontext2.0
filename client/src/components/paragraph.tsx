@@ -30,6 +30,7 @@ export default function Paragraph(props: ParagraphProps) {
 }
 
 const Container = styled.article`
+    scroll-margin-top: 6rem;
     margin: 10rem auto;
     padding: 2rem;
     position: relative;
@@ -61,7 +62,7 @@ const Container = styled.article`
         background-color: ${(p) => p.theme.secondary};
     }
 `;
-const Heading = styled.h3`
+const Heading = styled.h1`
     font-family: ${fonts.gayathri};
     font-size: 3rem;
     color: ${(p) => p.theme.secondary};
