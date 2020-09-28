@@ -15,15 +15,15 @@ export default function Marketing() {
                 <p>
                     <Link to="/">
                         {intl.formatMessage({
-                            id: "webdev.pagenav-home",
+                            id: "marketing.pagenav-home",
                             defaultMessage: "Voorpagina",
                         })}
                     </Link>
                     {" > "}
                     <Link to="/website-ontwerpen">
                         {intl.formatMessage({
-                            id: "webdev.pagenav-current",
-                            defaultMessage: "Website Ontwerpen",
+                            id: "marketing.pagenav-current",
+                            defaultMessage: "Online Marketing",
                         })}
                     </Link>
                 </p>
@@ -96,21 +96,21 @@ export default function Marketing() {
             <Paragraph
                 id="email-marketing"
                 heading={intl.formatMessage({
-                    id: "webdev.paragraph-3-header",
+                    id: "marketing.paragraph-3-header",
                     defaultMessage: "e-mail marketing",
                 })}
                 para1={intl.formatMessage({
-                    id: "webdev.paragraph-3-text-1",
+                    id: "marketing.paragraph-3-text-1",
                     defaultMessage:
                         "Om een e-mailmarketingcampagne te starten, moet u de e-maillijst samenstellen met adressen van klanten die zich op uw campagne hebben geabonneerd. U kunt uw lijst samenstellen door uw klanten te vragen zich te abonneren voor korting of een ander soort beloning. Het kan ook gebeuren door het formulier op uw website in te vullen.",
                 })}
                 para2={intl.formatMessage({
-                    id: "webdev.paragraph-3-text-2",
+                    id: "marketing.paragraph-3-text-2",
                     defaultMessage:
                         "Houd er rekening mee dat veel landen de toestemming van klanten nodig hebben om hen een e-mail te sturen, dus vergeet het juiste beleid niet, en die checkbox waarmee wordt bevestigd dat uw klanten Algemeene Voorwaarden over uw campagne hebben gelezen en ermee akkoord zijn gegaan.",
                 })}
                 para3={intl.formatMessage({
-                    id: "webdev.paragraph-3-text-3",
+                    id: "marketing.paragraph-3-text-3",
                     defaultMessage:
                         "Het verzenden van alleen de e-mails levert geen winst op, noch voor u of uw klanten. Houd er rekening mee dat u de juiste inhoud naar mensen met bepaalde interesses stuurt. Overstelp ze niet met te veel inhoud of te veel e-mails is opeenvolgend. Vraag hen of ze geïnteresseerd zijn in het ontvangen van e-mails over andere producten of diensten. Misschien zijn degenen die een inhoud leuk vinden, geïnteresseerd in een aantal gerelateerde onderwerpen. Kijk hoe vaak ze graag van je willen horen? Is het wekelijks of maandelijks? Probeer ze vervolgens te vragen je feedback te geven over jou winkel- of klantervaring. Vergeet hen niet gewoon te bedanken dat ze uw klanten zijn.",
                 })}
@@ -127,6 +127,38 @@ export default function Marketing() {
                     })}
                 </CustomButton>
             </a>
+
+            <Paragraph
+                id="sem-marketing"
+                heading={intl.formatMessage({
+                    id: "marketing.paragraph-4-header",
+                    defaultMessage: "Search Engine Marketing",
+                })}
+                para1={intl.formatMessage({
+                    id: "marketing.paragraph-4-text-1",
+                    defaultMessage:
+                        "Dit zijn betaalde advertenties van uw website die verschijnen wanneer er op een gericht trefwoord wordt gezocht. U betaalt alleen voor advertenties waarop is geklikt, daarom wordt er een 'pay-for-click'-advertentie genoemd.",
+                })}
+                para2={intl.formatMessage({
+                    id: "marketing.paragraph-4-text-2",
+                    defaultMessage:
+                        "Laat uw advertentie er aantrekkelijker uitzien door een relevante koptekst te gebruiken, speciale aanbiedingen te benadrukken en een pakkende call-to-action-zin toe te voegen.",
+                })}
+                para3={intl.formatMessage({
+                    id: "marketing.paragraph-4-text-3",
+                    defaultMessage:
+                        "Om het beste uit SEM te halen, moet u eerst onderzoekstools beheersen en trefwoorden selecteren. U moet ook uw advertentiecampagnes op de meest relevante manier structureren. Alle subcategorieën of subspecialiteiten van uw bedrijf zouden aparte campagnes online moeten hebben en de meest gewilde zou het belangrijkst voor u moeten zijn.",
+                })}
+            />
+
+            <Link style={{ textDecoration: "none" }} to="/contact">
+                <CustomButton>
+                    {intl.formatMessage({
+                        id: "marketing.button-1",
+                        defaultMessage: "Vraag ons voor meer informatie",
+                    })}
+                </CustomButton>
+            </Link>
         </Container>
     );
 }

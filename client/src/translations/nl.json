@@ -90,6 +90,8 @@
     "about.reviews-opinion-2-head": "Vriendelijke mensen en mooi resultaat",
     "about.reviews-opinion-2-text": "Ik raad dit bedrijf zeker aan, ze zijn betrokken, zorgen voor dat elke detail van de website een juiste plek en bedoeling heeft. Voor deze prijs ben ik heel tevreden met de resultaat. Top!",
 
+    "marketing.pagenav-home": "Home",
+    "marketing.pagenav-current": "Online Marketing",
     "marketing.header-head-1": "Het maken van een plan is cruciaal om de voortgang te kunnen meten,",
     "marketing.header-head-2": "Het goede plan is flexibel en gericht op het behalen van realistische doelen.",
     "marketing.header-text": "Een goede marketingstrategie vereist een solide plan, dat kan verschillen afhankelijk van: scope - het verkeer waarop u zich concentreert; technologieën - tools die u gaat gebruiken; budget - de tijd en kosten die u bereid bent te besteden. IT Context helpt u bij het kiezen van de beste oplossingen die aan uw eisen voldoen.",
@@ -109,6 +111,11 @@
     "marketing.paragraph-3-text-2": "Houd er rekening mee dat veel landen de toestemming van klanten nodig hebben om hen een e-mail te sturen, dus vergeet het juiste beleid niet, en die checkbox waarmee wordt bevestigd dat uw klanten Algemeene Voorwaarden over uw campagne hebben gelezen en ermee akkoord zijn gegaan.",
     "marketing.paragraph-3-text-3": "Het verzenden van alleen de e-mails levert geen winst op, noch voor u of uw klanten. Houd er rekening mee dat u de juiste inhoud naar mensen met bepaalde interesses stuurt. Overstelp ze niet met te veel inhoud of te veel e-mails is opeenvolgend. Vraag hen of ze geïnteresseerd zijn in het ontvangen van e-mails over andere producten of diensten. Misschien zijn degenen die een inhoud leuk vinden, geïnteresseerd in een aantal gerelateerde onderwerpen. Kijk hoe vaak ze graag van je willen horen? Is het wekelijks of maandelijks? Probeer ze vervolgens te vragen je feedback te geven over jou winkel- of klantervaring. Vergeet hen niet gewoon te bedanken dat ze uw klanten zijn.",
     "marketing.button-3": "Vraag meer over e-mail marketing",
+    "marketing.paragraph-4-header": "Zoekmachines Marketing",
+    "marketing.paragraph-4-text-1": "Dit zijn betaalde advertenties van uw website die verschijnen wanneer er op een gericht trefwoord wordt gezocht. U betaalt alleen voor advertenties waarop is geklikt, daarom wordt er een 'pay-for-click'-advertentie genoemd.",
+    "marketing.paragraph-4-text-2": "Laat uw advertentie er aantrekkelijker uitzien door een relevante koptekst te gebruiken, speciale aanbiedingen te benadrukken en een pakkende call-to-action-zin toe te voegen.",
+    "marketing.paragraph-4-text-3": "Om het beste uit SEM te halen, moet u eerst onderzoekstools beheersen en trefwoorden selecteren. U moet ook uw advertentiecampagnes op de meest relevante manier structureren. Alle subcategorieën of subspecialiteiten van uw bedrijf zouden aparte campagnes online moeten hebben en de meest gewilde zou het belangrijkst voor u moeten zijn.",
+    "marketing.button-4": "Vraag meer over e-mail marketing",
 
     "contact.pagenav-home": "Voorpagina",
     "contact.pagenav-current": "Contact",

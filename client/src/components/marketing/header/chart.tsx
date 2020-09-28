@@ -29,7 +29,11 @@ export default function Chart() {
             >
                 SEO (Organic)
             </SearchEngineOptimisatie>
-            <SearchEnginesMarketing>SEM</SearchEnginesMarketing>
+            <SearchEnginesMarketing
+                onClick={() => scrollToArticle("sem-marketing")}
+            >
+                SEM
+            </SearchEnginesMarketing>
             <DisplayAdvertaising>Display Advertaising</DisplayAdvertaising>
             <SocialMediaMarketing>Social Media Marketing</SocialMediaMarketing>
             <AxisY>effectiviteit bij het werven van klanten</AxisY>
