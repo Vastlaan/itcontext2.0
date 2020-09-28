@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { fonts, respond, Text } from "../styles";
 
 interface ParagraphProps {
+    id?: string;
     heading?: string;
     para1?: string;
     para2?: string;
@@ -10,10 +11,10 @@ interface ParagraphProps {
 }
 
 export default function Paragraph(props: ParagraphProps) {
-    const { heading, para1, para2, para3 } = props;
+    const { id, heading, para1, para2, para3 } = props;
 
     return (
-        <Container>
+        <Container id={id}>
             <Heading>{heading}</Heading>
             <Text style={{ gridArea: "para1", letterSpacing: ".1rem" }}>
                 {para1}

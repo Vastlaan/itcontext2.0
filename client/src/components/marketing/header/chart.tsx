@@ -4,13 +4,23 @@ import { useIntl } from "react-intl";
 import { fonts, Button, respond } from "../../../styles";
 
 export default function Chart() {
+    const scrollToArticle = (id: string) => {
+        const article = document.querySelector(`#${id}`);
+        if (article) {
+            article.scrollIntoView({ behavior: "smooth" });
+        }
+    };
     return (
         <Container>
             <Title>IT Context marketing strategieën</Title>
             <AxisX>
                 <div>marketing strategieën</div>
             </AxisX>
-            <ContentMarketing>Content Marketing</ContentMarketing>
+            <ContentMarketing
+                onClick={() => scrollToArticle("content-marketing")}
+            >
+                Content Marketing
+            </ContentMarketing>
             <EmailMarketing>Email Marketing</EmailMarketing>
             <SearchEngineOptimisatie>SEO (Organic)</SearchEngineOptimisatie>
             <SearchEnginesMarketing>SEM</SearchEnginesMarketing>
