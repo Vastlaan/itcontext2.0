@@ -218,12 +218,12 @@ export default function Marketing() {
 
             <a
                 style={{ textDecoration: "none" }}
-                href="mailto:info@itcontext.nl?subject=Ik zou graag meer weten over E-mail Marketing!&body=Stuur mij aub een bijsluiter met meer informatie over e-mail marketing! Groeten!"
+                href="mailto:info@itcontext.nl?subject=Social Media Campagne!&body=Ik zou graag uw advies over oprichten van Social Media Campagne. Neem aub contact met mij op. Groeten!"
             >
                 <CustomButton>
                     {intl.formatMessage({
                         id: "marketing.button-6",
-                        defaultMessage: "Vraag meer over e-mail marketing",
+                        defaultMessage: "Vraag ons hulp bij Social Media",
                     })}
                 </CustomButton>
             </a>
