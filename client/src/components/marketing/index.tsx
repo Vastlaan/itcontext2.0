@@ -154,16 +154,86 @@ export default function Marketing() {
             <Link style={{ textDecoration: "none" }} to="/contact">
                 <CustomButton>
                     {intl.formatMessage({
-                        id: "marketing.button-1",
+                        id: "marketing.button-4",
                         defaultMessage: "Vraag ons voor meer informatie",
                     })}
                 </CustomButton>
             </Link>
+
+            <Paragraph
+                id="display-marketing"
+                heading={intl.formatMessage({
+                    id: "marketing.paragraph-5-header",
+                    defaultMessage: "Display Advertising",
+                })}
+                para1={intl.formatMessage({
+                    id: "marketing.paragraph-5-text-1",
+                    defaultMessage:
+                        "Display ads zijn moderne advertenties die op websites verschijnen in de vorm van een banner of video. Het is naast de zoekmachines marketing de meest populaire advertentiemethode. U kunt deals sluiten met de eigenaar van de website of netwerken die advertenties op meerdere websites aanbieden. U kunt zich richten op specifieke websites of een specifiek publiek, of beide.",
+                })}
+                para2={intl.formatMessage({
+                    id: "marketing.paragraph-5-text-2",
+                    defaultMessage:
+                        "Display-advertenties zijn niet zoals SEM-advertenties, dus ze reageren niet op zoektermen, maar verschijnen op plaatsen of aan de mensen die mogelijk (maar niet) geïnteresseerd zijn in uw aanbieding.",
+                })}
+                para3={intl.formatMessage({
+                    id: "marketing.paragraph-5-text-3",
+                    defaultMessage:
+                        "Display-advertenties zijn gericht op de websites die worden bezocht door mensen die uw producten willen kopen of mensen wiens online activiteit (zoals bezochte websites of gekochte producten) een hint kan zijn dat zij uw producten ook leuk zullen vinden. SEM- en display-advertenties werken mogelijk ook samen.",
+                })}
+            />
+
+            <a style={{ textDecoration: "none" }} href="tel:0031682307051">
+                <CustomButton>
+                    {intl.formatMessage({
+                        id: "marketing.button-5",
+                        defaultMessage:
+                            "Bel ons en vraag hoe kunnen wij helpen",
+                    })}
+                </CustomButton>
+            </a>
+
+            <Paragraph
+                id="social-marketing"
+                heading={intl.formatMessage({
+                    id: "marketing.paragraph-6-header",
+                    defaultMessage: "Social Media Marketing",
+                })}
+                para1={intl.formatMessage({
+                    id: "marketing.paragraph-6-text-1",
+                    defaultMessage:
+                        "Social Media is een geweldige kans om uw merk te upgraden. Er zijn enkele basisregels die u moet onthouden. Word lid van de juiste social media sites, deel waardevolle of boeiende inhoud, neem deel aan gesprekken, zoek uit wat mensen leuk vinden en geef ze er meer van en laat uw netwerk groeien. Vermijd agressieve reclame voor jezelf, focus op het leveren van goede inhoud en het vasthouden van de aandacht van het publiek. Luister naar wat mensen te zeggen hebben en probeer hun vragen te beantwoorden.",
+                })}
+                para2={intl.formatMessage({
+                    id: "marketing.paragraph-6-text-2",
+                    defaultMessage:
+                        "Hoe spreek je met je publiek? Verschillende sociale netwerken creëren verschillende interacties tussen gebruikers. U moet bijvoorbeeld licht en vriendelijk met uw klanten praten op persoonlijke netwerken en 'gezaghebbend' en professioneel op professionele netwerken. Houd uw doelen in gedachten, wees voor uw bestaande klanten dankbaar voor hun loyaliteit en spreek intuïtief met nieuwe klanten die u wilt aantrekken.",
+                })}
+                para3={intl.formatMessage({
+                    id: "marketing.paragraph-6-text-3",
+                    defaultMessage:
+                        "Je hebt een goed plan nodig. Probeer te beginnen met eenvoudige vragen beantwoorden: Wat probeer je te bereiken met sociale media? Het kan zijn dat je je klanten bestaanden vergroten wil of bewustwording van uw producten opbouwen bij bestaande klanten. Wat heb je interessant te zeggen? Ontdek wat interessant is voor uw potentiële klanten en probeer daar aan deel te nemen. Hoe vind je mensen om je berichten te delen? Als u een starter bent, nodig dan enkele van uw vrienden of familie uit om uw bedrijf leuk te vinden. Neem deel aan openbare discussies over de onderwerpen die betrekking hebben op uw bedrijf. Word lid van groepen en deel uw inhoud daar, becommentarieer de reacties of fotos van anderen. Hoe spreek je met je publiek? Verschillende sociale netwerken creëren verschillende interacties tussen gebruikers. U moet bijvoorbeeld licht en vriendelijk met uw klanten praten op persoonlijke netwerken en 'gezaghebbend' en professioneel op professionele netwerken. Houd uw doelen in gedachten, wees voor uw bestaande klanten dankbaar voor hun loyaliteit en spreek intuïtief met nieuwe klanten die u wilt aantrekken.",
+                })}
+            />
+
+            <a
+                style={{ textDecoration: "none" }}
+                href="mailto:info@itcontext.nl?subject=Ik zou graag meer weten over E-mail Marketing!&body=Stuur mij aub een bijsluiter met meer informatie over e-mail marketing! Groeten!"
+            >
+                <CustomButton>
+                    {intl.formatMessage({
+                        id: "marketing.button-6",
+                        defaultMessage: "Vraag meer over e-mail marketing",
+                    })}
+                </CustomButton>
+            </a>
         </Container>
     );
 }
 
-const Container = styled.section``;
+const Container = styled.section`
+    margin-bottom: 10rem;
+`;
 const CustomPageNav = styled(PageNav)`
     padding: 2rem 2rem 0rem 2rem;
 `;

@@ -34,8 +34,16 @@ export default function Chart() {
             >
                 SEM
             </SearchEnginesMarketing>
-            <DisplayAdvertaising>Display Advertaising</DisplayAdvertaising>
-            <SocialMediaMarketing>Social Media Marketing</SocialMediaMarketing>
+            <DisplayAdvertaising
+                onClick={() => scrollToArticle("display-marketing")}
+            >
+                Display Advertaising
+            </DisplayAdvertaising>
+            <SocialMediaMarketing
+                onClick={() => scrollToArticle("social-marketing")}
+            >
+                Social Media Marketing
+            </SocialMediaMarketing>
             <AxisY>effectiviteit bij het werven van klanten</AxisY>
         </Container>
     );
