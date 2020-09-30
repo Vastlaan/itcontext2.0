@@ -70,7 +70,7 @@ const Container = styled.div<ContainerProps>`
     display: block;
     background-color: ${(p) => p.theme.primary};
     position: absolute;
-    bottom: -30rem;
+    bottom: -39.3rem;
     right: 0;
     z-index: 9;
     transition: all 0.3s;
@@ -84,11 +84,17 @@ const Container = styled.div<ContainerProps>`
         flex-direction: column;
 
         a {
+            margin: 1rem;
+            text-transform: uppercase;
             text-decoration: none;
             font-size: 2.5rem;
             font-family: ${fonts.advent};
             color: snow;
             transition: all 0.4s;
+
+            &:hover {
+                color: ${(p) => p.theme.greyLight};
+            }
         }
     }
 `;
