@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
-import { fonts, respond, Button } from "../../styles";
+import { fonts, respond, Button, Text } from "../../styles";
 
 interface FormProps {
     submitContactForm: (e: React.FormEvent<HTMLFormElement>) => void;
@@ -23,13 +23,13 @@ export default function Form(props: FormProps) {
                     defaultMessage: "Contact Formulier",
                 })}
             </h1>
-            <p>
+            <Text>
                 {intl.formatMessage({
                     id: "contact.form-header-sub",
                     defaultMessage:
                         "Heb je een vraag of opmerking? Vul dan onderstaand contactformulier in, wij streven ernaar om je vraag binnen 3 werkdagen te beantwoorden. Heb je een vraag over een van ons dienst? Vermeld dan het in onderstaand formulier:",
                 })}
-            </p>
+            </Text>
             {warning ? <div>{warning}</div> : null}
             <Field>
                 <label>
@@ -95,12 +95,6 @@ const Container = styled.form`
         letter-spacing: 0.3rem;
         text-align: center;
         text-transform: uppercase;
-        color: ${(props) => props.theme.grey};
-    }
-    p {
-        margin: 2rem auto;
-        font-family: ${fonts.cormoran};
-        font-size: 2rem;
         color: ${(props) => props.theme.grey};
     }
 `;

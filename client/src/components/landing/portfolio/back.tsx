@@ -44,7 +44,7 @@ const Text = styled.div`
 
     p {
         font-family: ${fonts.cormoran};
-        font-size: 2rem;
+        font-size: 2.2rem;
         letter-spacing: 0.3rem;
         color: ${(props) => props.theme.greyDark};
     }

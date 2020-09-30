@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
-import { fonts, Button, respond } from "../../styles";
+import { fonts, Button, respond, Text } from "../../styles";
 import { BsChevronDoubleDown } from "react-icons/bs";
 import Image from "../../img/image-webdev-header.jpg";
 
@@ -31,13 +31,13 @@ export default function Header() {
                         defaultMessage: "op maat van uw behoeften",
                     })}
                 </Head>
-                <Text>
+                <CustomText>
                     {intl.formatMessage({
                         id: "webdev.header-text",
                         defaultMessage:
                             "Onze brede aanbod onderscheidt zich door allerlei oplossingen. Wij realiseren zowel kleine als grote opdrachten, van eenvoudig maar krachtig websites tot complexe webapplicaties, e-mailadressen, Content Manager Systems en veel meer.",
                     })}
-                </Text>
+                </CustomText>
                 <CustomButton onClick={scrollDown}>
                     {intl.formatMessage({
                         id: "webdev.header-btn",
@@ -78,12 +78,9 @@ const Head = styled.h1`
     font-family: ${fonts.gayathri};
     letter-spacing: 0.3rem;
 `;
-const Text = styled.p`
+const CustomText = styled(Text)`
     margin: 3rem 0;
     color: snow;
-    font-size: 2rem;
-    font-family: ${fonts.cormoran};
-    letter-spacing: 0.2rem;
 `;
 const CustomButton = styled(Button)`
     background-color: ${(props) => props.theme.secondary};

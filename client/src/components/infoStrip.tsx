@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { textChangeRangeNewSpan } from "typescript";
 import { fonts, respond, Text, Button } from "../styles";
 
 interface InfoStripProps {
@@ -42,7 +41,6 @@ const ShortButton = styled(Button)`
     }
 `;
 const ShortText = styled(Text)`
-    font-size: 2rem;
     padding: 2rem;
 `;
 const Note = styled.div`

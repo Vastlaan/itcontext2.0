@@ -54,7 +54,7 @@ export const Social = styled.div`
 export const BlockInfo = styled.p`
     grid-area: info;
     font-family: ${fonts.advent};
-    font-size: 2rem;
+    font-size: 2.2rem;
     text-transform: uppercase;
     color: ${(props) => props.theme.grey};
     border-left: 5px solid ${(props) => props.theme.fresh};
@@ -73,7 +73,7 @@ export const BlockHeader = styled.h2`
 `;
 export const BlockText = styled.p`
     grid-area: text;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-family: ${fonts.cormoran};
     text-align: center;
     padding: 1rem;
@@ -215,7 +215,10 @@ export const Confirmation = styled.div`
 
 export const Text = styled.p`
     font-family: ${fonts.cormoran};
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: ${(props) => props.theme.greyDark};
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.15rem;
+    text-align: center;
+
+    ${() => respond("m", "text-align: left;")}
 `;

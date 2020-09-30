@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
 import { FiPhoneCall, FiMail } from "react-icons/fi";
-import { fonts, Anchor } from "../../styles";
+import { fonts, Anchor, Text } from "../../styles";
 
 export default function Details() {
     const intl = useIntl();
@@ -21,13 +21,13 @@ export default function Details() {
                     defaultMessage: "WIJ ZIJN JE GRAAG VAN DIENST",
                 })}
             </h3>
-            <p>
+            <Text>
                 {intl.formatMessage({
                     id: "contact.details-header-sub-2",
                     defaultMessage:
                         "Heb je een vraag voor ons? Neem gerust contact met ons op via de onderstaande contactgegevens.",
                 })}
-            </p>
+            </Text>
             <Anchor color="#117864" href="tel:0682307051">
                 <FiPhoneCall />
                 <span>06 82 30 70 51</span>
@@ -58,12 +58,6 @@ const Container = styled.div`
         font-weight: 700;
         text-align: center;
         text-transform: lowercase;
-        color: ${(props) => props.theme.grey};
-    }
-    p {
-        margin: 1rem auto;
-        font-family: ${fonts.cormoran};
-        font-size: 2rem;
         color: ${(props) => props.theme.grey};
     }
 `;

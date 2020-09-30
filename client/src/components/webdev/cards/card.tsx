@@ -102,7 +102,7 @@ const Header = styled.div<CardStyledProps>`
 `;
 const CardText = styled(Text)<CardStyledProps>`
     color: ${(props) => (props.hovered ? `snow` : "#18191F")};
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-align: center;
     transition: all 0.3s;
 `;
