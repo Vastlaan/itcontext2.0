@@ -8,6 +8,8 @@ import { useIntl } from "react-intl";
 import Form from "./form";
 import Details from "./details";
 import Confirmation from "./confirmation";
+import SEO from "../seo";
+
 import { respond, PageNav } from "../../styles";
 
 function Contact() {
@@ -72,6 +74,12 @@ function Contact() {
     };
     return (
         <Container>
+            <SEO
+                title="IT Context - Contact"
+                description="IT Context is gevestigd in Purmerend. Mail Ons: info@itcontext.nl . Bel ons: 06 82 30 70 51 of bezoek onze website: http://itcontext.nl"
+                url="http://itcontext.nl"
+                imageUrl=""
+            />
             <PageNav>
                 <p>
                     <Link to="/">

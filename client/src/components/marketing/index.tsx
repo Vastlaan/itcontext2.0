@@ -5,12 +5,19 @@ import styled from "styled-components";
 import Header from "./header";
 import { PageNav, Button } from "../../styles";
 import Paragraph from "../paragraph";
+import SEO from "../seo";
 
 export default function Marketing() {
     const intl = useIntl();
 
     return (
         <Container>
+            <SEO
+                title="IT Context - Online Marketing"
+                description="IT Context helpt uw bedrijf met SEO, online moderne advertenties, Social Media Marketing en veel meer. Alles om uw bedrijf online zichtbaar te maken en meer klanten naar uw website aantrekken."
+                url="http://itcontext.nl"
+                imageUrl=""
+            />
             <CustomPageNav>
                 <p>
                     <Link to="/">

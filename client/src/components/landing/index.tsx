@@ -5,12 +5,19 @@ import Portfolio from "./portfolio";
 import Responsive from "./responsive";
 import Ux from "./ux";
 import Intersection from "../intersection";
+import SEO from "../seo";
 
 export default function Landing() {
     const intl = useIntl();
 
     return (
         <main>
+            <SEO
+                title="IT Context - Succesvolle Websites"
+                description="Website laten maken in Purmerend? Wij bieden de beste prijs-kwaliteit. Websites ontwerpen volgens moderne trends en nieuwste technologieën. Neem contact met ons mee info@itcontext.nl"
+                url="http://itcontext.nl"
+                imageUrl=""
+            />
             <Header />
             <Responsive />
             <Intersection

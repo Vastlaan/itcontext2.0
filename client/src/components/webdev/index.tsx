@@ -9,6 +9,7 @@ import Intersection from "../intersection";
 import InfoStrip from "../infoStrip";
 import Header from "./header";
 import Security from "./security";
+import SEO from "../seo";
 import { FaHandshake } from "react-icons/fa";
 
 export default function Webdev() {
@@ -16,6 +17,12 @@ export default function Webdev() {
 
     return (
         <Container>
+            <SEO
+                title="IT Context - Websites ontwikkelen"
+                description="IT Context ontwerpt betaalbaar en professionele websites, complexe webapplicaties en webshops. Specialisten in profiessionele e-mailadressen aanmaken, Content Manager Systems, Databeses en Systems Administration."
+                url="http://itcontext.nl"
+                imageUrl=""
+            />
             <Header />
             <PageNav>
                 <p>

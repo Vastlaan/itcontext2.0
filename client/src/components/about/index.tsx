@@ -7,12 +7,19 @@ import Paragraph from "../paragraph";
 import Intersection from "../intersection";
 import Reviews from "./reviews";
 import PanoramaImage from "../../img/panorama.jpg";
+import SEO from "../seo";
 
 export default function About() {
     const intl = useIntl();
 
     return (
         <Container>
+            <SEO
+                title="IT Context - Over Ons"
+                description="IT Context ontwerp moderne websites, professionele webapplicaties en webshops. Duik in onze website en leer ons beter kennen."
+                url="http://itcontext.nl"
+                imageUrl=""
+            />
             <Header />
             <Panorama>
                 <img
