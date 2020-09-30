@@ -32,12 +32,12 @@ app.post("/api/submitContactForm", (req: Request, res: Response) => {
         from: "no-reply@itcontext.nl",
         subject: "IT Context Form Submittion",
         html: `
-            <h1 style='background-color: #0b4f6c; color: white; width: 100%; padding: 1rem 2rem; text-align: center;'>Bevestiging IT Context Contact Formulier</h1>
+            <h1 style='background-color: #0b4f6c; color: white; padding: 1rem 2rem; text-align: center;'>Bevestiging IT Context Contact Formulier</h1>
             <h3 style='text-align: center; font-size: 25px;'>Goede dag, ${name}! We hebben uw bericht in goede orde ontvangen!</h3>
             <p style='text-align:center; font-size: 20px;'>Wij streven ernaar om je vraag binnen 2 werkdagen te beantwoorden</p>
             <p style='text-align:center; font-size: 20px;'>Uw contact e-mail: ${email}</p>
             <p style='text-align:center; font-size: 20px;'>Uw bericht:</p>
-            <p style='text-align:center; font-size: 18px; background-color: gold;'>${message}</p>
+            <p style='text-align:center; font-size: 18px; background-color: gold; padding: 2rem;'>${message}</p>
             </br>
             </br>
             <p style='text-align:center; font-size: 20px;'>IT Context</p>
