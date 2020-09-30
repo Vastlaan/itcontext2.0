@@ -52,7 +52,7 @@ function Contact() {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(dataToSend),
+            body: JSON.stringify({ contactFormData: dataToSend }),
         })
             .then((res) => res.json())
             .then((data) => {
