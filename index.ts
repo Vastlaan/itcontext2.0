@@ -1,13 +1,13 @@
 import express from "express";
 import { Request, Response } from "express";
 import { json } from "body-parser";
-import * as SgMail from "@sendgrid/mail";
-import { SG_API_KEY } from "./config/keys";
+import SgMail from "@sendgrid/mail";
+const keys = require("./config/keys");
 
 const app = express();
 app.use(json());
 
-SgMail.setApiKey(SG_API_KEY);
+SgMail.setApiKey(keys.SG_API_KEY);
 
 interface ContactFormData {
     name: string;
@@ -23,7 +23,7 @@ declare global {
     }
 }
 
-app.post("/submitContactForm", (req: Request, res: Response) => {
+app.post("/api/submitContactForm", (req: Request, res: Response) => {
     const { contactFormData } = req.body;
     const { name, email, message } = contactFormData;
 

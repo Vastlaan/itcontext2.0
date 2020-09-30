@@ -193,6 +193,7 @@ export const Confirmation = styled.div`
         font-family: ${fonts.advent};
         font-size: 3rem;
         color: ${(props) => props.theme.bg};
+        text-align: center;
     }
 
     a,
