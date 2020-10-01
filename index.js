@@ -14,7 +14,7 @@ app.post("/api/submitContactForm", function (req, res) {
     var contactFormData = req.body.contactFormData;
     var name = contactFormData.name, email = contactFormData.email, message = contactFormData.message;
     var msg = {
-        to: [email, "info@michalantczak.com"],
+        to: [email, "info@itcontext.nl"],
         from: "no-reply@itcontext.nl",
         subject: "IT Context Form Submittion",
         html: "\n            <h1 style='background-color: #0b4f6c; color: white; padding: 1rem 2rem; text-align: center;'>Bevestiging IT Context Contact Formulier</h1>\n            <h3 style='text-align: center; font-size: 25px;'>Goede dag, " + name + "! We hebben uw bericht in goede orde ontvangen!</h3>\n            <p style='text-align:center; font-size: 20px;'>Wij streven ernaar om je vraag binnen 2 werkdagen te beantwoorden</p>\n            <p style='text-align:center; font-size: 20px;'>Uw contact e-mail: " + email + "</p>\n            <p style='text-align:center; font-size: 20px;'>Uw bericht:</p>\n            <p style='text-align:center; font-size: 18px; background-color: gold; padding: 2rem;'>" + message + "</p>\n            </br>\n            </br>\n            <p style='text-align:center; font-size: 20px;'>IT Context</p>\n            <p style='text-align:center; font-size: 20px;'>info@itcontext.nl</p>\n            <p style='text-align:center; font-size: 20px;'>06 82 30 70 51</p>\n        ",
