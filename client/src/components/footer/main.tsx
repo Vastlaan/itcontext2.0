@@ -95,7 +95,7 @@ export default function Main() {
                     <a href="https://facebook.com">
                         <FaFacebook />
                     </a>
-                    <a href="https://facebook.com">
+                    <a href="https://linkedin.com/company/it-context">
                         <FaLinkedin />
                     </a>
                 </Social>

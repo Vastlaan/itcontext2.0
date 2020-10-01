@@ -47,7 +47,7 @@ export default function Bait() {
                     <a href="https://facebook.com">
                         <FaFacebook color="darkblue" />
                     </a>
-                    <a href="https://facebook.com">
+                    <a href="https://linkedin.com/company/it-context">
                         <FaLinkedin color="skyblue" />
                     </a>
                 </Social>

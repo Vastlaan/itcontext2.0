@@ -28,7 +28,7 @@ app.post("/api/submitContactForm", (req: Request, res: Response) => {
     const { name, email, message } = contactFormData;
 
     const msg = {
-        to: [email, "info@michalantczak.com"],
+        to: [email, "info@itcontext.nl"],
         from: "no-reply@itcontext.nl",
         subject: "IT Context Form Submittion",
         html: `
