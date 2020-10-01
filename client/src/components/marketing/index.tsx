@@ -16,7 +16,7 @@ export default function Marketing() {
                 title="IT Context - Online Marketing"
                 description="IT Context helpt uw bedrijf met SEO, online moderne advertenties, Social Media Marketing en veel meer. Alles om uw bedrijf online zichtbaar te maken en meer klanten naar uw website aantrekken."
                 url="http://itcontext.nl"
-                imageUrl=""
+                imageUrl="https://michalantczakblogresources.s3.eu-central-1.amazonaws.com/itcontext/ITContextLandingPage.jpg"
             />
             <CustomPageNav>
                 <p>

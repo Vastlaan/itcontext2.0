@@ -21,7 +21,7 @@ export default function Webdev() {
                 title="IT Context - Websites ontwikkelen"
                 description="IT Context ontwerpt betaalbaar en professionele websites, complexe webapplicaties en webshops. Specialisten in profiessionele e-mailadressen aanmaken, Content Manager Systems, Databeses en Systems Administration."
                 url="http://itcontext.nl"
-                imageUrl=""
+                imageUrl="https://michalantczakblogresources.s3.eu-central-1.amazonaws.com/itcontext/ITContextLandingPage.jpg"
             />
             <Header />
             <PageNav>

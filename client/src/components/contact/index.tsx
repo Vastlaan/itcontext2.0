@@ -78,7 +78,7 @@ function Contact() {
                 title="IT Context - Contact"
                 description="IT Context is gevestigd in Purmerend. Mail Ons: info@itcontext.nl . Bel ons: 06 82 30 70 51 of bezoek onze website: http://itcontext.nl"
                 url="http://itcontext.nl"
-                imageUrl=""
+                imageUrl="https://michalantczakblogresources.s3.eu-central-1.amazonaws.com/itcontext/ITContextLandingPage.jpg"
             />
             <PageNav>
                 <p>
