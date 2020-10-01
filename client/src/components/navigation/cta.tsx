@@ -15,10 +15,10 @@ export default function Cta(props: CtaProps) {
     return (
         <Container>
             <Flag onClick={() => setLanguage("nl")}>
-                <img src={NLFlag} alt="nederlandse flag" />
+                <img src={NLFlag} alt="dutch flag" />
             </Flag>
             <Flag onClick={() => setLanguage("en")}>
-                <img src={ENFlag} alt="nederlandse flag" />
+                <img src={ENFlag} alt="english flag" />
             </Flag>
             <Button
                 onClick={() => setDisplayMobileMenu((prevState) => !prevState)}
