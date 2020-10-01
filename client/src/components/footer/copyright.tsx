@@ -3,7 +3,7 @@ import { useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { RiHeart2Fill } from "react-icons/ri";
-import { fonts } from "../../styles";
+import { fonts, respond } from "../../styles";
 
 export default function Copyright() {
     const intl = useIntl();
@@ -38,8 +38,10 @@ const Container = styled.div`
     border-top: 1px solid ${(props) => props.theme.grey};
     color: snow;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+
+    ${() => respond("m", "justify-content: space-between;")}
 `;
 const Year = styled.p`
     font-size: 2rem;
