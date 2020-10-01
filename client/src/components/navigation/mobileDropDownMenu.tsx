@@ -64,7 +64,6 @@ export default function MobileDropDownMenu(props: MobileMenuProps) {
 }
 
 const Container = styled.div<ContainerProps>`
-    visibility: ${(p) => (p.show ? `visible` : `hidden`)};
     width: 100%;
     padding: 5rem 10rem 5rem 5rem;
     display: block;
