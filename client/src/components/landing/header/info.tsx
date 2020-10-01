@@ -145,6 +145,9 @@ const Block = styled.div`
             font-family: ${fonts.advent};
             font-size: 2.5rem;
             color: ${(props) => props.theme.primary};
+            text-align: center;
+
+            ${() => respond("m", "text-align: left;")}
         }
     }
 `;
