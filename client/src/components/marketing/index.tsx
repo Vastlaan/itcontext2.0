@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 import { useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
@@ -9,6 +10,7 @@ import SEO from "../seo";
 
 export default function Marketing() {
     const intl = useIntl();
+    ReactGA.pageview("/online-marketing");
 
     return (
         <Container>

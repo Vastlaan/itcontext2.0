@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { fonts, PageNav } from "../../styles";
@@ -14,6 +15,7 @@ import { FaHandshake } from "react-icons/fa";
 
 export default function Webdev() {
     const intl = useIntl();
+    ReactGA.pageview("/website-ontwikkelen");
 
     return (
         <Container>

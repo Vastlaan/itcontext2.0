@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
 import { fonts, Button, respond } from "../../styles";
@@ -11,6 +12,8 @@ import SEO from "../seo";
 
 export default function About() {
     const intl = useIntl();
+
+    ReactGA.pageview("/over-ons");
 
     return (
         <Container>

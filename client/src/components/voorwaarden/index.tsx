@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { fonts, PageNav } from "../../styles";
@@ -6,6 +7,7 @@ import { useIntl } from "react-intl";
 
 export default function Voorwaarden() {
     const intl = useIntl();
+    ReactGA.pageview("/algemene-voorwaarden");
 
     return (
         <Container>

@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 import { useIntl } from "react-intl";
 import Header from "./header";
 import Portfolio from "./portfolio";
@@ -9,6 +10,8 @@ import SEO from "../seo";
 
 export default function Landing() {
     const intl = useIntl();
+
+    ReactGA.pageview("/");
 
     return (
         <main>

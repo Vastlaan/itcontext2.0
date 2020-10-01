@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { IntlProvider } from "react-intl";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ReactGA from "react-ga";
 // components
 import Nav from "./components/navigation";
 import Landing from "./components/landing";
@@ -51,6 +52,9 @@ function App() {
     });
 
     useEffect(() => {
+        ReactGA.initialize("UA-132849357-5");
+        console.log("initialized");
+
         const cookiesPresets = window.localStorage.getItem("cookiesPresets");
 
         if (cookiesPresets) {
@@ -58,23 +62,6 @@ function App() {
             return setCookies(cookiesPresetsObject);
         }
     }, []);
-
-    // // Below code will be implement for fetching translations from json file on Amazon S#
-    // const [ten, setTen] = useState({});
-
-    // // const language = navigator.language.split(/[-_]/)[0]; // language without region code
-
-    // useEffect(() => {
-    //     const fetchTranslation = async () => {
-    //         const res = await fetch(
-    //             "https://michalantczakblogresources.s3.eu-central-1.amazonaws.com/itcontext/translation-en.json"
-    //         );
-    //         const data = await res.json();
-
-    //         setTen(data);
-    //     };
-    //     fetchTranslation();
-    // }, []);
 
     return (
         <div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import ReactGA from "react-ga";
 // import gsap from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styled from "styled-components";
@@ -25,6 +26,8 @@ function Contact() {
     const [message, setMessage] = useState("");
     const [warning, setWarning] = useState("");
     const [displayConfirmation, setDisplayConfirmation] = useState(false);
+
+    ReactGA.pageview("/contact");
 
     // useEffect(() => {
     //     gsap.registerPlugin(ScrollTrigger);
