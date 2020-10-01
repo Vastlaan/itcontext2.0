@@ -17,7 +17,7 @@ export default function Landing() {
         <main>
             <SEO
                 title="IT Context - Succesvolle Websites"
-                description="Website laten maken in Purmerend? Wij bieden de beste prijs-kwaliteit. Websites ontwerpen volgens moderne trends en nieuwste technologieën. Neem contact met ons mee info@itcontext.nl"
+                description="Website laten maken in Purmerend? Wij bieden de beste prijs-kwaliteitverhouding. Websites ontwerpen volgens moderne trends en nieuwste technologieën. Neem contact met ons mee info@itcontext.nl"
                 url="http://itcontext.nl"
                 imageUrl="https://michalantczakblogresources.s3.eu-central-1.amazonaws.com/itcontext/ITContextLandingPage.jpg"
             />
