@@ -196,9 +196,12 @@ const Info = styled.div`
     background-color: ${(p) => p.theme.bg};
 
     h3 {
-        font-size: 3rem;
+        font-size: 3.5rem;
         font-family: ${fonts.gayathri};
         color: ${(p) => p.theme.primary};
+        text-align: center;
+
+        ${() => respond("m", "text-align: left; font-size: 3rem;")}
     }
 
     svg {
