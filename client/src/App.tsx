@@ -16,6 +16,7 @@ import Footer from "./components/footer";
 import NotFound from "./components/not-found";
 import ScrollToTop from "./components/scroll-to-top";
 import Cookies from "./components/cookies";
+import WhatsApp from "./components/whatsapp";
 // translations
 import En from "./translations/en.json";
 import Nl from "./translations/nl.json";
@@ -103,6 +104,7 @@ function App() {
                             />
                         ) : null}
 
+                        <WhatsApp />
                         <Footer />
                     </Router>
                 </ThemeProvider>
