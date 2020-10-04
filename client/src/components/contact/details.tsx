@@ -28,9 +28,9 @@ export default function Details() {
                         "Heb je een vraag voor ons? Neem gerust contact met ons op via de onderstaande contactgegevens.",
                 })}
             </Text>
-            <Anchor color="#117864" href="tel:0682307051">
+            <Anchor color="#117864" href="tel:0299705072">
                 <FiPhoneCall />
-                <span>06 82 30 70 51</span>
+                <span>0299 70 50 72</span>
             </Anchor>
             <Anchor color="#006A93" href="mailTo:info@itcontext.nl">
                 <FiMail />

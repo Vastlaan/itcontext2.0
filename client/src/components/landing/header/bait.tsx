@@ -29,9 +29,9 @@ export default function Bait() {
                         defaultMessage: "tot uw dienst",
                     })}
                 </Text>
-                <Anchor color="#117864" href="tel:0031682307051">
+                <Anchor color="#117864" href="tel:0299705072">
                     <RiPhoneLine />
-                    <span>06 82 30 70 51</span>
+                    <span>0299 70 50 72</span>
                 </Anchor>
                 <Anchor color="#006A93" href="mailto:info@itcontext.nl">
                     <RiMailLine />

@@ -93,7 +93,7 @@ export default function Marketing() {
                         "De meest populaire zoekwoorden hebben veel concurrentie. Als u een klein bedrijf bent, kan het moeilijk zijn om bovenaan de rangschikkingsresultaten voor die zoekwoorden te verschijnen. Daar kunnen Long Tail Keywords helpen. Long Tail Keywords zijn zoekwoorden met een kleine concurrentie en meestal specifieker. Trefwoorden moeten relevant zijn en de website moet vermijden 'keywords stuffing'.",
                 })}
             />
-            <a style={{ textDecoration: "none" }} href="tel:0031682307051">
+            <a style={{ textDecoration: "none" }} href="tel:0299705072">
                 <CustomButton>
                     {intl.formatMessage({
                         id: "marketing.button-2",
@@ -192,7 +192,7 @@ export default function Marketing() {
                 })}
             />
 
-            <a style={{ textDecoration: "none" }} href="tel:0031682307051">
+            <a style={{ textDecoration: "none" }} href="tel:0299705072">
                 <CustomButton>
                     {intl.formatMessage({
                         id: "marketing.button-5",

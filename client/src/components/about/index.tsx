@@ -20,7 +20,7 @@ export default function About() {
             <SEO
                 title="IT Context - Over Ons"
                 description="IT Context ontwerp moderne websites, professionele webapplicaties en webshops. Duik in onze website en leer ons beter kennen."
-                url="http://itcontext.nl"
+                url="https://itcontext.nl"
                 imageUrl="https://michalantczakblogresources.s3.eu-central-1.amazonaws.com/itcontext/ITContextLandingPage.jpg"
             />
             <Header />
