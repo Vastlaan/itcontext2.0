@@ -170,11 +170,31 @@ const Cookies = styled.section`
     overflow: scroll;
     scrollbar-width: none;
     z-index: 11;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "statement"
+        "buttons"
+        "selections"
+        "read";
+
+    ${() =>
+        respond(
+            "m",
+            `grid-template-areas:
+        "statement"
+        "selections"
+        "buttons"
+        "read";
+    `
+        )};
+
     &::-webkit-scrollbar {
         display: none;
     }
 `;
 const Statement = styled.div`
+    grid-area: statement;
     display: flex;
     justify-content: space-between;
 `;
@@ -201,6 +221,7 @@ const Info = styled.div`
     }
 `;
 const Selections = styled.div`
+    grid-area: selections;
     display: flex;
     padding: 1rem;
     margin: 1rem;
@@ -226,9 +247,10 @@ const Selections = styled.div`
     }
 `;
 const Buttons = styled.div`
+    grid-area: buttons;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
 
     ${() => respond("l", "flex-direction: row; justify-content: space-around;")}
@@ -254,6 +276,7 @@ const Buttons = styled.div`
 `;
 
 const ReadMore = styled.div`
+    grid-area: read;
     margin: 1rem;
     padding: 1rem;
 
