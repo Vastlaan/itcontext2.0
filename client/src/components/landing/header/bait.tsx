@@ -18,7 +18,7 @@ export default function Bait() {
                 <h3>
                     {intl.formatMessage({
                         id: "landing.header-info-1",
-                        defaultMessage: "tot uw dienst",
+                        defaultMessage: "tot je dienst",
                     })}
                 </h3>
             </Head>
@@ -26,7 +26,8 @@ export default function Bait() {
                 <Text>
                     {intl.formatMessage({
                         id: "landing.header-info-2",
-                        defaultMessage: "tot uw dienst",
+                        defaultMessage:
+                            "Wij werken van maandag t / m vrijdag tussen 9.00 en 17.00 uur. Wij zijn gevestigd in Purmerend, maar werken in heel Nederland. Heb je vragen? Onze klantenservice staat voor je klaar.",
                     })}
                 </Text>
                 <Anchor color="#117864" href="tel:0299705072">

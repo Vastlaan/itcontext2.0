@@ -81,14 +81,14 @@ export default function Main() {
                 <h3>
                     {intl.formatMessage({
                         id: "footer.social-header",
-                        defaultMessage: "Volg Ons op Social Media",
+                        defaultMessage: "Volg ons op social media",
                     })}
                 </h3>
                 <p>
                     {intl.formatMessage({
                         id: "footer.social-text",
                         defaultMessage:
-                            "Duik in ons bedrijf, leer ons beter kennen. Wees op te hoogte van onze aanbiediengen en maak een kennis met onze nieuweste prestaties. Wij zijn jong bedrijf, maar we hebben grote ambities.",
+                            "Duik in ons bedrijf en leer ons beter kennen. Wees op de hoogte van onze aanbiediengen en maak een kennis met onze nieuweste prestaties. Wij zijn jong bedrijf met grote ambities.",
                     })}
                 </p>
                 <Social style={{ justifyContent: "flex-start" }}>

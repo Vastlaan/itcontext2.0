@@ -28,14 +28,14 @@ export default function Header() {
                 <Head>
                     {intl.formatMessage({
                         id: "webdev.header-header-2",
-                        defaultMessage: "op maat van uw behoeften",
+                        defaultMessage: "op maat gemaakt",
                     })}
                 </Head>
                 <CustomText>
                     {intl.formatMessage({
                         id: "webdev.header-text",
                         defaultMessage:
-                            "Onze brede aanbod onderscheidt zich door allerlei oplossingen. Wij realiseren zowel kleine als grote opdrachten, van eenvoudig maar krachtig websites tot complexe webapplicaties, e-mailadressen, Content Manager Systems en veel meer.",
+                            "Ons brede aanbod onderscheidt zich door allerlei oplossingen. Wij realiseren zowel kleine als grote opdrachten, van eenvoudige maar krachtige websites tot complexe webapplicaties, e-mailadressen, Content Managment Systems en veel meer.",
                     })}
                 </CustomText>
                 <CustomButton onClick={scrollDown}>

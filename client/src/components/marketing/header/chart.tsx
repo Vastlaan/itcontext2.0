@@ -22,7 +22,7 @@ export default function Chart() {
                 Content Marketing
             </ContentMarketing>
             <EmailMarketing onClick={() => scrollToArticle("email-marketing")}>
-                Email Marketing
+                E-mail Marketing
             </EmailMarketing>
             <SearchEngineOptimisatie
                 onClick={() => scrollToArticle("seo-marketing")}

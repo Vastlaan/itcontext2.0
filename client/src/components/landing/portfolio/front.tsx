@@ -11,7 +11,7 @@ export default function Front() {
             <Header>
                 {intl.formatMessage({
                     id: "landing.portfolio-header",
-                    defaultMessage: "Voorstelling",
+                    defaultMessage: "Concept",
                 })}
             </Header>
             <Image></Image>

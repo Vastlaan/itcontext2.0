@@ -32,7 +32,7 @@ export default function Cards() {
                     text={intl.formatMessage({
                         id: "webdev.cards-1-text",
                         defaultMessage:
-                            "Onze websites zijn gedwongen om gebruik te maken van beveiligd SSL-protocol, zodat de verbinding beschermd tegen diefstal van gebruikersgegevens.",
+                            "Onze websites maken gebruik van een beveiligd SSL-protocol, zodat de verbinding beschermd is tegen diefstal van gebruikersgegevens.",
                     })}
                 />
                 <Card
@@ -52,7 +52,7 @@ export default function Cards() {
                     text={intl.formatMessage({
                         id: "webdev.cards-2-text",
                         defaultMessage:
-                            "We volgen wereldwijde trends en gebruiken de nieuwste, best werkende oplossingen",
+                            "We volgen wereldwijde trends en gebruiken de nieuwste en best werkende oplossingen",
                     })}
                 />
                 <Card

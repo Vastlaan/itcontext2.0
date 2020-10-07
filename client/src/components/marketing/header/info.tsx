@@ -16,20 +16,20 @@ export default function Info() {
                 {intl.formatMessage({
                     id: "marketing.header-head-1",
                     defaultMessage:
-                        "Het maken van een plan is cruciaal om de voortgang te kunnen meten,",
+                        "Het maken van een plan is cruciaal om de voortgang te kunnen meten.",
                 })}
                 <br />
                 {intl.formatMessage({
                     id: "marketing.header-head-2",
                     defaultMessage:
-                        "Het goede plan is flexibel en gericht op het behalen van realistische doelen.",
+                        "Het beste plan is flexibel en gericht op het behalen van realistische doelen.",
                 })}
             </Head>
             <CustomText>
                 {intl.formatMessage({
                     id: "marketing.header-text",
                     defaultMessage:
-                        "Een goede marketingstrategie vereist een solide plan, dat kan verschillen afhankelijk van: scope - het verkeer waarop u zich concentreert; technologieën - tools die u gaat gebruiken; budget - de tijd en kosten die u bereid bent te besteden. IT Context helpt u bij het kiezen van de beste oplossingen die aan uw eisen voldoen.",
+                        "Een goede marketingstrategie vereist een solide plan, dat kan verschillen afhankelijk van: scope - het verkeer waarop je je concentreert; technologieën - tools die je gaat gebruiken; budget - de tijd en kosten die je bereid bent te besteden. IT Context helpt je bij het kiezen van de beste oplossingen die aan jouw wensen en eisen voldoen.",
                 })}
             </CustomText>
             <CustomButton>

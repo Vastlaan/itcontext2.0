@@ -28,19 +28,19 @@ export default function Responsive() {
                 <BlockHeader>
                     {intl.formatMessage({
                         id: "webdev.security-header",
-                        defaultMessage: "Hoe beschermen wij onze websites",
+                        defaultMessage: "Hoe beschermen wij onze websites?",
                     })}
                 </BlockHeader>
                 <BlockText>
                     {intl.formatMessage({
                         id: "webdev.security-text",
                         defaultMessage:
-                            "Onze servers draaien op een van de meste beveiligd omgeving en volgens de strenge veiligheid regels. Wij zorgen ook voor encrypted communicatie tussen onze servers en bezoekers van uw website. Daarvoor dwingen we gebruik van SSL protocols, zodat belangrijke wachtworden of personlijke gegevens kunnen niet lekken.",
+                            "Onze servers draaien op een van de meest beveiligde omgevingen en volgens de strengste veiligheidsregels. Wij zorgen ook voor encrypted communicatie tussen onze servers en bezoekers van jouw website. Daarvoor maken we gebruik van SSL protocols, zodat belangrijke wachtwoorden of persoonlijke gegevens niet zullen lekken.",
                     })}
                 </BlockText>
 
                 <BlockImage>
-                    <img src={Image} alt="securely design website" />
+                    <img src={Image} alt="veilig ontworpen website" />
                 </BlockImage>
 
                 <BlockButton>

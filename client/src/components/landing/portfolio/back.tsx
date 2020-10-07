@@ -13,7 +13,7 @@ export default function Back() {
                     {intl.formatMessage({
                         id: "landing.portfolio-text",
                         defaultMessage:
-                            "Onze werk is gekenmerkt door de continue ontwikkeling proces. Projecten zijn altijd met gebruik van de nieuweste technologieën, met passie en betrokkenheid uitgevoert",
+                            "Onze werk wordt gekenmerkt door een continue ontwikkelingsproces. Projecten worden altijd met behulp van de nieuweste technologieën, met passie en betrokkenheid uitgevoerd.",
                     })}
                 </p>
             </Text>

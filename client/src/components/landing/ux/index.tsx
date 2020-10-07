@@ -37,7 +37,7 @@ export default function Ux() {
                     {intl.formatMessage({
                         id: "landing.ux-text",
                         defaultMessage:
-                            "We analyseren wat er in het hoofd van uw klant gebeurt. Daarom is ons ontwerp erop gericht om uw publiek te laten groeien met mogelijk veel nieuwe klanten.",
+                            "We analyseren wat er in het hoofd van je klanten gebeurd. Daarom is ons ontwerp erop gericht om je publiek te laten groeien met mogelijk veel nieuwe klanten.",
                     })}
                 </BlockText>
                 <List>
@@ -45,7 +45,7 @@ export default function Ux() {
                         <BsCheckCircle />{" "}
                         {intl.formatMessage({
                             id: "landing.ux-check1",
-                            defaultMessage: "Uw gebruikers erbij betrokken",
+                            defaultMessage: "Betrek je gebruikers",
                         })}
                     </p>
                     <p>
@@ -53,7 +53,7 @@ export default function Ux() {
                         {intl.formatMessage({
                             id: "landing.ux-check2",
                             defaultMessage:
-                                "Intentional design met de nadruk op actie ondernemen",
+                                "Intentionaal design met de nadruk op actie ondernemen",
                         })}
                     </p>
                     <p>

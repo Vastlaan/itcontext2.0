@@ -37,7 +37,7 @@ export default function Responsive() {
                     {intl.formatMessage({
                         id: "landing.responsive-text",
                         defaultMessage:
-                            "Onze technologie zorgt ervoor dat uw website vanaf verschillende apparaten toegankelijk is, snel laadt en uw bedrijf hoger scoort in de resultaten van zoekmachines",
+                            "Onze technologie zorgt ervoor dat je website vanaf verschillende apparaten toegankelijk is, snel laadt en je bedrijf hoger scoort in de resultaten van zoekmachines",
                     })}
                 </BlockText>
                 <Sign>

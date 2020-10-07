@@ -31,7 +31,7 @@ export default function Landing() {
                 text={intl.formatMessage({
                     id: "landing.intersection1-text",
                     defaultMessage:
-                        "Onze doel is om betaalbaar, goede kwaliteit websites aan allerlei ondernemingen te leveren. Met eigen e-mailadres, SEO plan en Content Manager System.",
+                        "Ons doel is om kwalitatieve en betaalbare websites te leveren aan allerlei ondernemingen. Met eigen e-mailadres, SEO plan en Content Management Systeem.",
                 })}
                 background={false}
             />
@@ -41,12 +41,12 @@ export default function Landing() {
                 headline={intl.formatMessage({
                     id: "landing.intersection2-headline",
                     defaultMessage:
-                        "Vriendelijke en professionele aanpak van klanten behoeften",
+                        "Vriendelijke en professionele aanpak van klant behoeften",
                 })}
                 text={intl.formatMessage({
                     id: "landing.intersection2-text",
                     defaultMessage:
-                        "Wij denken met u constructief mee en passen de beste oplossingen. De samenwerking is gebaseerd op het begrijpen van uw behoeften en het reageren op uw opmerkingen",
+                        "Wij denken constructief met je mee en passen de beste oplossingen toe. Onze samenwerking is gebaseerd op het begrijpen van jou behoeften en het reageren op jouw verwachtingen",
                 })}
                 background={false}
             />

@@ -13,7 +13,8 @@ export default function Info() {
             <Header>
                 {intl.formatMessage({
                     id: "landing.header-main",
-                    defaultMessage: "Moderne website & creatief ontwerp",
+                    defaultMessage:
+                        "IT Context helpt je bedrijf online te groeien",
                 })}
             </Header>
             <Circles />
@@ -35,7 +36,7 @@ export default function Info() {
                             {intl.formatMessage({
                                 id: "landing.header-1-text",
                                 defaultMessage:
-                                    "Wij maken websites die uw bedrijf vertegenwoordigen in de moderne en chique stijl. Maak het intuïtief om te navigeren en gemakkelijk te gebruiken.",
+                                    "Wij maken websites die je bedrijf vertegenwoordigen in een moderne en chique stijl. Maak het eenvoudig om te navigeren en gemakkelijk te gebruiken.",
                             })}
                         </Text>
                     </div>
@@ -50,14 +51,14 @@ export default function Info() {
                             {intl.formatMessage({
                                 id: "landing.header-2-header",
                                 defaultMessage:
-                                    "Elegante en gestructureerde website",
+                                    "Bereik de juiste doelgroep en overtuig hen om contact met je op te nemen",
                             })}
                         </h3>
                         <Text>
                             {intl.formatMessage({
                                 id: "landing.header-2-text",
                                 defaultMessage:
-                                    "Elegante en gestructureerde website",
+                                    "We zorgen ervoor dat potentiële klanten je gemakkelijk kunnen vinden en bouwen een solide basis op om hen te helpen bij het kiezen van je producten en diensten.",
                             })}
                         </Text>
                     </div>
@@ -79,7 +80,7 @@ export default function Info() {
                             {intl.formatMessage({
                                 id: "landing.header-3-text",
                                 defaultMessage:
-                                    "Elegante en gestructureerde website",
+                                    "We ontwerpen prachtige en unieke websites en helpen je met het creëren van waardevolle inhoud.",
                             })}
                         </Text>
                     </div>

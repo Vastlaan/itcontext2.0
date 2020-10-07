@@ -24,7 +24,8 @@ export default function Header() {
                 <h1>
                     {intl.formatMessage({
                         id: "about.header-slogan-2",
-                        defaultMessage: "enkel idee of belangrijke beslissing,",
+                        defaultMessage:
+                            "een enkel idee of belangrijke beslissing,",
                     })}
                 </h1>
                 <br />
