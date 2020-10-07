@@ -164,11 +164,12 @@ const Cookies = styled.section`
     bottom: 0;
     left: 0;
     width: 100%;
-    max-height: 80vh;
+    max-height: 55vh;
     border: 3px solid ${(p) => p.theme.secondary};
     background-color: ${(p) => p.theme.bg};
     overflow: scroll;
     scrollbar-width: none;
+    z-index: 11;
     &::-webkit-scrollbar {
         display: none;
     }
