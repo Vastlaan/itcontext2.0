@@ -54,7 +54,6 @@ function App() {
 
     useEffect(() => {
         ReactGA.initialize("UA-132849357-5");
-        console.log("initialized");
 
         const cookiesPresets = window.localStorage.getItem("cookiesPresets");
 

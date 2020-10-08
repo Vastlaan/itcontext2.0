@@ -29,6 +29,10 @@ export default function Copyright() {
                     by <Link to="/">IT Context</Link>
                 </p>
             </Credits>
+            <Numbers>
+                <p>Kvk: 80486487</p>
+                <p>Btw-id: NL003444998B74</p>
+            </Numbers>
         </Container>
     );
 }
@@ -40,13 +44,12 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    font-size: 2rem;
+    font-family: ${fonts.advent};
 
     ${() => respond("m", "justify-content: space-between;")}
 `;
-const Year = styled.p`
-    font-size: 2rem;
-    font-family: ${fonts.advent};
-`;
+const Year = styled.p``;
 const Credits = styled.div`
     display: flex;
     align-items: center;
@@ -65,4 +68,11 @@ const Credits = styled.div`
         color: ${(props) => props.theme.warm};
         margin: 0 1rem;
     }
+`;
+const Numbers = styled.div`
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    ${respond("m", "justify-content: space-between; flex-direction: row;")}
 `;

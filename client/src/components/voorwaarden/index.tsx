@@ -36,7 +36,8 @@ export default function Voorwaarden() {
                 <p>
                     1.1. IT Context: de eenmanszaak IT Context, statutair
                     gevestigd te Purmerend en ingeschreven bij de Kamer van
-                    Koophandel onder dossiernummer NUMMER. <br />
+                    Koophandel onder dossiernummer <strong>80486487</strong>.
+                    <br />
                     1.2. Opdrachtgever: de natuurlijke persoon of rechtspersoon
                     die met IT Context een overeenkomst is aangegaan <br />
                     1.3. Onder 'algemene voorwaarden' wordt verstaan: het geheel
