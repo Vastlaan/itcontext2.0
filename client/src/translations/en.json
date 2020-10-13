@@ -139,6 +139,18 @@
     "contact.confirmation-1": "Thank you for your message!",
     "contact.confirmation-2": "We will contact you as soon as possible.",
 
+    "offerte.header-1":"Request a quote",
+    "offerte.text":"Order gratis our brochure and learn more about our services and prices.",
+    "offerte.header-2":"Fill in your e-mail address",
+    "offerte.label":"Your e-mail:",
+    "offerte.header-3":"Order now free brochure",
+    "offerte.disclaimer-1":"I agree with ",
+    "offerte.disclaimer-2":"Terms & Conditions",
+    "offerte.disclaimer-3":"and with the ",
+    "offerte.disclaimer-4":"Privacy Policy",
+    "offerte.warning":"please agree with Terms & Conditions",
+    "offerte.button":"Order Now",
+
     "footer.copyright-rights": "All rights reserved.",
     "footer.copyright-credits": "Designed with",
     "footer.services-header": "Services",

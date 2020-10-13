@@ -141,6 +141,18 @@
     "contact.confirmation-1": "Bedankt voor uw bericht!",
     "contact.confirmation-2": "Wij zullen met u zo spoedig mogelijk contact opnemen.",
 
+    "offerte.header-1":"Een Offerte Aanvragen",
+    "offerte.text":"Bestel een gratis brochure en lees meer over onze diensten en prijzen.",
+    "offerte.header-2":"E-mailadres doorgeven",
+    "offerte.label":"Jouw e-mail:",
+    "offerte.header-3":"Bestel Gratis Offerte",
+    "offerte.disclaimer-1":"Ik ga akkord met de ",
+    "offerte.disclaimer-2":"Voorwaarden ",
+    "offerte.disclaimer-3":"en het ",
+    "offerte.disclaimer-4":"Privacybeleid",
+    "offerte.warning":"ga aub akkoord met onze voorwaarden",
+    "offerte.button":"Direct Aanvragen",
+
     "footer.copyright-rights": "Alle rechten voorbehouden",
     "footer.copyright-credits": "Ontworpen met",
     "footer.services-header": "Diensten",

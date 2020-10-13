@@ -6,6 +6,7 @@ import Portfolio from "./portfolio";
 import Responsive from "./responsive";
 import Ux from "./ux";
 import Intersection from "../intersection";
+import OfertCTA from '../ofertCTA'
 import SEO from "../seo";
 
 export default function Landing() {
@@ -35,6 +36,7 @@ export default function Landing() {
                 })}
                 background={false}
             />
+            <OfertCTA/>
             <Portfolio />
             <Ux />
             <Intersection

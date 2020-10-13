@@ -11,6 +11,8 @@ interface LabelProps{
 
 export default function() {
 
+  const intl = useIntl()
+
   const [email, setEmail] = useState('')
   const [isChecked, setIsChecked] = useState(false)
   const [warning, setWarning] = useState(false)
@@ -27,20 +29,20 @@ export default function() {
     <Form onSubmit={sendBrochure}>
         <Header>
           <AiOutlineForm/>
-          Offerte Aanvraag
+          {intl.formatMessage({id:"offerte.header-1",defaultMessage:"Een Offerte Aanvragen"})}
         </Header>
-        <Text>Bestel een gratis brochure en lees meer over onze diensten en prijzen.</Text>
+        <Text>{intl.formatMessage({id:"offerte.text",defaultMessage:"Bestel een gratis brochure en lees meer over onze diensten en prijzen."})}</Text>
         <HeaderSmall>
           <RiMailSendLine/>
-          E-mailadres doorgeven
+          {intl.formatMessage({id:"offerte.header-2",defaultMessage:"E-mailadres doorgeven"})}
         </HeaderSmall>
         <InputField>
-          <label htmlFor="email">Jouw e-mailadres</label>
+          <label htmlFor="email">{intl.formatMessage({id:"offerte.label",defaultMessage:"Jouw e-mailadres:"})}</label>
           <input type="email" name="email" onChange={(e)=>setEmail(e.target.value)} required/>
         </InputField>
         <HeaderSmall>
           <RiSendPlane2Line/>
-          Bestel Gratis Offerte
+          {intl.formatMessage({id:"offerte.header-3",defaultMessage:"Bestel Gratis Offerte"})}        
         </HeaderSmall>
         <CheckboxField>
           <Label htmlFor="check" isChecked={isChecked} onClick={()=>{
@@ -48,12 +50,17 @@ export default function() {
             setWarning(false)
             }}>
             <div></div>
-            {warning&&<Warning>ga aub akkoord met onze voorwaarden</Warning>}
-            <span>ik ga akkoord met de <a href="/algemene-voorwaarden">voorwaarden</a> en het <a href="/cookies">privacybeleid</a></span>
+            {warning&&<Warning>{intl.formatMessage({id:"offerte.warning",defaultMessage:"ga aub akkoord met onze voorwaarden"})}</Warning>}
+            <span>
+              {intl.formatMessage({id:"offerte.disclaimer-1",defaultMessage:"ik ga akkoord met de"})} 
+              <a href="/algemene-voorwaarden">{intl.formatMessage({id:"offerte.disclaimer-2",defaultMessage:"voorwaarden"})} </a>
+              {intl.formatMessage({id:"offerte.disclaimer-3",defaultMessage:"en het"})}  
+               <a href="/cookies">{intl.formatMessage({id:"offerte.disclaimer-4",defaultMessage:"Privacybeleid"})} </a>
+            </span>
           </Label>
           <input type="checkbox" name='check' />
         </CheckboxField>
-        <Button style={{margin: '3rem 0'}} type='submit'>Direct Aanvragen</Button>
+        <CustomButton type='submit'>{intl.formatMessage({id:"offerte.button",defaultMessage:"Direct Aanvragen"})}</CustomButton>
       </Form>
   )
 }
@@ -73,7 +80,7 @@ const Header = styled.h1`
     align-items: center;
     font-family: ${fonts.advent};
     font-size: 3rem;
-    color: ${p=>p.theme.primary};
+    color: ${p=>p.theme.grey};
 
     svg{
       margin-right: 1rem;
@@ -119,6 +126,14 @@ const InputField = styled.div`
 
 `;
 
+const CustomButton = styled(Button)`
+  margin: 3rem 0;
+  background-color: ${p=>p.theme.primaryLight};
+  border: 1px solid ${p=>p.theme.primaryLight};
+  border-radius: 3px;
+
+`;
+
 const CheckboxField = styled.div`
   position: relative;
   height: 3rem;
@@ -143,8 +158,10 @@ const Label = styled.label<LabelProps>`
       left: 0rem;
       width: 2rem;
       height: 2rem;
-      border: 1px solid ${p=>p.isChecked?p.theme.fresh:p.theme.warm };
+      border: 3px solid ${p=>p.isChecked?p.theme.fresh:p.theme.fresh };
+      box-shadow: 0 0 1rem rgba(0,0,0,.3);
       border-radius: 50%;
+      cursor: pointer;
       transition: all .3s;
 
       &:after{
