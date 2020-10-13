@@ -4,6 +4,7 @@
     "navigation.menu-2": "Online marketing",
     "navigation.menu-3": "About Us",
     "navigation.menu-4": "Contact",
+    "navigation.menu-5": "Our offer",
 
     "landing.header-main": "Grow your business online",
     "landing.header-1-header": "Elegant and structured website",
@@ -26,6 +27,7 @@
     "landing.responsive-btn": "Order your professional website",
     "landing.portfolio-text": "Our work is recognized by the continuous development process. Projects have always been carried out using the latest technologies, with passion and commitment",
     "landing.portfolio-header": "Conception",
+    "landing.offerte":"Request our offer",
     "landing.ux-info": "Intuitive navigation",
     "landing.ux-header": "User friendly experience",
     "landing.ux-text": "We consider what is happening in your customer’s mind. That's why our design is oriented on growing your audience with potentially many new clients.",
@@ -98,7 +100,7 @@
     "marketing.paragraph-1-text-1": "Content marketing is a great way to attract audience attention. It's based on creating digital content like videos, articles, social media posts. It's designed to create interest in a company's products and services. It can also direct more traffic to your site and increase the sales, boost brand awareness and build trust recognition.",
     "marketing.paragraph-1-text-2": "How to promote your content? It might be as much engaging as creating the content self. First, define the channels you want to distribute your content to. Plan Content Calendar and always measure the results. Ask IT Context to help you to accomplish those tasks.",
     "marketing.paragraph-1-text-3": "The good content campaign is based on knowing your audience. It must answer your audience questions. To accomplish that you must know them better. Try to look up their social media accounts and figure out what sites, groups, profiles they follow and adjust to that. Provide valuable information – use different formats, choose the right places for your content and make sure you talk directly to your audience. Stop business speech and prioritise the natural language. Make your content unique, interesting and exciting. Use engaging headlines. Keeping them wanting more.",
-    "marketing.button-1": "Ask us for more information",
+    "marketing.button-1": "Request our offer",
     "marketing.paragraph-2-header": "Search engine optimization (SEO)",
     "marketing.paragraph-2-text-1": "Search Engines Optimization is a technic to improve ranking of a website to appear in Organic Search. Organic Search is unpaid ranking of the website content. To improve the place in the search results you need to use keywords which are as much often searched for and at the same time relevant to your business particular situation.",
     "marketing.paragraph-2-text-2": "Search Engine Optimization is an ongoing process, because people change their preferences, technology we use is changing and search engines are being reached by new algorithms.",
@@ -139,7 +141,7 @@
     "contact.confirmation-1": "Thank you for your message!",
     "contact.confirmation-2": "We will contact you as soon as possible.",
 
-    "offerte.header-1":"Request a quote",
+    "offerte.header-1":"Request an offer",
     "offerte.text":"Order gratis our brochure and learn more about our services and prices.",
     "offerte.header-2":"Fill in your e-mail address",
     "offerte.label":"Your e-mail:",

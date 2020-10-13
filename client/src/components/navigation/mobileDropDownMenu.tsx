@@ -52,6 +52,12 @@ export default function MobileDropDownMenu(props: MobileMenuProps) {
                         defaultMessage: "Over Ons",
                     })}
                 </Link>
+                <Link to="/offerte-aanvragen" onClick={() => setDisplayMobileMenu(false)}>
+                    {intl.formatMessage({
+                        id: "navigation.menu-5",
+                        defaultMessage: "Offerte",
+                    })}
+                </Link>
                 <Link to="/contact" onClick={() => setDisplayMobileMenu(false)}>
                     {intl.formatMessage({
                         id: "navigation.menu-4",
@@ -69,7 +75,7 @@ const Container = styled.div<ContainerProps>`
     display: block;
     background-color: ${(p) => p.theme.primary};
     position: absolute;
-    bottom: -39.3rem;
+    bottom: -45.25rem;
     right: 0;
     z-index: 9;
     transition: all 0.3s;

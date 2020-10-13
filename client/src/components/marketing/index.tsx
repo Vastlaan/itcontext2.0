@@ -62,11 +62,11 @@ export default function Marketing() {
                         "De goede contentcampagne is gebaseerd op het kennen van jouw publiek. Het moet de vragen van jouw publiek beantwoorden. Om dat te bereiken, moet je ze beter leren kennen. Probeer hun sociale media-accounts op te zoeken en kom erachter welke sites, groepen en profielen ze volgen en pas je strategie daarna aan. Verstrek waardevolle informatie, gebruik verschillende formaten, kies de juiste plaatsen voor jouw inhoud en zorg ervoor dat je rechtstreeks met jouw publiek praat. Stop met zakelijke uitspraken en kies voor informele taal. Maak jouw inhoud uniek, interessant en spannend. Gebruik boeiende titels, zodat ze verder willen en meer willen.",
                 })}
             />
-            <Link style={{ textDecoration: "none" }} to="/contact">
+            <Link style={{ textDecoration: "none" }} to="/offerte-aanvragen">
                 <CustomButton>
                     {intl.formatMessage({
                         id: "marketing.button-1",
-                        defaultMessage: "Vraag ons voor meer informatie",
+                        defaultMessage: "Vraag direct offerte aan",
                     })}
                 </CustomButton>
             </Link>

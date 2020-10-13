@@ -36,8 +36,9 @@ export default function Landing() {
                 })}
                 background={false}
             />
-            <OfertCTA/>
+            
             <Portfolio />
+            <OfertCTA/>
             <Ux />
             <Intersection
                 headline={intl.formatMessage({
