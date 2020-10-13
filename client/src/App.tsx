@@ -12,6 +12,7 @@ import Legal from "./components/legal";
 import Marketing from "./components/marketing";
 import Voorwaarden from "./components/voorwaarden";
 import Webdev from "./components/webdev";
+import Aanvraag from './components/aanvraag'
 import Footer from "./components/footer";
 import NotFound from "./components/not-found";
 import ScrollToTop from "./components/scroll-to-top";
@@ -24,6 +25,8 @@ import Nl from "./translations/nl.json";
 import { lightTheme, darkTheme, respond } from "./styles";
 
 function App() {
+
+    ReactGA.initialize("UA-132849357-5");
     const [isDarkTheme, setIsDarkTheme] = useState(false);
     const [language, setLanguage] = useState("nl");
     const [cookies, setCookies] = useState({
@@ -53,8 +56,7 @@ function App() {
     });
 
     useEffect(() => {
-        ReactGA.initialize("UA-132849357-5");
-
+    
         const cookiesPresets = window.localStorage.getItem("cookiesPresets");
 
         if (cookiesPresets) {
@@ -94,6 +96,12 @@ function App() {
                                 exact
                                 component={Voorwaarden}
                             />
+                            <Route
+                                path="/offerte-aanvragen"
+                                exact
+                                component={Aanvraag}
+                            />
+                            
                             <Route component={NotFound} />
                         </Switch>
                         {cookies.display ? (

@@ -2,7 +2,7 @@ import React from "react";
 import ReactGA from "react-ga";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
-import { fonts, Button, respond } from "../../styles";
+//components
 import Header from "./header";
 import Paragraph from "../paragraph";
 import Intersection from "../intersection";

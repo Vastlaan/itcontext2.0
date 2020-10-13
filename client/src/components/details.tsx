@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
 import { FiPhoneCall, FiMail } from "react-icons/fi";
-import { fonts, Anchor, Text } from "../../styles";
+import { fonts, Anchor, Text } from "../styles";
 
 export default function Details() {
     const intl = useIntl();

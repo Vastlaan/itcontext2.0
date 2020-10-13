@@ -7,7 +7,7 @@ import styled from "styled-components";
 import { useIntl } from "react-intl";
 //components
 import Form from "./form";
-import Details from "./details";
+import Details from "../details";
 import Confirmation from "./confirmation";
 import SEO from "../seo";
 
