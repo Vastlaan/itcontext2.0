@@ -8,7 +8,7 @@ import { useIntl } from "react-intl";
 //components
 import Form from "./form";
 import Details from "../details";
-import Confirmation from "./confirmation";
+import Confirmation from "../confirmation";
 import SEO from "../seo";
 
 import { respond, PageNav } from "../../styles";
@@ -110,11 +110,13 @@ function Contact() {
                 />
 
                 <Details />
-                {displayConfirmation ? (
+                {displayConfirmation && (
                     <Confirmation
                         setDisplayConfirmation={setDisplayConfirmation}
+                        message1="contact.confirmation-1"
+                        message2="contact.confirmation-2"
                     />
-                ) : null}
+                )}
             </Main>
         </Container>
     );

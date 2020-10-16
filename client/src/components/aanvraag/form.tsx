@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import styled from "styled-components";
 import { useIntl } from "react-intl";
 import {fonts, respond, Button, Text} from '../../styles'
+import Confirmation from '../confirmation'
 import {AiOutlineForm} from 'react-icons/ai'
 import {RiMailSendLine, RiSendPlane2Line} from 'react-icons/ri'
 
@@ -16,13 +17,23 @@ export default function() {
   const [email, setEmail] = useState('')
   const [isChecked, setIsChecked] = useState(false)
   const [warning, setWarning] = useState(false)
+  const [displayConfirmation, setDisplayConfirmation] = useState(false)
 
   function sendBrochure(e: React.FormEvent<HTMLFormElement>){
     e.preventDefault()
     if(!isChecked){
       return setWarning(true)
     }
-    console.log(email)
+    const offerFormData = { email }
+    fetch('/api/sendOffer',{
+      method: "POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body: JSON.stringify(offerFormData)
+    }).then(res=>res.json())
+      .then(data=>data==="Success" && setDisplayConfirmation(true))
+      .catch(e=>console.error(e))
   }
 
   return (
@@ -61,6 +72,13 @@ export default function() {
           <input type="checkbox" name='check' />
         </CheckboxField>
         <CustomButton type='submit'>{intl.formatMessage({id:"offerte.button",defaultMessage:"Direct Aanvragen"})}</CustomButton>
+        {displayConfirmation && (
+                    <Confirmation
+                        setDisplayConfirmation={setDisplayConfirmation}
+                        message1="contact.confirmation-3"
+                        message2="contact.confirmation-4"
+                    />
+                )}
       </Form>
   )
 }

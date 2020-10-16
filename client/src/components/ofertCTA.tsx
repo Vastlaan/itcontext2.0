@@ -36,6 +36,4 @@ const CustomButton = styled(Button)`
   &:hover{
     color: ${p=>p.theme.warm};
   }
-
-  
 `
