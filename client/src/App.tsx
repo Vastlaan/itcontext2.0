@@ -13,6 +13,7 @@ import Marketing from "./components/marketing";
 import Voorwaarden from "./components/voorwaarden";
 import Webdev from "./components/webdev";
 import Aanvraag from './components/aanvraag'
+import Blog from './components/blog'
 import Footer from "./components/footer";
 import NotFound from "./components/not-found";
 import ScrollToTop from "./components/scroll-to-top";
@@ -100,6 +101,11 @@ function App() {
                                 path="/offerte-aanvragen"
                                 exact
                                 component={Aanvraag}
+                            />
+                            <Route
+                                path="/blog"
+                                exact
+                                component={Blog}
                             />
                             
                             <Route component={NotFound} />
