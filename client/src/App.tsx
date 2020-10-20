@@ -29,6 +29,9 @@ import { lightTheme, darkTheme, respond } from "./styles";
 function App() {
 
     ReactGA.initialize("UA-132849357-5");
+
+    const clientLang = window.navigator.language;
+
     const [isDarkTheme, setIsDarkTheme] = useState(false);
     const [language, setLanguage] = useState("nl");
     const [cookies, setCookies] = useState({
@@ -58,7 +61,10 @@ function App() {
     });
 
     useEffect(() => {
-    
+        
+        if(clientLang.split('-')[0]==='en'){
+            setLanguage('en')
+        }
         const cookiesPresets = window.localStorage.getItem("cookiesPresets");
 
         if (cookiesPresets) {

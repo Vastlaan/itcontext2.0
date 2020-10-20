@@ -26,7 +26,6 @@ export default function () {
     fetch('https://api.itcontext.nl/articles').then(res=>res.json()).then(data=>setArticles(data)).catch(e=>console.error(e))
   },[])
 
-  console.log(articles)
   return (
     <Articles>
         {articles.map(article=>{
@@ -38,7 +37,6 @@ export default function () {
           }
 
           const content = marked(article.content!)
-          console.log(article.id)
 
           return <Article key={article.id}>
             <Headline><AiOutlineRead/><span>{article.title}</span></Headline>
