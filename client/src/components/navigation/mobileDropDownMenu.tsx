@@ -82,11 +82,14 @@ const Container = styled.div<ContainerProps>`
     transition-timing-function: ease-out;
     transform: translateX(${(p) => (p.show ? `0%` : `100%`)});
     overflow: hidden;
+    ${()=>respond('xl','width: 100%; padding: 0rem; bottom: -5rem; ')}
+   
 
     ul {
         list-style: none;
         display: flex;
         flex-direction: column;
+        ${()=>respond('xl','flex-direction: row; justify-content: space-around; ')}
 
         a {
             margin: 1rem;
@@ -96,6 +99,8 @@ const Container = styled.div<ContainerProps>`
             font-family: ${fonts.advent};
             color: snow;
             transition: all 0.4s;
+
+            ${()=>respond('xl','font-size: 2rem; text-align: right;')}
 
             &:hover {
                 color: ${(p) => p.theme.greyLight};
