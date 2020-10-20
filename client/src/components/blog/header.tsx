@@ -6,7 +6,7 @@ export default function () {
 
   return (
     <Container>
-      <Heading>Tech <span>Blog</span></Heading>
+      <Heading><span>Web Dev</span> Blog</Heading>
       <Line></Line>
       <CustomText>only english version available</CustomText>
     </Container>

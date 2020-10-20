@@ -1,11 +1,14 @@
 import React, {useState, useEffect} from 'react'
+import {Link} from 'react-router-dom'
 import styled from "styled-components";
 import marked from 'marked'
-import {respond, fonts,Text} from '../../styles'
+import {respond, fonts,Text, Button} from '../../styles'
 import { useIntl } from "react-intl";
 import {IoMdTimer} from 'react-icons/io'
+import {AiOutlineRead} from 'react-icons/ai'
 
 interface ArticleProps{
+  categories?: any[];
   content?: string;
   created_at?: string;
   date?: string;
@@ -24,23 +27,31 @@ export default function () {
   },[])
 
   console.log(articles)
-
-
   return (
     <Articles>
         {articles.map(article=>{
 
           function getMarkdownText() {
-            var rawMarkup = marked(article.content!, {sanitize: true});
+            let rawMarkup = marked(article.content!, {sanitize: true});
+            rawMarkup = rawMarkup.substring(0,200)+' ...'
             return { __html: rawMarkup };
           }
 
           const content = marked(article.content!)
+          console.log(article.id)
 
           return <Article key={article.id}>
-            <h3>{article.title}</h3>
+            <Headline><AiOutlineRead/><span>{article.title}</span></Headline>
             <Date><IoMdTimer/>{article.date}</Date>
             <Content dangerouslySetInnerHTML={getMarkdownText()}/>
+            <Link style={{margin:"0 0 2rem 2rem"}} to={`/article/${article.id}`}>
+              <Button>Read more</Button>
+            </Link>
+            <Tags>{article.categories!.map(cat=>{
+              return <span key={`category-${cat.id}`}>#{cat.name}</span>
+            })}
+            </Tags>
+            
           </Article>
         })}
       </Articles>
@@ -48,32 +59,35 @@ export default function () {
 }
 const Articles = styled.div`
   padding: 2rem;
-  
-  display: grid;
-  grid-template-columns: 1fr;
-
-  ${()=>respond('m', 'grid-template-columns: 1fr 1fr;')}
 `
 const Article = styled.div`
   width: 90vw;
   margin: 2rem auto;
   background-color:${p=>p.theme.bg};
-  h3{
-    padding: 1rem 2rem;
-    font-size: 2.5rem;
-    font-weight:700;
-    font-family: ${fonts.gayathri};
-    background-color:${p=>p.theme.primary};
-    color:${p=>p.theme.bg};
-  }
-
 
 `
+const Headline = styled.h3`
+  padding: 1rem 2rem;
+  font-size: 2.5rem;
+  font-weight:700;
+  font-family: ${fonts.advent};
+  background-color:${p=>p.theme.primary};
+  color:${p=>p.theme.bg};
+  display: flex;
+  align-items: center;
+
+  svg{
+    margin-right: 1rem;
+    color: white;
+  }
+`
 const Date = styled.div`
-    padding: 2rem;
+    padding:  1rem 2rem;
     display: flex;
     align-items: center;
     font-size: 2rem;
+    font-family: ${fonts.advent};
+    color:${p=>p.theme.greyDark};
 
     svg{
       color:${p=>p.theme.warm};
@@ -81,7 +95,7 @@ const Date = styled.div`
     }
 `
 const Content =styled.div`
-  margin: 2rem auto;
+  margin: 0 auto;
   padding: 2rem;
 
   ol{
@@ -105,5 +119,19 @@ const Content =styled.div`
   code{   
     font-size: 1.6rem;   
     color: gold;
+  }
+`
+
+const Tags = styled.div`
+  width: 100%;
+  background-color: ${p=>p.theme.primary};
+  padding: 1rem 2rem;
+  margin-top:2rem;
+
+  span{
+    font-size: 1.6rem;
+    margin-right: 1rem;
+    font-family: "Courier New", sans-serif;
+    color: ${p=>p.theme.bg};
   }
 `

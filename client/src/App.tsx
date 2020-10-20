@@ -14,6 +14,7 @@ import Voorwaarden from "./components/voorwaarden";
 import Webdev from "./components/webdev";
 import Aanvraag from './components/aanvraag'
 import Blog from './components/blog'
+import Article from './components/article'
 import Footer from "./components/footer";
 import NotFound from "./components/not-found";
 import ScrollToTop from "./components/scroll-to-top";
@@ -106,6 +107,11 @@ function App() {
                                 path="/blog"
                                 exact
                                 component={Blog}
+                            />
+                            <Route
+                                path="/article/:id"
+                                exact
+                                component={Article}
                             />
                             
                             <Route component={NotFound} />
