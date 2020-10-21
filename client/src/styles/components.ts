@@ -34,6 +34,7 @@ export const Social = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 
     a {
         &:not(:last-child) {
@@ -123,6 +124,8 @@ export const Anchor = styled.a`
     background-color: ${(props) => props.color};
     border-radius: 3px;
     transition: all 0.3s;
+
+    ${()=>respond('xxl','margin: 2rem auto; width: 40rem;')}
 
     &:hover {
         background-color: transparent;
@@ -222,3 +225,7 @@ export const Text = styled.p`
 
     ${() => respond("m", "text-align: left;")}
 `;
+
+export const MainLayout = styled.main`
+    ${()=>respond('xxl','width: 1366px; margin: 0 auto;')}
+`

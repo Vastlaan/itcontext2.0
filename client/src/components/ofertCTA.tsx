@@ -28,12 +28,12 @@ const Container = styled.div`
   align-items: center;
 `
 const CustomButton = styled(Button)`
-  background-color: ${p=>p.theme.warm};
-  border: 1px solid ${p=>p.theme.warm};
+  background-color: ${p=>p.theme.primary};
+  border: 1px solid ${p=>p.theme.primary};
   border-radius: 3px;
 
 
   &:hover{
-    color: ${p=>p.theme.warm};
+    color: ${p=>p.theme.primary};
   }
 `

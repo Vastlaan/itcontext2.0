@@ -28,4 +28,11 @@ const Container = styled.header`
             `grid-template-areas: 
         "info info info info info bait";`
         )};
+     ${() =>
+        respond(
+            "xxl",
+            `grid-template-areas: 
+        "info info info info bait bait";`
+        )};
+    
 `;

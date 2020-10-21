@@ -9,6 +9,7 @@ import Intersection from "../intersection";
 import Reviews from "./reviews";
 import PanoramaImage from "../../img/panorama.jpg";
 import SEO from "../seo";
+import {MainLayout} from '../../styles'
 
 export default function About() {
     const intl = useIntl();
@@ -23,14 +24,18 @@ export default function About() {
                 url="https://itcontext.nl"
                 imageUrl="https://michalantczakblogresources.s3.eu-central-1.amazonaws.com/itcontext/ITContextLandingPage.jpg"
             />
-            <Header />
+
             <Panorama>
                 <img
                     src={PanoramaImage}
                     alt="moderne websites voor ondernemingen"
                 />
             </Panorama>
-            <Paragraph
+
+            <Header />
+            
+            <MainLayout>
+                <Paragraph
                 heading={intl.formatMessage({
                     id: "about.paragraph-1-header",
                     defaultMessage: "kosten website maken",
@@ -50,21 +55,23 @@ export default function About() {
                     defaultMessage:
                         "Waarschijnlijk zou u toch meer van de website verwachten. U wilt dat uw klanten makkelijk online afspraak met u kunnen maken of een offerte aanvragen. Misschien wenst u dat elke klant een persoonlijke account kunt aanmaken en daardoor een toegang krijgen tot voor hem bedoelde inhoud. Heeft u een professionele e-mailadres nodig? IT Context biedt goedkoop e-mail, de prijzen beginnen vanaf 19 &euro; exclusief per jaar. Wilt u inhoud van uw website online beheren? Met ons krijg u toegang tot Content Manager System al vanaf 49 &euro; exclusief per jaar. IT Context helpt u ook met uw eigen webshop oprichten.  Kosten hangen er af van aantal paginas, producten en gewenste functionaliteit.  Er komen nog kleine maandelijke bedragen bij voor o.a. online betalen en server capaciteit.",
                 })}
-            />
-            <Intersection
-                headline={intl.formatMessage({
-                    id: "about.intersection1-headline",
-                    defaultMessage: "Professioneel, loyaal en betrokken",
-                })}
-                text={intl.formatMessage({
-                    id: "about.intersection1-text",
-                    defaultMessage:
-                        "we bouwen de reputatie op de succesverhalen van onze klanten, zodat het in ons grote belang is om u te helpen een lokale tycoon te worden in uw branche",
-                })}
-                background={true}
-            />
+                />
+                <Intersection
+                    headline={intl.formatMessage({
+                        id: "about.intersection1-headline",
+                        defaultMessage: "Professioneel, loyaal en betrokken",
+                    })}
+                    text={intl.formatMessage({
+                        id: "about.intersection1-text",
+                        defaultMessage:
+                            "we bouwen de reputatie op de succesverhalen van onze klanten, zodat het in ons grote belang is om u te helpen een lokale tycoon te worden in uw branche",
+                    })}
+                    background={true}
+                />
 
-            <Reviews />
+                <Reviews />
+            </MainLayout>
+            
         </Container>
     );
 }
@@ -73,7 +80,7 @@ const Container = styled.section`
 `;
 const Panorama = styled.div`
     width: 100%;
-    margin: 5rem 0;
+    margin:0;
 
     img {
         object-fit: cover;

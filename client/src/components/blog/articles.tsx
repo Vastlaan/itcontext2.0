@@ -59,9 +59,10 @@ const Articles = styled.div`
   padding: 2rem;
 `
 const Article = styled.div`
-  width: 90vw;
-  margin: 2rem auto;
+  width: 100%;
+  margin: 5rem auto;
   background-color:${p=>p.theme.bg};
+  ${()=>respond('xxl','width: 1366px; margin: 0 auto;')}
 
 `
 const Headline = styled.h3`

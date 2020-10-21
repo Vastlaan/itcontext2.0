@@ -13,6 +13,7 @@ import {
     PageNav,
     Confirmation,
     Text,
+    MainLayout
 } from "./components";
 
 export {
@@ -31,4 +32,5 @@ export {
     PageNav,
     Confirmation,
     Text,
+    MainLayout
 };

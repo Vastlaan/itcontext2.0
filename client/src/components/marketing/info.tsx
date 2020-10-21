@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
-import { fonts, Button, Text, respond } from "../../../styles";
+import { fonts, Button, Text, respond } from "../../styles";
 import { FaChartPie, FaArrowRight } from "react-icons/fa";
 
 export default function Info() {
@@ -27,7 +27,7 @@ export default function Info() {
             </Head>
             <CustomText>
                 {intl.formatMessage({
-                    id: "marketing.header-text",
+                    id: "marketing.header-text-m",
                     defaultMessage:
                         "Een goede marketingstrategie vereist een solide plan, dat kan verschillen afhankelijk van: scope - het verkeer waarop je je concentreert; technologieën - tools die je gaat gebruiken; budget - de tijd en kosten die je bereid bent te besteden. IT Context helpt je bij het kiezen van de beste oplossingen die aan jouw wensen en eisen voldoen.",
                 })}
@@ -74,7 +74,7 @@ const CustomButton = styled(Button)`
         margin-left: 1rem;
         transform: rotate(90deg);
 
-        ${() => respond("l", " transform: rotate(0deg);")}
+        ${() => respond("l", " transform: rotate(90deg);")}
     }
 `;
 const BackgroundIcon = styled.div`

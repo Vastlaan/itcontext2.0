@@ -42,7 +42,7 @@ const Container = styled.div`
     border-top: 1px solid ${(props) => props.theme.grey};
     color: snow;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     font-size: 2rem;
     font-family: ${fonts.advent};
@@ -72,7 +72,7 @@ const Credits = styled.div`
 const Numbers = styled.div`
     flex: 0 0 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     ${respond("m", "justify-content: space-between; flex-direction: row;")}
 `;

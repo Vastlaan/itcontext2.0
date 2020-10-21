@@ -21,7 +21,7 @@ export default function Details() {
                     defaultMessage: "WIJ ZIJN JE GRAAG VAN DIENST",
                 })}
             </h3>
-            <Text>
+            <Text style={{margin: '2rem 0'}}>
                 {intl.formatMessage({
                     id: "contact.details-header-sub-2",
                     defaultMessage:

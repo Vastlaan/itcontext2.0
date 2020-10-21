@@ -75,7 +75,7 @@ const Container = styled.div<ContainerProps>`
     display: block;
     background-color: ${(p) => p.theme.primary};
     position: absolute;
-    bottom: -45.25rem;
+    bottom: -41.25rem;
     right: 0;
     z-index: 9;
     transition: all 0.3s;

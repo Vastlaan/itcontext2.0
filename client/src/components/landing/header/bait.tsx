@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
-import { fonts, Social, Anchor, Text } from "../../../styles";
+import { fonts, Social, Anchor, Text, respond } from "../../../styles";
 import { BsInfoCircle } from "react-icons/bs";
 import { RiPhoneLine, RiMailLine } from "react-icons/ri";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
@@ -23,13 +23,13 @@ export default function Bait() {
                 </h3>
             </Head>
             <Actions>
-                <Text>
+                <CustomText>
                     {intl.formatMessage({
                         id: "landing.header-info-2",
                         defaultMessage:
                             "Wij werken van maandag t / m vrijdag tussen 9.00 en 17.00 uur. Wij zijn gevestigd in Purmerend, maar werken in heel Nederland. Heb je vragen? Onze klantenservice staat voor je klaar.",
                     })}
-                </Text>
+                </CustomText>
                 <Anchor color="#117864" href="tel:0299705072">
                     <RiPhoneLine />
                     <span>0299 70 50 72</span>
@@ -38,13 +38,14 @@ export default function Bait() {
                     <RiMailLine />
                     <span>info@itcontext.nl</span>
                 </Anchor>
-                <Text>
-                    {intl.formatMessage({
-                        id: "landing.header-info-3",
-                        defaultMessage: "Volg ons",
-                    })}
-                </Text>
+                
                 <Social>
+                    <Text>
+                        {intl.formatMessage({
+                            id: "landing.header-info-3",
+                            defaultMessage: "Volg ons",
+                        })}
+                    </Text>
                     <a href="https://facebook.com">
                         <FaFacebook color="darkblue" />
                     </a>
@@ -105,3 +106,8 @@ const Actions = styled.div`
         text-align: center;
     }
 `;
+
+const CustomText = styled(Text)`
+
+    ${()=>respond('xxl','margin: 4rem auto;')}
+`

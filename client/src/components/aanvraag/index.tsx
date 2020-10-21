@@ -24,7 +24,7 @@ export default function Aanvraag() {
         <Circles/>
         <Form/>
         <DetailsContainer>
-<Details/>
+          <Details/>
         </DetailsContainer>
         
     </Container>
@@ -77,4 +77,5 @@ const DetailsContainer = styled.div`
   margin: 5rem auto;
   box-shadow: 1rem -1rem 2rem rgba(0,0,0,.3);
   ${()=>respond('m','margin: 0 10rem;')}
+  ${()=>respond('xxl','width: 50rem;')}
 `

@@ -77,12 +77,17 @@ const Head = styled.h1`
     font-size: 4rem;
     font-family: ${fonts.gayathri};
     letter-spacing: 0.3rem;
+
+    ${()=>respond('xxl','font-size: 6rem;')}
 `;
 const CustomText = styled(Text)`
+    text-align: left;
     margin: 3rem 0;
     color: snow;
 `;
 const CustomButton = styled(Button)`
+    align-self: flex-start;
+    margin: 5rem 0;
     background-color: ${(props) => props.theme.secondary};
     border: 1px solid ${(props) => props.theme.secondary};
 

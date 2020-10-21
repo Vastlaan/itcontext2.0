@@ -47,8 +47,8 @@ export default function Card(props: CardProps) {
 }
 
 const Container = styled.div<CardStyledProps>`
-    min-height: 40rem;
-    width: 35rem;
+    min-height: 45rem;
+    width: 40rem;
     padding: 3rem 2rem;
     display: flex;
     flex-direction: column;

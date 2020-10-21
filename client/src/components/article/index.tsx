@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import {RouteComponentProps} from 'react-router-dom'
 import marked from 'marked'
 import Article from '../articleTemplate'
+import {MainLayout} from '../../styles'
 
 
 
@@ -43,7 +44,11 @@ export default function ({match}: RouteComponentProps<TParams>){
 
   if(!loading){
     return (
-      <Article id={article.id!} title={article.title!} date={article.date!} categories={article.categories!} markup={getMarkdownText()}/>
+      <>
+      <MainLayout>
+        <Article id={article.id!} title={article.title!} date={article.date!} categories={article.categories!} markup={getMarkdownText()}/>
+      </MainLayout>
+      </>
     )
   }
   else{

@@ -42,7 +42,7 @@ export default function() {
           <AiOutlineForm/>
           {intl.formatMessage({id:"offerte.header-1",defaultMessage:"Een Offerte Aanvragen"})}
         </Header>
-        <Text>{intl.formatMessage({id:"offerte.text",defaultMessage:"Bestel een gratis brochure en lees meer over onze diensten en prijzen."})}</Text>
+        <Text style={{margin: '2rem 0'}}>{intl.formatMessage({id:"offerte.text",defaultMessage:"Bestel een gratis brochure en lees meer over onze diensten en prijzen."})}</Text>
         <HeaderSmall>
           <RiMailSendLine/>
           {intl.formatMessage({id:"offerte.header-2",defaultMessage:"E-mailadres doorgeven"})}
@@ -91,6 +91,7 @@ const Form = styled.form`
   box-shadow: 1rem -1rem 2rem rgba(0,0,0,.3);
 
   ${()=>respond('m','margin: 0 10rem;')}
+  ${()=>respond('xxl','width: 50rem;')}
 `
 
 const Header = styled.h1`
@@ -153,6 +154,7 @@ const CustomButton = styled(Button)`
 `;
 
 const CheckboxField = styled.div`
+  margin-top:2rem;
   position: relative;
   height: 3rem;
 
@@ -212,7 +214,7 @@ const Warning = styled.p`
     position: absolute;
     padding: 0 1rem;
     width: 30rem;
-      top: -.5rem;
+      top: -1.5rem;
       left: 2rem;
       background-color: ${p=>p.theme.warm};
       color: white;

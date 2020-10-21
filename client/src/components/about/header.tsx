@@ -117,10 +117,10 @@ const Container = styled.header`
         respond(
             "m",
             `grid-template-areas:
-            "nav nav nav nav info info"
-        "head head head head info info"
-        "head head head head info info"
-        "long long long long long long"
+            "nav nav nav nav nav nav"
+        "head head head head head head"
+        ". long long long long ."
+        ". info info info info ."
         ;`
         )}
 `;

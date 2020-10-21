@@ -32,13 +32,13 @@ export default function Info() {
                                     "Elegante en gestructureerde website",
                             })}
                         </h3>
-                        <Text>
+                        <CustomText>
                             {intl.formatMessage({
                                 id: "landing.header-1-text",
                                 defaultMessage:
                                     "Wij maken websites die je bedrijf vertegenwoordigen in een moderne en chique stijl. Maak het eenvoudig om te navigeren en gemakkelijk te gebruiken.",
                             })}
-                        </Text>
+                        </CustomText>
                     </div>
                 </Block>
                 <Block>
@@ -54,13 +54,13 @@ export default function Info() {
                                     "Bereik de juiste doelgroep en overtuig hen om contact met je op te nemen",
                             })}
                         </h3>
-                        <Text>
+                        <CustomText>
                             {intl.formatMessage({
                                 id: "landing.header-2-text",
                                 defaultMessage:
                                     "We zorgen ervoor dat potentiële klanten je gemakkelijk kunnen vinden en bouwen een solide basis op om hen te helpen bij het kiezen van je producten en diensten.",
                             })}
-                        </Text>
+                        </CustomText>
                     </div>
                 </Block>
                 <Block>
@@ -76,13 +76,13 @@ export default function Info() {
                                     "Onderscheid je van de concurrentie",
                             })}
                         </h3>
-                        <Text>
+                        <CustomText>
                             {intl.formatMessage({
                                 id: "landing.header-3-text",
                                 defaultMessage:
                                     "We ontwerpen prachtige en unieke websites en helpen je met het creëren van waardevolle inhoud.",
                             })}
-                        </Text>
+                        </CustomText>
                     </div>
                 </Block>
             </Details>
@@ -93,6 +93,8 @@ const Container = styled.div`
     grid-area: info;
     position: relative;
     padding: 5rem 2rem;
+
+    ${()=>respond('xxl','padding: 5rem;')}
 `;
 const Circles = styled.div`
     position: absolute;
@@ -121,6 +123,8 @@ const Header = styled.h1`
     font-size: 3.5rem;
     text-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
     color: ${(props) => props.theme.grey};
+
+    ${()=>respond('xxl','font-size: 5rem;')}
 `;
 const Details = styled.div`
     list-style: none;
@@ -139,6 +143,7 @@ const Block = styled.div`
 
     ${() =>
         respond("s", "grid-template-columns: 10rem 1fr;justify-items: center;")}
+    ${()=>respond('xxl','margin-bottom: 5rem;')}
 
     div {
         justify-self: start;
@@ -164,3 +169,7 @@ const Icon = styled.div`
         color: ${(props) => props.theme.primaryLight};
     }
 `;
+
+const CustomText = styled(Text)`
+    ${()=>respond('xxl','max-width:60%;')}
+`

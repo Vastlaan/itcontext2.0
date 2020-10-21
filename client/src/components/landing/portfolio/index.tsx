@@ -18,7 +18,7 @@ export default function Protfolio() {
 const Container = styled.section`
     position: relative;
     margin: 10rem 0;
-    background-color: ${(props) => props.theme.bg};
+    background-image: linear-gradient(to right, ${(props) => props.theme.bg} 80%,${(props) => props.theme.primaryLight} 80%);
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
@@ -31,4 +31,5 @@ const Container = styled.section`
             "m",
             'grid-template-columns: 1fr 1fr; grid-template-areas: "front back";'
         )}
+    ${()=>respond('xxl','padding: 0 5rem;')}
 `;

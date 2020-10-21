@@ -43,7 +43,7 @@ export default function ({id, title, date, markup, categories}:ArticleProps) {
 }
 
 const Article = styled.div`
-  width: 90vw;
+  width: 90%;
   margin: 5rem auto;
   background-color:${p=>p.theme.bg};
 `
@@ -74,7 +74,7 @@ const Info = styled.div`
   font-family: ${fonts.advent};
   
   &>*{
-    margin-right: 2rem;
+    margin: 0 2rem 0.5rem 0;
   }
   
 

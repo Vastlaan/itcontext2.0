@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
-import { fonts, Button, respond } from "../../../styles";
+import { fonts, Button, respond } from "../../styles";
 
 export default function Chart() {
     const scrollToArticle = (id: string) => {
@@ -49,7 +49,8 @@ export default function Chart() {
     );
 }
 const Container = styled.div`
-    flex: 0 0 50%;
+    width: 90%;
+    margin: 2rem auto;
     background-color: ${(p) => p.theme.bg};
     display: grid;
     grid-template-columns: 5rem repeat(11, 1fr);
@@ -66,6 +67,8 @@ const Container = styled.div`
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
     padding: 1rem;
     transform: translateY(-4rem);
+
+    ${()=>respond('m','width: 70%;')}
 `;
 const AxisX = styled.div`
     grid-area: axisX;
