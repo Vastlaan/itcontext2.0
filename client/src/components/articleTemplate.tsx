@@ -16,13 +16,28 @@ export default function ({id, title, date, markup, categories}:ArticleProps) {
 
   return (
     <Article key={id}>
-        <Headline><AiOutlineRead/>{title}</Headline>
-        <Date><IoMdTimer/>{date}</Date>
+        
+        <Headline>
+          <h3>{title}</h3>
+        </Headline>
+        <Info>
+          <Date>
+            <IoMdTimer/>
+            {date}
+          </Date>
+          <Read>
+            <AiOutlineRead/>
+            <span>read time 10 min.</span>
+          </Read>
+          <Tags>
+            <span>tags:</span>
+            {categories.map(cat=>{
+              return <span key={`category-${cat.id}`}>#{cat.name}</span>
+            })}
+          </Tags>
+        </Info>
         <Content dangerouslySetInnerHTML={markup}/>
-        <Tags>{categories.map(cat=>{
-          return <span key={`category-${cat.id}`}>#{cat.name}</span>
-        })}
-        </Tags>
+        
       </Article>
   )
 }
@@ -32,33 +47,76 @@ const Article = styled.div`
   margin: 2rem auto;
   background-color:${p=>p.theme.bg};
 `
-const Headline = styled.h3`
-  padding: 1rem 2rem;
-  font-size: 2.5rem;
-  font-weight:700;
+const Headline = styled.div`
+  margin: 1rem 0;
+  padding:  0rem 2rem ;
+  border-bottom: 1px solid ${p=>p.theme.greyLight};
+
+  h3{
+    
+    font-size: 4rem;
+    font-weight:600;
+    font-family: ${fonts.headline};
+    text-transform: uppercase;
+    color:${p=>p.theme.greyDark};
+    text-align: left;
+
+    ${()=>respond('m','text-align: left;font-size: 2.5rem;')}
+    
+  }
+`
+const Info = styled.div`
+  padding:0 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction:column;
+  align-items: flex-start;
   font-family: ${fonts.advent};
-  background-color:${p=>p.theme.primary};
-  color:${p=>p.theme.bg};
+  
+  &>*{
+    margin-right: 2rem;
+  }
+  
+
+  ${()=>respond('m','flex-direction: row; flex-wrap: wrap; align-items: center;')}
+`
+const Read = styled.div`
   display: flex;
   align-items: center;
 
   svg{
+    font-size: 2rem;
+    color: ${p=>p.theme.primaryLight};
     margin-right: 1rem;
-    color: white;
+  }
+
+  span{
+    font-size: 2rem;
   }
 `
 const Date = styled.div`
-    padding: 0rem 2rem;
+
     display: flex;
     align-items: center;
     font-size: 2rem;
-    font-family: ${fonts.advent};
+    
     color:${p=>p.theme.greyDark};
 
     svg{
-      color:${p=>p.theme.warm};
+      color:${p=>p.theme.primaryLight};
       margin-right: 1rem;
     }
+`
+const Tags = styled.div`
+  flex: 1;
+  text-align: right;
+
+  span{
+    font-size: 1.6rem;
+    margin-right: 1rem;
+    font-family: "Courier New", sans-serif;
+    color: ${p=>p.theme.grey};
+  }
 `
 const Content =styled.div`
   margin: 0rem auto;
@@ -85,18 +143,6 @@ const Content =styled.div`
   code{   
     font-size: 1.6rem;   
     color: gold;
-  }
-`
-const Tags = styled.div`
-  width: 100%;
-  background-color: ${p=>p.theme.primary};
-  padding: 1rem 2rem;
-  margin-top:2rem;
-
-  span{
-    font-size: 1.6rem;
-    margin-right: 1rem;
-    font-family: "Courier New", sans-serif;
-    color: ${p=>p.theme.bg};
+    font-family: ${fonts.code};
   }
 `

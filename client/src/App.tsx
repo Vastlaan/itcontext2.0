@@ -147,7 +147,8 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: inherit;
-        line-height: 1.6;
+        line-height: 1.3;
+        ${()=>respond('m','line-height: 1.6;')}
     }
 
     html{
