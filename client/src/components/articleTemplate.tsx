@@ -44,7 +44,7 @@ export default function ({id, title, date, markup, categories}:ArticleProps) {
 
 const Article = styled.div`
   width: 90vw;
-  margin: 2rem auto;
+  margin: 5rem auto;
   background-color:${p=>p.theme.bg};
 `
 const Headline = styled.div`
