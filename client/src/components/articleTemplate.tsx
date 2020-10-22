@@ -54,9 +54,9 @@ const Headline = styled.div`
 
   h3{
     
-    font-size: 4rem;
+    font-size: 6rem;
     font-weight:600;
-    font-family: ${fonts.headline};
+    font-family: ${fonts.advent};
     text-transform: uppercase;
     color:${p=>p.theme.greyDark};
     text-align: left;

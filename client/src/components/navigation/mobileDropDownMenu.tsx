@@ -88,6 +88,8 @@ const Container = styled.div<ContainerProps>`
     transition-timing-function: ease-out;
     transform: translateX(${(p) => (p.show ? `0%` : `100%`)});
     overflow: hidden;
+    ${()=>respond('m','bottom: -47rem;')}
+    ${()=>respond('m','bottom: -52rem;')}
     ${()=>respond('xl','width: 100%; padding: 0rem; bottom: -5rem; ')}
    
 

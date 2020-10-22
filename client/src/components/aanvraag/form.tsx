@@ -83,7 +83,7 @@ export default function() {
   )
 }
 const Form = styled.form`
-  width: 40rem;
+  width: 50rem;
   border-radius: 1rem;
   background-color: ${p=>p.theme.bg};
   padding: 2rem;
@@ -91,7 +91,7 @@ const Form = styled.form`
   box-shadow: 1rem -1rem 2rem rgba(0,0,0,.3);
 
   ${()=>respond('m','margin: 0 10rem;')}
-  ${()=>respond('xxl','width: 50rem;')}
+  ${()=>respond('xxl','width: 55rem;')}
 `
 
 const Header = styled.h1`

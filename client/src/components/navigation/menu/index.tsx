@@ -32,7 +32,7 @@ export default function Menu(props: MenuProps) {
                 })}
             </Link>
             <Hidden>
-                <Link to="/offerte">
+                <Link to="/offerte-aanvragen">
                     {intl.formatMessage({
                         id: "navigation.menu-5",
                         defaultMessage: "Offerte",
@@ -63,11 +63,11 @@ const Container = styled.ul`
     display: none;
     justify-content: space-evenly;
     flex: 1;
-    ${() => respond("l", "display: flex;")}
+    ${() => respond("xl", "display: flex;")}
 
     a, div {
         text-decoration: none;
-        flex: 1;
+        flex:1;
         padding: 0.5rem;
         display: flex;
         align-items: center;
@@ -82,6 +82,8 @@ const Container = styled.ul`
         &:hover {
             background-color: ${(props) => props.theme.grey};
         }
+
+        ${()=>respond('xxl','flex:auto;')}
     }
 `;
 const Hidden = styled.div`

@@ -1,7 +1,9 @@
 export const fonts = {
-    gayathri: "'Gayathri', sans-serif;",
-    advent: "'Advent Pro', sans-serif;",     //  'Work Sans', sans-serif;
-    cormoran: "'Crimson Text', serif;",     // 'Cormorant Garamond', serif;
+    gayathri: "'Jura', sans-serif;",
+    advent: "'Jura', sans-serif;",     //  'Work Sans', sans-serif;
+    cormoran: "'Forum', cursive;",     // 'Cormorant Garamond', serif;
     code: "'Anonymous Pro', monospace;",
-    headline: "'Poppins', sans-serif;"
+    headline: "'Poppins', sans-serif;",
+    paragraph: "'Forum', cursive;",
+    head: "'Jura', sans-serif;"
 };

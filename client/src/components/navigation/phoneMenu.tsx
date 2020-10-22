@@ -35,7 +35,7 @@ const Container = styled.ul`
     flex: 1;
     background-color: ${(props) => props.theme.bg};
 
-    ${() => respond("l", "display: none;")}
+    ${() => respond("xl", "display: none;")}
 
     a {
         text-decoration: none;
@@ -51,9 +51,9 @@ const Container = styled.ul`
         transition: all 0.3s;
         text-align: center;
         text-transform: uppercase;
-        ${() => respond("s", "display: flex;")};
-        ${() => respond("m", "display: flex; font-size: 2.5rem;")};
-        ${() => respond("l", "display: none;")};
+        
+        ${() => respond("m", "display: flex; font-size: 2.2rem;")};
+        ${() => respond("xl", "display: none;")};
 
         &:hover {
             background-color: ${(props) => props.theme.greyLight};

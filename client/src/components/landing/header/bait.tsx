@@ -63,7 +63,7 @@ const Container = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: rgba(246,249,255,.6);
+    background-color: rgba(246,249,255,.4);
 `;
 const Head = styled.div`
     width: 100%;

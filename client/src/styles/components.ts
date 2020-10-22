@@ -114,7 +114,7 @@ export const BlockButton = styled(Button)`
 `;
 
 export const Anchor = styled.a`
-    width: 30rem;
+    width: 40rem;
     text-decoration: none;
     padding: 1rem 3rem;
     margin: 2rem auto;
