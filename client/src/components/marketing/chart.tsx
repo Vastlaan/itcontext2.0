@@ -97,6 +97,7 @@ const AxisY = styled.div`
     color: ${(p) => p.theme.greyDark};
 `;
 const SingleChart = styled.button`
+    padding: 1rem 0;
     border: none;
     display: flex;
     align-items: center;

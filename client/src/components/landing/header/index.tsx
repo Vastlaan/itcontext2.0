@@ -5,6 +5,7 @@ import Info from "./info";
 import Bait from "./bait";
 // styles
 import { respond } from "../../../styles";
+import Image from '../../../img/header-landing.jpg'
 
 export default function Header() {
     return (
@@ -21,6 +22,10 @@ const Container = styled.header`
         "info"
         "bait";
     overflow-x: hidden;
+    background-image: linear-gradient(to right, rgba(255,255,255,.6),rgba(255,255,255,.6)), url(${Image});
+    background-size: cover;
+    background-repeat: no-repreat;
+    background-position: center;
 
     ${() =>
         respond(
@@ -32,7 +37,7 @@ const Container = styled.header`
         respond(
             "xxl",
             `grid-template-areas: 
-        "info info info info bait bait";`
+        "info info info info info bait";`
         )};
     
 `;

@@ -57,12 +57,15 @@ export default function () {
 }
 const Articles = styled.div`
   padding: 2rem;
+   margin: 5rem auto;
+   
+  ${()=>respond('xxl','width: 1366px;')}
 `
 const Article = styled.div`
   width: 100%;
-  margin: 5rem auto;
+  margin: 2rem auto;
   background-color:${p=>p.theme.bg};
-  ${()=>respond('xxl','width: 1366px; margin: 0 auto;')}
+  
 
 `
 const Headline = styled.h3`

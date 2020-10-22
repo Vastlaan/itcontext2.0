@@ -5,7 +5,7 @@ import { fonts, respond } from "../../styles";
 
 export default function Logo() {
     return (
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link to="/" style={{ textDecoration: "none", display:'flex' }}>
             <Container>IT Context</Container>
         </Link>
     );

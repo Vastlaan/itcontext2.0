@@ -49,7 +49,7 @@ export default function Header() {
 
 const Container = styled.header`
     width: 100%;
-    height: 50rem;
+    min-height: 50rem;
     margin: 0rem auto;
     padding: 4rem 2rem;
     display: flex;
@@ -60,7 +60,7 @@ const Container = styled.header`
     background-position: center center;
 
 
-    ${() => respond("xxl", "height: 60rem; padding: 10rem 2rem;")}
+    ${() => respond("xxl", "min-height: 60rem; padding: 10rem 2rem;")}
 `;
 
 const Head = styled.h1`

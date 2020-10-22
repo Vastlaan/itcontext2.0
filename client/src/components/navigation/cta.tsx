@@ -34,6 +34,8 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     background-color: ${(props) => props.theme.primary};
+
+    
 `;
 const Button = styled.button`
     align-self: stretch;
@@ -45,7 +47,7 @@ const Button = styled.button`
     transition: all 0.3s;
     cursor: pointer;
     display: block;
-    ${() => respond("l", "display: block;")}
+    ${()=>respond('xxl','display:none;')}
 
     &:hover {
         background-color: ${(props) => props.theme.primaryLight};

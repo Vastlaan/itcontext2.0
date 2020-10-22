@@ -63,8 +63,7 @@ const Container = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-
-    background-color: ${(props) => props.theme.bg};
+    background-color: rgba(246,249,255,.6);
 `;
 const Head = styled.div`
     width: 100%;
@@ -72,6 +71,7 @@ const Head = styled.div`
     align-items: center;
 
     h3 {
+        transform: translateX(-4rem);
         flex: 1;
         text-align: center;
         text-transform: uppercase;

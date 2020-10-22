@@ -228,4 +228,5 @@ export const Text = styled.p`
 
 export const MainLayout = styled.main`
     ${()=>respond('xxl','width: 1366px; margin: 0 auto;')}
+    ${()=>respond('tv','width: 1960px; margin: 0 auto;')}
 `

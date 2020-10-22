@@ -160,6 +160,7 @@ const GlobalStyle = createGlobalStyle`
         ${(props) => respond("l", `font-size:60%;`)}
         ${(props) => respond("xl", `font-size:62.5%;`)}
         ${(props) => respond("xxl", `font-size:65%;`)}
+        ${(props) => respond("tv", `font-size:100%;`)}
     }
 
     body{

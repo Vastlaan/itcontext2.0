@@ -23,5 +23,9 @@ export const respond = (type: string, content: string): string | undefined => {
         return `@media only screen and (min-width: 1662px){
     ${content}
   }`;
+    } else if (type === "tv") {
+        return `@media only screen and (min-width: 2561px){
+    ${content}
+  }`;
     }
 };

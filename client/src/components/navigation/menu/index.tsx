@@ -31,6 +31,30 @@ export default function Menu(props: MenuProps) {
                     defaultMessage: "Over Ons",
                 })}
             </Link>
+            <Hidden>
+                <Link to="/offerte">
+                    {intl.formatMessage({
+                        id: "navigation.menu-5",
+                        defaultMessage: "Offerte",
+                    })}
+                </Link>
+            </Hidden>
+            <Hidden>
+                <Link to="/contact">
+                    {intl.formatMessage({
+                        id: "navigation.menu-4",
+                        defaultMessage: "Contact",
+                    })}
+                </Link>
+            </Hidden>
+            <Hidden>
+                <Link to="/blog">
+                    {intl.formatMessage({
+                        id: "navigation.menu-6",
+                        defaultMessage: "Blog",
+                    })}
+                </Link>
+            </Hidden>
         </Container>
     );
 }
@@ -41,7 +65,7 @@ const Container = styled.ul`
     flex: 1;
     ${() => respond("l", "display: flex;")}
 
-    a {
+    a, div {
         text-decoration: none;
         flex: 1;
         padding: 0.5rem;
@@ -60,3 +84,7 @@ const Container = styled.ul`
         }
     }
 `;
+const Hidden = styled.div`
+    display:none !important;
+    ${()=>respond('xxl','display: flex !important; align-items: center;')}
+`

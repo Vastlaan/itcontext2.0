@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
 import { fonts, respond, Text } from "../../../styles";
+
 import { RiShieldStarLine } from "react-icons/ri";
 import { FaBlackTie, FaRegHandshake } from "react-icons/fa";
 
@@ -17,7 +18,6 @@ export default function Info() {
                         "IT Context helpt je bedrijf online te groeien",
                 })}
             </Header>
-            <Circles />
             <Details>
                 <Block>
                     <Icon>
@@ -93,37 +93,19 @@ const Container = styled.div`
     grid-area: info;
     position: relative;
     padding: 5rem 2rem;
+    
 
     ${()=>respond('xxl','padding: 5rem;')}
 `;
-const Circles = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50rem;
-    height: 50rem;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    z-index: -1;
 
-    &::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(50%, 0%);
-        width: 30rem;
-        height: 30rem;
-        border-radius: 50%;
-        border: 1px solid rgba(0, 0, 0, 0.2);
-    }
-`;
 const Header = styled.h1`
+    text-align: center;
     font-family: ${fonts.gayathri};
     font-size: 3.5rem;
     text-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
     color: ${(props) => props.theme.grey};
 
+    ${()=>respond('m','text-align: left;')}
     ${()=>respond('xxl','font-size: 5rem;')}
 `;
 const Details = styled.div`
@@ -159,6 +141,7 @@ const Block = styled.div`
 `;
 
 const Icon = styled.div`
+    margin: 0 auto;
     background-color: ${(props) => props.theme.bg};
     padding: 2rem;
     border-right: 1px solid ${(props) => props.theme.greyLight};
@@ -168,6 +151,8 @@ const Icon = styled.div`
         font-size: 4rem;
         color: ${(props) => props.theme.primaryLight};
     }
+
+    ${()=>respond('m','margin: 0;')}
 `;
 
 const CustomText = styled(Text)`
