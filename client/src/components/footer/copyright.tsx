@@ -38,16 +38,16 @@ export default function Copyright() {
 }
 
 const Container = styled.div`
-    padding: 1rem 2rem;
+    padding: 1rem 0rem;
     border-top: 1px solid ${(props) => props.theme.grey};
-    color: snow;
+    color: ${p=>p.theme.greyLight};
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     font-size: 2rem;
     font-family: ${fonts.advent};
 
-    ${() => respond("m", "justify-content: space-between;")}
+    ${() => respond("m", "justify-content: space-between; padding: 1rem 2rem;")}
 `;
 const Year = styled.p``;
 const Credits = styled.div`
