@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import styled from "styled-components";
 import marked from 'marked'
+import Loading from '../loading'
 import {respond, fonts,Text, Button} from '../../styles'
 import { useIntl } from "react-intl";
 import {IoMdTimer} from 'react-icons/io'
@@ -21,10 +22,20 @@ interface ArticleProps{
 
 export default function () {
   const [articles, setArticles] = useState<ArticleProps[]>([])
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(()=>{
-    fetch('https://api.itcontext.nl/articles').then(res=>res.json()).then(data=>setArticles(data)).catch(e=>console.error(e))
+    fetch('https://api.itcontext.nl/articles')
+    .then(res=>res.json())
+    .then(data=>{
+      setArticles(data)
+      setIsLoading(false)
+    }).catch(e=>console.error(e))
   },[])
+
+  if(isLoading){
+    return <Loading/>
+  }
 
   return (
     <Articles>

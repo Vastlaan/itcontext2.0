@@ -125,7 +125,7 @@ export const Anchor = styled.a`
     border-radius: 3px;
     transition: all 0.3s;
 
-    ${()=>respond('xxl','margin: 2rem auto; width: 40rem;')}
+    ${()=>respond('xxl','margin: 2rem 0; width: 40rem;')}
 
     &:hover {
         background-color: transparent;

@@ -27,7 +27,7 @@ export default function ({id, title, date, markup, categories}:ArticleProps) {
           </Date>
           <Read>
             <AiOutlineRead/>
-            <span>read time 10 min.</span>
+            <span>read time 5 min.</span>
           </Read>
           <Tags>
             <span>tags:</span>
@@ -61,7 +61,7 @@ const Headline = styled.div`
     color:${p=>p.theme.greyDark};
     text-align: left;
 
-    ${()=>respond('m','text-align: left;font-size: 2.5rem;')}
+    ${()=>respond('m','text-align: left;font-size: 6rem;')}
     
   }
 `
@@ -92,6 +92,7 @@ const Read = styled.div`
 
   span{
     font-size: 2rem;
+    color:${p=>p.theme.grey};
   }
 `
 const Date = styled.div`
@@ -100,7 +101,7 @@ const Date = styled.div`
     align-items: center;
     font-size: 2rem;
     
-    color:${p=>p.theme.greyDark};
+    color:${p=>p.theme.grey};
 
     svg{
       color:${p=>p.theme.primaryLight};
@@ -114,7 +115,7 @@ const Tags = styled.div`
   span{
     font-size: 1.6rem;
     margin-right: 1rem;
-    font-family: "Courier New", sans-serif;
+    font-family: ${fonts.code};
     color: ${p=>p.theme.grey};
   }
 `

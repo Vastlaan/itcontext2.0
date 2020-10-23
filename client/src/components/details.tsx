@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
 import { FiPhoneCall, FiMail } from "react-icons/fi";
-import { fonts, Anchor, Text } from "../styles";
+import { fonts, Anchor, Text, respond } from "../styles";
 
 export default function Details() {
     const intl = useIntl();
@@ -44,11 +44,14 @@ const Container = styled.div`
     flex: 0 0 40%;
     padding: 2rem;
     font-family: ${fonts.advent};
+    text-align: center;
+
+    ${()=>respond('m','text-align: left;')}
 
     h1 {
         font-size: 2.8rem;
         font-weight: 900;
-        text-align: center;
+        
         text-transform: uppercase;
         color: ${(props) => props.theme.grey};
     }
@@ -56,7 +59,7 @@ const Container = styled.div`
     h3 {
         font-size: 2rem;
         font-weight: 700;
-        text-align: center;
+        
         text-transform: lowercase;
         color: ${(props) => props.theme.grey};
     }

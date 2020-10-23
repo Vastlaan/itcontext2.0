@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import {RouteComponentProps} from 'react-router-dom'
 import marked from 'marked'
 import Article from '../articleTemplate'
+import Loading from '../loading'
 import {MainLayout} from '../../styles'
 
 
@@ -53,7 +54,7 @@ export default function ({match}: RouteComponentProps<TParams>){
   }
   else{
     return(
-      <div>loading data...</div>
+      <div><Loading/></div>
     )
   }
   

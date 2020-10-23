@@ -36,7 +36,7 @@ export default function Form(props: FormProps) {
                     {intl.formatMessage({
                         id: "contact.form-field-1",
                         defaultMessage: "Naam",
-                    })}
+                    })}:
                 </label>
                 <input
                     name="contact_name"
@@ -49,7 +49,7 @@ export default function Form(props: FormProps) {
                     {intl.formatMessage({
                         id: "contact.form-field-2",
                         defaultMessage: "E-mail",
-                    })}
+                    })}:
                 </label>
                 <input
                     name="contact_email"
@@ -63,7 +63,7 @@ export default function Form(props: FormProps) {
                     {intl.formatMessage({
                         id: "contact.form-field-3",
                         defaultMessage: "Bericht",
-                    })}
+                    })}:
                 </label>
                 <textarea
                     name="contact_msg"
@@ -93,18 +93,22 @@ const Container = styled.form`
         font-size: 3.2rem;
         font-weight: 300;
         letter-spacing: 0.3rem;
-        text-align: center;
         text-transform: uppercase;
         color: ${(props) => props.theme.grey};
+        text-align: center;
+
+        ${()=>respond('m','text-align: left;')}
     }
 `;
 
 const Field = styled.div`
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin: 2rem auto;
 
     label {
+        width: 10rem;
+        text-align: right;
         margin-right: 2rem;
         font-size: 2rem;
         color: ${(props) => props.theme.grey};
@@ -133,5 +137,7 @@ const Field = styled.div`
 const CustomButton = styled(Button)`
     display: flex;
     justify-content: center;
-    margin: 2rem auto 5rem auto;
+    margin: 2rem 0 5rem 12rem;
+    padding: 1.5rem 5rem;
+    font-size: 2.5rem;
 `;
