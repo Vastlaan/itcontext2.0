@@ -81,15 +81,15 @@ const Container = styled.div<ContainerProps>`
     display: block;
     background-color: ${(p) => p.theme.primary};
     position: absolute;
-    bottom: -46rem;
+    bottom: -45.75rem;
     right: 0;
-    z-index: 9;
+    z-index: -1;
     transition: all 0.3s;
     transition-timing-function: ease-out;
     transform: translateX(${(p) => (p.show ? `0%` : `100%`)});
     overflow: hidden;
-    ${()=>respond('m','bottom: -47rem;')}
-    ${()=>respond('m','bottom: -52rem;')}
+    ${()=>respond('xs','bottom: -46.5rem;')}
+    ${()=>respond('m','bottom: -51rem;')}
     ${()=>respond('xl','width: 100%; padding: 0rem; bottom: -5rem; ')}
    
 
