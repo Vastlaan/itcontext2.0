@@ -54,7 +54,6 @@ const Container = styled.div<CardStyledProps>`
     flex-direction: column;
     justify-content: space-between;
     border-radius: 3px;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
     background-image: ${(props) =>
         props.hovered
             ? `linear-gradient(to bottom, rgba(17, 120, 100,.6), rgba(17, 120, 100,1)), url(${props.image})`
@@ -64,9 +63,10 @@ const Container = styled.div<CardStyledProps>`
     background-repeat: no-repeat;
     background-position: center;
     transition: all 0.3s;
+    box-shadow: 0 0 2rem rgba(0,0,0,.3);
 
-    ${() => respond("m", "width: 25rem;")}
-    ${() => respond("m", "width: 30rem;")}
+
+    ${() => respond("m", "width: 35rem;")}
 
     &:hover {
         background-image: ${(p) => `linear-gradient(

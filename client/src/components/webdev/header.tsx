@@ -55,7 +55,7 @@ export default function Header() {
 }
 const Container = styled.header`
     padding: 2rem;
-    background-image: url(${Image});
+    background-image: linear-gradient(to right,rgba(15,40,78,.5),rgba(15,40,78,.5)), url(${Image});
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
