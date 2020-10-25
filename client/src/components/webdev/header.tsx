@@ -54,7 +54,8 @@ export default function Header() {
     );
 }
 const Container = styled.header`
-    padding: 2rem;
+    min-height: 50rem;
+    padding: 4rem 2rem;
     background-image: linear-gradient(to right,rgba(15,40,78,.5),rgba(15,40,78,.5)), url(${Image});
     background-size: cover;
     background-repeat: no-repeat;
@@ -62,7 +63,9 @@ const Container = styled.header`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    min-height: 70vh;
+
+    ${() => respond("xxl", "min-height: 60rem; padding: 10rem 2rem;")}
+
 `;
 
 const Main = styled.div`
