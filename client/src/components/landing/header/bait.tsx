@@ -30,14 +30,14 @@ export default function Bait() {
                             "Wij werken van maandag t / m vrijdag tussen 9.00 en 17.00 uur. Wij zijn gevestigd in Purmerend, maar werken in heel Nederland. Heb je vragen? Onze klantenservice staat voor je klaar.",
                     })}
                 </CustomText>
-                <Anchor color="#117864" href="tel:0299705072">
+                <CustomAnchor color="#117864" href="tel:0299705072">
                     <RiPhoneLine />
                     <span>0299 70 50 72</span>
-                </Anchor>
-                <Anchor color="#006A93" href="mailto:info@itcontext.nl">
+                </CustomAnchor>
+                <CustomAnchor color="#006A93" href="mailto:info@itcontext.nl">
                     <RiMailLine />
                     <span>info@itcontext.nl</span>
-                </Anchor>
+                </CustomAnchor>
                 
                 <Social>
                     <Text>
@@ -110,4 +110,8 @@ const Actions = styled.div`
 const CustomText = styled(Text)`
 
     ${()=>respond('xxl','margin: 4rem auto;')}
+`
+
+const CustomAnchor = styled(Anchor)`
+    ${()=>respond('xxl','margin: 2rem auto;')}
 `
