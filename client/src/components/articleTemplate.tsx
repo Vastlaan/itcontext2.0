@@ -54,7 +54,7 @@ const Headline = styled.div`
 
   h3{
     
-    font-size: 7.6rem;
+    font-size: 5rem;
     font-weight:600;
     font-family: ${fonts.advent};
     color:${p=>p.theme.greyDark};
