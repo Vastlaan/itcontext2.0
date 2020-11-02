@@ -34,12 +34,12 @@ app.post("/api/sendOffer", function (req, res) {
         attachments: [
             {
                 content: attachment,
-                filename: "IT Context Brochure.pdf",
+                filename: "Brochure.pdf",
                 type: "application/pdf",
                 disposition: "attachment"
             }
         ],
-        html: "\n            <h1 style='background-color: #0b4f6c; color: white; padding: 1rem 2rem; text-align: center;'>Offerte IT Context</h1>\n            <h3 style='text-align: center; font-size: 25px;'>Goede dag! Hierbij sturen wij jouw offerte als bijlage.</h3>\n            <p style='text-align:center; font-size: 20px;'>Als je nog interesse hebt in onze diensten, aarzel niet om contact met ons op te nemen via ons <a href='mailto:info@itcontext.nl'>e-mailadress</a> of <a href='tel:0299705072'>telefoon</a>.</p>\n            </br>\n            </br>\n            <p style='text-align:center; font-size: 20px;'>Met vriendelijke groet,</p>\n            <p style='text-align:center; font-size: 20px;'>IT Context</p>\n            <p style='text-align:center; font-size: 20px;'>info@itcontext.nl</p>\n            <p style='text-align:center; font-size: 20px;'>0299 70 50 72</p>\n        "
+        html: "\n            <h1 style='background-color: #0b4f6c; color: white; padding: 1rem 2rem; text-align: center;'>Offerte IT Context</h1>\n            <h3 style='text-align: center; font-size: 25px;'>Goede dag " + email + "! Hierbij sturen wij jouw offerte als bijlage.</h3>\n            <p style='text-align:center; font-size: 20px;'>Als je nog interesse hebt in onze diensten, aarzel niet om contact met ons op te nemen via ons <a href='mailto:info@itcontext.nl'>e-mailadress</a> of <a href='tel:0299705072'>telefoon</a>.</p>\n            </br>\n            </br>\n            <p style='text-align:center; font-size: 20px;'>Met vriendelijke groet,</p>\n            <p style='text-align:center; font-size: 20px;'>IT Context</p>\n            <p style='text-align:center; font-size: 20px;'>info@itcontext.nl</p>\n            <p style='text-align:center; font-size: 20px;'>0299 70 50 72</p>\n        "
     };
     mail_1["default"].send(msg);
     res.status(200).json("Success");
