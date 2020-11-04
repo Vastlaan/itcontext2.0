@@ -34,18 +34,78 @@ app.post("/api/submitContactForm", (req: Request, res: Response) => {
         from: "no-reply@itcontext.nl",
         subject: "IT Context formulier ingediend",
         html: `
-            <h1 style='background-color: #0b4f6c; color: white; padding: 1rem 2rem; text-align: center;'>Bevestiging IT Context Contact Formulier</h1>
-            <h3 style='text-align: center; font-size: 25px;'>Goede dag, ${name}! We hebben uw bericht in goede orde ontvangen!</h3>
-            <p style='text-align:center; font-size: 20px;'>Wij streven ernaar om je vraag binnen 2 werkdagen te beantwoorden</p>
-            <p style='text-align:center; font-size: 20px;'>Uw contact e-mail: ${email}</p>
-            <p style='text-align:center; font-size: 20px;'>Uw bericht:</p>
-            <p style='text-align:center; font-size: 18px; background-color: gold; padding: 2rem;'>${message}</p>
-            </br>
-            </br>
-            <p style='text-align:center; font-size: 20px;'>Met vriendelijke groet,</p>
-            <p style='text-align:center; font-size: 20px;'>IT Context</p>
-            <p style='text-align:center; font-size: 20px;'>info@itcontext.nl</p>
-            <p style='text-align:center; font-size: 20px;'>0299 70 50 72</p>
+            <style>
+                
+                @import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Forum&family=Jura:wght@400;500;600;700&display=swap');
+            
+                .header {
+                background-image: linear-gradient(to bottom right, #0F284E, #006A93);
+                padding: 10px;
+                box-shadow: 0px 10px 10px rgba(0,0,0,.3);
+                }
+            
+                .header>h1 {
+                font-family: 'Jura', sans-serif;
+                font-size: 39px;
+                color: white;
+                letter-spacing: -3px;
+                font-weight: 700;
+                line-height: 0;
+                text-shadow: 5px 5px 5px rgba(0,0,0,.3);
+                }
+            
+                .header>h2 {
+                font-family: 'Jura', sans-serif;
+                font-size: 25px;
+                color: white;
+                letter-spacing: -3px;
+                font-weight: 700;
+                line-height: .5;
+                text-shadow: 5px 5px 5px rgba(0,0,0,.3);
+                }
+            
+                .content {
+                padding: 10px;
+                }
+            
+                .content>h3 {
+                font-family: 'Forum', serif;
+                font-size: 20px;
+                color: #0F284E;
+                }
+            
+                .content>p {
+                font-family: 'Forum', serif;
+                font-size: 16px;
+                color: #343a40;
+                line-height: 1.3;
+                margin: 0;
+                }
+            
+                .content>p>a {
+                font-family: 'Forum', serif;
+                font-size: 16px;
+                color: #006A93;
+                text-decoration: none;
+                }
+            </style>
+            <div class='header'>
+                <h1>IT Context</h1>
+                <h2>Web Design Studio</h2>
+            </div>
+            <div class='content'>
+                <h3>Goede dag, ${name}! We hebben uw bericht in goede orde ontvangen!</h3>
+                <p>Wij streven ernaar om je vraag binnen 2 werkdagen te beantwoorden.</p>
+                <p>Uw contact e-mail: ${email}</p>
+                <p>Uw bericht:</p>
+                <p style='text-align:center; font-size: 12px; background-color: #A6ABBD; padding: 10px;'>${message}</p>
+                </br>
+                <p>Met vriendelijke groet,</p>
+                <p>IT Context</p>
+                <p>info@itcontext.nl</p>
+                <p>0299 70 50 72</p>
+            </div>
         `,
     };
 
@@ -74,15 +134,77 @@ app.post("/api/sendOffer", (req: Request, res: Response) => {
             }
         ],
         html: `
-            <h1 style='background-color: #0b4f6c; color: white; padding: 1rem 2rem; text-align: center;'>Offerte IT Context</h1>
-            <h3 style='text-align: center; font-size: 25px;'>Goede dag ${email}! Hierbij sturen wij jouw offerte als bijlage.</h3>
-            <p style='text-align:center; font-size: 20px;'>Als je nog interesse hebt in onze diensten, aarzel niet om contact met ons op te nemen via ons <a href='mailto:info@itcontext.nl'>e-mailadress</a> of <a href='tel:0299705072'>telefoon</a>.</p>
-            </br>
-            </br>
-            <p style='text-align:center; font-size: 20px;'>Met vriendelijke groet,</p>
-            <p style='text-align:center; font-size: 20px;'>IT Context</p>
-            <p style='text-align:center; font-size: 20px;'>info@itcontext.nl</p>
-            <p style='text-align:center; font-size: 20px;'>0299 70 50 72</p>
+            <style>
+    
+                @import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Forum&family=Jura:wght@400;500;600;700&display=swap');
+            
+                .header {
+                background-image: linear-gradient(to bottom right, #0F284E, #006A93);
+                padding: 10px;
+                box-shadow: 0px 10px 10px rgba(0,0,0,.3);
+                }
+            
+                .header>h1 {
+                font-family: 'Jura', sans-serif;
+                font-size: 39px;
+                color: white;
+                letter-spacing: -3px;
+                font-weight: 700;
+                line-height: 0;
+                text-shadow: 5px 5px 5px rgba(0,0,0,.3);
+                }
+            
+                .header>h2 {
+                font-family: 'Jura', sans-serif;
+                font-size: 25px;
+                color: white;
+                letter-spacing: -3px;
+                font-weight: 700;
+                line-height: .5;
+                text-shadow: 5px 5px 5px rgba(0,0,0,.3);
+                }
+            
+                .content {
+                padding: 10px;
+                }
+            
+                .content>h3 {
+                font-family: 'Forum', serif;
+                font-size: 20px;
+                color: #0F284E;
+                }
+            
+                .content>p {
+                font-family: 'Forum', serif;
+                font-size: 16px;
+                color: #343a40;
+                line-height: 1.3;
+                margin: 0;
+                }
+            
+                .content>p>a {
+                font-family: 'Forum', serif;
+                font-size: 16px;
+                color: #006A93;
+                text-decoration: none;
+                }
+            </style>
+            <div class='header'>
+                <h1>IT Context</h1>
+                <h2>Web Design Studio</h2>
+            </div>
+            <div class='content'>
+                <h3>Goede dag ${email}! Hierbij sturen wij jouw offerte als bijlage.</h3>
+                <p>Als je nog interesse hebt in onze diensten, aarzel niet om contact met
+                ons op te nemen via ons <a href='mailto:info@itcontext.nl'>e-mailadress</a> of <a href='tel:0299705072'>telefoon</a>.
+                </p>
+                </br>
+                <p>Met vriendelijke groet,</p>
+                <p>IT Context</p>
+                <p>info@itcontext.nl</p>
+                <p>0299 70 50 72</p>
+            </div>
         `,
     };
 
