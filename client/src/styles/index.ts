@@ -3,6 +3,7 @@ import { respond } from "./respond";
 import { fonts } from "./fonts";
 import {
     Button,
+    ButtonEmpty,
     Social,
     BlockInfo,
     BlockButton,
@@ -22,6 +23,7 @@ export {
     respond,
     fonts,
     Button,
+    ButtonEmpty,
     Social,
     BlockInfo,
     BlockText,

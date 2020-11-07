@@ -31,5 +31,5 @@ const Container = styled.section`
             "m",
             'grid-template-columns: 1fr 1fr; grid-template-areas: "front back";'
         )}
-    ${()=>respond('xxl',`padding: 0 5rem; background-image: linear-gradient(to right, #f6f9ff 80%, #c0392b 80%);`)}
+    ${(p)=>respond('xxl',`padding: 0 5rem; background-image: linear-gradient(to right, #f6f9ff 80%, ${p.theme.primaryLight} 80%);`)}
 `;

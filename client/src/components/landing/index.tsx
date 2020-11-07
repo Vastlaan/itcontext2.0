@@ -7,7 +7,6 @@ import Portfolio from "./portfolio";
 import Responsive from "./responsive";
 import Ux from "./ux";
 import Intersection from "../intersection";
-import OfertCTA from '../ofertCTA'
 import SEO from "../seo";
 import {MainLayout} from '../../styles'
 
@@ -44,7 +43,6 @@ export default function Landing() {
             <Portfolio />
 
             <MainLayout>
-                <OfertCTA/>
                 <Ux />
                 <Intersection
                     headline={intl.formatMessage({

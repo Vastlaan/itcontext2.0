@@ -34,7 +34,7 @@ const Container = styled.div`
     pointer-events: none;
 `;
 const Header = styled.h1`
-    font-family: ${fonts.gayathri};
+    font-family: ${fonts.headline};
     font-size: 4.5rem;
     font-weight: 600;
     text-transform: uppercase;

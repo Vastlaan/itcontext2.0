@@ -11,16 +11,45 @@ export const Button = styled.button`
     cursor: pointer;
     transition: all 0.3s;
 
-    border: 1px solid ${(props) => props.theme.primary};
-    background-color: ${(props) => props.theme.primary};
+    border: 1px solid ${(props) => props.color?props.color:props.theme.primary};
+    background-color: ${(props) => props.color?props.color:props.theme.primary};
     color: ${(props) => props.theme.bg};
 
     &:hover {
         background-color: transparent;
-        color: ${(props) => props.theme.primary};
+        color: ${(props) => props.color?props.color:props.theme.primary};
 
         a {
-            color: ${(props) => props.theme.primary};
+            color: ${(props) => props.color?props.color:props.theme.primary};
+        }
+    }
+    &:active,
+    :focus {
+        outline: none;
+    }
+`;
+export const ButtonEmpty = styled.button`
+    margin: 1rem auto;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    font-family: ${fonts.advent};
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    border: 1px solid ${(props) => props.color?props.color:props.theme.primary};
+    background-color: transparent;
+    color: ${(props) => props.color?props.color:props.theme.primary};
+
+    
+
+    &:hover {
+        background-color: ${(props) => props.color?props.color:props.theme.primary};
+        color: ${(props) => props.theme.bg};
+        
+
+        a {
+            color: ${(props) => props.theme.bg};
         }
     }
     &:active,
@@ -66,8 +95,12 @@ export const BlockHeader = styled.h2`
     grid-area: head;
     padding: 0 1rem;
     font-size: 3.5rem;
-    font-family: ${fonts.gayathri};
-    color: ${(props) => props.theme.grey};
+    font-family: ${fonts.headline};
+    font-weight: 600;
+    max-width: 40rem;
+    line-height: 1;
+    letter-spacing: -.2rem;
+    color: ${(props) => props.theme.primary};
     text-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
 
     ${() => respond("l", "padding: 0")}
@@ -219,7 +252,7 @@ export const Confirmation = styled.div`
 export const Text = styled.p`
     font-family: ${fonts.cormoran};
     font-size: 2.2rem;
-    color: ${(props) => props.theme.greyDark};
+    color: ${(props) => props.theme.grey};
     letter-spacing: 0.15rem;
     text-align: center;
 
