@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import styled from "styled-components";
 import { useIntl } from "react-intl";
 import { respond, fonts, Button, ButtonEmpty, Anchor, Text } from "../../../styles";
@@ -49,8 +50,8 @@ export default function InfoComponent() {
                   })}
           </TextHeader>
             <Buttons>
-              <Button>Website</Button>
-              <ButtonEmpty>Marketing</ButtonEmpty>
+              <Link to='/website-ontwerpen'><Button>Website</Button></Link>
+              <Link to='/online-marketing'><ButtonEmpty>Marketing</ButtonEmpty></Link>
           </Buttons>
           
       </InfoContent>
@@ -65,7 +66,7 @@ const Info = styled.div`
     background-position: center;
     padding: 4.7rem 2.2rem;
 
-    ${()=>respond('l',`background-image: linear-gradient(to right, rgba(202, 244, 253,1),rgba(202, 244, 253,.1)), url(${Img});`)}
+    ${()=>respond('l',`background-image: linear-gradient(to right, rgba(202, 244, 253,1),rgba(202, 244, 253,.1)), url(${Img});   padding: 4.7rem;`)}
 
     ${()=>respond('xxl','padding: 13.8rem;')}
 `
@@ -163,6 +164,9 @@ const Buttons = styled.div`
     margin-bottom: 2.3rem;
     button{
         margin-right: 2rem;
+    }
+    a{
+        text-decoration: none;
     }
 `
 const TextHeader = styled.p`

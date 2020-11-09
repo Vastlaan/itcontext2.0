@@ -43,14 +43,15 @@ export default function Details() {
 const Container = styled.div`
     flex: 0 0 40%;
     padding: 2rem;
-    font-family: ${fonts.advent};
+    font-family: ${fonts.exo};
+    
     text-align: center;
 
     ${()=>respond('m','text-align: left;')}
 
     h1 {
         font-size: 2.8rem;
-        font-weight: 900;
+        font-weight:900;
         
         text-transform: uppercase;
         color: ${(props) => props.theme.grey};

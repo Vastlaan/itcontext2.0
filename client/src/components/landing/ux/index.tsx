@@ -41,29 +41,38 @@ export default function Ux() {
                     })}
                 </BlockText>
                 <List>
-                    <p>
-                        <BsCheckCircle />{" "}
-                        {intl.formatMessage({
-                            id: "landing.ux-check1",
-                            defaultMessage: "Betrek je gebruikers",
-                        })}
-                    </p>
-                    <p>
-                        <BsCheckCircle />{" "}
-                        {intl.formatMessage({
-                            id: "landing.ux-check2",
-                            defaultMessage:
-                                "Intentionaal design met de nadruk op actie ondernemen",
-                        })}
-                    </p>
-                    <p>
-                        <BsCheckCircle />{" "}
-                        {intl.formatMessage({
-                            id: "landing.ux-check3",
-                            defaultMessage:
-                                "Consistent en begrijpelijk ontwerp",
-                        })}
-                    </p>
+                
+                    <div>
+                        
+                        <p>
+                            {intl.formatMessage({
+                                id: "landing.ux-check1",
+                                defaultMessage: "Betrek je gebruikers",
+                            })}
+                        </p>
+                        
+                    </div>
+                    <div>
+                        
+                        <p>
+                            {intl.formatMessage({
+                                id: "landing.ux-check2",
+                                defaultMessage:
+                                    "Intentionaal design met de nadruk op actie ondernemen",
+                            })}
+                        </p>
+                        
+                    </div>
+                    <div>
+                        
+                        <p>
+                            {intl.formatMessage({
+                                id: "landing.ux-check3",
+                                defaultMessage:
+                                    "Consistent en begrijpelijk ontwerp",
+                            })} 
+                        </p>
+                    </div>
                 </List>
                 <BlockImage>
                     <Icon>
@@ -146,21 +155,21 @@ const List = styled.div`
     grid-area: list;
     display: flex;
     flex-direction: column;
-    align-items: center;
 
-    p {
-        width: 90%;
-        display: flex;
-        align-items: center;
-        font-size: 2rem;
-        font-family: ${fonts.cormoran};
-        letter-spacing: 0.2rem;
 
-        svg {
-            min-width: 20px;
-            min-height: 20px;
-            margin-right: 1rem;
-            color: ${(props) => props.theme.fresh};
+    div{
+        display: grid;
+        grid-template-columns:1fr;
+        align-content: center;
+
+        p {         
+            font-size: 2.2rem;
+            font-family: ${fonts.cormoran};
+            letter-spacing: 0.15rem;
+            text-align: center;
         }
+
     }
+
+    
 `;

@@ -55,7 +55,7 @@ export default function Header() {
 }
 const Container = styled.header`
     min-height: 50rem;
-    padding: 4rem 2rem;
+    padding: 4.7rem 2.2rem;
     background-image: linear-gradient(to right,rgba(15,40,78,.5),rgba(15,40,78,.5)), url(${Image});
     background-size: cover;
     background-repeat: no-repeat;
@@ -64,7 +64,8 @@ const Container = styled.header`
     align-items: center;
     flex-wrap: wrap;
 
-    ${() => respond("xxl", "min-height: 60rem; padding: 10rem 2rem;")}
+    ${() => respond("l", "min-height: 60rem; padding: 4.7rem;")}
+    ${() => respond("xxl", "min-height: 60rem; padding: 10rem 4.7rem;")}
 
 `;
 
@@ -77,13 +78,16 @@ const Main = styled.div`
 `;
 const Head = styled.h1`
     color: snow;
-    font-size: 4rem;
-    font-family: ${fonts.gayathri};
-    letter-spacing: 0.3rem;
+    font-size: 6rem;
+    font-weight: 800;
+    font-family: ${fonts.exo};
+    letter-spacing: -.1rem;
+    line-height: 1;
 
     ${()=>respond('xxl','font-size: 6rem;')}
 `;
 const CustomText = styled(Text)`
+    max-width: 60rem;
     text-align: left;
     margin: 3rem 0;
     color: snow;

@@ -42,7 +42,7 @@ export default function() {
           <AiOutlineForm/>
           {intl.formatMessage({id:"offerte.header-1",defaultMessage:"Een Offerte Aanvragen"})}
         </Header>
-        <Text style={{margin: '2rem 0'}}>{intl.formatMessage({id:"offerte.text",defaultMessage:"Bestel een gratis brochure en lees meer over onze diensten en prijzen."})}</Text>
+        <Text style={{margin: '1rem 0 2rem 0', textAlign: 'left'}}>{intl.formatMessage({id:"offerte.text",defaultMessage:"Bestel een gratis brochure en lees meer over onze diensten en prijzen."})}</Text>
         <HeaderSmall>
           <RiMailSendLine/>
           {intl.formatMessage({id:"offerte.header-2",defaultMessage:"E-mailadres doorgeven"})}
@@ -86,7 +86,7 @@ const Form = styled.form`
   width: 50rem;
   border-radius: 1rem;
   background-color: ${p=>p.theme.bg};
-  padding: 2rem;
+  padding: 6.8rem 2.2rem;
   margin: 2rem auto;
   box-shadow: 1rem -1rem 2rem rgba(0,0,0,.3);
 
@@ -97,8 +97,9 @@ const Form = styled.form`
 const Header = styled.h1`
   display: flex;
     align-items: center;
-    font-family: ${fonts.advent};
-    font-size: 3rem;
+    font-family: ${fonts.exo};
+    font-weight: 900;
+    font-size: 2.8rem;
     color: ${p=>p.theme.grey};
 
     svg{
@@ -109,8 +110,9 @@ const Header = styled.h1`
 const HeaderSmall = styled.h3`
   display: flex;
     align-items: center;
-    font-family: ${fonts.advent};
-    font-size: 2.5rem;
+    font-family: ${fonts.exo};
+    font-weight: 900;
+    font-size: 2.8rem;
     color: ${p=>p.theme.grey};
 
     svg{
@@ -119,7 +121,7 @@ const HeaderSmall = styled.h3`
     }
 `;
 const InputField = styled.div`
-  margin: 2rem 0;
+  margin: 1rem 0 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -146,7 +148,7 @@ const InputField = styled.div`
 `;
 
 const CustomButton = styled(Button)`
-  margin: 3rem 0;
+  margin: 2rem 0 3rem 0;
   background-color: ${p=>p.theme.primaryLight};
   border: 1px solid ${p=>p.theme.primaryLight};
   border-radius: 3px;

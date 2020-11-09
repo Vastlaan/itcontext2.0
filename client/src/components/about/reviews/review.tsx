@@ -75,8 +75,9 @@ const Image = styled.div`
 `;
 const Title = styled.h6`
     grid-area: title;
-    font-family: ${fonts.advent};
+    font-family: ${fonts.exo};
     font-size: 2.5rem;
+    font-weight: 800;
     color: ${(props) => props.theme.primary};
 `;
 const Date = styled.p`

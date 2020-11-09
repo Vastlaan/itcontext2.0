@@ -87,12 +87,11 @@ export default function Form(props: FormProps) {
 const Container = styled.form`
     flex: 0 0 60%;
     padding: 2rem;
-    font-family: ${fonts.advent};
+    font-family: ${fonts.exo};
 
     h1 {
-        font-size: 3.2rem;
-        font-weight: 300;
-        letter-spacing: 0.3rem;
+        font-size: 2.8rem;
+        font-weight: 900;
         text-transform: uppercase;
         color: ${(props) => props.theme.grey};
         text-align: center;

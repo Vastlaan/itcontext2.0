@@ -38,12 +38,14 @@ const Headline = styled.p`
     text-align: center;
 `;
 const Main = styled.p`
-    font-family: ${fonts.advent};
+    font-family: ${fonts.exo};
     color: ${(props) => props.theme.primaryLight};
     font-size: 3.5rem;
-    font-weight: 600;
+    font-weight: 800;
     width: 90%;
     text-align: center;
+    letter-spacing: 0rem;
+    line-height: 1.2;
 
     ${() => respond("m", "width: 50%;")}
 `;

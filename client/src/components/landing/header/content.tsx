@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import styled from "styled-components";
 import { useIntl } from "react-intl";
 import Decoration from '../../decoration'
@@ -27,8 +28,8 @@ export default function ContentComponent() {
             })}
         </h3>
         <Buttons>
-            <Button>Offerte</Button>
-            <ButtonEmpty>Contact</ButtonEmpty>
+            <Link to='/offerte-aanvragen'><Button>Offerte</Button></Link>
+            <Link to='/contact'><ButtonEmpty>Contact</ButtonEmpty></Link>
         </Buttons>
         <Social>
             <h4>
@@ -59,7 +60,7 @@ export default function ContentComponent() {
 const Content = styled.div`
     padding: 4.7rem 2.2rem;
 
-    ${()=>respond('l','background-color: #CAF4FD;')}
+    ${()=>respond('l','background-color: #CAF4FD;  padding: 4.7rem;')}
     ${()=>respond('xxl','padding: 13.8rem;')}
 
     h1{
@@ -119,6 +120,9 @@ const Buttons = styled.div`
     margin-bottom: 2.3rem;
     button{
         margin-right: 2rem;
+    }
+    a{
+        text-decoration: none;
     }
 `
 const Social = styled.div`

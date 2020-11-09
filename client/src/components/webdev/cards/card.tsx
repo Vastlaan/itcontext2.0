@@ -93,12 +93,13 @@ const Icon = styled.div<CardStyledProps>`
     }
 `;
 const Header = styled.div<CardStyledProps>`
-    font-family: ${fonts.gayathri};
+    font-family: ${fonts.exo};
+    font-weight: 800;
     font-size: 2.5rem;
     text-transform: capitalize;
     text-align: center;
     transition: all 0.3s;
-    color: ${(props) => (props.hovered ? `snow` : "#0F284E")};
+    color: ${(props) => (props.hovered ? `snow` : "#117864")};
 `;
 const CardText = styled(Text)<CardStyledProps>`
     color: ${(props) => (props.hovered ? `snow` : "#18191F")};

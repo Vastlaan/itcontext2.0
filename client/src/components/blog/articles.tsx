@@ -82,8 +82,8 @@ const Article = styled.div`
 const Headline = styled.h3`
   padding: 1rem 2rem;
   font-size: 2.5rem;
-  font-weight:700;
-  font-family: ${fonts.advent};
+  font-weight:800;
+  font-family: ${fonts.exo};
   background-color:${p=>p.theme.primary};
   color:${p=>p.theme.bg};
   display: flex;

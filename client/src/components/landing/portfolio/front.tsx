@@ -34,9 +34,9 @@ const Container = styled.div`
     pointer-events: none;
 `;
 const Header = styled.h1`
-    font-family: ${fonts.headline};
+    font-family: ${fonts.exo};
     font-size: 4.5rem;
-    font-weight: 600;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
     color: ${(props) => props.theme.primaryLight};

@@ -90,16 +90,17 @@ export const BlockInfo = styled.p`
     border-left: 5px solid ${(props) => props.theme.fresh};
     padding: 0rem 1rem;
     margin: 0 1rem;
+    ${()=>respond('l','margin: 0;')}
 `;
 export const BlockHeader = styled.h2`
     grid-area: head;
     padding: 0 1rem;
     font-size: 3.5rem;
-    font-family: ${fonts.headline};
-    font-weight: 600;
+    font-family: ${fonts.exo};
+    font-weight: 800;
     max-width: 40rem;
     line-height: 1;
-    letter-spacing: -.2rem;
+    letter-spacing: -.1rem;
     color: ${(props) => props.theme.primary};
     text-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
 
@@ -253,8 +254,8 @@ export const Text = styled.p`
     font-family: ${fonts.cormoran};
     font-size: 2.2rem;
     color: ${(props) => props.theme.grey};
-    letter-spacing: 0.15rem;
     text-align: center;
+    max-width: 70rem;
 
     ${() => respond("m", "text-align: left;")}
 `;

@@ -80,7 +80,7 @@ const Eye = styled.div`
     }
 
     a {
-        font-family: ${fonts.advent};
+        font-family: ${fonts.exo};
         font-size: 6rem;
         font-weight: 700;
         color: snow;

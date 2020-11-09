@@ -132,7 +132,7 @@ const List = styled.div`
         font-size: 2.5rem;
         font-weight: 600;
         color: snow;
-        font-family: ${fonts.advent};
+        font-family: ${fonts.exo};
     }
 
     a {
@@ -159,7 +159,7 @@ const SocialMedia = styled.div`
         font-size: 2.5rem;
         font-weight: 600;
         color: snow;
-        font-family: ${fonts.advent};
+        font-family: ${fonts.exo};
     }
 
     p {

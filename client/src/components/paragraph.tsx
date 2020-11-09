@@ -63,7 +63,8 @@ const Container = styled.article`
     }
 `;
 const Heading = styled.h1`
-    font-family: ${fonts.gayathri};
+    font-family: ${fonts.exo};
+    font-weight: 800;
     font-size: 3rem;
     color: ${(p) => p.theme.secondary};
     text-transform: uppercase;

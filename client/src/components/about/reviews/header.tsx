@@ -33,8 +33,8 @@ export default function Header() {
 }
 const Container = styled.div`
     h3 {
-        font-family: ${fonts.advent};
-        font-weight: 500;
+        font-family: ${fonts.exo};
+        font-weight: 800;
         font-size: 4rem;
         color: ${(props) => props.theme.grey};
         text-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
@@ -44,7 +44,9 @@ const Container = styled.div`
         font-family: ${fonts.cormoran};
         font-size: 2rem;
         color: ${(props) => props.theme.grey};
+        
     }
+    margin-bottom: 4.7rem;
 `;
 const Line = styled.div`
     margin: 1rem 0;

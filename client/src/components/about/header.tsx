@@ -157,11 +157,12 @@ const Head = styled.div`
     padding: 2rem;
 
     h1 {
-        font-family: ${fonts.advent};
+        font-family: ${fonts.exo};
         font-size: 2.5rem;
         color: ${(p) => p.theme.primaryLight};
-        font-weight: 700;
+        font-weight: 800;
         text-align: center;
+        line-height: 1.2;
 
         ${() => respond("s", `font-size: 4rem;`)}
     }
@@ -197,12 +198,15 @@ const Info = styled.div`
     background-color: ${(p) => p.theme.bg};
 
     h3 {
-        font-size: 3.5rem;
-        font-family: ${fonts.gayathri};
-        color: ${(p) => p.theme.primary};
+        font-family: ${fonts.exo};
+        font-size: 3em;
+        font-weight: 800;
         text-align: center;
+        line-height: 1.2;
+        color: ${(p) => p.theme.primary};
 
-        ${() => respond("m", "text-align: left; font-size: 3rem;")}
+
+        ${() => respond("m", "text-align: left;")}
     }
 
     svg {

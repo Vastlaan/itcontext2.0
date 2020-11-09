@@ -51,12 +51,16 @@ const Container = styled.div`
     margin-bottom: 8rem;
 `;
 const Head = styled.h1`
-    width: 100%;
-    font-family: ${fonts.advent};
+    font-family: ${fonts.exo};
     font-size: 3rem;
     color: ${(p) => p.theme.primaryLight};
-    font-weight: 700;
+    font-weight: 800;
     text-align: center;
+    max-width: 60rem;
+    margin: 0 auto;
+    line-height: 1.2;
+
+    
 
     ${() => respond("s", `font-size:3rem;`)}
 `;

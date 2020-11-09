@@ -51,7 +51,7 @@ const Container = styled.header`
     width: 100%;
     min-height: 50rem;
     margin: 0rem auto;
-    padding: 4rem 2rem;
+    padding: 4.7rem 2.2rem;
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(to right, rgba(15,40,78,.5),rgba(15,40,78,.5)), url(${Image});
@@ -59,24 +59,25 @@ const Container = styled.header`
     background-repeat: no-repeat;
     background-position: center center;
 
-
-    ${() => respond("xxl", "min-height: 60rem; padding: 10rem 2rem;")}
+    ${() => respond("l", "min-height: 60rem; padding: 4.7rem;")}
+    ${() => respond("xxl", "min-height: 60rem; padding: 10rem 4.7rem;")}
 `;
 
 const Head = styled.h1`
     color: ${(p)=>p.theme.bg};
-    font-size: 4rem;
-    font-family: ${fonts.gayathri};
-    letter-spacing: 0.3rem;
+    font-size: 6rem;
+    font-weight: 800;
+    font-family: ${fonts.exo};
+    letter-spacing: -.1rem;
+    line-height: 1;
 
     ${()=>respond('xxl','font-size: 6rem;')}
 `;
 const CustomText = styled(Text)`
-    width: 100%;
+    max-width: 60rem;
     text-align: left;
     margin: 3rem 0;
     color: ${(p)=>p.theme.bg};
-    ${()=>respond('xxl','width: 60%;')}
 `;
 const CustomButton = styled(Button)`
     align-self: flex-start;
