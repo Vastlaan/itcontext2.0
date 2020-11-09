@@ -1,160 +1,182 @@
-import React from "react";
+import React from 'react'
 import styled from "styled-components";
 import { useIntl } from "react-intl";
-import { fonts, respond, Text } from "../../../styles";
+import { respond, fonts, Button, ButtonEmpty, Anchor, Text } from "../../../styles";
+import Img from '../../../img/header-landing.jpg'
+import { FaInfo } from "react-icons/fa";
+import { RiPhoneLine, RiMailLine } from "react-icons/ri";
 
-import { RiShieldStarLine } from "react-icons/ri";
-import { FaBlackTie, FaRegHandshake } from "react-icons/fa";
+export default function InfoComponent() {
 
-export default function Info() {
-    const intl = useIntl();
+  const intl = useIntl()
 
-    return (
-        <Container>
-            <Header>
-                {intl.formatMessage({
-                    id: "landing.header-main",
-                    defaultMessage:
-                        "IT Context helpt je bedrijf online te groeien",
-                })}
-            </Header>
-            <Details>
-                <Block>
-                    <Icon>
-                        <FaBlackTie />
-                    </Icon>
-
-                    <div>
-                        <h3>
-                            {intl.formatMessage({
-                                id: "landing.header-1-header",
-                                defaultMessage:
-                                    "Elegante en gestructureerde website",
-                            })}
-                        </h3>
-                        <CustomText>
-                            {intl.formatMessage({
-                                id: "landing.header-1-text",
-                                defaultMessage:
-                                    "Wij maken websites die je bedrijf vertegenwoordigen in een moderne en chique stijl. Maak het eenvoudig om te navigeren en gemakkelijk te gebruiken.",
-                            })}
-                        </CustomText>
-                    </div>
-                </Block>
-                <Block>
-                    <Icon>
-                        <FaRegHandshake />
-                    </Icon>
-
-                    <div>
-                        <h3>
-                            {intl.formatMessage({
-                                id: "landing.header-2-header",
-                                defaultMessage:
-                                    "Bereik de juiste doelgroep en overtuig hen om contact met je op te nemen",
-                            })}
-                        </h3>
-                        <CustomText>
-                            {intl.formatMessage({
-                                id: "landing.header-2-text",
-                                defaultMessage:
-                                    "We zorgen ervoor dat potentiële klanten je gemakkelijk kunnen vinden en bouwen een solide basis op om hen te helpen bij het kiezen van je producten en diensten.",
-                            })}
-                        </CustomText>
-                    </div>
-                </Block>
-                <Block>
-                    <Icon>
-                        <RiShieldStarLine />
-                    </Icon>
-
-                    <div>
-                        <h3>
-                            {intl.formatMessage({
-                                id: "landing.header-3-header",
-                                defaultMessage:
-                                    "Onderscheid je van de concurrentie",
-                            })}
-                        </h3>
-                        <CustomText>
-                            {intl.formatMessage({
-                                id: "landing.header-3-text",
-                                defaultMessage:
-                                    "We ontwerpen prachtige en unieke websites en helpen je met het creëren van waardevolle inhoud.",
-                            })}
-                        </CustomText>
-                    </div>
-                </Block>
-            </Details>
-        </Container>
-    );
+  return (
+    <Info>
+      <InfoContent>
+          <InfoHeader>
+              <Icon>   
+                  <FaInfo/> 
+              </Icon>
+                                
+              <h3>
+                  {intl.formatMessage({
+                      id: "landing.header-info-1",
+                      defaultMessage: "tot je dienst",
+                  })}
+              </h3>
+              
+          </InfoHeader>
+          <TextHeader>
+              {intl.formatMessage({
+                  id: "landing.header-info-2",
+                  defaultMessage:
+                      "Wij werken van maandag t / m vrijdag tussen 9.00 en 17.00 uur. Wij zijn gevestigd in Purmerend, maar werken in heel Nederland. Heb je vragen? Onze klantenservice staat voor je klaar.",
+              })}
+          </TextHeader>
+          <ContactData color="#0F284E" href="tel:0299705072">
+              <RiPhoneLine />
+              <span>0299 70 50 72</span>
+          </ContactData>
+          <ContactData color="#006A93" href="mailto:info@itcontext.nl">
+              <RiMailLine />
+              <span>info@itcontext.nl</span>
+          </ContactData>
+          <TextHeader>
+              {intl.formatMessage({
+                      id: "landing.header-2-header",
+                      defaultMessage:
+                          "Bereik de juiste doelgroep en overtuig hen om contact met je op te nemen",
+                  })}
+          </TextHeader>
+            <Buttons>
+              <Button>Website</Button>
+              <ButtonEmpty>Marketing</ButtonEmpty>
+          </Buttons>
+          
+      </InfoContent>
+  </Info>
+  )
 }
-const Container = styled.div`
-    grid-area: info;
-    position: relative;
-    padding: 5rem 2rem;
+const Info = styled.div`
+    overflow-x: hidden;
     
+    background-size: cover;
+    background-repeat: no-repreat;
+    background-position: center;
+    padding: 4.7rem 2.2rem;
 
-    ${()=>respond('xxl','padding: 5rem;')}
-`;
+    ${()=>respond('l',`background-image: linear-gradient(to right, rgba(202, 244, 253,1),rgba(202, 244, 253,.1)), url(${Img});`)}
 
-const Header = styled.h1`
-    text-align: center;
-    font-family: ${fonts.gayathri};
-    font-size: 3.5rem;
-    text-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
-    color: ${(props) => props.theme.grey};
+    ${()=>respond('xxl','padding: 13.8rem;')}
+`
+const InfoHeader = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 
-    ${()=>respond('m','text-align: left;')}
-    ${()=>respond('xxl','font-size: 5rem;')}
-`;
-const Details = styled.div`
-    list-style: none;
+`
+const InfoContent = styled.div`
+    
+    max-width: 40rem;
+    margin: 0 0 0 0;
     display: flex;
     flex-direction: column;
-    padding: 2rem 0;
-`;
 
-const Block = styled.div`
-    margin-bottom: 3rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    align-items: center;
-    grid-row-gap: 2rem;
+    ${()=>respond('l','margin: 0 0 0 auto;')}
 
-    ${() =>
-        respond("s", "grid-template-columns: 10rem 1fr;justify-items: center;")}
-    ${()=>respond('xxl','margin-bottom: 5rem;')}
+   
+   
+    h3{
+        font-family: ${fonts.forum};
+        font-size: 3.3rem;
+        text-transform: capitalize;
+        font-weight: 700;
+        color: ${p=>p.theme.primary};
+        margin-left: 1rem;
+    }
+     svg{
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1rem;
+        color: ${p=>p.theme.primary};
+    }
+`
+const ContactData = styled.a`
+    width: 35rem;
+    text-decoration: none;
+    padding: .9rem 2.3rem;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    border: 1px solid transparent;
+    background-color: ${(props) => props.color};
+    border-radius: 3px;
+    transition: all 0.3s;
 
-    div {
-        justify-self: start;
-        h3 {
-            font-family: ${fonts.advent};
-            font-size: 2.5rem;
-            color: ${(props) => props.theme.primary};
-            text-align: center;
+    ${()=>respond('xxl','margin: .5rem 0; width: 35rem;')}
 
-            ${() => respond("m", "text-align: left;")}
+    &:hover {
+        background-color: transparent;
+        border: 1px solid ${(props) => props.color};
+
+        svg {
+            color: ${(props) => props.color};
+        }
+        span {
+            color: ${(props) => props.color};
         }
     }
-`;
-
-const Icon = styled.div`
-    margin: 0 auto;
-    background-color: ${(props) => props.theme.bg};
-    padding: 2rem;
-    border-right: 1px solid ${(props) => props.theme.greyLight};
-    border-bottom: 1px solid ${(props) => props.theme.greyLight};
-    box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
     svg {
+        margin-right: 2rem;
+        align-self: center;
         font-size: 4rem;
-        color: ${(props) => props.theme.primaryLight};
+        color: snow;
+    }
+    span {
+        color: snow;
+        font-size: 3rem;
+        font-family: ${fonts.jura};
+    }
+`
+const Icon = styled.div`
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: ${p=>p.theme.primary};
+    border: 2px solid ${p=>p.theme.primary};
+    transition: all .3s;
+
+    &:hover{
+        transform: scale(1.2);
     }
 
-    ${()=>respond('m','margin: 0;')}
-`;
+    svg{
+        margin-right: 0;
+        width: 3rem;
+        height: 3rem;
+        color: ${p=>p.theme.primary};
+    }
+`
+const Buttons = styled.div`
+    margin-bottom: 2.3rem;
+    button{
+        margin-right: 2rem;
+    }
+`
+const TextHeader = styled.p`
 
-const CustomText = styled(Text)`
-    ${()=>respond('xxl','max-width:60%;')}
+        margin-top: 2.2rem;
+        margin-bottom: 4.7rem;
+        font-family: ${fonts.cormoran};
+        font-weight: 600;
+        font-size: 1.9rem;
+        color: ${p=>p.theme.greyDark};
+        max-width: 40rem;
+        line-height: 1.3;
+        letter-spacing: .2rem;
+        
+        position: relative;
+    
 `

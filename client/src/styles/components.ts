@@ -147,9 +147,9 @@ export const BlockButton = styled(Button)`
 `;
 
 export const Anchor = styled.a`
-    width: 40rem;
+    width: 35rem;
     text-decoration: none;
-    padding: 1rem 3rem;
+    padding: .9rem 2.3rem;
     margin: 2rem auto;
     display: flex;
     justify-content: center;
@@ -158,7 +158,7 @@ export const Anchor = styled.a`
     border-radius: 3px;
     transition: all 0.3s;
 
-    ${()=>respond('xxl','margin: 2rem 0; width: 40rem;')}
+    ${()=>respond('xxl','margin: 1rem 0; width: 35rem;')}
 
     &:hover {
         background-color: transparent;
