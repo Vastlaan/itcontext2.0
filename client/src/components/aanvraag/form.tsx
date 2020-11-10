@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { useIntl } from "react-intl";
 import {fonts, respond, Button, Text} from '../../styles'
 import Confirmation from '../confirmation'
+import Decoration from '../decoration'
+import Img from '../../img/offer-header.png'
+import Details from '../details'
 import {AiOutlineForm} from 'react-icons/ai'
 import {RiMailSendLine, RiSendPlane2Line} from 'react-icons/ri'
 
@@ -37,74 +40,97 @@ export default function() {
   }
 
   return (
-    <Form onSubmit={sendBrochure}>
-        <Header>
-          <AiOutlineForm/>
-          {intl.formatMessage({id:"offerte.header-1",defaultMessage:"Een Offerte Aanvragen"})}
-        </Header>
-        <Text style={{margin: '1rem 0 2rem 0', textAlign: 'left'}}>{intl.formatMessage({id:"offerte.text",defaultMessage:"Bestel een gratis brochure en lees meer over onze diensten en prijzen."})}</Text>
-        <HeaderSmall>
-          <RiMailSendLine/>
-          {intl.formatMessage({id:"offerte.header-2",defaultMessage:"E-mailadres doorgeven"})}
-        </HeaderSmall>
-        <InputField>
-          <label htmlFor="email">{intl.formatMessage({id:"offerte.label",defaultMessage:"Jouw e-mailadres:"})}</label>
-          <input type="email" name="email" onChange={(e)=>setEmail(e.target.value)} required/>
-        </InputField>
-        <HeaderSmall>
-          <RiSendPlane2Line/>
-          {intl.formatMessage({id:"offerte.header-3",defaultMessage:"Bestel Gratis Offerte"})}        
-        </HeaderSmall>
-        <CheckboxField>
-          <Label htmlFor="check" isChecked={isChecked} onClick={()=>{
-            setIsChecked(prevState=>!prevState)
-            setWarning(false)
-            }}>
-            <div></div>
-            {warning&&<Warning>{intl.formatMessage({id:"offerte.warning",defaultMessage:"ga aub akkoord met onze voorwaarden"})}</Warning>}
-            <span>
-              {intl.formatMessage({id:"offerte.disclaimer-1",defaultMessage:"ik ga akkoord met de"})} 
-              <a href="/algemene-voorwaarden">{intl.formatMessage({id:"offerte.disclaimer-2",defaultMessage:"voorwaarden"})} </a>
-              {intl.formatMessage({id:"offerte.disclaimer-3",defaultMessage:"en het"})}  
-               <a href="/cookies">{intl.formatMessage({id:"offerte.disclaimer-4",defaultMessage:"Privacybeleid"})} </a>
-            </span>
-          </Label>
-          <input type="checkbox" name='check' />
-        </CheckboxField>
-        <CustomButton type='submit'>{intl.formatMessage({id:"offerte.button",defaultMessage:"Direct Aanvragen"})}</CustomButton>
-        {displayConfirmation && (
-                    <Confirmation
-                        setDisplayConfirmation={setDisplayConfirmation}
-                        message1="contact.confirmation-3"
-                        message2="contact.confirmation-4"
-                    />
-                )}
-      </Form>
+    <Container>
+      <Form onSubmit={sendBrochure}>
+          <Header>
+            {intl.formatMessage({id:"offerte.header-1",defaultMessage:"Een Offerte Aanvragen"})}
+          </Header>
+          <Text style={{margin: '1rem 0 2rem 0', textAlign: 'left'}}>{intl.formatMessage({id:"offerte.text",defaultMessage:"Bestel een gratis brochure en lees meer over onze diensten en prijzen."})}</Text>
+          <HeaderSmall>
+            <RiMailSendLine/>
+            {intl.formatMessage({id:"offerte.header-2",defaultMessage:"E-mailadres doorgeven"})}
+          </HeaderSmall>
+          <InputField>
+            <label htmlFor="email">{intl.formatMessage({id:"offerte.label",defaultMessage:"Jouw e-mailadres:"})}</label>
+            <input type="email" name="email" onChange={(e)=>setEmail(e.target.value)} required/>
+          </InputField>
+          <HeaderSmall>
+            <RiSendPlane2Line/>
+            {intl.formatMessage({id:"offerte.header-3",defaultMessage:"Bestel Gratis Offerte"})}        
+          </HeaderSmall>
+          <CheckboxField>
+            <Label htmlFor="check" isChecked={isChecked} onClick={()=>{
+              setIsChecked(prevState=>!prevState)
+              setWarning(false)
+              }}>
+              <div></div>
+              {warning&&<Warning>{intl.formatMessage({id:"offerte.warning",defaultMessage:"ga aub akkoord met onze voorwaarden"})}</Warning>}
+              <span>
+                {intl.formatMessage({id:"offerte.disclaimer-1",defaultMessage:"ik ga akkoord met de"})} 
+                <a href="/algemene-voorwaarden">{intl.formatMessage({id:"offerte.disclaimer-2",defaultMessage:"voorwaarden"})} </a>
+                {intl.formatMessage({id:"offerte.disclaimer-3",defaultMessage:"en het"})}  
+                <a href="/cookies">{intl.formatMessage({id:"offerte.disclaimer-4",defaultMessage:"Privacybeleid"})} </a>
+              </span>
+            </Label>
+            <input type="checkbox" name='check' />
+          </CheckboxField>
+          <CustomButton type='submit'>{intl.formatMessage({id:"offerte.button",defaultMessage:"Direct Aanvragen"})}</CustomButton>
+          <Decoration gap='1rem'/>
+          {displayConfirmation && (
+                      <Confirmation
+                          setDisplayConfirmation={setDisplayConfirmation}
+                          message1="contact.confirmation-3"
+                          message2="contact.confirmation-4"
+                      />
+                  )}
+        </Form>
+        <Images>
+          <Decoration gap="2rem" color="#006A93" style={{gridTemplateColumns: 'repeat(5,1fr)', gridTemplateRows: 'repeat(20,1fr)'}}/>
+        </Images>
+      </Container>
   )
 }
-const Form = styled.form`
-  width: 50rem;
-  border-radius: 1rem;
-  background-color: ${p=>p.theme.bg};
-  padding: 6.8rem 2.2rem;
-  margin: 2rem auto;
-  box-shadow: 1rem -1rem 2rem rgba(0,0,0,.3);
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2.2rem;
+  
 
-  ${()=>respond('m','margin: 0 10rem;')}
-  ${()=>respond('xxl','width: 55rem;')}
+  ${()=>respond('l','grid-template-columns: 1fr 1fr;')}
+`
+const Images = styled.div`
+
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 6.8rem 2.2rem;
+
+  ${()=>respond('l','display: flex;')}
+
+`
+const Form = styled.form`
+  padding: 2.2rem;
+  position: relative;
+  z-index: 2;
+
+
+  ${()=>respond('m','')}
+  ${()=>respond('xxl','padding: 6.8rem 2.2rem;')}
 `
 
 const Header = styled.h1`
   display: flex;
     align-items: center;
     font-family: ${fonts.exo};
-    font-weight: 900;
-    font-size: 2.8rem;
-    color: ${p=>p.theme.grey};
+    font-weight: 800;
+    font-size: 4.7rem;
+    line-height: 1.2;
+    color: ${p=>p.theme.primaryLight};
 
     svg{
       margin-right: 1rem;
-      color: ${p=>p.theme.fresh};
+      color: ${p=>p.theme.primaryLight};
     }
 `
 const HeaderSmall = styled.h3`
@@ -114,10 +140,11 @@ const HeaderSmall = styled.h3`
     font-weight: 900;
     font-size: 2.8rem;
     color: ${p=>p.theme.grey};
+    max-width: 40rem;
 
     svg{
       margin-right: 1rem;
-      color: ${p=>p.theme.fresh};
+      color: ${p=>p.theme.primaryLight};
     }
 `;
 const InputField = styled.div`
@@ -129,11 +156,11 @@ const InputField = styled.div`
   label{
     font-family: ${fonts.gayathri};
     font-size: 2.5rem;
-    color: ${p=>p.theme.fresh};
+    color: ${p=>p.theme.primaryLight};
   }
 
   input{
-    border: 1px solid ${p=>p.theme.fresh};
+    border: 1px solid ${p=>p.theme.primaryLight};
     background-color:white;
     padding: 1rem 3rem;
     text-align: center;

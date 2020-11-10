@@ -25,17 +25,18 @@ export default function Menu(props: MenuProps) {
                     defaultMessage: "Online marketing",
                 })}
             </Link>
-            <Link to="/over-ons">
+            <Link to="/offerte-aanvragen">
                 {intl.formatMessage({
-                    id: "navigation.menu-3",
-                    defaultMessage: "Over Ons",
+                    id: "navigation.menu-5",
+                    defaultMessage: "Offerte",
                 })}
             </Link>
+            
             <Hidden>
-                <Link to="/offerte-aanvragen">
+                <Link to="/over-ons">
                     {intl.formatMessage({
-                        id: "navigation.menu-5",
-                        defaultMessage: "Offerte",
+                        id: "navigation.menu-3",
+                        defaultMessage: "Over Ons",
                     })}
                 </Link>
             </Hidden>

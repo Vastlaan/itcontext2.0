@@ -87,7 +87,7 @@ export const BlockInfo = styled.p`
     font-size: 2.2rem;
     text-transform: uppercase;
     color: ${(props) => props.theme.grey};
-    border-left: 5px solid ${(props) => props.theme.fresh};
+    border-left: 5px solid ${(props) => props.theme.primaryLight};
     padding: 0rem 1rem;
     margin: 0 1rem;
     ${()=>respond('l','margin: 0;')}
@@ -101,7 +101,7 @@ export const BlockHeader = styled.h2`
     max-width: 40rem;
     line-height: 1;
     letter-spacing: -.1rem;
-    color: ${(props) => props.theme.primary};
+    color: ${(props) => props.theme.primaryLight};
     text-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
 
     ${() => respond("l", "padding: 0")}

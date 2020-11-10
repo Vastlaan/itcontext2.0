@@ -39,12 +39,13 @@ export default function Header() {
             </Head>
             <Info>
                 <h3>
+                    <HiOutlineLightBulb />
                     {intl.formatMessage({
                         id: "about.header-info-header",
                         defaultMessage: "Wij geloven in uw idee",
                     })}
                 </h3>
-                <HiOutlineLightBulb />
+                
                 <Text>
                     {intl.formatMessage({
                         id: "about.header-info-text",
@@ -198,21 +199,24 @@ const Info = styled.div`
     background-color: ${(p) => p.theme.bg};
 
     h3 {
+        display: flex;
+        align-items: center;
         font-family: ${fonts.exo};
-        font-size: 3em;
+        font-size: 3.3em;
         font-weight: 800;
         text-align: center;
         line-height: 1.2;
-        color: ${(p) => p.theme.primary};
+        color: ${(p) => p.theme.primaryLight};
+
+        svg {
+            font-size: 5rem;
+            color: ${(p) => p.theme.primaryLight};
+            margin: 2rem 0;
+        }
 
 
         ${() => respond("m", "text-align: left;")}
     }
 
-    svg {
-        font-size: 5rem;
-        color: ${(p) => p.theme.fresh};
-        margin: 2rem 0;
-        align-self: center;
-    }
+    
 `;

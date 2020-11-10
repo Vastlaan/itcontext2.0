@@ -56,16 +56,25 @@ const Container = styled.article`
         content: "";
         position: absolute;
         top: 0;
-        left: 2rem;
+        left: 50%;
         width: 20rem;
         height: 3px;
-        background-color: ${(p) => p.theme.secondary};
+        background-color: ${(p) => p.theme.primaryLight};
+        margin: 0 auto;
+        transform: translateX(-50%);
+
+        ${()=>respond('m','left: 2rem; transform: translateX(0%);')}
     }
 `;
 const Heading = styled.h1`
     font-family: ${fonts.exo};
     font-weight: 800;
     font-size: 3rem;
-    color: ${(p) => p.theme.secondary};
+    color: ${(p) => p.theme.primaryLight};
     text-transform: uppercase;
+    margin: 0 auto;
+    text-align: center;
+
+    ${()=>respond('m','margin: 0; text-align: left;')}
+
 `;

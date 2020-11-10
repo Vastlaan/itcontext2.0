@@ -93,7 +93,7 @@ const Container = styled.form`
         font-size: 2.8rem;
         font-weight: 900;
         text-transform: uppercase;
-        color: ${(props) => props.theme.grey};
+        color: ${(props) => props.theme.primaryLight};
         text-align: center;
 
         ${()=>respond('m','text-align: left;')}

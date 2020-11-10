@@ -122,6 +122,8 @@ const Buttons = styled.div`
         margin-right: 2rem;
     }
     a{
+        position:relative;
+        z-index: 2;
         text-decoration: none;
     }
 `

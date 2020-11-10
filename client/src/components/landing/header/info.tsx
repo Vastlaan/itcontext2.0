@@ -65,6 +65,7 @@ const Info = styled.div`
     background-repeat: no-repreat;
     background-position: center;
     padding: 4.7rem 2.2rem;
+    
 
     ${()=>respond('l',`background-image: linear-gradient(to right, rgba(202, 244, 253,1),rgba(202, 244, 253,.1)), url(${Img});   padding: 4.7rem;`)}
 
@@ -88,10 +89,10 @@ const InfoContent = styled.div`
    
    
     h3{
-        font-family: ${fonts.forum};
+        font-family: ${fonts.exo};
         font-size: 3.3rem;
         text-transform: capitalize;
-        font-weight: 700;
+        font-weight: 800;
         color: ${p=>p.theme.primary};
         margin-left: 1rem;
     }
@@ -113,6 +114,8 @@ const ContactData = styled.a`
     background-color: ${(props) => props.color};
     border-radius: 3px;
     transition: all 0.3s;
+    position:relative;
+    z-index: 2;
 
     ${()=>respond('xxl','margin: .5rem 0; width: 35rem;')}
 

@@ -36,7 +36,7 @@ const Container = styled.div`
         font-family: ${fonts.exo};
         font-weight: 800;
         font-size: 4rem;
-        color: ${(props) => props.theme.grey};
+        color: ${(props) => props.theme.primaryLight};
         text-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
     }
     p {

@@ -54,7 +54,7 @@ const Container = styled.div`
         font-weight:900;
         
         text-transform: uppercase;
-        color: ${(props) => props.theme.grey};
+        color: ${(props) => props.theme.primaryLight};
     }
 
     h3 {

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useIntl } from "react-intl";
 import Content from './content'
 import Info from './info'
+import Circles from '../../circles'
 import { respond } from "../../../styles";
 import Img from '../../../img/header-landing.jpg'
 
@@ -15,6 +16,7 @@ export default function Header() {
 
             <Content/>
             <Info/>
+            <Circles/>
             
         </Container>
     );

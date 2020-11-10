@@ -10,13 +10,13 @@ export default function Ci() {
 }
 const Circles = styled.div`
     position: absolute;
-    bottom: 40%;
-    right: 40%;
-    width: 30rem;
-    height: 30rem;
+    bottom: 10%;
+    right: 30%;
+    width: 60rem;
+    height: 60rem;
     border-radius: 50%;
-    border: 1px solid ${p=>p.theme.primary};
-    opacity: .3;
+    border: 1px solid ${p=>p.theme.grey};
+    opacity: .2;
     z-index: 1;
 
     &::after {
@@ -25,10 +25,10 @@ const Circles = styled.div`
         top: -20%;
         left: -20%;
 
-        width: 15rem;
-        height: 15rem;
+        width: 25rem;
+        height: 25rem;
         border-radius: 50%;
-        border: 2px solid ${p=>p.theme.primary};
-        opacity: .4;
+        border: 2px solid ${p=>p.theme.grey};
+        opacity: .3;
     }
 `;
