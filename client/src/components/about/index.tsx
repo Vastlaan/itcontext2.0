@@ -22,7 +22,7 @@ export default function About() {
                 title="IT Context - Over Ons"
                 description="IT Context ontwerp moderne websites, professionele webapplicaties en webshops. Duik in onze website en leer ons beter kennen."
                 url="https://itcontext.nl"
-                imageUrl="https://michalantczakblogresources.s3.eu-central-1.amazonaws.com/itcontext/ITContextLandingPage.jpg"
+                imageUrl="https://michalantczakblogresources.s3.eu-central-1.amazonaws.com/itcontext-poster.jpg"
             />
 
             <Panorama>

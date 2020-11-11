@@ -2,8 +2,7 @@ import React from 'react'
 import ReactGA from "react-ga";
 import styled from "styled-components";
 import Form from './form'
-
-import Circles from '../circles'
+import Header from './header'
 import {respond} from '../../styles'
 import SEO from "../seo";
 
@@ -16,13 +15,14 @@ export default function Aanvraag() {
 
   return (
     <Container>
+      <SEO
+          title="IT Context - Offerte Aanvragen"
+          description="Vraag gratis jouw offerte aan. Betaalbaar website laten maken."
+          url="https://itcontext.nl"
+          imageUrl="https://michalantczakblogresources.s3.eu-central-1.amazonaws.com/itcontext-poster.jpg"
+        />
+      <Header/>
       <Content>
-          <SEO
-            title="IT Context - Offerte Aanvragen"
-            description="Vraag gratis jouw offerte aan. Betaalbaar website laten maken."
-            url="http://itcontext.nl"
-            imageUrl="https://michalantczakblogresources.s3.eu-central-1.amazonaws.com/itcontext/ITContextLandingPage.jpg"
-          />
           <Form/>
       </Content>
     </Container>
