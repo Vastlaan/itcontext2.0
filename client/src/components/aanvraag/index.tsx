@@ -21,10 +21,13 @@ export default function Aanvraag() {
           url="https://itcontext.nl"
           imageUrl="https://michalantczakblogresources.s3.eu-central-1.amazonaws.com/itcontext-poster.jpg"
         />
-      <Header/>
+      
       <Content>
           <Form/>
       </Content>
+
+      <Header/>
+      
     </Container>
     
   )

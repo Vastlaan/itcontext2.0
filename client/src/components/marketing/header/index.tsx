@@ -54,7 +54,7 @@ const Container = styled.header`
     padding: 4.7rem 2.2rem;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to right, rgba(15,40,78,.5),rgba(15,40,78,.5)), url(${Image});
+    background-image: linear-gradient(to right, rgba(255,255,255,1) 50%,rgba(255,255,255,.1)), url(${Image});
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -64,7 +64,7 @@ const Container = styled.header`
 `;
 
 const Head = styled.h1`
-    color: ${(p)=>p.theme.bg};
+    color: ${(p)=>p.theme.primary};
     font-size: 6rem;
     font-weight: 800;
     font-family: ${fonts.exo};
@@ -77,15 +77,10 @@ const CustomText = styled(Text)`
     max-width: 60rem;
     text-align: left;
     margin: 3rem 0;
-    color: ${(p)=>p.theme.bg};
+    color: ${(p)=>p.theme.grey};
 `;
 const CustomButton = styled(Button)`
     align-self: flex-start;
     margin: 5rem 0;
-    background-color: ${(props) => props.theme.secondary};
-    border: 1px solid ${(props) => props.theme.secondary};
-
-    &:hover {
-        color: ${(props) => props.theme.secondary};
-    }
+   
 `;

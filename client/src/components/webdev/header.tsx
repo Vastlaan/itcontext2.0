@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useIntl } from "react-intl";
 import { fonts, Button, respond, Text } from "../../styles";
 import { BsChevronDoubleDown } from "react-icons/bs";
-import Image from "../../img/image-webdev-header.jpg";
+import Image from "../../img/header-marketing.jpg";
 
 export default function Header() {
     function scrollDown() {
@@ -55,8 +55,7 @@ export default function Header() {
 }
 const Container = styled.header`
     min-height: 50rem;
-    padding: 4.7rem 2.2rem;
-    background-image: linear-gradient(to right,rgba(15,40,78,.5),rgba(15,40,78,.5)), url(${Image});
+    background-image: linear-gradient(to right, rgba(255,255,255,1) 50%,rgba(255,255,255,.1)), url(${Image});
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -64,8 +63,8 @@ const Container = styled.header`
     align-items: center;
     flex-wrap: wrap;
 
-    ${() => respond("l", "min-height: 60rem; padding: 4.7rem;")}
-    ${() => respond("xxl", "min-height: 60rem; padding: 10rem 4.7rem;")}
+    ${() => respond("l", "min-height: 60rem;")}
+    ${() => respond("xxl", "min-height: 60rem;")}
 
 `;
 
@@ -73,11 +72,14 @@ const Main = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 4.7rem 2.2rem;
+    background-image: linear-gradient(to right, rgba(255,255,255,1),rgba(255,255,255,1));
 
-    ${() => respond("m", "width: 50%;")}
+    ${() => respond("m", "width: 50%; padding: 4.7rem;")}
+    ${() => respond("xxl", " padding: 10rem 4.7rem;")}
 `;
 const Head = styled.h1`
-    color: snow;
+    color: ${p=>p.theme.primary};
     font-size: 6rem;
     font-weight: 800;
     font-family: ${fonts.exo};
@@ -90,16 +92,16 @@ const CustomText = styled(Text)`
     max-width: 60rem;
     text-align: left;
     margin: 3rem 0;
-    color: snow;
+    color: ${p=>p.theme.grey};
 `;
 const CustomButton = styled(Button)`
     align-self: flex-start;
     margin: 5rem 0;
-    background-color: ${(props) => props.theme.secondary};
-    border: 1px solid ${(props) => props.theme.secondary};
+    background-color: ${(props) => props.theme.primary};
+    border: 1px solid ${(props) => props.theme.primary};
 
     &:hover {
-        color: ${(props) => props.theme.secondary};
+        color: ${(props) => props.theme.primary};
     }
 `;
 
@@ -118,13 +120,13 @@ const SideButton = styled(Button)`
     justify-content: center;
     padding: 1rem;
     background-color: transparent;
-    border: 2px solid ${(props) => props.theme.secondary};
+    border: 2px solid ${(props) => props.theme.primary};
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.3;
 
     svg {
-        color: ${(props) => props.theme.secondary};
+        color: ${(props) => props.theme.primary};
         font-size: 5rem;
     }
 `;

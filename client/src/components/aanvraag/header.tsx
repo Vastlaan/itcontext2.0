@@ -11,7 +11,7 @@ export default function Header() {
   )
 }
 
-const Container = styled.header`
+const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
