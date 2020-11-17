@@ -1,8 +1,10 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 import styled from "styled-components";
 import { useIntl } from "react-intl";
 import { FiPhoneCall, FiMail } from "react-icons/fi";
-import { fonts, Anchor, Text, respond } from "../styles";
+import { AiOutlineForm} from "react-icons/ai";
+import { fonts, Anchor, Anchor2, Text, respond } from "../styles";
 
 export default function Details() {
     const intl = useIntl();
@@ -21,7 +23,7 @@ export default function Details() {
                     defaultMessage: "WIJ ZIJN JE GRAAG VAN DIENST",
                 })}
             </h3>
-            <Text style={{margin: '2rem 0'}}>
+            <Text style={{margin: '2rem 0', textAlign: 'left'}}>
                 {intl.formatMessage({
                     id: "contact.details-header-sub-2",
                     defaultMessage:
@@ -36,6 +38,18 @@ export default function Details() {
                 <FiMail />
                 <span>info@itcontext.nl</span>
             </Anchor>
+            
+            <Link style={{textDecoration: 'none'}} to='/offerte-aanvragen'>
+                <Anchor2 color="#0F284E">
+                    <AiOutlineForm />
+                    <span>
+                        {intl.formatMessage({
+                        id: "navigation.menu-5",
+                        defaultMessage:
+                            "Offerte",
+                    })}</span>
+                </Anchor2>
+            </Link>
         </Container>
     );
 }
@@ -44,8 +58,10 @@ const Container = styled.div`
     flex: 0 0 40%;
     padding: 2rem;
     font-family: ${fonts.exo};
-    
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
     ${()=>respond('m','text-align: left;')}
 
@@ -54,7 +70,7 @@ const Container = styled.div`
         font-weight:900;
         
         text-transform: uppercase;
-        color: ${(props) => props.theme.primaryLight};
+        color: ${(props) => props.theme.primary};
     }
 
     h3 {

@@ -18,7 +18,7 @@ export default function ContentComponent() {
                 id: "landing.header-main",
                 defaultMessage:
                     "IT Context helpt je bedrijf online te groeien",
-            }).split(' ').map((w,i,a)=>i!==(a.length-1)?<>{w} </>:<span key={i* 2.17}>{w} </span>)}
+            }).split(' ').map((w,i,a)=>i!==(a.length-1)?<strong key={i* 2.17}>{w} </strong>:<span key={i* 2.17}>{w} </span>)}
         </h1>
         <h3>
             {intl.formatMessage({
@@ -79,6 +79,11 @@ const Content = styled.div`
             letter-spacing: -.2rem;
             color: ${p=>p.theme.primaryLight};
             
+        }
+        strong{
+            font-weight: 900;
+            font-size: 6rem;
+            line-height: 1;
         }
     }
     h3{

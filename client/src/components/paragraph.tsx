@@ -59,7 +59,7 @@ const Container = styled.article`
         left: 50%;
         width: 20rem;
         height: 3px;
-        background-color: ${(p) => p.theme.primaryLight};
+        background-color: ${(p) => p.theme.primary};
         margin: 0 auto;
         transform: translateX(-50%);
 
@@ -70,7 +70,7 @@ const Heading = styled.h1`
     font-family: ${fonts.exo};
     font-weight: 800;
     font-size: 3rem;
-    color: ${(p) => p.theme.primaryLight};
+    color: ${(p) => p.theme.primary};
     text-transform: uppercase;
     margin: 0 auto;
     text-align: center;

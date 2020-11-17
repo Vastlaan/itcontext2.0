@@ -13,6 +13,8 @@ interface CardProps {
     icon?: JSX.Element;
     header?: string;
     text?: string;
+    price?:string;
+    period?:string;
 }
 interface CardStyledProps {
     hovered?: boolean;
@@ -21,7 +23,7 @@ interface CardStyledProps {
 }
 
 export default function Card(props: CardProps) {
-    const { btn, link, hovered, translate, image, icon, header, text } = props;
+    const { btn, link, hovered, translate, image, icon, header, text, price, period } = props;
 
     const scrollToSecurity = () => {
         const security = document.querySelector("#security");
@@ -35,6 +37,8 @@ export default function Card(props: CardProps) {
             <Icon hovered={hovered}>{icon}</Icon>
             <Header hovered={hovered}>{header}</Header>
             <CardText hovered={hovered}>{text}</CardText>
+            <CardPrice hovered={hovered}>{price?.split('.').map((w,i)=>i===0?<span key={`card-${w}-${i}`}>{w}</span>:<sup key={`card-${w}-${i}`}>{w}</sup>)}</CardPrice>
+            <Info hovered={hovered}>*{period}</Info>
             <Link
                 to={link}
                 onClick={scrollToSecurity}
@@ -52,7 +56,7 @@ const Container = styled.div<CardStyledProps>`
     padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    
     border-radius: 3px;
     background-image: ${(props) =>
         props.hovered
@@ -84,10 +88,10 @@ const Container = styled.div<CardStyledProps>`
 `;
 
 const Icon = styled.div<CardStyledProps>`
-    margin: 0 auto 2rem auto;
+    margin: 0 auto 1.3rem auto;
 
     svg {
-        font-size: 5rem;
+        font-size: 4.7rem;
         color: ${(props) => (props.hovered ? `snow` : "#117864")};
         transition: all 0.3s;
     }
@@ -104,6 +108,22 @@ const Header = styled.div<CardStyledProps>`
 const CardText = styled(Text)<CardStyledProps>`
     color: ${(props) => (props.hovered ? `snow` : "#18191F")};
     font-size: 2rem;
+    text-align: center;
+    transition: all 0.3s;
+`;
+const CardPrice = styled(Text)<CardStyledProps>`
+    color: ${(props) => (props.hovered ? `snow` : "#18191F")};
+    font-size: 4.7rem;
+    text-align: center;
+    transition: all 0.3s;
+
+    sup{
+        font-size: 1.9rem;
+    }
+`;
+const Info = styled(Text)<CardStyledProps>`
+    color: ${(props) => (props.hovered ? `snow` : "#18191F")};
+    font-size: 1.3rem;
     text-align: center;
     transition: all 0.3s;
 `;

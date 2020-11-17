@@ -43,7 +43,7 @@ export default function() {
     <Container>
       <Form onSubmit={sendBrochure}>
           <Header>
-            {intl.formatMessage({id:"offerte.header-1",defaultMessage:"Een Offerte Aanvragen"})}
+            {intl.formatMessage({id:"offerte.header-1",defaultMessage:"Een Offerte Aanvragen"}).split(' ').map((w,i,a)=>i!==(a.length-1)?<strong key={i* 2.17}>{w} </strong>:<span key={i* 2.17}>{w} </span>)}
           </Header>
           <Text style={{margin: '1rem 0 2rem 0', textAlign: 'left'}}>{intl.formatMessage({id:"offerte.text",defaultMessage:"Bestel een gratis brochure en lees meer over onze diensten en prijzen."})}</Text>
           <HeaderSmall>
@@ -120,31 +120,40 @@ const Form = styled.form`
 `
 
 const Header = styled.h1`
-  display: flex;
-    align-items: center;
+    color: ${(p)=>p.theme.primary};
+    font-size: 6rem;
+    font-weight: 900;
     font-family: ${fonts.exo};
-    font-weight: 800;
-    font-size: 4.7rem;
-    line-height: 1.2;
-    color: ${p=>p.theme.primaryLight};
+    letter-spacing: -.1rem;
+    line-height: 1;
 
-    svg{
-      margin-right: 1rem;
-      color: ${p=>p.theme.primaryLight};
+    span{
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -.2rem;
+        color: ${p=>p.theme.primaryLight};
+        
     }
-`
+    strong{
+        font-weight: 900;
+        font-size: 6rem;
+        line-height: 1;
+    }
+
+    ${()=>respond('xxl','font-size: 6rem;')}
+`;
 const HeaderSmall = styled.h3`
   display: flex;
     align-items: center;
     font-family: ${fonts.exo};
     font-weight: 900;
     font-size: 2.8rem;
-    color: ${p=>p.theme.grey};
+    color: ${p=>p.theme.primary};
     max-width: 40rem;
 
     svg{
       margin-right: 1rem;
-      color: ${p=>p.theme.primaryLight};
+      color: ${p=>p.theme.primary};
     }
 `;
 const InputField = styled.div`
@@ -156,11 +165,11 @@ const InputField = styled.div`
   label{
     font-family: ${fonts.gayathri};
     font-size: 2.5rem;
-    color: ${p=>p.theme.primaryLight};
+    color: ${p=>p.theme.primary};
   }
 
   input{
-    border: 1px solid ${p=>p.theme.primaryLight};
+    border: 1px solid ${p=>p.theme.primary};
     background-color:white;
     padding: 1rem 3rem;
     text-align: center;
@@ -176,8 +185,8 @@ const InputField = styled.div`
 
 const CustomButton = styled(Button)`
   margin: 2rem 0 3rem 0;
-  background-color: ${p=>p.theme.primaryLight};
-  border: 1px solid ${p=>p.theme.primaryLight};
+  background-color: ${p=>p.theme.primary};
+  border: 1px solid ${p=>p.theme.primary};
   border-radius: 3px;
 
 `;

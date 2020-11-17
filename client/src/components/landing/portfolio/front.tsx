@@ -39,7 +39,7 @@ const Header = styled.h1`
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
-    color: ${(props) => props.theme.primaryLight};
+    color: ${(props) => props.theme.primary};
 
     ${() => respond("s", "font-size: 6rem;")}
 `;

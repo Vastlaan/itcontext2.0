@@ -8,12 +8,22 @@ interface FormProps {
     warning: string;
     setName: React.Dispatch<React.SetStateAction<string>>;
     setEmail: React.Dispatch<React.SetStateAction<string>>;
+    message: string;
     setMessage: React.Dispatch<React.SetStateAction<string>>;
+    website: boolean;
+    setWebsite: React.Dispatch<React.SetStateAction<boolean>>;
+    onlineMarketing: boolean;
+    setOnlineMarketing: React.Dispatch<React.SetStateAction<boolean>>;
+    emailService: boolean;
+    setEmailService: React.Dispatch<React.SetStateAction<boolean>>;
+    other: boolean;
+    setOther: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function Form(props: FormProps) {
-    const { submitContactForm, warning, setName, setEmail, setMessage } = props;
+    const { submitContactForm, warning, setName, setEmail, message, setMessage,website, setWebsite, onlineMarketing, setOnlineMarketing, emailService, setEmailService, other,setOther } = props;
     const intl = useIntl();
+
 
     return (
         <Container onSubmit={submitContactForm}>
@@ -23,7 +33,7 @@ export default function Form(props: FormProps) {
                     defaultMessage: "Contact Formulier",
                 })}
             </h1>
-            <Text>
+            <Text style={{textAlign: 'left'}}>
                 {intl.formatMessage({
                     id: "contact.form-header-sub",
                     defaultMessage:
@@ -31,7 +41,66 @@ export default function Form(props: FormProps) {
                 })}
             </Text>
             {warning ? <div>{warning}</div> : null}
+
+            <h3>Waar kunnen wij u mee helpen?</h3>
+
             <Field>
+                <input type="checkbox" name='service' checked={website} onChange={()=>setWebsite(prevState=>!prevState)} />
+                <label htmlFor="service">Websites</label>
+            </Field>
+            <Field>
+                <input type="checkbox" name='service'/>
+                <label htmlFor="service">Online Marketing</label>
+            </Field>
+            <Field>
+                <input type="checkbox" name='service'/>
+                <label htmlFor="service">SEO</label>
+            </Field>
+            <Field>
+                <input type="checkbox" name='service'/>
+                <label htmlFor="service">Andere reden</label>
+            </Field>
+
+            <h3>Wat is jouw vraag?</h3>    
+            <Field2>
+               <label>
+                    {intl.formatMessage({
+                        id: "contact.form-field-3",
+                        defaultMessage: "Bericht",
+                    })}:
+                </label>
+                <textarea
+                    name="contact_msg"
+                    maxLength={500}
+                    required
+                    value={message}
+                    onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+                        setMessage(e.target?.value)
+                    }
+                ></textarea>
+            </Field2>
+            
+            <h3>Wat is jouw e-mailadres?</h3>
+
+            <Field2>
+                <label>
+                    {intl.formatMessage({
+                        id: "contact.form-field-2",
+                        defaultMessage: "E-mail",
+                    })}:
+                </label>
+                <input
+                    name="contact_email"
+                    type="email"
+                    required
+                    onChange={(e) => setEmail(e.target.value)}
+                />
+            </Field2>
+             
+                
+                
+
+            {/* <Field>
                 <label>
                     {intl.formatMessage({
                         id: "contact.form-field-1",
@@ -73,7 +142,7 @@ export default function Form(props: FormProps) {
                         setMessage(e.target?.value)
                     }
                 ></textarea>
-            </Field>
+            </Field> */}
             <CustomButton type="submit">
                 {intl.formatMessage({
                     id: "contact.form-submit",
@@ -93,35 +162,43 @@ const Container = styled.form`
         font-size: 2.8rem;
         font-weight: 900;
         text-transform: uppercase;
-        color: ${(props) => props.theme.primaryLight};
-        text-align: center;
+        color: ${(props) => props.theme.primary};
+        text-align: left;
 
         ${()=>respond('m','text-align: left;')}
+    }
+    h3{
+        font-family: ${fonts.headline};
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: ${p=>p.theme.primary};
+        margin-top: 2.7rem;
     }
 `;
 
 const Field = styled.div`
-    display: flex;
-    justify-content: flex-start;
-    margin: 2rem auto;
+   
+    width:100%;
+    display:flex;
+    align-items: center;
+    
 
     label {
-        width: 10rem;
-        text-align: right;
-        margin-right: 2rem;
+        
+        text-align: left;
+        margin-left: 2rem;
         font-size: 2rem;
         color: ${(props) => props.theme.grey};
     }
 
     input,
     textarea {
-        width: 70%;
         padding: 1rem;
         font-family: ${fonts.cormoran};
         font-size: 1.8rem;
         border: 1px solid ${(props) => props.theme.primary};
 
-        ${() => respond("l", "width: 50%;")}
+        ${() => respond("l", "")}
 
         &:focus {
             outline: none;
@@ -129,14 +206,28 @@ const Field = styled.div`
         }
     }
     textarea {
-        height: 20rem;
+        height: 10rem;
+        width: 70%;
     }
 `;
+
+const Field2 = styled(Field)`
+    flex-direction: column;
+    align-items: flex-start;
+
+    label{
+        margin-left: 0rem;
+    }
+`
 
 const CustomButton = styled(Button)`
     display: flex;
     justify-content: center;
-    margin: 2rem 0 5rem 12rem;
-    padding: 1.5rem 5rem;
-    font-size: 2.5rem;
+    margin: 2.7rem 0;
+    background-color: ${p=>p.theme.fresh};
+    border: 1px solid ${p=>p.theme.fresh};
+
+    &:hover{
+        color: ${p=>p.theme.fresh};
+    }
 `;

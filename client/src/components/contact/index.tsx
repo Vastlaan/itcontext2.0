@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, RouteComponentProps } from "react-router-dom";
 import ReactGA from "react-ga";
 // import gsap from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -13,14 +13,22 @@ import SEO from "../seo";
 
 import { respond, PageNav } from "../../styles";
 
-function Contact() {
+type TParams = { slug?: string };
+
+function Contact({match}: RouteComponentProps<TParams>) {
     interface DataToSend {
         name: string;
         email: string;
         message: string;
     }
     // const contact = useRef();
+
+    const subject = match.params
     const intl = useIntl();
+    const [website, setWebsite] = useState(false)
+    const [emailService, setEmailService] = useState(false)
+    const [onlineMarketing, setOnlineMarketing] = useState(false)
+    const [other, setOther] = useState(false)
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
@@ -29,17 +37,30 @@ function Contact() {
 
     ReactGA.pageview("/contact");
 
-    // useEffect(() => {
-    //     gsap.registerPlugin(ScrollTrigger);
-    //     const tl = gsap.timeline({
-    //         paused: true,
-    //         scrollTrigger: {
-    //             trigger: contact.current,
-    //             toggleActions: "restart none restart none",
-    //         },
-    //     });
-    //     tl.fromTo(contact.current, 1, { opacity: 0 }, { opacity: 1 });
-    // }, []);
+    useEffect(()=>{
+        if(subject.slug!){
+            switch(subject.slug){
+                case 'website-only':
+                     setName('Website ontwerpen')
+                    setWebsite(true)
+                    setMessage('Ik ben geintereseerd in betaalbaar, op maat gemaakt website. Neem aub een contact met mij op! Groeten')
+                    return 
+                case 'website-combo':
+                     setName('Website + e-mail + hosting aanbieding')
+                    setWebsite(true)
+                    setMessage('Ik ben geintereseerd in gratis Website met e-mail en hosting op server in Amsterdam. Neem aub een contact met mij op! Groeten')
+                    return 
+                case 'website-allin':
+                     setName('All In Pakket aanvraag')
+                    setWebsite(true)
+                    setMessage('Ik ben geintereseerd in All In Pakket. Neem aub een contact met mij op! Groeten')
+                    return 
+                default:
+                    setName('Informatie verzoek')
+                    return
+            }
+        }
+    },[])
 
     const submitContactForm = (e: any) => {
         e.preventDefault();
@@ -104,9 +125,19 @@ function Contact() {
                 <Form
                     setEmail={setEmail}
                     setName={setName}
+                    message={message}
                     setMessage={setMessage}
                     warning={warning}
                     submitContactForm={submitContactForm}
+                    website={website}
+                    setWebsite={setWebsite}
+                    onlineMarketing={onlineMarketing}
+                    setOnlineMarketing={setOnlineMarketing}
+                    emailService={emailService}
+                    setEmailService={setEmailService}
+                    other={other}
+                    setOther={setOther}
+
                 />
 
                 <Details />

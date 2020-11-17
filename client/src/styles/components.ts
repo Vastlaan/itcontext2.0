@@ -87,7 +87,7 @@ export const BlockInfo = styled.p`
     font-size: 2.2rem;
     text-transform: uppercase;
     color: ${(props) => props.theme.grey};
-    border-left: 5px solid ${(props) => props.theme.primaryLight};
+    border-left: 5px solid ${(props) => props.theme.primary};
     padding: 0rem 1rem;
     margin: 0 1rem;
     ${()=>respond('l','margin: 0;')}
@@ -101,7 +101,7 @@ export const BlockHeader = styled.h2`
     max-width: 40rem;
     line-height: 1;
     letter-spacing: -.1rem;
-    color: ${(props) => props.theme.primaryLight};
+    color: ${(props) => props.theme.primary};
     text-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
 
     ${() => respond("l", "padding: 0")}
@@ -148,10 +148,10 @@ export const BlockButton = styled(Button)`
 `;
 
 export const Anchor = styled.a`
-    width: 35rem;
+    width: 40rem;
     text-decoration: none;
     padding: .9rem 2.3rem;
-    margin: 2rem auto;
+    margin: 2rem 0;
     display: flex;
     justify-content: center;
     border: 1px solid transparent;
@@ -159,7 +159,44 @@ export const Anchor = styled.a`
     border-radius: 3px;
     transition: all 0.3s;
 
-    ${()=>respond('xxl','margin: 1rem 0; width: 35rem;')}
+    ${()=>respond('xxl','margin: 1rem 0; width: 40rem;')}
+
+    &:hover {
+        background-color: transparent;
+        border: 1px solid ${(props) => props.color};
+
+        svg {
+            color: ${(props) => props.color};
+        }
+        span {
+            color: ${(props) => props.color};
+        }
+    }
+    svg {
+        margin-right: 2rem;
+        align-self: center;
+        font-size: 4rem;
+        color: snow;
+    }
+    span {
+        color: snow;
+        font-size: 3rem;
+        font-family: ${fonts.advent};
+    }
+`;
+export const Anchor2 = styled.div`
+    width: 40rem;
+    text-decoration: none;
+    padding: .9rem 2.3rem;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    border: 1px solid transparent;
+    background-color: ${(props) => props.color};
+    border-radius: 3px;
+    transition: all 0.3s;
+
+    ${()=>respond('xxl','margin: 1rem 0; width: 40rem;')}
 
     &:hover {
         background-color: transparent;

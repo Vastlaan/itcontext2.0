@@ -21,13 +21,13 @@ export default function Header() {
             <Head>
                     {intl.formatMessage({
                         id: "marketing.header-header-1",
-                        defaultMessage: "Professionele Websites",
-                    })}
+                        defaultMessage: "",
+                    }).split(' ').map((w,i,a)=>i!==(a.length-1)?<strong key={i* 2.17}>{w} </strong>:<span key={i* 2.17}>{w} </span>)}
                 </Head>
                 <Head>
                     {intl.formatMessage({
                         id: "marketing.header-header-2",
-                        defaultMessage: "op maat gemaakt",
+                        defaultMessage: "",
                     })}
                 </Head>
                 <CustomText>
@@ -60,16 +60,29 @@ const Container = styled.header`
     background-position: center center;
 
     ${() => respond("l", "min-height: 60rem; padding: 4.7rem;")}
-    ${() => respond("xxl", "min-height: 60rem; padding: 10rem 4.7rem;")}
+    ${() => respond("xxl", "min-height: 60rem; padding: 13.8rem;")}
 `;
 
 const Head = styled.h1`
     color: ${(p)=>p.theme.primary};
     font-size: 6rem;
-    font-weight: 800;
+    font-weight: 900;
     font-family: ${fonts.exo};
     letter-spacing: -.1rem;
     line-height: 1;
+
+    span{
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -.2rem;
+        color: ${p=>p.theme.primaryLight};
+        
+    }
+    strong{
+        font-weight: 900;
+        font-size: 6rem;
+        line-height: 1;
+    }
 
     ${()=>respond('xxl','font-size: 6rem;')}
 `;

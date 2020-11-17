@@ -87,7 +87,8 @@ function App() {
                         <Switch>
                             <Route path="/" exact component={Landing} />
                             <Route path="/over-ons" exact component={About} />
-                            <Route path="/contact" exact component={Contact} />
+                            <Route path="/contact/:slug" component={Contact} />
+                            <Route path="/contact/" component={Contact} />
                             <Route path="/cookies" exact component={Legal} />
                             <Route
                                 path="/online-marketing"

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useIntl } from "react-intl";
 import { fonts, Button, respond, Text } from "../../styles";
 import { BsChevronDoubleDown } from "react-icons/bs";
-import Image from "../../img/header-marketing.jpg";
+import Image from "../../img/header-webdev.jpg";
 
 export default function Header() {
     function scrollDown() {
@@ -23,7 +23,7 @@ export default function Header() {
                     {intl.formatMessage({
                         id: "webdev.header-header-1",
                         defaultMessage: "Professionele Websites",
-                    })}
+                    }).split(' ').map((w,i,a)=>i!==(a.length-1)?<strong key={i* 2.17}>{w} </strong>:<span key={i* 2.17}>{w} </span>)}
                 </Head>
                 <Head>
                     {intl.formatMessage({
@@ -72,19 +72,32 @@ const Main = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 4.7rem 2.2rem;
+    padding: 4.7rem 0 4.7rem 2.2rem;
     background-image: linear-gradient(to right, rgba(255,255,255,1),rgba(255,255,255,1));
 
-    ${() => respond("m", "width: 50%; padding: 4.7rem;")}
-    ${() => respond("xxl", " padding: 10rem 4.7rem;")}
+    ${() => respond("m", "width: 50%; padding: 4.7rem 0 4.7rem 4.7rem;")}
+    ${() => respond("xxl", " padding: 13.8rem 0 13.8rem 13.8rem ;")}
 `;
 const Head = styled.h1`
     color: ${p=>p.theme.primary};
     font-size: 6rem;
-    font-weight: 800;
+    font-weight: 900;
     font-family: ${fonts.exo};
     letter-spacing: -.1rem;
     line-height: 1;
+
+    span{
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -.2rem;
+        color: ${p=>p.theme.primaryLight};
+        
+    }
+    strong{
+        font-weight: 900;
+        font-size: 6rem;
+        line-height: 1;
+    }
 
     ${()=>respond('xxl','font-size: 6rem;')}
 `;
