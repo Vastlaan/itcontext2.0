@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useRef, useEffect}  from 'react'
 import {Link} from 'react-router-dom'
+import gsap from 'gsap'
 import styled from "styled-components";
 import { useIntl } from "react-intl";
 import Decoration from '../../decoration'
@@ -9,10 +10,25 @@ import { FaFacebookF, FaLinkedinIn, FaInfo } from "react-icons/fa";
 export default function ContentComponent() {
 
   const intl = useIntl();
+  const header = useRef<HTMLDivElement>(null)
+  const text1 = useRef<HTMLDivElement>(null)
+  const button1 = useRef<HTMLAnchorElement>(null)
+  const button2 = useRef<HTMLAnchorElement>(null)    
+  const text2 = useRef<HTMLDivElement>(null)  
+  const btns = useRef<HTMLDivElement>(null) 
+
+  useEffect(()=>{
+    gsap.from(header.current, {x: '-20', opacity: 0, duration: .6, ease: 'linear'})
+    gsap.from(text1.current, {x: '-20', opacity: 0, duration: .6, ease: 'linear', delay: .3 })
+    gsap.from(button1.current, {x: '-20', opacity: 0, duration: .6, ease: 'linear', delay: .5})
+    gsap.from(button2.current, {x: '-20', opacity: 0, duration: .6, ease: 'linear', delay: .7})
+    gsap.from(text2.current, {x: '-20', opacity: 0, duration: .6, ease: 'linear', delay: .8})
+    gsap.from(btns.current, {x: '-20', opacity: 0, duration: .6, ease: 'linear', delay: .9})
+  },[])
 
   return (
-    <Content>
-        <h1>
+    <Content >
+        <h1 ref={header}>
             {
                 intl.formatMessage({
                 id: "landing.header-main",
@@ -20,7 +36,7 @@ export default function ContentComponent() {
                     "IT Context helpt je bedrijf online te groeien",
             }).split(' ').map((w,i,a)=>i!==(a.length-1)?<strong key={i* 2.17}>{w} </strong>:<span key={i* 2.17}>{w} </span>)}
         </h1>
-        <h3>
+        <h3 ref={text1}>
             {intl.formatMessage({
                 id: "landing.header-2-text",
                 defaultMessage:
@@ -28,17 +44,17 @@ export default function ContentComponent() {
             })}
         </h3>
         <Buttons>
-            <Link to='/offerte-aanvragen'><Button>Offerte</Button></Link>
-            <Link to='/contact'><ButtonEmpty>Contact</ButtonEmpty></Link>
+            <Link ref={button1} to='/offerte-aanvragen'><Button>Offerte</Button></Link>
+            <Link ref={button2} to='/contact'><ButtonEmpty>Contact</ButtonEmpty></Link>
         </Buttons>
         <Social>
-            <h4>
+            <h4 ref={text2}> 
                 {intl.formatMessage({
                     id: "landing.header-info-3",
                     defaultMessage: "Volg ons",
                 })}
             </h4>
-            <div>
+            <div ref={btns}>
                 <a href="https://facebook.com">
                     <Icon>
                         <FaFacebookF />

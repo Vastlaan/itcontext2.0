@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 import styled from "styled-components";
 import { fonts, respond, Text } from "../styles";
 
@@ -13,8 +15,16 @@ interface ParagraphProps {
 export default function Paragraph(props: ParagraphProps) {
     const { id, heading, para1, para2, para3 } = props;
 
+    const content = useRef<HTMLDivElement>(null)
+    
+
+    useEffect(()=>{
+        gsap.registerPlugin(ScrollTrigger)
+        gsap.from(content.current!, {opacity: 0, duration: 1, scrollTrigger: {trigger: content.current!, toggleActions: "restart none none none",}})
+    },[])
+
     return (
-        <Container id={id}>
+        <Container id={id} ref={content}>
             <Heading>{heading}</Heading>
             <Text style={{ gridArea: "para1", letterSpacing: ".1rem" }}>
                 {para1}

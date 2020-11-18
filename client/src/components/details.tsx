@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 import {Link} from 'react-router-dom'
 import styled from "styled-components";
 import { useIntl } from "react-intl";
@@ -8,9 +10,16 @@ import { fonts, Anchor, Anchor2, Text, respond } from "../styles";
 
 export default function Details() {
     const intl = useIntl();
+     const content = useRef<HTMLDivElement>(null)
+    
+
+    useEffect(()=>{
+        gsap.registerPlugin(ScrollTrigger)
+        gsap.from(content.current!, {opacity: 0,duration: 1, scrollTrigger: {trigger: content.current!, toggleActions: "restart none none none",}})
+    },[])
 
     return (
-        <Container id="klantenservice">
+        <Container ref={content} id="klantenservice">
             <h1>
                 {intl.formatMessage({
                     id: "contact.details-header-main",
@@ -66,7 +75,7 @@ const Container = styled.div`
     ${()=>respond('m','text-align: left;')}
 
     h1 {
-        font-size: 2.8rem;
+        font-size: 3.3rem;
         font-weight:900;
         
         text-transform: uppercase;

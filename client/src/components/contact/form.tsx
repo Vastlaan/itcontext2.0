@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 import styled from "styled-components";
 import { useIntl } from "react-intl";
 import { fonts, respond, Button, Text } from "../../styles";
@@ -24,9 +26,16 @@ export default function Form(props: FormProps) {
     const { submitContactForm, warning, setName, setEmail, message, setMessage,website, setWebsite, onlineMarketing, setOnlineMarketing, emailService, setEmailService, other,setOther } = props;
     const intl = useIntl();
 
+     const content = useRef<HTMLFormElement>(null)
+    
+
+    useEffect(()=>{
+        gsap.registerPlugin(ScrollTrigger)
+        gsap.from(content.current!, {opacity: 0,duration: 1, scrollTrigger: {trigger: content.current!, toggleActions: "restart none none none",}})
+    },[])
 
     return (
-        <Container onSubmit={submitContactForm}>
+        <Container ref={content} onSubmit={submitContactForm}>
             <h1>
                 {intl.formatMessage({
                     id: "contact.form-header-main",
@@ -159,7 +168,7 @@ const Container = styled.form`
     font-family: ${fonts.exo};
 
     h1 {
-        font-size: 2.8rem;
+        font-size: 3.3rem;
         font-weight: 900;
         text-transform: uppercase;
         color: ${(props) => props.theme.primary};

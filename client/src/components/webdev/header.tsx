@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 import styled from "styled-components";
 import { useIntl } from "react-intl";
 import { fonts, Button, respond, Text } from "../../styles";
@@ -15,9 +17,16 @@ export default function Header() {
     }
 
     const intl = useIntl();
+    const content = useRef<HTMLDivElement>(null)
+    
+
+    useEffect(()=>{
+        gsap.registerPlugin(ScrollTrigger)
+        gsap.from(content.current!, {opacity: 0, duration: 1, scrollTrigger: {trigger: content.current!, toggleActions: "restart none none none",}})
+    },[])
 
     return (
-        <Container>
+        <Container ref={content}>
             <Main>
                 <Head>
                     {intl.formatMessage({

@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 import { Link } from "react-router-dom";
 import styled, { StyledFunction } from "styled-components";
 import { respond, fonts, Text, Button } from "../../../styles";
@@ -32,8 +34,15 @@ export default function Card(props: CardProps) {
         }
     };
 
+    const content = useRef<HTMLDivElement>(null)
+
+    useEffect(()=>{
+        gsap.registerPlugin(ScrollTrigger)
+        gsap.from(content.current!, {opacity: 0,y:200, duration: 1 , scrollTrigger: {trigger: content.current!, toggleActions: "restart none none none",}})
+    },[])
+
     return (
-        <Container hovered={hovered} trans={translate} image={image}>
+        <Container ref={content} hovered={hovered} trans={translate} image={image}>
             <Icon hovered={hovered}>{icon}</Icon>
             <Header hovered={hovered}>{header}</Header>
             <CardText hovered={hovered}>{text}</CardText>

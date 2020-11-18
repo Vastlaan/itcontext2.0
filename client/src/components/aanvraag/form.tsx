@@ -1,4 +1,6 @@
-import React, {useState} from 'react'
+import React, {useEffect, useRef, useState} from "react";
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 import styled from "styled-components";
 import { useIntl } from "react-intl";
 import {fonts, respond, Button, Text} from '../../styles'
@@ -39,8 +41,16 @@ export default function() {
       .catch(e=>console.error(e))
   }
 
+  const content = useRef<HTMLDivElement>(null)
+    
+
+    useEffect(()=>{
+        gsap.registerPlugin(ScrollTrigger)
+        gsap.from(content.current!, {opacity: 0, duration: 1, scrollTrigger: {trigger: content.current!, toggleActions: "restart none none none",}})
+    },[])
+
   return (
-    <Container>
+    <Container ref={content}>
       <Form onSubmit={sendBrochure}>
           <Header>
             {intl.formatMessage({id:"offerte.header-1",defaultMessage:"Een Offerte Aanvragen"}).split(' ').map((w,i,a)=>i!==(a.length-1)?<strong key={i* 2.17}>{w} </strong>:<span key={i* 2.17}>{w} </span>)}
@@ -187,7 +197,7 @@ const CustomButton = styled(Button)`
   margin: 2rem 0 3rem 0;
   background-color: ${p=>p.theme.primary};
   border: 1px solid ${p=>p.theme.primary};
-  border-radius: 3px;
+--  border-radius: 3px;
 
 `;
 

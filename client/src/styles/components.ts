@@ -223,7 +223,7 @@ export const Anchor2 = styled.div`
 `;
 
 export const PageNav = styled.div`
-    padding: 2rem;
+    padding: 0rem 2rem;
     p,
     a {
         font-family: ${fonts.advent};

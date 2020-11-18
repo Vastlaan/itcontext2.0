@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useIntl } from "react-intl";
 import styled from "styled-components";
 import Header from "./header";
@@ -8,9 +10,16 @@ import Face2 from "../../../img/image-review-2.jpg";
 
 export default function Reviews() {
     const intl = useIntl();
+    const content = useRef<HTMLDivElement>(null)
+    
+
+    useEffect(()=>{
+        gsap.registerPlugin(ScrollTrigger)
+        gsap.from(content.current!, {opacity: 0,y:100, duration: 1, scrollTrigger: {trigger: content.current!, toggleActions: "restart none none none",}})
+    },[])
 
     return (
-        <Container>
+        <Container ref={content}>
             <Header />
             <Review
                 image={Face1}

@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 import ReactGA from "react-ga";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
@@ -16,6 +18,14 @@ export default function About() {
 
     ReactGA.pageview("/over-ons");
 
+    const panorama = useRef<HTMLDivElement>(null)
+    
+
+    useEffect(()=>{
+        gsap.registerPlugin(ScrollTrigger)
+        gsap.from(panorama.current!, {opacity: 0, duration: 1, scrollTrigger: {trigger: panorama.current!, toggleActions: "restart none none none",}})
+    },[])
+
     return (
         <Container>
             <SEO
@@ -25,7 +35,7 @@ export default function About() {
                 imageUrl="https://michalantczakblogresources.s3.eu-central-1.amazonaws.com/itcontext-poster.jpg"
             />
 
-            <Panorama>
+            <Panorama ref={panorama}>
                 <img
                     src={PanoramaImage}
                     alt="moderne websites voor ondernemingen"

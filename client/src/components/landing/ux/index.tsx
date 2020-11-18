@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
@@ -18,8 +20,15 @@ import { RiHeart2Fill } from "react-icons/ri";
 export default function Ux() {
     const intl = useIntl();
 
+    const content = useRef<HTMLDivElement>(null)
+
+    useEffect(()=>{
+        gsap.registerPlugin(ScrollTrigger)
+        gsap.from(content.current!, {opacity: 0, y: 100, duration: 1, scrollTrigger: {trigger: content.current!, toggleActions: "restart none none none",}})
+    },[])
+
     return (
-        <Container>
+        <Container ref={content}>
             <BlockContent>
                 <BlockInfo>
                     {intl.formatMessage({

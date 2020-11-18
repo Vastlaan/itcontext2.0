@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 import styled from "styled-components";
 import { useIntl } from "react-intl";
 import Image from '../../../img/header-marketing.jpg'
@@ -8,16 +10,24 @@ export default function Header() {
 
     const intl = useIntl()
 
+    const content = useRef<HTMLDivElement>(null)
+    
+
+    useEffect(()=>{
+        gsap.registerPlugin(ScrollTrigger)
+        gsap.from(content.current!, {opacity: 0, duration: 1, scrollTrigger: {trigger: content.current!, toggleActions: "restart none none none",}})
+    },[])
+
     function scrollDown() {
         return window.scrollTo({
-            top: 550,
+            top: 600,
             left: 0,
             behavior: "smooth",
         });
     }
 
     return (
-        <Container>
+        <Container ref={content}>
             <Head>
                     {intl.formatMessage({
                         id: "marketing.header-header-1",

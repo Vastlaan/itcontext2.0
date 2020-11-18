@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
 import {Link} from 'react-router-dom'
+import gsap from 'gsap'
 import styled from "styled-components";
 import { useIntl } from "react-intl";
 import { respond, fonts, Button, ButtonEmpty, Anchor, Text } from "../../../styles";
@@ -11,10 +12,26 @@ export default function InfoComponent() {
 
   const intl = useIntl()
 
+  const header = useRef<HTMLDivElement>(null)
+  const text1 = useRef<HTMLDivElement>(null)
+  const button1 = useRef<HTMLAnchorElement>(null)
+  const button2 = useRef<HTMLAnchorElement>(null)    
+  const text2 = useRef<HTMLDivElement>(null)  
+  const btns = useRef<HTMLDivElement>(null)  
+
+  useEffect(()=>{
+    gsap.from(header.current, {x: '20', opacity: 0, duration: .6, ease: 'linear'})
+    gsap.from(text1.current, {x: '20', opacity: 0, duration: .6, ease: 'linear', delay: .3})
+    gsap.from(button1.current, {x: '20', opacity: 0, duration: .6, ease: 'linear', delay: .5})
+    gsap.from(button2.current, {x: '20', opacity: 0, duration: .6, ease: 'linear', delay: .7})
+    gsap.from(text2.current, {x: '20', opacity: 0, duration: .6, ease: 'linear', delay: .8})
+    gsap.from(btns.current, {x: '20', opacity: 0, duration: .6, ease: 'linear', delay: .9})
+  }, [])
+
   return (
     <Info>
       <InfoContent>
-          <InfoHeader>
+          <InfoHeader ref={header}>
               <Icon>   
                   <FaInfo/> 
               </Icon>
@@ -27,29 +44,29 @@ export default function InfoComponent() {
               </h3>
               
           </InfoHeader>
-          <TextHeader>
+          <TextHeader ref={text1}>
               {intl.formatMessage({
                   id: "landing.header-info-2",
                   defaultMessage:
                       "Wij werken van maandag t / m vrijdag tussen 9.00 en 17.00 uur. Wij zijn gevestigd in Purmerend, maar werken in heel Nederland. Heb je vragen? Onze klantenservice staat voor je klaar.",
               })}
           </TextHeader>
-          <ContactData color="#0F284E" href="tel:0299705072">
+          <ContactData ref={button1} color="#0F284E" href="tel:0299705072">
               <RiPhoneLine />
               <span>0299 70 50 72</span>
           </ContactData>
-          <ContactData color="#006A93" href="mailto:info@itcontext.nl">
+          <ContactData ref={button2} color="#006A93" href="mailto:info@itcontext.nl">
               <RiMailLine />
               <span>info@itcontext.nl</span>
           </ContactData>
-          <TextHeader>
+          <TextHeader ref={text2}>
               {intl.formatMessage({
                       id: "landing.header-2-header",
                       defaultMessage:
                           "Bereik de juiste doelgroep en overtuig hen om contact met je op te nemen",
                   })}
           </TextHeader>
-            <Buttons>
+            <Buttons ref={btns}>
               <Link to='/website-ontwerpen'><Button>Website</Button></Link>
               <Link to='/online-marketing'><ButtonEmpty>Marketing</ButtonEmpty></Link>
           </Buttons>
